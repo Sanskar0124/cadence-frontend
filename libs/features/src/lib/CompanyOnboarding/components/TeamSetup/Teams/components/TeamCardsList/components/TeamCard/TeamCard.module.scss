@@ -1,0 +1,46 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.card {
+	min-height: 104px;
+	min-width: 272px;
+	padding: 0 20px;
+	display: flex;
+	align-items: center;
+	background: linear-gradient(
+		106.52deg,
+		rgba(162, 130, 232, 0.04) -11.57%,
+		rgba(126, 142, 231, 0.04) 50.39%,
+		rgba(68, 153, 233, 0.04) 116.35%
+	);
+	border-radius: 15px;
+	position: relative;
+	cursor: pointer;
+	gap: 20px;
+
+	&:hover {
+		background: #f0f8fe;
+	}
+
+	.logo {
+		width: 58px;
+		height: 54px;
+		border-radius: 50%;
+	}
+
+	.info {
+		display: flex;
+		flex-direction: column;
+
+		.title {
+			font-size: 16px;
+			font-weight: 700;
+			line-height: 22px;
+		}
+
+		.members {
+			font-size: 14px;
+			font-weight: 400;
+			color: $lightBlue;
+		}
+	}
+}

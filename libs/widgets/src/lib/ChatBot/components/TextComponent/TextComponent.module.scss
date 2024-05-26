@@ -1,0 +1,265 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.container {
+	min-height: 440px;
+	position: relative;
+
+	.chatsContainer {
+		justify-content: flex-end;
+		height: 440px;
+
+		.chats {
+			height: 31rem;
+			overflow: scroll;
+			&::-webkit-scrollbar {
+				display: none;
+			}
+			.userChats {
+				display: flex;
+				padding: 6px 12px;
+				justify-content: flex-end;
+				align-items: flex-end;
+				flex-direction: column;
+
+				.close {
+					display: none;
+				}
+
+				.userText {
+					background: $primaryGradient;
+					color: $white;
+					max-width: 210px;
+					width: fit-content;
+					padding: 6px 12px;
+					border-radius: 10px;
+					font-weight: 400;
+					font-size: 12px;
+					line-height: 16px;
+					flex-grow: 0;
+					white-space: pre-wrap;
+					word-break: break-word;
+
+					> a {
+						color: $white;
+						text-decoration: underline;
+						font-weight: 400;
+						font-size: 12px;
+					}
+				}
+
+				.date {
+					color: $veryLightBlue;
+					font-weight: 400;
+					font-size: 10px;
+					line-height: 14px;
+					opacity: 0.48;
+					margin-top: 2px;
+				}
+			}
+
+			.botChats {
+				display: flex;
+				padding: 6px 12px;
+				justify-content: flex-start;
+				align-items: flex-start;
+				flex-direction: column;
+
+				.botText {
+					background: $whiteShade1;
+					color: $lightBlue;
+					max-width: 262px;
+					width: fit-content;
+					padding: 6px 12px;
+					border-radius: 10px;
+					font-weight: 400;
+					font-size: 12px;
+					line-height: 16px;
+					align-self: stretch;
+					flex-grow: 0;
+					white-space: pre-wrap;
+					word-break: break-word;
+
+					> a {
+						color: $blue;
+						text-decoration: underline;
+						font-weight: 400;
+						font-size: 12px;
+					}
+				}
+
+				.date {
+					color: $veryLightBlue;
+					font-weight: 400;
+					font-size: 10px;
+					line-height: 14px;
+					opacity: 0.48;
+					margin-top: 2px;
+				}
+			}
+
+			.userAttachments {
+				display: flex;
+				padding: 6px 12px;
+				flex-direction: column;
+				justify-content: flex-end;
+				align-items: flex-end;
+
+				.attachments {
+					padding: 5px;
+					background: $primaryGradient;
+					color: $white;
+					border-radius: 10px;
+					display: flex;
+					justify-content: center;
+					flex-direction: column;
+					width: 287px;
+					position: relative;
+
+					.text {
+						color: $white;
+						font-weight: 400;
+						font-size: 12px;
+						line-height: 16px;
+						white-space: pre-wrap;
+						word-break: break-word;
+					}
+					.image {
+						width: 277px;
+						height: 162px;
+						border-radius: 5px;
+						margin: auto;
+					}
+					.video {
+						width: 277px;
+						height: 162px;
+						outline: none;
+					}
+				}
+				.date {
+					color: $veryLightBlue;
+					font-weight: 400;
+					font-size: 10px;
+					line-height: 14px;
+					opacity: 0.48;
+					margin-top: 2px;
+				}
+			}
+
+			// botAttachments
+			.botAttachmentsContainer {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				padding: 6px 12px;
+				.botAttachments {
+					padding: 5px;
+					background: $whiteShade1;
+					color: $lightBlue;
+					border-radius: 10px;
+					display: flex;
+					flex-direction: column;
+					width: 287px;
+					position: relative;
+
+					.text {
+						color: $lightBlue;
+						font-weight: 400;
+						font-size: 12px;
+						line-height: 16px;
+						white-space: pre-wrap;
+						word-break: break-word;
+					}
+					.image {
+						width: 277px;
+						height: 162px;
+						border-radius: 5px;
+						margin: auto;
+					}
+					.video {
+						width: 277px;
+						height: 162px;
+						outline: none;
+					}
+				}
+				.date {
+					color: $veryLightBlue;
+					font-weight: 400;
+					font-size: 10px;
+					line-height: 14px;
+					opacity: 0.48;
+					margin-top: 2px;
+				}
+			}
+		}
+
+		.suggestedMsg {
+			display: flex;
+			gap: 10px;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			margin: 20px 0;
+			& > button {
+				height: 36px !important;
+				padding: 0 10px !important;
+			}
+		}
+
+		.convClosed {
+			color: $lightBlue;
+			text-align: center;
+			font-size: 0.8rem;
+			margin-top: 15px;
+		}
+
+		.agentContainer {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			> svg {
+				color: $lightBlue;
+				margin-right: 3px;
+			}
+
+			> span {
+				margin-right: 4px;
+				font-weight: 400;
+				font-size: 12px;
+				line-height: 16px;
+			}
+			.supportAgent {
+				color: $lightBlue;
+			}
+			.supportAgentContinue {
+				color: $veryLightBlue;
+			}
+		}
+	}
+
+	.welcomeMsg {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		text-align: center;
+		color: $lightBlue;
+		padding: 15px;
+		height: 400px;
+		p {
+			width: 80%;
+			margin: 5px 0;
+			a {
+				cursor: pointer;
+				color: $blue;
+				font-weight: 400;
+				text-decoration: underline;
+				width: fit-content;
+			}
+		}
+	}
+
+	.isfetching {
+		opacity: 0.5;
+	}
+}

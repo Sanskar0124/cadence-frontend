@@ -1,0 +1,59 @@
+.activityPlaceholder {
+	.activitySkeleton {
+		width: 100%;
+		height: 50px;
+		margin-bottom: 1rem;
+	}
+}
+
+.leadNamePlaceholder {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 1rem;
+
+	.leadNameSkeleton {
+		width: 70%;
+		height: 30px;
+	}
+
+	.timezoneSkeleton {
+		width: 40%;
+		height: 20px;
+	}
+}
+
+.leadDetailsPlaceholder {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 1rem;
+
+	> div {
+		height: 15px;
+	}
+
+	.first {
+		width: 50%;
+	}
+
+	.second {
+		width: 80%;
+	}
+
+	.third {
+		width: 60%;
+	}
+}
+
+.leadCadencesPlaceholder {
+	.leadCadencesSkeleton {
+		width: 100%;
+		height: 50px;
+		margin-bottom: 1rem;
+	}
+}

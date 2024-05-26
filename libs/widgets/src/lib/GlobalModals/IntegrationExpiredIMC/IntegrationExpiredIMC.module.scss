@@ -1,0 +1,54 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.sfeIMC {
+	width: 25vw;
+	@media screen and (min-width: 1700px) {
+		width: 20vw;
+	}
+	text-align: center;
+
+	.icon {
+		margin: 2rem auto;
+	}
+
+	> div {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		.title {
+			font-size: 16px;
+			font-weight: 700;
+			margin-bottom: 0.5rem;
+			display: inline-block;
+			&::first-letter {
+				text-transform: capitalize;
+			}
+		}
+
+		.subTitle {
+			font-size: 14px;
+			font-weight: 400;
+			margin-bottom: 1.5rem;
+			display: inline-block;
+			&::first-letter {
+				text-transform: capitalize;
+			}
+		}
+	}
+
+	.btn {
+		width: 100%;
+		background: $salesforce;
+		color: #fff;
+		font-size: 1rem;
+		box-shadow: 1px 8px 24px rgba(125, 142, 231, 0.4);
+		&:not(:disabled):hover {
+			background: #1dade5;
+			box-shadow: 1px 8px 24px rgba(125, 142, 231, 0.4);
+			transition: 0.2s ease-in-out;
+		}
+		&:active {
+			background: $mainPurple;
+		}
+	}
+}

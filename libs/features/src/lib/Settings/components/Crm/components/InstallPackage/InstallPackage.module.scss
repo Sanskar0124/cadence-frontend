@@ -1,0 +1,44 @@
+@import "libs/themes/src/lib/styles/variables";
+@import "../../../../Settings.module.scss";
+
+.container {
+	.settings {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		.pkg {
+			width: 60%;
+			position: relative;
+			.input {
+				padding-right: 2.5rem;
+				height: 40px;
+				font-size: 0.9rem;
+				font-weight: 400;
+			}
+			> div {
+				top: 24%;
+				right: 10px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: absolute;
+				gap: 15px;
+				svg {
+					cursor: pointer;
+				}
+			}
+		}
+		.helpLinks {
+			a {
+				color: #037dfc;
+				cursor: pointer;
+				font-weight: 400;
+				text-decoration: underline;
+				width: fit-content;
+			}
+			&:last-child {
+				text-transform: capitalize;
+			}
+		}
+	}
+}

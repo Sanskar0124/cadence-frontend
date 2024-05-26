@@ -1,0 +1,122 @@
+.criteriaSubWrapper {
+	background-color: #fafaff;
+	padding: 1rem;
+	border: 1px solid #97a2fe;
+	box-shadow: 0px 1px 0px #cfd4ff;
+	border-radius: 15px;
+	width: 100%;
+
+	.outsideNode {
+		display: flex;
+		align-items: flex-start;
+		gap: 0.7rem;
+		// background-color: #fafaff;
+		// padding: 1rem;
+		// border: 1px solid #97a2fe;
+		// box-shadow: 0px 1px 0px #cfd4ff;
+		border-radius: 15px;
+		width: 100%;
+		position: relative;
+		.box {
+			position: absolute;
+			width: 15px;
+			height: 20px;
+			background: #97a2fe;
+
+			left: -14px;
+			top: 25px;
+		}
+
+		.firstNode {
+			display: flex;
+			// flex-direction: column;
+			align-items: center;
+
+			gap: 0.7rem;
+			// background-color: #fafaff;
+			// padding: 1rem;
+			// border: 1px solid #97a2fe;
+			// box-shadow: 0px 1px 0px #cfd4ff;
+			border-radius: 15px;
+			width: 100%;
+			.criteria {
+				width: 100%;
+				background: #f0f2ff;
+				padding: 0.5rem;
+				border-radius: 10px;
+
+				.typeOne {
+					margin-top: 0.5rem;
+					display: grid;
+					grid-template-columns: 49% 49%;
+					justify-content: center;
+					grid-column-gap: 0.5rem;
+				}
+				.typeTwo {
+					margin-top: 0.5rem;
+
+					display: grid;
+					grid-template-columns: 49% 49%;
+					justify-content: center;
+					grid-column-gap: 0.5rem;
+				}
+
+				.inputDate {
+					width: 100%;
+				}
+			}
+
+			.conditionWrapper {
+				position: relative;
+				margin-bottom: 0rem;
+
+				.iconBtns {
+					display: flex;
+					gap: 1rem;
+
+					.iconBtn {
+						background-color: transparent;
+						box-shadow: none;
+						height: fit-content !important;
+						width: fit-content !important;
+						padding: 0 !important;
+					}
+				}
+			}
+		}
+	}
+}
+.optionLabel {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	gap: 5px;
+
+	.label {
+		display: flex;
+		max-width: 80%;
+		flex-direction: column;
+		justify-content: center;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	.tag {
+		border-radius: 8px;
+		display: flex;
+		padding: 2px 8px;
+		font-weight: 400;
+		gap: 6px;
+		align-items: center;
+
+		&.selected {
+			background: rgba(255, 255, 255, 0.12);
+			color: #ffffff;
+		}
+		&.notSelected {
+			color: #567191;
+			background: rgba(129, 147, 168, 0.05);
+		}
+	}
+}

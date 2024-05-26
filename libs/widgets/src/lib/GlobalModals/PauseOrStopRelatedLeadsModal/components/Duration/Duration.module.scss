@@ -1,0 +1,34 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.headText {
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	display: block;
+	color: #567191;
+}
+
+.titleSelector {
+	width: 100%;
+	padding-left: 20px;
+}
+
+.label {
+	margin-left: 20px;
+}
+
+.inputGroup {
+	padding: 5px 0;
+
+	.inputTime {
+		// display: none;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+}
+
+.collapseContainer {
+}

@@ -1,0 +1,70 @@
+@import "libs/themes/src/lib/styles/variables";
+.header {
+	padding: 0px 20px 0px 15px;
+	margin-top: -4px;
+	display: flex;
+	width: 98%;
+	justify-content: space-between;
+	align-items: center;
+	.modalHeading {
+		font-weight: 700;
+		font-size: 16px;
+	}
+	span {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.5em;
+		font-size: 14px;
+		font-weight: 600;
+		p {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			max-width: 500px;
+		}
+		span {
+			padding: 0.5em 1em;
+			border-radius: 10px;
+			background: linear-gradient(
+				106.52deg,
+				rgba(162, 130, 232, 0.08) -11.57%,
+				rgba(126, 142, 231, 0.08) 50.39%,
+				rgba(68, 153, 233, 0.08) 116.35%
+			);
+			color: $mainPurple;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			max-width: 200px;
+		}
+	}
+}
+
+.leadScoreReasons {
+	width: 550px;
+	height: fit-content;
+	max-height: 685px;
+	overflow: scroll;
+	padding: 20px 8px;
+	padding-bottom: 1px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 0.5em;
+	padding-bottom: 0px;
+	margin-bottom: -20px;
+	.skeleton {
+		width: 100%;
+		min-height: 45px !important;
+		margin-top: -18px;
+		margin-bottom: 10px;
+	}
+}
+
+.emptyState {
+	min-height: 400px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

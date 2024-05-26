@@ -1,0 +1,117 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.reassignment {
+	width: 100%;
+	max-width: 600px;
+
+	.heading {
+		margin: -2px 0 30px 0;
+		display: flex;
+		flex-flow: row nowrap;
+		h3 {
+			font-size: 16px;
+			font-weight: 700;
+			color: $black;
+			vertical-align: middle;
+			&:first-child {
+				margin-left: 30px;
+			}
+			&:nth-child(2) {
+				margin-left: auto;
+				color: $blue;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.body {
+		max-height: 484px;
+		padding: 0 2px;
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+		.main {
+			.leadsNContacts {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+			}
+		}
+
+		.reassign {
+			.searchBar {
+				margin-top: 10px;
+				position: relative;
+			}
+
+			.header {
+				height: max-content;
+				margin: 14px 36px 20px 20px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+
+				> p {
+					font-size: 14px;
+					font-weight: 400;
+					color: $black;
+				}
+
+				.distnStatus {
+					height: 26px;
+					display: flex;
+					align-items: center;
+					gap: 10px;
+
+					> label span {
+						transform: translateY(-50%);
+					}
+				}
+			}
+
+			.users {
+				margin-bottom: 25px;
+				padding: 0 20px;
+			}
+
+			.checks {
+				display: flex;
+				gap: 40px;
+
+				.check {
+					display: flex;
+					gap: 10px;
+				}
+			}
+		}
+
+		.inputGroup {
+			margin-bottom: 20px;
+			.contact_select_options {
+				margin-bottom: 10px;
+			}
+			.action {
+				text-transform: capitalize;
+			}
+
+			&:nth-last-child(1) {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.footer {
+		margin-top: 40px;
+
+		.removeBtn {
+			width: 100%;
+			border-radius: 15px;
+			box-shadow: 1px 8px 24px rgba(125, 142, 231, 0.4);
+		}
+	}
+}

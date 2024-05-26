@@ -1,0 +1,75 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.salesforceSetup {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 2rem 2.4rem;
+	border: 1px solid #e7ebff;
+	background-color: $white;
+	border-radius: 20px;
+	overflow-y: scroll;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	.heading {
+		display: flex;
+		align-items: center;
+		margin-bottom: 5px;
+		font-size: 1.14rem;
+		font-weight: 700;
+		color: $black;
+	}
+	.subheading {
+		font-family: "Open Sans";
+		font-size: 1rem;
+		font-weight: 400;
+		line-height: 19px;
+		letter-spacing: 0px;
+		margin-bottom: 1rem;
+	}
+	.inputBlock {
+		margin-bottom: 2.85rem;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.salesforceBtn {
+		border: 1px solid $mainPurple;
+	}
+	.inputBox {
+		width: 52%;
+		position: relative;
+		margin-bottom: 1rem;
+		.input {
+			padding-right: 1rem;
+			height: 40px;
+			font-size: 0.9rem;
+			font-weight: 400;
+		}
+		> div {
+			top: 26%;
+			right: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			gap: 15px;
+			svg {
+				cursor: pointer;
+			}
+		}
+	}
+	.helpLinks {
+		display: flex;
+		flex-direction: column;
+		gap: 0.71rem;
+		a {
+			cursor: pointer;
+			color: $blue;
+			font-weight: 400;
+			text-decoration: underline;
+			width: fit-content;
+		}
+	}
+}

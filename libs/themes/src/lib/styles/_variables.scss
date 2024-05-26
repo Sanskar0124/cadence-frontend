@@ -1,0 +1,106 @@
+//colors
+$primaryGradient: linear-gradient(
+	106.52deg,
+	#a282e8 -11.57%,
+	#7e8ee7 50.39%,
+	#4499e9 116.35%
+);
+$primaryGradientLight: linear-gradient(
+	106.52deg,
+	rgba(162, 130, 232, 0.12) -11.57%,
+	rgba(126, 142, 231, 0.12) 50.39%,
+	rgba(68, 153, 233, 0.12) 116.35%
+);
+$primaryGradientExtraLight: linear-gradient(
+	124deg,
+	rgba(162, 130, 232, 0.1) 0%,
+	rgba(126, 142, 231, 0.1) 48.44%,
+	rgba(68, 153, 233, 0.1) 100%,
+	#fff
+);
+$primaryGradientHover: linear-gradient(
+	106.52deg,
+	rgb(162, 130, 232, 0.5) -11.57%,
+	rgb(126, 142, 231, 0.5) 50.39%,
+	rgb(68, 153, 233, 0.5) 116.35%
+);
+$ringoverGradient: linear-gradient(315deg, #40e0cf 0%, #36cdcf 100%);
+$lightBlueGradient: linear-gradient(
+	106.52deg,
+	rgba(162, 130, 232, 0.1) -11.57%,
+	rgba(126, 142, 231, 0.1) 50.39%,
+	rgba(68, 153, 233, 0.1) 116.35%
+);
+$lightYellowGradient: linear-gradient(
+	135deg,
+	rgba(255, 207, 79, 0.05) 0%,
+	rgba(255, 155, 74, 0.05) 100%
+);
+$lightGreenGradient: linear-gradient(
+	315deg,
+	rgba(64, 224, 207, 0.05) 0%,
+	rgba(54, 205, 207, 0.05) 100%
+);
+$darkGreenGradient: linear-gradient(
+	315deg,
+	rgba(64, 224, 207, 0.1) 0%,
+	rgba(54, 205, 207, 0.1) 100%
+);
+$yellowGradient1: linear-gradient(
+	135deg,
+	rgba(255, 207, 79, 0.1) 0%,
+	rgba(255, 155, 74, 0.1) 100%
+);
+
+$mainPurple: #5b6be1;
+$secondary: #2d5380;
+$blue: #5ea5e9;
+$darkblue: #037dfc;
+$lightBlue: #567191;
+$veryLightBlue: #8193a8;
+$green: #00ddd0;
+$darkGreen: #00b3a8;
+$pink: #fb7a96;
+$white: #ffffff;
+$whiteShade1: #f5f6f7;
+$whiteShade2: #f3f4fd;
+$whiteShade3: #f5f5f5;
+$black: #394759;
+$blackShade1: #404040;
+$blackShade4: #bfbfbf;
+$blackShade5: #ececec;
+$blackShade6: #394759;
+$blackShade7: #595959;
+$grey: #e4e6ea;
+$greyshade1: #dadce0;
+
+$background: #eff7fd;
+$redGradient: linear-gradient(315deg, #ff8888 0%, #f05f5f 100%);
+$redGradient1: linear-gradient(
+	315deg,
+	rgba(255, 136, 136, 0.2) 0%,
+	rgba(240, 95, 95, 0.2) 100%
+);
+$redGradient2: linear-gradient(115.94deg, #f75a92 -12.55%, #ff9a9a 112.61%);
+$yellowGradient: linear-gradient(133.74deg, #ffcf4f -11.99%, #ff9b4a 100%);
+$pinkGradient: linear-gradient(115.94deg, #f75a92 -12.55%, #ff9a9a 112.61%);
+$orangeGradient: linear-gradient(135deg, #ffcf4f 0%, #ff9b4a 100%);
+$blueGradient: linear-gradient(315deg, #72bbf1 0%, #4b90e2 100%);
+$red: #f77272;
+$redShade2: #f77272;
+$redShade3: #f77272;
+$darkRed: #ef525e;
+
+$orange: #ffb12a;
+$yellow: #ffb12a;
+$greenShade1: #3bd6d0;
+
+//disabled
+$disabled: #e4e6ea;
+
+//Inteagrations
+$google: #4285f4;
+$outlook: #05a6f0;
+
+$salesforce: #00a1e0;
+$hubspot: #ff7a59;

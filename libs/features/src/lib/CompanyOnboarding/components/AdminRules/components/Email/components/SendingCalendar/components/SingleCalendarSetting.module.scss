@@ -1,0 +1,88 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.singleCalendarSetting {
+	.title {
+		font-weight: 600;
+		font-size: 1rem;
+		display: inline-block;
+		&::first-letter {
+			text-transform: capitalize;
+		}
+	}
+
+	.description {
+		font-size: 1rem;
+		margin-top: 0.4rem;
+		margin-bottom: 0.5rem;
+		color: $lightBlue;
+	}
+
+	.setting {
+		margin-bottom: 2rem;
+	}
+
+	.dayBtn {
+		padding: 11px 12px;
+		width: 60px !important;
+		font-size: 0.9rem;
+	}
+	// &.exception {
+	// 	border-radius: 10px;
+	// 	padding: 15px 20px;
+	// }
+	.header {
+		:nth-child(1) {
+			margin-bottom: 1.5rem;
+		}
+	}
+	.switchTab {
+		margin-bottom: 1rem;
+	}
+	.inputBox {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+	.timeSettings {
+		display: flex;
+		align-items: center;
+		margin-top: 1rem;
+		gap: 1.5rem;
+
+		div {
+			width: fit-content;
+		}
+
+		span {
+			width: 7px;
+			height: 2px;
+			background: $black;
+		}
+	}
+
+	.waitTime {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+
+		span {
+			display: inline-block;
+			&::first-letter {
+				text-transform: capitalize;
+			}
+		}
+
+		> input {
+			text-align: center;
+		}
+		.select {
+			text-transform: capitalize;
+		}
+	}
+
+	.timeBetweenBtn {
+		height: 35px;
+		font-size: 1.1rem;
+		border-radius: 5px;
+	}
+}

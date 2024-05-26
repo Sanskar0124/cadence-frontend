@@ -1,0 +1,111 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.importCsvModal {
+	min-width: 478px;
+	max-width: 542px;
+	.title {
+		margin-left: 30px;
+		margin-bottom: 20px;
+	}
+	.inputFieldsBox {
+		display: flex;
+		gap: 20px;
+		flex-direction: column;
+		margin-top: 40px;
+		.prospecting {
+			display: flex;
+			flex-direction: column;
+			gap: 30px;
+			& > div {
+				display: flex;
+				gap: 10px;
+				& > div {
+					&:first-child {
+						display: flex;
+					}
+					&:last-child {
+						span {
+							display: flex;
+							align-items: center;
+							font-size: 1.1rem;
+							font-weight: 600;
+							margin-bottom: 3px;
+							.prospecting {
+								margin-left: 6px;
+								border-radius: 20px;
+								background: linear-gradient(
+									124deg,
+									rgba(162, 130, 232, 0.1) 0%,
+									rgba(56, 70, 146, 0.1) 48.44%,
+									rgba(68, 153, 233, 0.1) 100%
+								);
+								color: $mainPurple;
+								padding: 8px 12px;
+								text-transform: uppercase;
+								font-size: 0.71rem;
+							}
+						}
+					}
+				}
+				&:last-child {
+					& > div:first-child {
+						transform: translateY(4.3px);
+					}
+				}
+			}
+		}
+	}
+	.sampleLink {
+		display: flex;
+		align-items: center;
+		margin-top: 10px;
+		> span {
+			font-size: 1rem;
+			font-weight: 400;
+			> a {
+				font-size: 1rem;
+				font-weight: 400;
+				text-decoration-line: underline;
+				color: #037dfc;
+			}
+		}
+		> a {
+			cursor: pointer;
+			padding: 6px 5px;
+			width: fit-content;
+			border-radius: 8px;
+			display: flex;
+			align-items: center;
+			font-size: 1rem;
+			font-weight: 400;
+			text-decoration-line: underline;
+			color: #037dfc;
+			gap: 7px;
+			& > span::first-letter {
+				text-transform: capitalize;
+			}
+			&:hover {
+				background: rgba(3, 125, 252, 0.08);
+				transition: 0.2s ease-in-out;
+			}
+		}
+	}
+	.helpLinks {
+		display: flex;
+		flex-direction: column;
+		gap: 0.3rem;
+		> *:first-child {
+			margin-top: 20px;
+		}
+		a {
+			cursor: pointer;
+			color: $blue;
+			font-weight: 400;
+			text-decoration: underline;
+			width: fit-content;
+		}
+	}
+	.importLeadsBtn {
+		margin-top: 40px;
+	}
+}

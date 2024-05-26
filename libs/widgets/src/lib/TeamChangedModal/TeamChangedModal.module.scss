@@ -1,0 +1,25 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.modal {
+	max-width: 440px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	padding: 30px 20px;
+	.heading {
+		font-size: 1.42rem;
+		font-weight: 700;
+		margin: 20px 0 10px;
+	}
+	.desc {
+		margin: 10px 0 0;
+		padding: 0 20px;
+		text-align: center;
+		line-height: 18px;
+		& > span {
+			color: $lightBlue;
+			font-weight: 600;
+		}
+	}
+}

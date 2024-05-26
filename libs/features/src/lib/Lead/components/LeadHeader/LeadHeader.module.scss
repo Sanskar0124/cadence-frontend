@@ -1,0 +1,56 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.leadHeader {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 1rem;
+
+	> .left {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: space-between;
+		gap: 0.75rem;
+
+		> h4 {
+			font-size: 1.1rem;
+		}
+	}
+
+	> .right {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+
+		.showTooltip {
+			display: block;
+		}
+
+		.btn {
+			background: #fff;
+			box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+			border-radius: 15px;
+			font-weight: 600;
+		}
+
+		.btnContent {
+			display: inline-block;
+			// align-items: center;
+			// gap: 0.75rem;
+			// color: $black;
+			color: $lightBlue;
+			&::first-letter {
+				text-transform: capitalize;
+			}
+		}
+		.qual {
+			color: $lightBlue;
+			text-transform: capitalize;
+			max-width: 150px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+}

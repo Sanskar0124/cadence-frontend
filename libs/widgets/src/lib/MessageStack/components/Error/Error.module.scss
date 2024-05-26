@@ -1,0 +1,113 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.errorBox {
+	position: relative;
+	width: 400px;
+	max-width: 400px;
+	min-height: 50px;
+	height: max-content;
+	overflow: auto;
+	background: $redGradient;
+	padding: 15px 35px 15px 12px;
+	color: $white;
+	border-radius: 15px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	overflow-x: hidden;
+
+	@keyframes animateAlertIn {
+		0% {
+			transform: translateX(300px);
+		}
+
+		100% {
+			transform: translateX(0px);
+		}
+	}
+
+	&.isActive {
+		animation: animateAlertIn 0.25s ease-in;
+	}
+	&.isOnClick {
+		cursor: pointer;
+	}
+	.iconcontainer {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		position: absolute;
+		top: 13px;
+		right: 8px;
+	}
+	.copyIcon {
+		cursor: pointer;
+	}
+
+	.closeIcon {
+		cursor: pointer;
+	}
+	.dropdownArrow {
+		position: absolute;
+		top: 13px;
+		right: 40px;
+		cursor: pointer;
+	}
+	.errorText {
+		font-size: 1rem;
+		font-weight: 600;
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		padding-right: 20px;
+
+		svg {
+			margin-right: 10px;
+			min-width: 20px;
+			min-height: 20px;
+		}
+	}
+	.description {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 10px;
+		margin-top: 20px;
+		margin-left: 8px;
+		width: 100%;
+
+		.errorId {
+			font-size: 14px;
+			font-weight: 600;
+		}
+		.errrorDesc {
+			display: -webkit-box;
+			max-width: 350px;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			font-size: 14px;
+			font-weight: 400;
+		}
+		.notTurncate {
+			text-align: justify;
+			max-width: 350px;
+			height: fit-content;
+			font-size: 14px;
+			font-weight: 400;
+		}
+	}
+
+	.showText {
+		margin-top: 8px;
+		margin-left: 10px;
+		height: max-content;
+		width: max-content;
+		font-size: 1rem;
+		font-weight: 600;
+		overflow: hidden;
+		cursor: pointer;
+		border-bottom: 1px solid #ffffff;
+	}
+}

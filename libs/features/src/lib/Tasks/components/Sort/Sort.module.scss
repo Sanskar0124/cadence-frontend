@@ -1,0 +1,90 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.sortConatiner {
+	margin-right: 20px;
+	position: relative;
+	.sortButton {
+		border: none;
+		border-radius: 20px;
+		height: 45px;
+		width: 45px;
+		background: $white;
+		color: $lightBlue;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&.active {
+			color: $white;
+			background: $primaryGradient;
+		}
+	}
+	.sorting {
+		position: absolute;
+		&::before {
+			content: "";
+			background-color: $white;
+			width: 15px;
+			height: 15px;
+			position: absolute;
+			left: 50%;
+			top: 0;
+			transform: translate(-50%, -50%) rotate(45deg);
+		}
+		position: absolute;
+		top: 130%;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 500px;
+		padding: 20px;
+		display: none;
+		background: $white;
+		box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+		border-radius: 10px;
+		&.active {
+			display: block;
+		}
+		.header {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 20px;
+			span,
+			button {
+				color: #000000;
+				font-weight: 600;
+			}
+			button {
+				border: none;
+				background: none;
+			}
+		}
+		.container {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 40px;
+			button {
+				display: block;
+				background-color: #f6f6f5;
+				color: $black;
+				height: 40px;
+				width: 100%;
+				text-align: left;
+				padding: 0 10px;
+				border-radius: 10px;
+				margin: 5px 0;
+				border: none;
+				display: flex;
+				align-items: center;
+				svg {
+					margin-right: 10px;
+				}
+				&.active {
+					color: $white;
+					background: $primaryGradient;
+				}
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+		}
+	}
+}

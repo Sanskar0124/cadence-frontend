@@ -1,0 +1,27 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.integrationStatusModal {
+	min-width: 400px;
+	.header {
+		margin-bottom: 2.3rem;
+	}
+	.body {
+		margin-bottom: 1rem;
+		.title {
+			font-weight: 700;
+			color: $lightBlue;
+			margin-bottom: 0.2rem;
+		}
+		.label {
+			margin-bottom: 1rem;
+			font-weight: 400;
+			text-transform: none;
+		}
+		.input {
+			margin-bottom: 2rem;
+		}
+	}
+	.footer {
+		margin-bottom: 0.7rem;
+	}
+}

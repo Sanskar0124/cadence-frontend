@@ -1,0 +1,41 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.boxInvite {
+	width: 100%;
+	min-height: 114px;
+	max-height: 312px;
+	padding: 7px;
+	background: $white;
+	border: 1px solid #dadce0;
+	border-radius: 15px;
+	overflow-y: scroll;
+
+	.invites {
+		width: 100%;
+		height: max-content;
+		display: flex;
+		flex-wrap: wrap;
+
+		.invite {
+			height: max-content;
+			width: max-content;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 6px 12px;
+			margin: 3px;
+			background: $whiteShade1;
+			border-radius: 10px;
+			gap: 6px;
+
+			.close {
+				width: 13px;
+				height: 13px;
+				color: $white;
+				background: $veryLightBlue;
+				border-radius: 50%;
+				cursor: pointer;
+			}
+		}
+	}
+}

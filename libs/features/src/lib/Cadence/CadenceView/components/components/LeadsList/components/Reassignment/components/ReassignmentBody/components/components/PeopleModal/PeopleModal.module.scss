@@ -1,0 +1,53 @@
+.peopleModal {
+	width: 100%;
+	max-width: 600px;
+
+	.heading {
+		margin-right: 32px;
+		margin-bottom: 40px;
+		font-size: 1.2rem;
+		font-weight: 700;
+
+		button {
+			color: #037dfc !important;
+			display: flex;
+			align-items: center;
+			gap: 12px;
+
+			span {
+				font-size: 14px;
+				font-weight: 400;
+				background: none;
+				border: none;
+				&::first-letter {
+					text-transform: capitalize;
+				}
+			}
+		}
+	}
+
+	.body {
+		display: flex;
+		flex-direction: column;
+
+		.searchBar {
+			border: 1px solid #dadce0;
+			border-radius: 20px;
+			position: relative;
+		}
+
+		.leadsList {
+			height: 452px;
+			margin-top: 30px;
+			padding: 0 10px;
+			display: flex;
+			flex-direction: column;
+			overflow-y: scroll;
+			gap: 22px;
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
+		}
+	}
+}

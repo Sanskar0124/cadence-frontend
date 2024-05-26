@@ -1,0 +1,281 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.hidden {
+	display: none !important;
+}
+
+.templateCard {
+	cursor: pointer;
+	display: grid;
+	padding: 10px;
+	padding-top: 0.2rem;
+	padding-bottom: 0.2rem;
+	transition: width 0.25s ease-in-out;
+	// grid-template-columns: 15% 35%  30% 20%;
+	grid-template-columns: 20% 40% 25% 15%;
+
+	&.other {
+		&.compressed {
+			grid-template-columns: 30% 45% 25%;
+		}
+	}
+	&.email {
+		display: grid;
+		grid-template-columns: 14% 29% 15% 31% 11%;
+
+		&.compressed {
+			grid-template-columns: 24% 27% 49%;
+		}
+	}
+
+	&:hover,
+	&.active {
+		background-color: #f0f8fe;
+		border-radius: 20px;
+		> td {
+			border: 10px solid #f0f8fe;
+		}
+
+		> td:first-of-type {
+			border-radius: 20px 0 0 20px;
+			border-left: 10px solid #f0f8fe;
+			border-top: 10px solid #f0f8fe;
+		}
+
+		> td:last-of-type {
+			border-radius: 0 20px 20px 0;
+			border-right: 10px solid #f0f8fe;
+			border-top: 10px solid #f0f8fe;
+		}
+		td.templateCardStats {
+			border: none;
+		}
+	}
+	&.disabled {
+		&:hover {
+			background-color: initial;
+			cursor: unset;
+		}
+	}
+	align-items: center;
+	color: $veryLightBlue;
+
+	> td {
+		border: 10px solid #fff;
+		padding: 3px 0px;
+		height: 100%;
+	}
+
+	> td:first-of-type {
+		border-radius: 20px 0 0 20px;
+		border-left: 10px solid #fff;
+		border-top: 10px solid #fff;
+	}
+
+	> td:last-of-type {
+		border-radius: 0 20px 20px 0;
+		border-right: 10px solid #fff;
+		border-top: 10px solid #fff;
+		display: flex;
+
+		align-items: center;
+	}
+
+	> td:nth-child(4),
+	> td:nth-child(3) {
+		align-items: center;
+	}
+
+	// >td:nth-child(3){
+	// 	justify-content: center;
+	// }
+
+	> td:nth-child(5) {
+	}
+	.templateCardName {
+		.templateName {
+			font-weight: 600;
+			color: $black;
+			margin-bottom: 4px;
+		}
+
+		.templateSentCount {
+			color: $lightBlue;
+			font-size: 12px;
+			margin-bottom: 4px;
+		}
+
+		.templateCreationDate {
+			color: $veryLightBlue;
+			font-size: 12px;
+		}
+	}
+
+	.templateCardText {
+		color: $black;
+		font-weight: 400;
+
+		p {
+			&:first-child {
+				margin-bottom: 0.5rem;
+			}
+		}
+	}
+
+	td.templateCardName p {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		word-break: break-all;
+	}
+
+	td.templateCardText p {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box !important;
+		&:first-child {
+			-webkit-line-clamp: 1;
+			-webkit-box-orient: vertical;
+			white-space: normal;
+			word-break: break-all;
+		}
+		&:last-child {
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			white-space: normal;
+			word-break: break-all;
+		}
+	}
+
+	td.templateCardCreatedBy {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 1rem;
+
+		.profile {
+			position: relative;
+			.userProfilePicture {
+				display: table-cell;
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				object-fit: cover;
+			}
+
+			.subdepartmentProfilePicture {
+				width: 28px;
+				height: 28px;
+				border: 2px solid $white;
+				background-color: $lightBlue;
+				border-radius: 50%;
+				position: absolute;
+				transform: translate(50%, -50%);
+			}
+		}
+
+		.createdByDetails {
+			display: flex;
+			flex-direction: column;
+			height: 48px;
+			gap: 2px;
+			// margin-top: 12px;
+			justify-content: center;
+
+			span {
+				&:first-child {
+					color: $black;
+					margin-bottom: 2px;
+				}
+
+				&:last-child {
+					color: $lightBlue;
+					font-size: 12px;
+				}
+			}
+		}
+	}
+
+	td.templateCardStats {
+		border: none;
+		.statistics {
+			display: flex;
+			padding-left: 4px;
+			padding-right: 4px;
+			align-items: center;
+			gap: 12px;
+			width: 100%;
+			height: 100%;
+
+			& > div > div {
+				display: flex;
+				grid-template-columns: repeat(5, 1fr);
+				align-items: center;
+				justify-content: center;
+				gap: 0.5em;
+				padding: 6px 8px;
+				border-radius: 100px;
+				font-weight: 600;
+			}
+
+			.stat {
+				background: $primaryGradientLight;
+				// max-width: 80px;
+				& > h3 {
+					font-size: 13px;
+					font-weight: 600 !important;
+					background: $primaryGradient;
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+				}
+			}
+			.statRed {
+				background: $redGradient1;
+				& > h3 {
+					font-size: 13px;
+					font-weight: 600;
+					background: $redShade2;
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+				}
+			}
+		}
+		button {
+			background: none;
+			border: none;
+			color: $darkRed;
+			&:nth-of-type(1) {
+				margin-left: 1.5em;
+			}
+			&:nth-of-type(2) {
+				margin-left: 7px;
+			}
+		}
+	}
+	.templateCardActions {
+		> div {
+			display: flex;
+			justify-content: space-around;
+			gap: 10px;
+			position: relative;
+			> div:first-of-type > button > div > svg {
+				height: 16px;
+				width: 16px;
+				transform: translateY(2px);
+			}
+			> div:nth-of-type(2) > button > div > svg {
+				height: 16px;
+				width: 16px;
+				transform: translateY(2px);
+			}
+
+			.moreButton svg {
+				transform: translateY(-2px);
+			}
+			.menuOptionBtn {
+				// padding: 10px;
+				text-transform: capitalize;
+			}
+		}
+	}
+}

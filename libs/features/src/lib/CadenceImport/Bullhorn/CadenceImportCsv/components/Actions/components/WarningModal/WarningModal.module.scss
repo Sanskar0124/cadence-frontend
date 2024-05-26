@@ -1,0 +1,221 @@
+// Modal CSS
+// Modal CSS
+.WarningModal {
+	width: 65%;
+
+	.header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 1rem;
+		margin-bottom: 3rem;
+
+		.btnRemoveSelected {
+			width: 100px;
+			height: 39px;
+			// background: #e4e6ea;
+			font-size: 14px;
+			font-weight: 600;
+			margin-right: 3rem;
+			border-radius: 15px;
+
+			// &:hover {
+			// 	background: #e4e6ea;
+			// }
+		}
+	}
+
+	.subHeader {
+		margin-bottom: 1.5rem;
+		.title {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+		}
+	}
+
+	.issuesReports {
+		max-height: 400px;
+		overflow-y: scroll;
+		&::-webkit-scrollbar {
+			// display: none;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: #ffd58c;
+		}
+	}
+
+	.unactiveCollapse:hover {
+		background: #fff5e1;
+	}
+
+	.collapsibleContainer {
+		background: #ffb12a0f;
+
+		position: relative;
+		margin-bottom: 1rem;
+		padding-bottom: 0.4rem;
+
+		.header {
+			width: 93%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding-left: 7px;
+			position: relative;
+			margin-bottom: 0rem;
+
+			.title {
+				// color: #fb7a96;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				color: #ffb12a;
+			}
+		}
+
+		// .tableWrapper{
+		// 	max-height: 200px;
+		// 	overflow-y: scroll;
+		// 	&::-webkit-scrollbar {
+		// 		// display: none;
+		// 	}
+		// }
+
+		.table {
+			.tableRow {
+				.checkBox {
+					height: 20px;
+					width: 20px;
+				}
+			}
+			.checkBox {
+				height: 20px;
+				width: 20px;
+
+				// input:checked ~  span{
+				// 	background-color: red;
+				// }
+
+				& > span {
+					transform: translateY(-10px);
+					border-radius: 8px;
+					height: 20px;
+					width: 20px;
+				}
+			}
+
+			thead tr th {
+				text-transform: uppercase;
+				&:nth-child(1) {
+					// width: 50px;
+					// text-align: center;
+				}
+			}
+
+			tbody {
+				tr {
+					height: 64px;
+
+					cursor: pointer;
+
+					> td {
+						// overflow: hidden;
+						> span {
+							display: inline-block;
+							width: 100px;
+							padding: 5px;
+							border-radius: 6px;
+							color: #fff;
+							text-align: center;
+							font-weight: 500;
+						}
+					}
+				}
+			}
+
+			td:nth-of-type(1),
+			th:nth-of-type(1),
+			th:nth-of-type(2),
+			td:nth-of-type(2) {
+				max-width: 40px;
+			}
+
+			th:nth-of-type(3),
+			th:nth-of-type(4),
+			th:nth-of-type(5),
+			th:nth-of-type(6),
+			td:nth-of-type(3),
+			td:nth-of-type(4),
+			td:nth-of-type(5),
+			td:nth-of-type(6) {
+				text-align: left;
+				max-width: 80px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+
+			td:nth-of-type(6),
+			th:nth-of-type(6) {
+				max-width: 100px;
+				text-align: center;
+			}
+
+			th:nth-of-type(7),
+			td:nth-of-type(7) {
+				max-width: 140px;
+
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+
+			th:nth-of-type(8),
+			td:nth-of-type(8) {
+				text-align: left;
+				max-width: 100px;
+			}
+
+			tr:nth-of-type(even) {
+				background: #fff5e1;
+				border-radius: 20px;
+			}
+
+			// .cadenceStatus {
+			// 	height: 30px;
+			// 	padding: 0 1rem;
+			// 	border-radius: 6px !important;
+			// }
+
+			// .name > div {
+			// 	display: flex;
+			// 	align-items: center;
+			// 	gap: 7px;
+			// }
+
+			// .actions {
+			// 	position: relative;
+			// 	.buttons {
+			// 		display: flex;
+			// 		flex-direction: column;
+			// 		gap: 5px;
+			// 	}
+			// 	.dotsBtn {
+			// 		width: 50px;
+			// 		height: 40px;
+			// 		border-radius: 15px;
+			// 		box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+			// 		text-align: center;
+			// 		display: flex;
+			// 		align-items: center;
+			// 		text-align: center;
+			// 		justify-content: center;
+			// 		svg {
+			// 			transform: translateY(-3px);
+			// 		}
+			// 	}
+			// }
+		}
+	}
+}

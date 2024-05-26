@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" translate="no" class="notranslate">
+	<head>
+		<meta charset="utf-8" name="google" content="notranslate" />
+		<title>Ringover Cadence</title>
+		<base href="/" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			rel="icon"
+			type="image/x-icon"
+			href="https://storage.googleapis.com/apt-cubist-307713.appspot.com/cadence/favicon/favicon.png"
+			integrity="sha512-c9lf9WcC+zddVXyXi3hUb533SsMhmKGtGP5agYVqERYDYJxPJUiq2AzDj2BKl0j6Xtz/EAkZZKFKc8RxH3n9oQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Open+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<script>
+			//redirect root to /crm
+			window.location.pathname === "/" && (() => (window.location.href = "/crm"))();
+
+			global = globalThis; // fix for "global not defined" error
+
+			let userInfo = JSON.parse(localStorage.getItem("userInfo"))?.userInfo;
+
+			!(function (t, e) {
+				var o, n, p, r;
+				e.__SV ||
+					((window.posthog = e),
+					(e._i = []),
+					(e.init = function (i, s, a) {
+						function g(t, e) {
+							var o = e.split(".");
+							2 == o.length && ((t = t[o[0]]), (e = o[1])),
+								(t[e] = function () {
+									t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+								});
+						}
+						((p = t.createElement("script")).type = "text/javascript"),
+							(p.async = !0),
+							(p.src = s.api_host + "/static/array.js"),
+							(r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r);
+						var u = e;
+						for (
+							void 0 !== a ? (u = e[a] = []) : (a = "posthog"),
+								u.people = u.people || [],
+								u.toString = function (t) {
+									var e = "posthog";
+									return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e;
+								},
+								u.people.toString = function () {
+									return u.toString(1) + ".people (stub)";
+								},
+								o =
+									"capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(
+										" "
+									),
+								n = 0;
+							n < o.length;
+							n++
+						)
+							g(u, o[n]);
+						e._i.push([i, s, a]);
+					}),
+					(e.__SV = 1));
+			})(document, window.posthog || []);
+
+			posthog.init("phc_yklePhVtQkDraIp4jC2FgLtLeJlGfwtH8pHV0keitFP", {
+				disable_session_recording: true,
+				loaded: function () {
+					posthog.identify(userInfo?.user_id, {
+						team_id: userInfo?.ringover_team_id,
+						email: userInfo?.email,
+					});
+					posthog.group("company", userInfo?.ringover_team_id, {
+						name: userInfo?.company_name,
+					});
+				},
+			});
+
+			(function (g, u, i, d, e, s) {
+				g[e] = g[e] || [];
+				var f = u.getElementsByTagName(i)[0];
+				var k = u.createElement(i);
+				k.async = true;
+				k.src = "https://static.userguiding.com/media/user-guiding-" + s + "-embedded.js";
+				f.parentNode.insertBefore(k, f);
+				if (g[d]) return;
+				var ug = (g[d] = { q: [] });
+				ug.c = function (n) {
+					return function () {
+						ug.q.push([n, arguments]);
+					};
+				};
+				var m = [
+					"previewGuide",
+					"finishPreview",
+					"track",
+					"identify",
+					"triggerNps",
+					"hideChecklist",
+					"launchChecklist",
+				];
+				for (var j = 0; j < m.length; j += 1) {
+					ug[m[j]] = ug.c(m[j]);
+				}
+			})(window, document, "script", "userGuiding", "userGuidingLayer", "626383378ID");
+
+			const getCreatedAt = () => {
+				const date = new Date(
+					userInfo?.created_at?.replace(/-/g, "\/").replace(/T.+/, "")
+				);
+				return `${date.getFullYear()}/${(date.getMonth() + 1)
+					.toString()
+					.padStart(2, "0")}/${date.getDate().toString().padStart(2, "0")}`;
+			};
+
+			window.userGuiding.identify(userInfo?.user_id, {
+				name: `${userInfo?.first_name} ${userInfo?.last_name}`,
+				email: `${userInfo?.email}`,
+				created_at: getCreatedAt(),
+				isTrial: userInfo?.is_trial_active,
+				is_onboarding_complete: userInfo?.is_onboarding_complete,
+				integration_type: userInfo?.integration_type,
+				mail_integration_type: userInfo?.mail_integration_type,
+				language: userInfo?.language,
+				role: userInfo?.role,
+				[`is_${userInfo?.mail_integration_type}_token_expired`]:
+					userInfo?.[`is_${userInfo?.mail_integration_type}_token_expired`],
+			});
+		</script>
+	</head>
+	<body class="notranslate">
+		<div id="root"></div>
+	</body>
+</html>

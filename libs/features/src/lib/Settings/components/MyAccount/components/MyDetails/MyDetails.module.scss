@@ -1,0 +1,82 @@
+@import "libs/themes/src/lib/styles/variables";
+@import "../../../../Settings.module.scss";
+
+.container {
+	.resetPassTitle {
+		display: block;
+		margin-top: 70px;
+	}
+
+	.settings {
+		.details {
+			display: flex;
+			.loader {
+				margin-left: 10px;
+				div {
+					border-color: rgba(3, 125, 252, 1) transparent transparent transparent;
+				}
+			}
+			.image {
+				position: relative;
+				margin-right: 20px;
+				border-radius: 50%;
+				width: 70px;
+				height: 70px;
+				overflow: hidden;
+				img {
+					width: 70px;
+					height: 70px;
+				}
+				.fileLabel {
+					cursor: pointer;
+					z-index: 10;
+					background: linear-gradient(
+						106.52deg,
+						rgba(166, 135, 233, 0.4) -11.57%,
+						rgba(135, 151, 233, 0.4) 50.39%,
+						rgba(82, 162, 235, 0.4) 116.35%
+					);
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					display: none;
+					align-items: center;
+					justify-content: center;
+					color: $white;
+				}
+				&:hover .fileLabel {
+					display: flex;
+				}
+			}
+			.info {
+				display: flex;
+				flex-direction: column;
+				gap: 2px;
+				.name {
+					font-weight: 600;
+					min-width: 100px;
+					min-height: 15px;
+				}
+				.role {
+					text-transform: capitalize;
+					min-width: 150px;
+					min-height: 15px;
+				}
+				.email {
+					margin-top: 3px;
+					min-width: 150px;
+					min-height: 15px;
+					color: $lightBlue;
+				}
+				> button {
+					transform: translateX(-5px);
+				}
+				.success {
+					color: $green;
+				}
+			}
+		}
+	}
+}

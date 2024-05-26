@@ -1,0 +1,32 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.warningModal {
+	width: 25vw;
+	cursor: default;
+	gap: 1.7rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	.leaveWarningModal {
+		margin-top: 2rem;
+		font-weight: 500;
+		div {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 1rem;
+			text-align: center;
+			p {
+				color: black;
+				font-size: 16px;
+				font-weight: 700;
+				margin-bottom: 5px;
+				margin-top: 15px;
+			}
+		}
+	}
+	.leaveButton {
+	}
+}

@@ -1,0 +1,78 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.linkedinExtension {
+	overflow-y: scroll;
+
+	.header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 1rem;
+
+		> .left {
+			.titleContainer {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				margin-top: 1rem;
+
+				.title {
+					font-size: 1.5rem;
+				}
+			}
+		}
+
+		> .right {
+			display: flex;
+			align-items: center;
+			gap: 40px;
+			> .inputGroup {
+				display: flex;
+				align-items: center;
+				gap: 15px;
+
+				label {
+					margin-bottom: 0;
+				}
+			}
+			.saveBtn {
+				text-transform: capitalize;
+			}
+
+			> div {
+				display: flex;
+				align-items: center;
+				justify-content: flex-end;
+				gap: 10px;
+
+				.activated {
+					display: flex;
+					align-items: center;
+					gap: 1rem;
+					padding: 1rem;
+					background: $whiteShade1;
+					border: 1px solid $mainPurple;
+					border-radius: 20px;
+
+					p {
+						margin-right: 1rem;
+					}
+				}
+			}
+		}
+	}
+
+	> .integrationSettings {
+		width: 100%;
+	}
+
+	> .main {
+		width: 100%;
+		height: calc(100vh - 300px);
+		background: #fff;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+}

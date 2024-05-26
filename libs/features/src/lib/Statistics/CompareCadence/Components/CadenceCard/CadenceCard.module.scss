@@ -1,0 +1,128 @@
+@import "libs/themes/src/lib/styles/variables";
+
+@mixin display-flex {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+@mixin display-flex-column {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.cardcontainer {
+	@include display-flex();
+	justify-content: center;
+	box-sizing: border-box;
+	width: 20rem; //292px
+	height: 14.1rem; //200px
+	background: $white;
+	border-radius: 10px;
+	flex-grow: 1;
+	position: relative;
+	&_removeicon {
+		position: absolute;
+		top: 6%;
+		right: 5%;
+		cursor: pointer;
+	}
+	&_detailscontainer {
+		@include display-flex-column();
+		justify-content: center;
+		align-items: center;
+		width: 90%;
+		gap: 10px;
+	}
+	&_cadenceicondiv {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		&_icon {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 48px;
+			height: 48px;
+			padding: 12px;
+			border-radius: 10px;
+		}
+	}
+	.name {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 20px;
+		color: $black;
+		max-width: 100%;
+		text-align: center;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.noCadence {
+		color: $lightBlue;
+		width: 100%;
+		text-align: center;
+	}
+	&_details {
+		@include display-flex();
+		padding: 0px;
+		gap: 30px;
+		width: 150px; //220px
+		height: 45px;
+		text-align: center;
+		&_values {
+			@include display-flex-column();
+			height: 45px;
+			width: 60px;
+			justify-content: center;
+			align-items: center;
+			gap: 5px;
+			&_count {
+				font-weight: 700;
+				font-size: 16px;
+				line-height: 20px;
+			}
+			&_name {
+				font-weight: 400;
+				font-size: 10px;
+				line-height: 14px;
+				color: $lightBlue;
+				text-align: center;
+				width: 100%;
+			}
+		}
+		&_cadencebtn {
+			font-weight: 600;
+			font-size: 14px;
+			line-height: 19px;
+			color: $lightBlue;
+			padding: 10px 20px;
+		}
+		&_container {
+			display: flex;
+			width: 100%;
+			justify-content: center;
+		}
+	}
+}
+.skeleton_details {
+	@include display-flex-column();
+	gap: 10px;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	.detailsPlaceholder {
+		width: 80%;
+		height: 40px;
+		border-radius: 10px;
+	}
+}
+
+@media screen and (max-width: 1150px) {
+	.cardcontainer {
+		flex-grow: 0;
+	}
+}

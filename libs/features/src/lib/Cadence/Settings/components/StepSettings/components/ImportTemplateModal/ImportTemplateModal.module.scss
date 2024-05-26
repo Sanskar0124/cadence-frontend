@@ -1,0 +1,88 @@
+@import "../../StepSettings.module.scss";
+
+.modal {
+	.title {
+		margin-top: -2px;
+		font-weight: 700;
+		font-size: 1.2rem;
+		display: inline-block;
+		&::first-letter {
+			text-transform: capitalize;
+		}
+	}
+	.templateBox {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		margin: 30px 0;
+		width: 300px;
+		max-height: 400px;
+		overflow-y: scroll;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+		.template {
+			display: flex;
+			align-items: center;
+			background: rgba(245, 246, 247, 1);
+			min-height: 50px;
+			border-radius: 20px;
+			.radio {
+				margin: 0 15px;
+				& > span {
+					border-radius: 8px;
+					height: 24px;
+					width: 24px;
+					i {
+						svg {
+							width: 1rem;
+							height: 1rem;
+						}
+					}
+				}
+			}
+			.checkbox {
+				margin: 0 15px;
+				height: 24px;
+				width: 24px;
+				& > span {
+					border-radius: 8px;
+					height: 24px;
+					width: 24px;
+					i {
+						svg {
+							width: 1rem;
+							height: 1rem;
+						}
+					}
+				}
+			}
+			.name {
+				max-width: 220px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: wrap;
+				color: $black;
+				&.active {
+					font-weight: 600;
+				}
+			}
+		}
+	}
+	.placeholder {
+		margin: 30px 0;
+		& > div {
+			margin: 10px 0;
+			height: 50px;
+			width: 300px;
+		}
+	}
+	.blankBtn,
+	.saveBtn {
+		width: 100%;
+	}
+	.blankBtn {
+		font-weight: 700;
+		margin-bottom: 10px;
+	}
+}

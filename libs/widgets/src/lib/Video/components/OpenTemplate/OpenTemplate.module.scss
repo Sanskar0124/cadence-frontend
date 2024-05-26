@@ -1,0 +1,81 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.openTemplate {
+	height: 93vh !important;
+	width: 60vw !important;
+	padding: 0 !important;
+	overflow: scroll;
+	overflow-x: hidden;
+	// display: flex;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	.headerwrapper {
+		position: sticky;
+		display: flex;
+		flex-direction: column;
+		top: 0;
+		background-color: white;
+		z-index: 99;
+		.header {
+			margin: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		.templateFilters {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			align-items: center;
+			// justify-content: center;
+			margin: 20px 0px;
+			.tabs {
+				border-radius: 20px;
+				border: 1px solid #d8ecff;
+
+				.tabBtns {
+					border-radius: 20px;
+					display: inline-flex;
+					align-items: center;
+					justify-content: center;
+					gap: 7px;
+					color: $lightBlue;
+				}
+
+				.tabBtnActive {
+					color: #fff;
+				}
+
+				.activePill {
+					border-radius: 16px;
+				}
+			}
+			.searchBar {
+				margin-top: 10px;
+			}
+		}
+	}
+	.player {
+		transition: all 3s ease-in-out;
+		border-radius: 10px;
+		overflow: hidden;
+	}
+	.list {
+		margin-top: 10px;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+	.fallback {
+		height: 70%;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: black;
+		text-align: center;
+	}
+}

@@ -1,0 +1,149 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.wrapper {
+	width: 100%;
+	height: 0px;
+	position: relative;
+
+	.container {
+		position: absolute;
+		top: 12px;
+		width: 100%;
+		height: 0;
+		padding: 10px 10px 0 10px;
+		display: flex;
+		flex-direction: column;
+		background: $white;
+		box-shadow: 0 2px 8px rgba(41, 43, 88, 0.2);
+		border-radius: 20px;
+		z-index: -100;
+		opacity: 0;
+		gap: 20px;
+
+		@keyframes animateIn {
+			0% {
+				height: 0px;
+			}
+			90% {
+				opacity: 1;
+			}
+		}
+
+		@keyframes animateOut {
+			0% {
+				opacity: 1;
+				height: 334px;
+				z-index: 100;
+			}
+			40% {
+				opacity: 1;
+			}
+			100% {
+				opacity: 0;
+				height: 0px;
+				z-index: 100;
+			}
+		}
+
+		&.open {
+			height: 334px;
+			animation: animateIn 0.5s;
+			opacity: 1;
+			z-index: 100;
+		}
+
+		&.close {
+			animation: animateOut 0.5s;
+		}
+
+		.employeeList {
+			display: flex;
+			flex-direction: column;
+			overflow-y: scroll;
+			gap: 10px;
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
+
+			& > div {
+				padding: 5px;
+				cursor: pointer;
+				border-radius: 20px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				border: 1px solid transparent;
+
+				&:hover {
+					background: #f0f8fe;
+				}
+
+				.info {
+					padding-left: 12px;
+					display: flex;
+					align-items: center;
+					gap: 10px;
+
+					.userImg {
+						height: 38px;
+						width: 38px;
+						object-fit: cover;
+						border-radius: 50%;
+					}
+
+					& > div {
+						display: flex;
+						flex-direction: column;
+
+						span {
+							&:last-child {
+								color: $lightBlue;
+							}
+						}
+					}
+				}
+
+				.tick {
+					width: 40px;
+					height: 40px;
+					background: $primaryGradient;
+					border-radius: 15px;
+					display: none;
+					align-items: center;
+					justify-content: center;
+					color: $white;
+				}
+
+				&.selected {
+					background: linear-gradient(
+						106.52deg,
+						rgba(162, 130, 232, 0.08) -11.57%,
+						rgba(126, 142, 231, 0.08) 50.39%,
+						rgba(68, 153, 233, 0.08) 116.35%
+					);
+					border: 1px solid #5b6be1;
+
+					.tick {
+						display: flex;
+					}
+
+					.info > div > span:first-child {
+						font-weight: 700;
+					}
+				}
+			}
+		}
+	}
+}
+
+.placeholder {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+	& > div {
+		width: 100%;
+		height: 40px;
+	}
+}

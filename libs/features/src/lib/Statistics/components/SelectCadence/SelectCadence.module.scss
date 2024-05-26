@@ -1,0 +1,156 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.selectCadence {
+	position: relative;
+	.selectCadenceBtn {
+		display: flex;
+		align-items: center;
+		border-radius: 15px !important;
+		gap: 10px;
+		& > span {
+			display: flex;
+			align-items: center;
+			svg {
+				color: $lightBlue;
+			}
+		}
+		& > p {
+			margin-right: 30px;
+			width: 100px;
+			font-size: 1rem;
+			font-weight: 400;
+			// color: $lightBlue;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+	.capitalize {
+		text-transform: capitalize;
+		color: $lightBlue;
+	}
+	.active {
+		color: $white;
+	}
+	.dropdown {
+		position: absolute;
+		top: 110%;
+		border-radius: 20px;
+		right: 0;
+		background: $white;
+		z-index: 10;
+		display: none;
+		flex-direction: column;
+		gap: 15px;
+		padding: 15px;
+		width: 400px;
+		box-shadow: 5px 10px 50px rgba(41, 43, 88, 0.2);
+		&.open {
+			display: flex;
+		}
+		.totalSelected {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			& > span {
+				color: $lightBlue;
+				font-weight: 600;
+				text-transform: capitalize;
+			}
+			&.currentTab {
+				padding: 0 8px 0 15px;
+			}
+		}
+		.tabs {
+			border-radius: 20px;
+			border: 1px solid #d8ecff;
+			height: 40px;
+			.tabBtns {
+				border-radius: 15px;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				text-transform: capitalize;
+				gap: 7px;
+				color: $black;
+				width: 50px;
+			}
+
+			.tabBtnActive {
+				color: #fff;
+			}
+
+			.activePill {
+				border-radius: 15px;
+			}
+		}
+		.list {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			overflow-y: scroll;
+			height: calc(100vh - 400px);
+			.cadence {
+				height: 40px;
+				padding: 5px 0 5px 15px;
+				cursor: pointer;
+				border-radius: 20px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				.info {
+					max-width: 250px;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					overflow: hidden;
+				}
+				.tick {
+					width: 40px;
+					height: 40px;
+					background: $primaryGradient;
+					border-radius: 17px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					color: $white;
+					visibility: hidden;
+				}
+				&.selected {
+					background: $primaryGradientLight;
+					.tick {
+						visibility: visible;
+					}
+					.info {
+						font-weight: 600;
+					}
+				}
+			}
+		}
+		.noCadence {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			flex-direction: column;
+			font-weight: 400;
+			// margin-top: 70px;
+			color: $veryLightBlue;
+			font-weight: 700;
+			height: calc(100vh - 400px);
+			.btnCreateCadence {
+				margin-top: 15px !important;
+			}
+		}
+	}
+	.placeholder {
+		width: 99%;
+		min-height: 50px;
+		margin: 10px 0;
+		&:first-child {
+			margin-top: 0;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

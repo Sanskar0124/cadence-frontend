@@ -1,0 +1,152 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.integration {
+	.title {
+		h2 {
+			display: inline-block;
+			&:first-letter {
+				text-transform: capitalize;
+			}
+		}
+	}
+
+	.options {
+		margin-top: 25px;
+		.subHeadings {
+			color: #567191;
+			font-weight: 600;
+		}
+	}
+	.settings {
+		min-width: 248px;
+		max-width: max-content;
+		// margin-top: 4%;
+		margin-top: 10px;
+		& > div {
+			cursor: pointer;
+			margin: 10px 0;
+			.connect {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				width: 100%;
+				> div {
+					display: flex;
+					align-items: center;
+				}
+			}
+			&:first-child {
+				margin-top: 0;
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+			display: flex;
+			align-items: center;
+			background-color: #f5f6f7 !important;
+			height: 50px;
+			padding: 0 20px;
+			border-radius: 20px;
+			color: #394759;
+			svg {
+				margin-right: 10px;
+				width: 40px;
+				height: 40px;
+			}
+			&.active {
+				border: 1px solid #a282e8;
+			}
+			button {
+				font-size: 1rem;
+				margin-left: 20px;
+			}
+		}
+	}
+	.calendlyDes {
+		color: #567191;
+	}
+	.checkBoxParent {
+		margin-top: 16px;
+		margin-bottom: 16px;
+		width: 285px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		::first-letter {
+			text-transform: capitalize;
+		}
+		.active {
+			border: 1px solid #a282e8;
+		}
+		.disabled {
+			opacity: 0.5;
+			cursor: not-allowed !important;
+		}
+		.newCheckbox {
+			cursor: pointer;
+			background: #f5f6f7;
+			width: 137px;
+			height: 44px;
+			border-radius: 15px;
+			// border: 1px solid #a282e8;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			flex-direction: row;
+			p {
+				font-weight: 400;
+				font-size: 12px;
+			}
+		}
+
+		.radio {
+			margin: 0 15px;
+			& > span {
+				border-radius: 8px;
+				height: 24px;
+				width: 24px;
+				opacity: 1;
+				cursor: pointer;
+				border: 1px solid #e4e7eb;
+				i {
+					svg {
+						width: 1rem;
+						height: 1rem;
+					}
+				}
+			}
+		}
+	}
+	.premium {
+		margin-top: 35px;
+		p {
+			color: #567191 !important;
+			font-size: 14px !important;
+		}
+	}
+	.normal {
+		margin-top: 35px;
+
+		.subHeadings {
+			color: #567191;
+			font-weight: 600;
+		}
+		p {
+			color: #567191 !important;
+			font-size: 14px !important;
+		}
+		.calendlyLink {
+			margin-top: 10px;
+
+			button {
+				width: fit-content;
+			}
+		}
+	}
+}
+.capitalize {
+	display: inline-block;
+	&::first-letter {
+		text-transform: capitalize;
+	}
+}

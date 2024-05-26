@@ -1,0 +1,260 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.sidebar {
+	height: calc(100vh - 200px);
+	width: 0;
+	display: none;
+	overflow: scroll;
+
+	white-space: nowrap;
+	&.preview {
+		padding: 20px;
+		padding-top: 0;
+		display: block;
+		width: 100%;
+	}
+
+	&::-webkit-scrollbar {
+		display: none;
+		width: 0;
+	}
+
+	&.launch {
+		padding: 20px;
+		padding-top: 0;
+		display: block;
+		transition: all 0.3s ease-in-out;
+		width: 100%;
+	}
+
+	.header {
+		position: sticky;
+		top: 0;
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		background: $white;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		.closeBtn {
+			z-index: 3;
+			border: none;
+			background: none;
+			color: $lightBlue;
+			width: 1.7rem;
+			height: 1.7rem;
+			border-radius: 50%;
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			& > svg {
+				width: 100%;
+				height: 100%;
+			}
+
+			&:hover {
+				background: $whiteShade1;
+			}
+		}
+
+		.templateSidebarActions {
+			// position: relative;
+			display: flex;
+			> div {
+				padding-left: 15px;
+			}
+			.editBtn svg {
+				transform: translateY(2px);
+			}
+
+			// .modeDropDownWrapper {
+			// 	position: relative;
+			// }
+
+			// .moreBtnDropDown {
+			// 	z-index: 9999;
+			// }
+
+			.moreBtn svg {
+				transform: translateY(-2px);
+			}
+
+			.menuOptionBtn {
+				padding: 5px 10px;
+
+				text-transform: capitalize;
+				> div {
+					display: flex;
+					align-items: center;
+					vertical-align: middle;
+					> div {
+						&:first-of-type {
+							padding-right: 5px;
+							> svg {
+								padding-top: 4.33px;
+							}
+						}
+					}
+					> div {
+						text-transform: capitalize;
+					}
+
+					.viewed {
+						text-transform: capitalize;
+					}
+
+					.clickedBtn {
+						text-transform: capitalize;
+					}
+
+					.unsubscribed {
+						text-transform: capitalize;
+					}
+				}
+				&:hover {
+					background: none;
+					cursor: default;
+				}
+				* {
+					font-size: 12px;
+				}
+
+				&.stat * {
+					color: $mainPurple;
+				}
+				&.statRed * {
+					color: $red;
+				}
+			}
+
+			.moreOptionBtn {
+				width: 173px;
+				padding: 10px 15px;
+				text-transform: capitalize;
+			}
+		}
+	}
+
+	.body {
+		max-width: 26vw;
+		.templateName {
+			font-weight: 700;
+			font-size: 16px;
+			color: $black;
+		}
+		.templateUnseen {
+			font-weight: 400;
+			font-size: 10px;
+			color: $lightBlue;
+		}
+
+		.templateSubject {
+			padding-top: 20px;
+			.templateSubjectHeader {
+				white-space: pre-line;
+				word-break: break-word;
+				font-weight: 600;
+				font-size: 14px;
+				color: $lightBlue;
+			}
+			.templateSubjectBody {
+				white-space: pre-line;
+				word-break: break-word;
+				font-weight: 400;
+				font-size: 14px;
+				color: $black;
+			}
+		}
+		.templateBody {
+			// position: relative;
+			// padding-top: 20px;
+			margin-top: 20px;
+			.templateBodyHeader {
+				font-weight: 600;
+				font-size: 14px;
+				color: $lightBlue;
+				text-transform: capitalize;
+				white-space: pre-line;
+				word-break: break-word;
+			}
+			.templateBodyBody {
+				font-weight: 400;
+				font-size: 14px;
+				color: $black;
+				white-space: pre-wrap;
+				white-space: pre-line;
+				word-break: break-word;
+
+				p {
+					word-wrap: break-word;
+				}
+
+				img {
+					max-width: 100%;
+				}
+
+				ul {
+					padding-left: 20px;
+				}
+			}
+
+			.videoTemplateHeader {
+				font-weight: 600;
+				font-size: 14px;
+				color: $lightBlue;
+				text-transform: capitalize;
+				white-space: pre-line;
+				word-break: break-word;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+			.player {
+				margin-top: 40px;
+				// z-index: -1;
+			}
+		}
+	}
+}
+
+.templateAttachments {
+	.templateAttachmentHeader {
+		white-space: pre-line;
+		word-break: break-word;
+		font-weight: 600;
+		font-size: 14px;
+		color: $lightBlue;
+		margin-top: 1em;
+		margin-bottom: 10px;
+	}
+	.templateAttachmentBody {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5em;
+		.attachmentContainer {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background: rgba(91, 107, 225, 0.08);
+			padding: 0.5em 0.8em;
+			border-color: #5b6be1 transparent transparent transparent;
+			color: $mainPurple;
+			border-radius: 6px;
+			svg {
+				color: $mainPurple;
+				width: 1.4em;
+				cursor: pointer;
+			}
+			p {
+				width: 90%;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+		}
+	}
+}

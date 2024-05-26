@@ -1,0 +1,42 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.createCadenceModal {
+	width: 100%;
+	max-width: 440px;
+
+	.heading {
+		margin: -2px 0 30px 0;
+
+		h3 {
+			font-size: 16px;
+			font-weight: 700;
+			color: $black;
+			display: inline-block;
+			&::first-letter {
+				text-transform: capitalize;
+			}
+		}
+	}
+
+	.main {
+		.inputGroup {
+			padding-bottom: 20px;
+			label {
+				display: inline-block;
+				text-transform: capitalize;
+			}
+
+			&:nth-last-child(1) {
+				padding-bottom: 0;
+			}
+		}
+	}
+
+	.footer {
+		margin-top: 40px;
+
+		.createBtn {
+			width: 100%;
+		}
+	}
+}

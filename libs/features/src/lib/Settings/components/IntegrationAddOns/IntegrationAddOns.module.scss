@@ -1,0 +1,19 @@
+@import "libs/themes/src/lib/styles/variables";
+@import "../../Settings.module.scss";
+
+.integrationAddOns {
+	padding: 20px;
+
+	.body {
+		margin-top: 30px;
+		height: calc(100vh - 200px);
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+		grid-auto-rows: max-content;
+		&::-webkit-scrollbar {
+			width: 0;
+			display: none;
+		}
+	}
+}

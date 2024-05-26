@@ -1,0 +1,73 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.emailSignature {
+	display: flex;
+	flex-direction: column-reverse;
+	gap: 1rem;
+	.title {
+		button {
+			font-weight: 600;
+			font-size: 1rem;
+		}
+	}
+	.settings {
+		.info {
+			h3 {
+				color: $black;
+				font-weight: 600;
+			}
+			p {
+				color: $lightBlue;
+				font-size: 0.9rem;
+			}
+		}
+		.signatures {
+			margin-top: 10px;
+			width: 420px;
+			& > div {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				height: 50px;
+				border-radius: 20px;
+				background-color: #f5f6f7;
+				margin: 10px 0;
+				padding: 5px;
+				&:first-child {
+					margin-top: 0;
+				}
+				&:last-child {
+					margin-bottom: 0;
+				}
+				.input {
+					display: flex;
+					align-items: center;
+					.name {
+						line-height: 19px;
+						margin-left: 10px;
+						width: 210px;
+						color: $black;
+						overflow: hidden;
+						white-space: nowrap;
+						text-overflow: ellipsis;
+					}
+				}
+				.buttons {
+					display: flex;
+					margin-right: 20px;
+					button {
+						font-size: 1rem;
+						font-weight: 400;
+						text-transform: capitalize;
+						&:last-child {
+							margin-left: 10px;
+						}
+					}
+				}
+				&.active {
+					border: 1px solid #a282e8;
+				}
+			}
+		}
+	}
+}

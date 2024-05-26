@@ -1,0 +1,61 @@
+@import "libs/themes/src/lib/styles/variables";
+@import "../../Settings.module.scss";
+
+.emailSetup {
+	padding: 20px;
+}
+
+.container {
+	align-items: center;
+	.settings {
+		display: flex;
+		align-items: center;
+		.greyBox {
+			width: fit-content;
+		}
+
+		.emailScope {
+			width: 424px !important;
+		}
+
+		& > a {
+			align-self: center;
+			color: $blue;
+			text-decoration: underline;
+			svg {
+				margin-right: 10px;
+			}
+		}
+	}
+}
+
+.upgradeModal {
+	width: 640px;
+	height: fit-content;
+	position: relative;
+	.stpesWrapper {
+		margin-top: 10px;
+		height: calc(100% - 98px);
+		border-radius: 15px;
+		padding: 10px;
+		.steps {
+			margin: 10px 0;
+			h2 {
+				margin: 10px 0;
+			}
+
+			p {
+				margin-bottom: 10px;
+				margin-left: 10px;
+			}
+			.boldText {
+				font-weight: 600;
+			}
+			.linktext {
+				color: #5ea5e9;
+				font-weight: 600;
+				text-decoration: underline;
+			}
+		}
+	}
+}

@@ -1,0 +1,63 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.tabNavBtn {
+	background: none;
+	border: none;
+	border-radius: 10px;
+	font-weight: 400;
+	height: 40px;
+	font-size: 1rem;
+	transition: color 0.3s ease, font-weight 0.3s ease;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&.bordered {
+		border: 2px solid $veryLightBlue;
+	}
+
+	// THEMES
+	// &.primaryAndLight {
+	// 	background: $lightBlueGradient;
+	// 	color: $black;
+
+	// 	&.active {
+	// 		background: $primaryGradient;
+	// 		color: #fff;
+	// 		border: none;
+	// 	}
+	// }
+
+	// &.primaryAndWhite {
+	// 	color: $black;
+	// 	&.active {
+	// 		color: #fff;
+	// 	}
+	// }
+
+	&.primaryAndGrey {
+		color: $lightBlue;
+		font-weight: 600;
+
+		&.active {
+			transition: color 0.3s ease, font-weight 0.3s ease;
+			border: none;
+		}
+	}
+	background-color: transparent;
+
+	&.active {
+		color: #fff;
+		font-weight: 600;
+	}
+
+	&.noAnimation {
+		padding: 0 15px;
+		border-radius: 0;
+		border-bottom: 3px solid #e3e9f9;
+		&.active {
+			border-color: $mainPurple;
+		}
+	}
+}

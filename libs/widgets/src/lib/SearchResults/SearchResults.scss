@@ -1,0 +1,33 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.search {
+	background-color: $white;
+	display: none;
+	position: absolute;
+	top: 55px;
+	max-height: 60vh;
+	overflow-y: scroll;
+	width: 100%;
+	left: 0%;
+	border-radius: 15px;
+	box-shadow: 0px 8px 25px rgba(16, 23, 57, 0.3);
+	z-index: 100000;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	&.active {
+		display: block;
+	}
+	.no-results {
+		text-align: center;
+		padding: 2rem;
+		color: $black;
+		font-weight: 500;
+		font-size: 1.3rem;
+	}
+	.error {
+		margin: 0 10px;
+	}
+}

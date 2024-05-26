@@ -1,0 +1,96 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.stepInfo {
+	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+
+	.header {
+		position: sticky;
+		top: 0;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		z-index: 1;
+		background-color: $white;
+		padding: 15px 24px;
+		.closeBtn {
+			width: 1.7rem;
+			height: 1.7rem;
+			background: none;
+			color: $lightBlue;
+			border-radius: 50%;
+			border: none;
+
+			&:hover {
+				background: $whiteShade1;
+			}
+		}
+
+		> h3 {
+			font-weight: 500;
+			font-size: 1.05rem;
+
+			span {
+				font-weight: 700;
+				margin-right: 5px;
+				font-size: 1.05rem;
+				text-transform: capitalize;
+			}
+		}
+	}
+
+	.main {
+		flex: 1;
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+		align-items: center;
+		margin: 5px 5px 15px 5px;
+		overflow: hidden;
+		.contentAndPeople {
+			width: 100%;
+
+			.mailSlider {
+				margin-bottom: 32px;
+				.tabBtn {
+					color: $lightBlue;
+					font-weight: 600;
+					font-size: 1.14rem;
+				}
+			}
+
+			.navSlider {
+				width: 300px;
+				margin: 0 auto 22px auto;
+
+				.tabs {
+					border-radius: 20px;
+					border: 1px solid #d8ecff;
+					height: 40px;
+
+					.tabBtns {
+						border-radius: 15px;
+						display: inline-flex;
+						align-items: center;
+						justify-content: center;
+						gap: 7px;
+						color: $black;
+					}
+
+					.tabBtnActive {
+						color: $white;
+					}
+
+					.activePill {
+						border-radius: 15px;
+					}
+				}
+			}
+			.contentBox {
+				overflow-y: scroll;
+			}
+		}
+	}
+}

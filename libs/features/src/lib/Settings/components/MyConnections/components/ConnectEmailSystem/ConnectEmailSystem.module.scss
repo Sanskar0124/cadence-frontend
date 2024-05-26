@@ -1,0 +1,24 @@
+@import "libs/themes/src/lib/styles/variables";
+@import "../../../../Settings.module.scss";
+
+.container {
+	align-items: center;
+	.settings {
+		button {
+			border-radius: 20px;
+			font-weight: 600;
+			p::first-letter {
+				text-transform: uppercase;
+			}
+		}
+		.greyBox {
+			width: 400px;
+			border-radius: 20px;
+			height: 50px;
+			padding-left: 20px;
+			div {
+				gap: 10px;
+			}
+		}
+	}
+}

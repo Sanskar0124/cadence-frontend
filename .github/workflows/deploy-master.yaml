@@ -1,0 +1,35 @@
+name: Deploy to Github Actions - Branch Master
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  publish-to-gcp:
+    name: SSH to Google Cloud Platform compute instances
+    runs-on: ubuntu-latest
+    steps:
+      - uses: "actions/checkout@v3"
+
+      - id: "auth"
+        uses: "google-github-actions/auth@v0"
+        with:
+          credentials_json: "${{ secrets.GCP_SA_KEY }}"
+
+      - id: "compute-ssh"
+        uses: "google-github-actions/ssh-compute@v0.1.1"
+        with:
+          instance_name: "${{ secrets.FRONTEND_MASTER}}"
+          user: "${{ secrets.USERNAME}}"
+          zone: "${{ secrets.SERVER_ZONE}}"
+          ssh_private_key: "${{ secrets.MASTER_KEY }}"
+          command: "./deploy-cadence.sh"
+
+      - id: "get-error"
+        run: |-
+          echo '${{ steps.compute-ssh.outputs.stderr }}'
+
+      - id: "get-stdout"
+        run: |-
+          echo '${{ steps.compute-ssh.outputs.stdout }}' | grep SUCCESS

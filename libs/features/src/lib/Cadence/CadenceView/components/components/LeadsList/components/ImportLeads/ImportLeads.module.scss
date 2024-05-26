@@ -1,0 +1,113 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.importLeads {
+	width: 100%;
+	height: calc(100vh - 244px);
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow-y: scroll;
+	> div {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		// @media only screen and (max-height: 710px) {
+		// 	margin-top: calc(710px - 100vh);
+		// }
+		.noLeads {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			& > span {
+				color: $veryLightBlue;
+				font-weight: 700;
+				font-size: 1.28rem;
+				line-height: 24px;
+				margin: 25px 0 5px;
+			}
+			& > p {
+				color: $veryLightBlue;
+				font-size: 1.1rem;
+				& > a {
+					color: $blue;
+					text-decoration: underline;
+				}
+			}
+		}
+		.radioBtnList {
+			margin-top: 50px;
+			display: flex;
+			align-items: center;
+			gap: 24px;
+			.radioBtn {
+				width: 264px;
+				height: 70px;
+				padding: 15px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				background: #fff;
+				border-radius: 15px;
+				cursor: pointer;
+				.leftSide {
+					display: flex;
+					align-items: center;
+					gap: 10px;
+					> p {
+						font-size: 16px;
+						font-weight: 600;
+						color: $lightBlue;
+					}
+				}
+				.rightSide {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					> span {
+						width: 40px;
+						height: 40px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						border-radius: 15px;
+						color: #fff;
+					}
+				}
+			}
+
+			.btnCenter {
+				justify-content: center !important;
+			}
+		}
+		.import {
+			height: 200px;
+			margin-top: 40px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 20px;
+			width: 40%;
+			& > p {
+				color: $veryLightBlue;
+				font-size: 1.1rem;
+				& > a {
+					color: $blue;
+					font-size: 1.1rem;
+					text-decoration: underline;
+				}
+			}
+			> button {
+				font-size: 14px;
+				font-weight: 400;
+				color: $black;
+			}
+			.dragNDropSectn {
+				width: 480px;
+				height: 163px;
+			}
+		}
+	}
+}

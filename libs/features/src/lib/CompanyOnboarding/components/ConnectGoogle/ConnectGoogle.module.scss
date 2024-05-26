@@ -1,0 +1,173 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.connectGoogleContainer {
+	position: relative;
+	border: 1px solid #e7ebff;
+	overflow-y: scroll;
+	padding: 2rem 2.4rem;
+	background-color: $white;
+	border-radius: 20px;
+	height: 100%;
+	.GoogleIcon {
+		position: absolute;
+		top: 2%;
+		right: 6.5%;
+	}
+	.subheading {
+		font-family: "Open Sans";
+		font-size: 1rem;
+		font-weight: 400;
+		line-height: 19px;
+		letter-spacing: 0px;
+		margin-bottom: 1rem;
+		display: inline-block;
+		&::first-letter {
+			text-transform: capitalize;
+		}
+	}
+	.heading {
+		display: flex;
+		align-items: center;
+		font-size: 1.5rem;
+		color: $black;
+		font-weight: 700;
+		gap: 0.5rem;
+		margin-bottom: 8px;
+		text-transform: capitalize;
+	}
+	.header {
+		margin-bottom: 2rem;
+	}
+	.body {
+		.heading {
+			font-size: 1.2rem;
+			font-weight: 700;
+		}
+		.loginGoogle {
+			.onboardingGoogleButton {
+				background: $grey !important;
+				border: none !important;
+				box-shadow: 0px 1px 1px 0px #00000026 !important;
+				border-radius: 15px !important;
+				transform: scale(0.9) translate(-15px, -5px);
+			}
+			margin-bottom: 1rem;
+		}
+		.installPKG {
+			.inputBox {
+				width: 60%;
+				position: relative;
+				.pkgLink {
+					padding-right: 1rem;
+					height: 40px;
+					font-size: 0.9rem;
+					font-weight: 400;
+					text-decoration: underline;
+				}
+				svg {
+					position: absolute;
+					right: 10px;
+					top: 26%;
+					cursor: pointer;
+				}
+				margin-bottom: 1rem;
+			}
+			.helpLinks {
+				display: flex;
+				flex-direction: column;
+				gap: 0.3rem;
+				a {
+					cursor: pointer;
+					color: $blue;
+					font-weight: 400;
+					text-decoration: underline;
+					width: fit-content;
+				}
+			}
+		}
+		.connectionsContainer {
+			margin-top: 2rem;
+			margin-bottom: 2.1rem;
+			.cHeading {
+				font-size: 1.2rem;
+				font-weight: 700;
+				margin-bottom: 1.3rem;
+				&::first-letter {
+					text-transform: capitalize;
+				}
+			}
+			.cTitle {
+				color: $lightBlue;
+				font-weight: 600;
+				margin-bottom: 0.4rem;
+				display: inline-block;
+				&::first-letter {
+					text-transform: capitalize;
+				}
+			}
+			.cSubtitle {
+				color: $veryLightBlue;
+				font-weight: 400;
+				margin-bottom: 0.9rem;
+			}
+			.googleBtn {
+				border: none;
+			}
+			.emailSetup {
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+				.emailConfigure {
+					flex: 1;
+					.emails {
+						margin-top: 1.2rem;
+						width: 400px;
+						& > div {
+							display: flex;
+							align-items: center;
+							justify-content: space-between;
+							height: 50px;
+							border-radius: 20px;
+							background-color: #f5f6f7;
+							margin: 10px 0;
+							padding: 5px;
+							width: 100%;
+							&:first-child {
+								margin-top: 0;
+							}
+							&:last-child {
+								margin-bottom: 0;
+							}
+							.input {
+								display: flex;
+								align-items: center;
+
+								.name {
+									line-height: 19px;
+									margin-left: 10px;
+									color: $black;
+								}
+							}
+							.buttons {
+								margin-right: 20px;
+								button {
+									font-size: 1rem;
+									font-weight: 400;
+									&:last-child {
+										margin-left: 10px;
+									}
+								}
+							}
+							&.active {
+								border: 1px solid #a282e8;
+							}
+						}
+					}
+				}
+				.emailSignatureConfigure {
+					flex: 1;
+				}
+			}
+		}
+	}
+}

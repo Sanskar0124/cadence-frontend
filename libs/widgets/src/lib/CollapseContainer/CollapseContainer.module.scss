@@ -1,0 +1,48 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.collapseContainer {
+	width: 100%;
+	height: auto;
+	border-radius: 10px;
+	transition: max-height 0.2s ease;
+	overflow: hidden;
+	position: relative;
+	&.expanded {
+		overflow: visible;
+	}
+	// THEMES
+	&.primary {
+		background: $whiteShade2;
+	}
+
+	.collapseHeader {
+		position: relative;
+		min-height: 50px;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		place-items: center;
+		place-content: center;
+		cursor: pointer;
+		.arrow {
+			// top: 20px;
+			// right: 25px;
+			background: none;
+			border: none;
+			color: $black;
+			transition: 0.2s ease;
+			transform: rotate(180deg);
+			margin-right: 1.2rem;
+			&.arrowDown {
+				transform: rotate(0deg) translate(0px, -1px);
+			}
+		}
+	}
+	.collapseChildren {
+		transition: all 0.3s ease-in-out;
+		max-height: 0px;
+		&.open {
+			max-height: fit-content;
+		}
+	}
+}

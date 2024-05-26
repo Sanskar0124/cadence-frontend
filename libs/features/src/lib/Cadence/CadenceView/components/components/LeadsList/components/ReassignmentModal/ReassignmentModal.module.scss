@@ -1,0 +1,11 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.reassignmentModal {
+	width: 100%;
+	max-width: 600px;
+
+	> button {
+		right: 15px;
+		top: 24px !important;
+	}
+}

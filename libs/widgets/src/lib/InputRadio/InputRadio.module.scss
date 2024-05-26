@@ -1,0 +1,39 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.radio {
+	position: relative;
+	cursor: pointer;
+	user-select: none;
+
+	input {
+		display: none;
+
+		&:checked ~ .checkmark {
+			background: $primaryGradient;
+			border: none;
+		}
+
+		&:disabled ~ .checkmark {
+			opacity: 0.5;
+			cursor: not-allowed;
+		}
+	}
+
+	.checkmark {
+		position: absolute;
+		background: $white;
+		border: 1px solid #e4e6ea;
+		&::before {
+			content: "";
+			position: absolute;
+			width: 75%;
+			height: 75%;
+			background: transparent;
+			border: 2px solid white;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			border-radius: 50%;
+		}
+	}
+}

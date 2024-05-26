@@ -1,0 +1,31 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.actions {
+	display: flex;
+	justify-content: space-between;
+	margin: 15px 0;
+	.left {
+		span {
+			display: block;
+			&::first-letter {
+				text-transform: capitalize;
+			}
+			&:first-child {
+				color: $lightBlue;
+			}
+			&:last-child {
+				font-size: 1.1rem;
+				font-weight: 700;
+			}
+		}
+	}
+	.right {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		button {
+			height: 50px;
+			border-radius: 15px;
+		}
+	}
+}

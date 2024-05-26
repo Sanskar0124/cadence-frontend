@@ -1,0 +1,101 @@
+// this is the common stylesheet for all redirects
+
+@import "libs/themes/src/lib/styles/variables";
+@import "../../lib/Login/Login.module.scss";
+
+.redirectPage {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	justify-content: center;
+	align-items: center;
+	width: 604px;
+	margin: 100px auto 0;
+	p {
+		font-weight: 500;
+		font-size: 1.5rem;
+		display: inline-block;
+		&::first-letter {
+			text-transform: capitalize;
+		}
+	}
+	.errorCollapse {
+		margin-bottom: 20px;
+		width: 400px;
+		.header {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			padding: 10px 20px 10px 10px;
+			font-size: 1.28rem;
+			color: $lightBlue;
+		}
+		.desc {
+			text-align: center;
+			font-size: 1.1rem;
+			line-height: 21px;
+			color: $lightBlue;
+			margin-bottom: 10px;
+		}
+	}
+	.redirectSpinner {
+		width: 35px;
+		height: 33px;
+		div {
+			width: 30px;
+			height: 30px;
+			border: 2px solid $mainPurple;
+			border-color: $mainPurple transparent transparent transparent;
+		}
+	}
+	.error {
+		color: $red;
+		font-weight: 600;
+		margin-bottom: 20px;
+		width: 75%;
+		text-align: center;
+	}
+}
+.spinnerdiv {
+	margin-right: 2px;
+	margin-top: 4px;
+	.redirectSpinner {
+		width: 45px;
+		height: 43px;
+		div {
+			width: 35px !important;
+			height: 35px !important;
+			border: 2px solid $mainPurple;
+			border-color: $mainPurple transparent transparent transparent !important;
+		}
+	}
+}
+.error {
+	color: $black;
+	font-weight: 400;
+	// margin-bottom: 10px;
+	width: 100%;
+	font-size: 18px;
+	text-align: center;
+	white-space: pre-wrap;
+}
+.errorcontainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+}
+.errortitle {
+	color: $red;
+	font-size: 20px;
+	font-weight: 700;
+}
+.backbtn {
+	border-radius: 15px !important;
+	padding: 10px 20px;
+	margin-top: 0px !important;
+	font-size: 14px;
+	color: $black;
+	font-weight: 600;
+}

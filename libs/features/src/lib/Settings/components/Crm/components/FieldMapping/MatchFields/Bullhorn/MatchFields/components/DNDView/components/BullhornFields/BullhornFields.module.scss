@@ -1,0 +1,104 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.bullhornFields {
+	flex: 0.38;
+	height: 100%;
+	border-top: 0.61px solid #e7ebff;
+	border-left: 0.61px solid #e7ebff;
+	border-bottom: 0.61px solid #e7ebff;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+	display: flex;
+	flex-direction: column;
+	padding: 14px 14px;
+	padding-top: 16px;
+	.header {
+		display: flex;
+		flex-direction: column;
+		gap: 0.7rem;
+		align-items: center;
+		.title {
+			font-weight: 600;
+			display: flex;
+			align-items: center;
+			justify-self: center;
+			gap: 0.4rem;
+			.sfCount {
+				pointer-events: none;
+				display: flex;
+				align-items: center;
+				font-size: 0.9rem;
+				font-weight: 400;
+				justify-content: center;
+				padding-top: 2px;
+				padding-bottom: 2px;
+				transform: scale(1.05);
+			}
+		}
+	}
+	.body {
+		flex: 1;
+		margin-top: 1rem;
+		position: relative;
+		background: transparent;
+		.sf {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			&::-webkit-scrollbar {
+				display: none;
+				width: 0;
+			}
+			overflow: scroll;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 0.9rem;
+			.subSection {
+				width: 90%;
+				.subSectionHeader {
+					font-weight: 600;
+					margin-bottom: 0.4rem;
+					color: $lightBlue;
+				}
+				.subSectionFields {
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					gap: 0.5rem;
+					.field {
+						//these styles should be same as in ringoverFields .field class
+						position: relative;
+						height: 45px;
+						width: 100%;
+						overflow-x: scroll;
+						padding-left: 20px;
+						padding-right: 20px;
+						padding-top: 13px;
+						text-align: center;
+						border-radius: 10px;
+						color: $mainPurple;
+						background: linear-gradient(
+							106.52deg,
+							rgba(162, 130, 232, 0.12) -11.57%,
+							rgba(126, 142, 231, 0.12) 50.39%,
+							rgba(68, 153, 233, 0.12) 116.35%
+						);
+						&::-webkit-scrollbar {
+							display: none;
+							width: 0;
+						}
+						svg {
+							position: absolute;
+							left: 10px;
+							top: 50%;
+							transform: translateY(-50%);
+						}
+					}
+				}
+			}
+		}
+	}
+}

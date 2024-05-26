@@ -1,0 +1,20 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.label {
+	display: block;
+	color: $lightBlue;
+	font-weight: 600;
+	font-size: 1rem;
+	line-height: 16px;
+	margin-bottom: 10px;
+	&::first-letter {
+		text-transform: capitalize !important;
+	}
+
+	&.required {
+		&::after {
+			content: "*";
+			color: $red;
+		}
+	}
+}

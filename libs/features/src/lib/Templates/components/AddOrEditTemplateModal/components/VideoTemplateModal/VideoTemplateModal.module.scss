@@ -1,0 +1,48 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.videoTemplateModal {
+	.header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 1rem;
+		.title {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.addButton {
+			margin-right: 30px;
+			font-weight: 700;
+		}
+	}
+	.main {
+		// max-height: 70vh;
+		overflow-y: scroll;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+	.inputBox {
+		margin-bottom: 2rem;
+		&::first-letter {
+			text-transform: capitalize;
+		}
+		label {
+			&::first-letter {
+				text-transform: capitalize;
+			}
+			margin-left: 0.2rem;
+			margin-bottom: 0.5rem;
+		}
+	}
+	.checkbox {
+		display: flex;
+		gap: 10px;
+		margin-bottom: 2rem;
+	}
+
+	.saveBtn {
+		text-transform: capitalize;
+	}
+}

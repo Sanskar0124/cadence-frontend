@@ -1,0 +1,71 @@
+{
+	"implicitDependencies": {
+		"package.json": {
+			"dependencies": "*",
+			"devDependencies": "*"
+		},
+		".eslintrc.json": "*"
+	},
+	"affected": {
+		"defaultBase": "master"
+	},
+	"npmScope": "cadence-frontend",
+	"tasksRunnerOptions": {
+		"default": {
+			"runner": "@nrwl/workspace/tasks-runners/default",
+			"options": {
+				"cacheableOperations": ["build", "lint", "test", "e2e"]
+			}
+		}
+	},
+	"projects": {
+		"utils": {
+			"tags": []
+		},
+		"languages": {
+			"tags": []
+		},
+		"assets": {
+			"tags": []
+		},
+		"data-access": {
+			"tags": []
+		},
+		"environments": {
+			"tags": []
+		},
+		"constants": {
+			"tags": []
+		},
+		"icons": {
+			"tags": []
+		},
+		"themes": {
+			"tags": []
+		},
+		"atoms": {
+			"tags": []
+		},
+		"salesforce": {
+			"tags": []
+		},
+		"features": {
+			"tags": []
+		},
+		"contexts": {
+			"tags": []
+		},
+		"components": {
+			"tags": []
+		},
+		"widgets": {
+			"tags": []
+		},
+		"rbac": {
+			"tags": []
+		},
+		"test-utils": {
+			"tags": []
+		}
+	}
+}

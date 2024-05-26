@@ -1,0 +1,25 @@
+@import "libs/themes/src/lib/styles/variables";
+.footer {
+	position: sticky;
+	background-color: #fff;
+	z-index: 999;
+	bottom: 0em;
+	padding-top: 5px;
+	overflow: visible;
+	button {
+		width: 100%;
+		margin-top: 3px;
+	}
+	.error {
+		color: $red;
+		font-weight: 500;
+		.addLink {
+			color: $green;
+			cursor: pointer;
+		}
+	}
+	.cadence {
+		display: flex;
+		gap: 0.5em;
+	}
+}

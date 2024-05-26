@@ -1,0 +1,101 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.peopleAndUsers {
+	flex: 1;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 0 15px;
+	height: calc(100vh - 420px);
+	overflow-y: scroll;
+	gap: 15px;
+	position: relative;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	.peopleAndUser {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+
+		.info {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+
+			.image {
+				width: 40px;
+				height: 40px;
+				object-fit: cover;
+				border-radius: 50%;
+			}
+
+			.name {
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 19px;
+				color: $black;
+				max-width: 150px;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+			}
+		}
+
+		.connects {
+			flex: 1;
+			display: flex;
+			border-top: 1px dashed #bfbfbf;
+		}
+
+		.statistics {
+			width: fit-content;
+			display: flex;
+			align-items: center;
+			font-size: 14px;
+			font-weight: 600;
+			line-height: 15px;
+			color: $mainPurple;
+			gap: 6px;
+
+			> span {
+				width: fit-content;
+			}
+		}
+	}
+
+	.placeholder {
+		min-height: 40px;
+		border-radius: 10px;
+	}
+}
+
+.emptySpaceWrapper {
+	width: 100%;
+	height: 50vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.emptySpace {
+	margin-top: 20px;
+	text-align: center;
+
+	div,
+	span {
+		color: #8193a8;
+		font-weight: 400;
+		font-size: 1.142rem;
+	}
+	.subTitle {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 5px;
+		margin-top: 3px;
+	}
+}

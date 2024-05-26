@@ -1,0 +1,55 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.searchBar {
+	position: relative;
+	& > div:first-child {
+		z-index: 3;
+	}
+	.results {
+		display: none;
+		z-index: 2;
+		width: 100%;
+		padding: 30px 20px 0px;
+		border: 1px solid #d8ecff;
+		border-radius: 20px;
+		top: 15px;
+		position: absolute;
+		background-color: $white;
+		max-height: 430px;
+		overflow-y: scroll;
+		&::-webkit-scrollbar {
+			height: 20px;
+		}
+		& > div {
+			margin: 20px 0;
+			& > span {
+				color: $black;
+				font-weight: 700;
+				font-size: 1.1rem;
+				line-height: 22px;
+				display: inline-block;
+				&::first-letter {
+					text-transform: capitalize;
+				}
+			}
+			& > div {
+				margin-top: 10px;
+				span {
+					cursor: pointer;
+					display: block;
+					padding: 10px 20px;
+					border-radius: 15px;
+					&:hover {
+						background-color: #f0f8fe;
+					}
+					&::first-letter {
+						text-transform: capitalize;
+					}
+				}
+			}
+		}
+		&.visible {
+			display: block;
+		}
+	}
+}

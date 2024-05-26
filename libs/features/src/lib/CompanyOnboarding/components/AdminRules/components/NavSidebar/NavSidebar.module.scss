@@ -1,0 +1,81 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.navSidebar {
+	background-color: $white;
+	padding: 2rem 2.3rem;
+	height: 100%;
+	.header {
+		.title {
+			font-size: 1.5rem;
+			font-weight: 700;
+			display: flex;
+			align-items: center;
+			gap: 0.6rem;
+			display: block;
+			&::first-letter {
+				text-transform: capitalize;
+			}
+		}
+		.subtitle {
+			font-weight: 400;
+			margin-top: 0.8rem;
+			line-height: 19.07px;
+			width: 85%;
+			display: block;
+			&::first-letter {
+				text-transform: capitalize;
+			}
+		}
+	}
+	.body {
+		margin-top: 2.5rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		.navButton {
+			color: $black;
+			font-weight: 400;
+			display: flex;
+			gap: 0.7rem;
+			width: 100%;
+			padding: 0px 20px;
+			background: none !important;
+			justify-content: flex-start;
+			align-items: center;
+			border-radius: 15px;
+			height: 50px;
+			cursor: pointer;
+
+			svg {
+				width: 20px;
+				height: 20px;
+			}
+
+			.labelText {
+				&::first-letter {
+					text-transform: uppercase !important;
+				}
+			}
+		}
+
+		.active {
+			border: $mainPurple;
+			border-radius: 15px;
+			border: 1px solid $mainPurple;
+			color: $mainPurple;
+			font-weight: 600;
+			height: 50px;
+			background-color: rgba(91, 107, 225, 0.04);
+
+			.labelText {
+				&::first-letter {
+					text-transform: uppercase !important;
+				}
+			}
+
+			svg {
+				color: $mainPurple;
+			}
+		}
+	}
+}

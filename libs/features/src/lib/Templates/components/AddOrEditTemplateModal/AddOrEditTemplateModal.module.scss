@@ -1,0 +1,14 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.modal {
+	height: 95vh;
+	width: 100%;
+	max-width: 800px;
+	overflow-y: scroll;
+}
+
+.videoModal {
+	width: 100%;
+	max-width: 800px;
+	overflow-y: scroll;
+}

@@ -1,0 +1,25 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.calendy {
+	.title {
+		display: inline-block;
+		&::first-letter {
+			text-transform: capitalize;
+		}
+	}
+	.settings {
+		display: flex;
+		align-items: center;
+		gap: 30px;
+		// background: #f5f6f7;
+		border-radius: 20px;
+
+		button {
+			font-weight: 400;
+			font-size: 1rem;
+		}
+		.success {
+			color: $green;
+		}
+	}
+}

@@ -1,0 +1,25 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.testFieldsModal {
+	width: 550px;
+	padding: 20px 22px !important;
+	.header {
+		transform: translate(0, -1px);
+		font-size: 1.2rem;
+		font-weight: 700;
+	}
+	.body {
+		margin-top: 2rem;
+		color: $lightBlue;
+		font-weight: 600;
+		.urlInput {
+			margin-top: 0.9rem;
+			border-radius: 15px;
+		}
+	}
+
+	.fetchButton {
+		margin-top: 1.8rem;
+		width: 100%;
+	}
+}

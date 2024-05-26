@@ -1,0 +1,101 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.customTaskModal {
+	width: 100%;
+	max-width: 900px;
+	.heading {
+		position: relative;
+		text-align: left;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 22px;
+		color: $blackShade6;
+		margin-left: 2.5rem;
+
+		color: $black;
+
+		.title {
+			color: $lightBlue;
+		}
+	}
+	.email_container {
+		.email {
+			margin: 2rem 0 1.3rem 0;
+			&_heading {
+				display: flex;
+				justify-content: space-between;
+				.user {
+					display: flex;
+					gap: 12px;
+					.pic {
+						width: 40px;
+						height: 40px;
+						// object-fit: cover;
+						border-radius: 50%;
+						svg {
+							width: 35px;
+							height: 35px;
+							object-fit: cover;
+							border-radius: 50%;
+						}
+					}
+					.details {
+						font-weight: 600;
+						font-size: 14px;
+						line-height: 19px;
+						display: flex;
+						flex-direction: column;
+						// gap: 10px;
+
+						color: $black;
+						.user_email {
+							font-weight: 400;
+							color: $blackShade6;
+						}
+					}
+				}
+				.date {
+					font-weight: 400;
+					font-size: 12px;
+					line-height: 16px;
+
+					color: $blackShade6;
+				}
+			}
+			&_body {
+				width: 90%;
+				max-width: 515px;
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 19px;
+				margin-top: 1.3rem;
+
+				color: $blackShade6; //#394759
+			}
+		}
+	}
+	.cadence {
+		display: flex;
+		gap: 20px;
+		.pause,
+		.stop {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			padding: 10px 20px;
+			gap: 10px;
+			cursor: pointer;
+
+			background: $whiteShade1;
+
+			box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+			border-radius: 15px;
+
+			font-weight: 600;
+			font-size: 14px;
+			line-height: 19px;
+			color: $blackShade6;
+		}
+	}
+}

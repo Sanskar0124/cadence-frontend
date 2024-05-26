@@ -1,0 +1,32 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.modal {
+	width: 80vw;
+	max-width: 720px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	padding: 10px 0;
+	& > img {
+		width: 100%;
+	}
+	& > h3 {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		font-size: 1.42rem;
+		font-weight: 600;
+		margin: 20px 0 10px;
+		img {
+			width: 24px;
+			height: 24px;
+		}
+	}
+	& > p {
+		margin: 10px 0 40px;
+		padding: 0 20px;
+		text-align: center;
+		line-height: 18px;
+	}
+}

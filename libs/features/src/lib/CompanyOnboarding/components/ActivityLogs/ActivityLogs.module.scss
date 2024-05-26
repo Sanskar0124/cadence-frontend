@@ -1,0 +1,195 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.activityLogs {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 2rem 2.4rem;
+	border: 1px solid #e7ebff;
+	background-color: $white;
+	border-radius: 20px;
+	overflow-y: scroll;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	.heading {
+		display: flex;
+		align-items: center;
+		margin-bottom: 5px;
+		font-size: 1.5rem;
+		font-weight: 700;
+		color: $black;
+		.loader {
+			margin-left: 10px;
+			div {
+				border-color: $black transparent transparent transparent;
+			}
+		}
+
+		.icon {
+			display: inline-flex;
+			background-color: $lightBlue;
+			width: 1.8rem;
+			height: 1.8rem;
+			align-items: center;
+			justify-content: center;
+			border-radius: 6px;
+			margin-right: 0.5rem;
+		}
+	}
+	.subheading {
+		font-family: "Open Sans";
+		font-size: 1rem;
+		font-weight: 400;
+		color: #567191;
+		line-height: 19px;
+		letter-spacing: 0px;
+		display: inline-block;
+		&::first-letter {
+			text-transform: capitalize;
+		}
+	}
+	.inputBlock {
+		margin-bottom: 2.85rem;
+		&.phoneSystem {
+			margin-top: 15px;
+			margin-bottom: 20px;
+			display: flex;
+			flex-direction: column;
+
+			.heading {
+				display: inline-block;
+				&::first-letter {
+					text-transform: capitalize;
+				}
+			}
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.phoneOptions {
+		margin-bottom: 1rem;
+	}
+
+	.connectWithPhoneSystem {
+		margin-bottom: 2rem;
+
+		> .subheading {
+			font-weight: 600;
+			margin-bottom: 0.5rem;
+			color: $black;
+		}
+	}
+
+	.radioBox {
+		margin-bottom: 1rem;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		& > div {
+			display: flex;
+			gap: 10px;
+		}
+	}
+
+	.inputBox {
+		width: 40%;
+		position: relative;
+		margin-bottom: 25px;
+		display: flex;
+		justify-content: space-between;
+		& > div {
+			&:first-child {
+				span {
+					font-weight: 600;
+				}
+				p {
+					color: $lightBlue;
+					margin-top: 3px;
+					margin-bottom: 20px;
+					display: block;
+					&::first-letter {
+						text-transform: capitalize;
+					}
+					a {
+						cursor: pointer;
+						color: #037dfc;
+						font-weight: 400;
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+
+	.helpLinks {
+		display: flex;
+		flex-direction: column;
+		margin-top: 10px;
+		gap: 0.71rem;
+		a {
+			cursor: pointer;
+			color: #037dfc;
+			font-weight: 400;
+			text-decoration: underline;
+			width: fit-content;
+		}
+		&:last-child {
+			text-transform: capitalize;
+		}
+	}
+
+	.smsHelp {
+		// transform: translateY(-10px);
+		color: $lightBlue;
+		p {
+			margin-bottom: 20px;
+			line-height: 2;
+			span {
+				margin-top: 10px;
+				font-family: sans-serif;
+			}
+		}
+		& > div {
+			margin: 5px 0;
+			span {
+				div {
+					background-color: $whiteShade1;
+					color: $lightBlue;
+					padding: 5px 10px;
+					border-radius: 10px;
+					display: flex;
+					gap: 12px;
+					justify-content: space-between;
+					align-items: center;
+				}
+			}
+			span:first-child {
+				display: inline-block;
+				width: 310px;
+				color: $lightBlue;
+				&::first-letter {
+					text-transform: capitalize;
+				}
+			}
+			span:last-child {
+				color: $blue;
+				display: inline-flex;
+				align-items: center;
+				gap: 5px;
+				svg {
+					cursor: pointer;
+				}
+			}
+		}
+		.docsLink {
+			margin-top: 20px;
+			a {
+				color: #037dfc;
+				text-decoration: underline;
+			}
+		}
+	}
+}

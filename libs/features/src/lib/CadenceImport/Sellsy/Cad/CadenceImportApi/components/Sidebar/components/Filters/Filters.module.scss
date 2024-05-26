@@ -1,0 +1,176 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.search {
+	position: relative;
+	.searchResult {
+		background-color: $white;
+		position: absolute;
+		top: 55px;
+		max-height: 400px;
+		overflow-y: scroll;
+		width: 96%;
+		left: 0%;
+		// box-shadow: 5px 10px 50px rgba(41, 43, 88, 0.2);
+		box-shadow: -1px 1px 20px 0px rgb(41 43 88 / 20%);
+		border-radius: 15px;
+		z-index: 100000;
+
+		padding: 8px;
+
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+		// text-align: center;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+		.noResult {
+			color: #567191;
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 40vh;
+
+			gap: 10px;
+		}
+
+		.activeZohoFieldRow {
+			border: 1px solid #5b6be1;
+			background: linear-gradient(
+				106.52deg,
+				rgba(162, 130, 232, 0.08) -11.57%,
+				rgba(126, 142, 231, 0.08) 50.39%,
+				rgba(68, 153, 233, 0.08) 116.35%
+			);
+			border-radius: 10px;
+			font-weight: 600;
+			color: #394759;
+			margin: 5px 0;
+
+			height: 40px;
+			padding: 5px 10px;
+			cursor: pointer;
+			border-radius: 10px;
+			display: grid;
+			grid-template-columns: 90% 10%;
+			align-items: center;
+			&:hover {
+				background: #f0f8fe;
+			}
+
+			.tick {
+				width: 30px;
+				height: 30px;
+				background: $primaryGradient;
+				border-radius: 10px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: $white;
+				visibility: visible;
+			}
+			// &.selected {
+			// 	background: $primaryGradientLight;
+			// 	.tick {
+			// 		visibility: visible;
+			// 	}
+			// 	.info {
+			// 		font-weight: 600;
+			// 	}
+			// }
+		}
+
+		.zohoFieldRow {
+			height: 40px;
+			// padding: 5px 0 5px 15px;
+			cursor: pointer;
+			border-radius: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			.info {
+				width: 300px;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				overflow: hidden;
+				color: #567191;
+				padding: 10px;
+				display: grid;
+				grid-template-columns: 80% 20%;
+				align-items: center;
+				&:hover {
+					background: #f0f8fe;
+					border-radius: 10px;
+				}
+			}
+		}
+	}
+}
+
+.heightForEmptyFilter {
+	height: 70vh;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 15px 0;
+	position: relative;
+}
+
+.heightForFilter {
+	// max-height: 60vh;
+	margin: 15px 0;
+	overflow-y: scroll;
+	position: relative;
+	height: 70vh;
+	min-height: 74vh;
+	// height: calc(83vh - 32px);
+}
+
+.filterBody {
+	margin: 38px 0;
+	position: relative;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	.noResult {
+		color: #567191;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		//  height: 66vh;
+
+		gap: 10px;
+
+		.notFilter {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 10px;
+			margin-bottom: 10px;
+		}
+	}
+
+	.addFB {
+		margin: 10px auto;
+	}
+}
+
+.placeholder {
+	width: 100%;
+	height: 50px !important;
+	margin: 10px 0;
+	// &:first-child {
+	// 	margin-top: 0;
+	// }
+	// &:last-child {
+	// 	margin-bottom: 0;
+	// }
+}

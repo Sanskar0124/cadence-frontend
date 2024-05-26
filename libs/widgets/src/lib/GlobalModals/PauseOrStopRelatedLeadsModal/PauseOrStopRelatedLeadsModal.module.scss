@@ -1,0 +1,136 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.stopRelatedLeadsModal {
+	width: 420px;
+	display: flex;
+	flex-flow: column nowrap;
+	.title {
+		margin-bottom: 20px;
+		margin-left: 40px;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 22px;
+	}
+
+	.search {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin-bottom: 20px;
+	}
+
+	.list {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		max-height: 400px;
+		overflow-y: scroll;
+		.listCard {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			.left {
+				font-size: 14px;
+				.name {
+					font-weight: 600;
+				}
+				.email {
+					font-weight: 400;
+					line-height: 19px;
+					letter-spacing: 0.1px;
+				}
+			}
+			.right {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 10px;
+			}
+		}
+		.loader {
+			height: 30px;
+		}
+	}
+
+	.infoBox {
+		margin-bottom: 20px;
+		.headText {
+			font-weight: 700;
+			display: block;
+			color: $lightBlue;
+			text-transform: capitalize;
+			margin-bottom: 8px;
+		}
+		.cadenceName {
+			font-weight: 700;
+			line-height: 19px;
+			color: $mainPurple;
+		}
+		.leadName {
+			font-weight: 600;
+		}
+	}
+
+	.leadWrapper {
+		display: inline-flex;
+		align-items: center;
+		svg {
+			margin-right: 15px;
+			transform: translateY(1px);
+		}
+	}
+
+	.relatedLeadsToggle {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		margin-bottom: 20px;
+		& > span {
+			color: $lightBlue;
+		}
+	}
+}
+
+.CollapseContainer {
+	margin-bottom: 10px;
+	.titleSelector {
+		padding: 10px;
+		padding-left: 20px;
+		width: 100%;
+		font-weight: 700;
+		color: $lightBlue;
+	}
+
+	.leadNameSelector {
+		display: flex;
+		flex-flow: column nowrap;
+		max-height: 10vw;
+		padding: 10px 15px 15px 15px;
+		overflow: auto;
+		scroll-snap-type: y mandatory;
+	}
+
+	.header {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 10px;
+	}
+	.checkBox {
+		margin-left: auto;
+	}
+	.allSelector {
+		display: inline-flex;
+	}
+}
+
+.modal {
+	overflow: hidden;
+}
+.folder {
+	overflow: auto;
+	max-height: 98vh;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}

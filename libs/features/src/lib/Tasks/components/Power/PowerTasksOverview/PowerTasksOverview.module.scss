@@ -1,0 +1,47 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 15px 20px 15px;
+	margin-bottom: 10px;
+	position: relative;
+	.tasks,
+	.time {
+		color: $pink;
+		border-radius: 10px;
+		background: linear-gradient(
+			116deg,
+			rgba(247, 90, 146, 0.04) -12.55%,
+			rgba(255, 154, 154, 0.04) 112.61%
+		);
+		padding: 5px 12px;
+		span:last-child {
+			font-weight: 700;
+		}
+	}
+	.divider {
+		position: absolute;
+		bottom: 0;
+		left: -10px;
+		width: 102.4%;
+		height: 4px;
+		background: linear-gradient(90deg, #ffb12a -4.97%, #f77272 36.24%, #fb7a96 79.54%);
+	}
+	&.boosted {
+		.tasks,
+		.time {
+			color: $mainPurple;
+			background: rgba(91, 107, 225, 0.05);
+		}
+		.divider {
+			background: linear-gradient(
+				90.28deg,
+				#5b6be1 -4.97%,
+				#037dfc 36.24%,
+				#fb7a96 79.54%
+			);
+		}
+	}
+}

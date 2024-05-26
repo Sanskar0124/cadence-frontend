@@ -1,0 +1,25 @@
+.sfPlaceholder {
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	overflow: scroll;
+	&::-webkit-scrollbar {
+		width: 0;
+		display: none;
+	}
+}
+.rfPlaceholder {
+	height: 100%;
+	width: 100%;
+	border-radius: 10px;
+}
+.singleSkeleton {
+	width: 100%;
+	min-height: 45px;
+	border-radius: 10px;
+}

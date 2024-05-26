@@ -1,0 +1,153 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.filters {
+	width: 100%;
+	height: 100%;
+	max-height: 100%;
+	overflow: hidden;
+	color: $black;
+	.closeBtn {
+		position: absolute;
+		z-index: 3;
+		left: 15px;
+		top: 21px;
+		border: none;
+		background: none;
+		color: $lightBlue;
+		width: 1.7rem;
+		height: 1.7rem;
+		border-radius: 50%;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		& > svg {
+			width: 100%;
+			height: 100%;
+		}
+
+		&:hover {
+			background: $whiteShade1;
+		}
+	}
+	.header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		// margin-bottom: 1.5rem;
+		.heading {
+			font-weight: 600;
+			padding-left: 1.6rem;
+			color: $black;
+			text-transform: capitalize;
+		}
+		.right {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			.resetAllButton {
+				color: $blue;
+				font-size: 1.2rem;
+				cursor: pointer;
+				display: inline-block;
+				&::first-letter {
+					text-transform: capitalize;
+				}
+			}
+		}
+		margin-bottom: 1.5rem;
+	}
+	.body {
+		height: 100%;
+		overflow: auto;
+		padding-bottom: 3rem;
+		&::-webkit-scrollbar {
+			display: none;
+			width: 0;
+		}
+		&.powerActive {
+			padding-bottom: 115px;
+		}
+		.filterType {
+			position: relative;
+			margin-bottom: 1.5rem;
+			.filterHeader {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				.taskType {
+					font-weight: 600;
+					font-size: 1rem;
+					display: inline-block;
+					&::first-letter {
+						text-transform: capitalize;
+					}
+
+					.companySize {
+						text-transform: capitalize;
+					}
+				}
+			}
+			.filterOptions {
+				margin-top: 0.7rem;
+				display: flex;
+				flex-wrap: wrap;
+				column-gap: 1rem;
+				row-gap: 0.7rem;
+				justify-content: space-between;
+				button {
+					height: 40px !important;
+					font-size: 1rem;
+					flex: 40%;
+					// width: 40px !important;
+					white-space: nowrap;
+					display: inline-block;
+					&::first-letter {
+						text-transform: capitalize;
+					}
+
+					&.customCalendarButton,
+					&.customCompanyRangeButton {
+						width: 100%;
+						border-radius: 15px;
+					}
+					&.active {
+						background: $primaryGradient;
+						color: $white;
+						&:hover {
+							opacity: 10;
+						}
+					}
+					> div {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						gap: 5px;
+					}
+				}
+
+				.timezoneTooltip {
+					width: 50% !important;
+				}
+			}
+			.timezoneFilterOption {
+				.timezoneTooltip {
+					width: 100% !important;
+				}
+			}
+		}
+	}
+	.boostTasksBtn {
+		position: absolute;
+		bottom: 30px;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 3;
+	}
+}
+.capitalize {
+	&::first-letter {
+		text-transform: capitalize;
+	}
+}

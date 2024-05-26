@@ -1,0 +1,174 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.editLeadModal {
+	width: 500px;
+
+	.title {
+		margin-bottom: 20px;
+		text-transform: capitalize;
+	}
+
+	.leadEnrich {
+		position: absolute;
+		top: 15px;
+		right: 60px;
+		display: flex;
+		align-items: center;
+		gap: 7px;
+
+		.enrichBtn {
+			padding: 0.5rem;
+
+			> div > div {
+				transform: translate(-3px, -1px);
+				div {
+					border-color: $lightBlue transparent transparent transparent;
+				}
+			}
+		}
+
+		img {
+			width: 20px;
+			height: 20px;
+		}
+	}
+	.dataCheckCollpase {
+		background: linear-gradient(
+			106.52deg,
+			rgba(162, 130, 232, 0.04) -11.57%,
+			rgba(126, 142, 231, 0.04) 50.39%,
+			rgba(68, 153, 233, 0.04) 116.35%
+		);
+		margin-bottom: 10px;
+		.loaderWrapper {
+			height: 200px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			.loader {
+				height: 37px;
+				width: 37px;
+				div {
+					height: 35px;
+					width: 35px;
+					border-color: $lightBlue transparent transparent transparent;
+				}
+			}
+		}
+		.dataCheckTitle {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			color: $lightBlue;
+			padding: 10px 20px 10px 10px;
+			font-weight: 700;
+		}
+		.dataCheckInstructions {
+			max-height: 200px;
+			overflow-y: scroll;
+			padding: 10px 10px 30px 10px;
+		}
+	}
+
+	.main {
+		max-height: 70vh;
+		overflow-y: scroll;
+		overflow-x: hidden;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+		h3 {
+			margin-top: -1.6px;
+			margin-bottom: 1rem;
+			font-size: 1.142rem;
+		}
+
+		label {
+			text-transform: capitalize;
+		}
+
+		button {
+			background: none;
+			border: none;
+		}
+
+		.personalInfo,
+		.accountInfo,
+		.phoneNumbersInfo,
+		.emailsInfo,
+		.variablesInfo {
+			margin-bottom: 2rem;
+			text-transform: capitalize;
+		}
+		.personalInfo {
+			> h3 {
+				text-transform: capitalize;
+			}
+		}
+
+		.inputGroup {
+			margin-bottom: 1rem;
+			position: relative;
+
+			label {
+				text-transform: capitalize;
+			}
+
+			.inputWithRadio {
+				padding-right: 35px;
+			}
+
+			.radioBtn {
+				position: absolute;
+				right: 10px;
+				bottom: 8px;
+				width: 1.7rem;
+				height: 1.7rem;
+				background: #fff;
+				border-radius: 50%;
+				background: #e4e6ea;
+
+				&.primary {
+					background: $primaryGradient;
+				}
+				&:disabled {
+					opacity: 0.5;
+					cursor: not-allowed;
+				}
+			}
+
+			&.isEnriched {
+				label {
+					color: $mainPurple;
+				}
+				.inputWithRadio {
+					border-color: $mainPurple;
+				}
+				.enrichLogo {
+					position: absolute;
+					right: 40px;
+					bottom: 8px;
+					width: 1.7rem;
+					height: 1.7rem;
+					border-radius: 50%;
+
+					img {
+						width: 1.5rem;
+					}
+				}
+			}
+		}
+	}
+
+	.footer {
+		.saveBtn {
+			display: block;
+			margin-top: 1rem;
+			width: 100%;
+			text-transform: capitalize;
+		}
+	}
+}

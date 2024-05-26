@@ -1,0 +1,50 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.templateCard {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 10px;
+	height: 150px;
+	// width: 100%;
+	.thumbnail {
+		height: 100%;
+		// width: 30%;
+	}
+	.about {
+		margin-left: 10px;
+		height: 100%;
+		width: 80%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		.title {
+			width: 98%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-bottom: 15px;
+			.radio {
+				margin: 0 15px;
+				box-shadow: 10px;
+				span {
+					border: 1px solid #dadce0;
+					box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+					border-radius: 24px;
+				}
+			}
+		}
+		.link {
+			font-weight: 600;
+			font-size: 14px;
+		}
+	}
+
+	&.selected {
+		background: $primaryGradientLight;
+		border-radius: 10px;
+		.title {
+			color: $mainPurple;
+		}
+	}
+}

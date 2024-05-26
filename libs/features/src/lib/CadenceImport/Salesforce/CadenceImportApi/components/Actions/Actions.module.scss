@@ -1,0 +1,50 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.actions {
+	display: flex;
+	justify-content: space-between;
+	margin: 15px 0;
+	.left {
+		span {
+			display: block;
+			&::first-letter {
+				text-transform: capitalize;
+			}
+			&:first-child {
+				color: $lightBlue;
+			}
+			&:last-child {
+				font-size: 1.1rem;
+				font-weight: 700;
+			}
+		}
+
+		p {
+			&::first-letter {
+				text-transform: capitalize;
+			}
+		}
+	}
+	.right {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		button {
+			height: 50px;
+			border-radius: 15px;
+		}
+		.btnAdd,
+		.btnExclude {
+			display: flex;
+			gap: 5px;
+			align-items: center;
+		}
+
+		.btnAdd {
+			box-shadow: none;
+		}
+		.btnExclude {
+			color: #ffb12a;
+		}
+	}
+}

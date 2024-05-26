@@ -1,0 +1,57 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.analytics {
+	display: flex;
+	margin-left: 40px;
+	& > div {
+		cursor: pointer;
+		margin: 0 2.5px;
+		color: $white;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+		width: 20px;
+		border-radius: 8px;
+		height: 50px;
+		transition: 0.5s;
+
+		.text {
+			display: inline-block;
+			&::first-letter {
+				text-transform: capitalize;
+			}
+		}
+		& > span {
+			opacity: 0;
+			white-space: nowrap;
+			transition: 0.5s;
+			&:first-child {
+				font-size: 0.7rem;
+				font-weight: 600;
+			}
+			&:last-child {
+				font-weight: 700;
+			}
+		}
+		&.task {
+			background: linear-gradient(315deg, #72bbf1 0%, #4b90e2 100%);
+		}
+		&.mail {
+			background: linear-gradient(115.94deg, #f75a92 -12.55%, #ff9a9a 112.61%);
+		}
+		&.call {
+			background: $ringoverGradient;
+		}
+		&.message {
+			background: $orangeGradient;
+		}
+		&.active {
+			width: 160px;
+			span {
+				opacity: 1;
+			}
+		}
+	}
+}

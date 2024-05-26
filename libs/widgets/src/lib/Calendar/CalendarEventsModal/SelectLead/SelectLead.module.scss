@@ -1,0 +1,76 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.selectLead {
+	cursor: pointer;
+	height: 40px;
+	border-radius: 15px;
+	border: 1px solid #dadce0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	& > span {
+		color: $lightBlue;
+	}
+	position: relative;
+	.selected::placeholder {
+		color: $black;
+	}
+	.dropdownIcon {
+		position: absolute;
+		right: 20px;
+		top: 50%;
+		transform: translateY(-60%);
+	}
+	.usersList {
+		visibility: hidden;
+		background: $white;
+		z-index: 1;
+		position: absolute;
+		top: 120%;
+		left: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		overflow-y: scroll;
+		height: 300px;
+		box-shadow: 5px 10px 50px 0px rgba(41, 43, 88, 0.2);
+		padding: 10px;
+		border-radius: 15px;
+		width: 100%;
+		& > div {
+			padding: 10px 15px;
+			cursor: pointer;
+			border-radius: 20px;
+			&:hover {
+				background: #f0f8fe;
+			}
+			&:active {
+				background: #f0f8fe;
+			}
+			&.selected {
+				background: $primaryGradient;
+				color: $white;
+			}
+			& > span {
+				max-width: 340px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+		}
+	}
+	&.isActive {
+		.dropdownIcon {
+			svg {
+				transform: rotate(180deg);
+			}
+		}
+		.usersList {
+			visibility: visible;
+		}
+	}
+	.placeholder {
+		width: 100%;
+		height: 40px;
+	}
+}

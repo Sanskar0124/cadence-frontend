@@ -1,0 +1,21 @@
+@import "libs/themes/src/lib/styles/variables";
+@import "../../GeneralSettings.module.scss";
+
+.settingBlock {
+	margin-bottom: 1.3rem;
+
+	.settingHeading {
+		margin-bottom: 0.8rem;
+		display: inline-block;
+		&::first-letter {
+			text-transform: capitalize;
+		}
+	}
+
+	.settingBody {
+		padding: 2.2rem 2.8rem;
+		background-color: $white;
+		border-radius: 10px;
+		margin-bottom: 2rem;
+	}
+}

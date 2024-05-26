@@ -1,0 +1,30 @@
+@import "../../Placeholder.module.scss";
+
+.setting {
+	margin-bottom: 1rem;
+
+	.title {
+		font-weight: 600;
+		font-size: 1rem;
+		display: inline-block;
+		&::first-letter {
+			text-transform: capitalize;
+		}
+	}
+
+	.description {
+		font-size: 1rem;
+		margin-top: 0.4rem;
+		margin-bottom: 0.5rem;
+		color: $lightBlue;
+	}
+
+	.placeholder {
+		flex: 1;
+		width: 50%;
+		height: 44px;
+		display: flex;
+		border-radius: 10px;
+		margin-top: 1rem;
+	}
+}

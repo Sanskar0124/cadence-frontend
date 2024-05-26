@@ -1,0 +1,48 @@
+@import "../MaximumTasks.module.scss";
+
+.singleTaskSetting {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	&.exception {
+		border-radius: 10px;
+		padding: 15px 20px;
+	}
+	.taskOptions {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		width: 100%;
+		max-width: 500px;
+
+		.task {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 1rem;
+			background-color: $whiteShade1;
+			border-radius: 20px;
+			height: 60px;
+			padding: 0 20px;
+			width: 100%;
+			> .left {
+				display: flex;
+				gap: 10px;
+
+				> .icon {
+					color: $lightBlue;
+					width: 20px;
+				}
+				> .taskName {
+					text-transform: capitalize;
+				}
+			}
+
+			.right {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+			}
+		}
+	}
+}

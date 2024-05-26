@@ -1,0 +1,20 @@
+env: standard
+runtime: nodejs16
+service: cadence-frontend
+
+handlers:
+  - url: /static
+    static_dir: dist/apps/salesforce/static
+    #secure: always
+
+  - url: /(.*\.(json|ico|js|css|gif|png))$
+    static_files: dist/apps/salesforce/\1
+    upload: dist/apps/salesforce/.*\.(json|ico|js|css|gif|png)$
+    #secure: always
+
+  - url: .*
+    static_files: dist/apps/salesforce/index.html
+    upload: dist/apps/salesforce/index.html
+    secure: always
+    redirect_http_response_code: 301
+#DO NOT ADD ENV HERE. CONFIGURE THEM IN GITHUB SECRETS

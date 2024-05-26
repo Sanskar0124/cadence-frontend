@@ -1,0 +1,52 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.modal {
+	width: 30vw;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	padding: 10px 0;
+	& > h3 {
+		font-size: 1.1rem;
+		font-weight: 700;
+		margin: 20px 0 2px;
+		text-align: center;
+	}
+	& > p {
+		margin: 2px 0 20px;
+		text-align: center;
+		line-height: 18px;
+	}
+	& > div {
+		display: flex;
+		align-items: center;
+		align-self: flex-start;
+		gap: 5px;
+		width: 85%;
+		margin: 5px auto;
+		span {
+			display: block;
+			padding: 4px 6px;
+			border-radius: 4px;
+			font-weight: 600;
+			min-width: 40px;
+			text-align: center;
+			&.success {
+				background: linear-gradient(
+					90deg,
+					rgba(54, 205, 207, 0.06) 0%,
+					rgba(64, 224, 207, 0.06) 100%
+				);
+				color: $darkGreen;
+			}
+			&.error {
+				background: rgba(247, 114, 114, 0.05);
+				color: $red;
+			}
+		}
+	}
+	button {
+		margin-top: 40px;
+	}
+}

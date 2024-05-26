@@ -1,0 +1,3 @@
+const RINGOVER_USER_ID_BASE = 10000;
+
+export default RINGOVER_USER_ID_BASE;

@@ -1,0 +1,102 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.eachFilterCard {
+	background: rgba(129, 147, 168, 0.05);
+	border-radius: 10px;
+	width: 100%;
+	padding: 15px;
+	margin-bottom: 10px;
+
+	.top {
+		.fieldNameInput {
+			margin-top: 0 !important;
+		}
+		.inputFields {
+			margin-top: 10px;
+
+			.withMetaData {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+			}
+			.betweenCompo {
+				display: grid;
+				grid-template-columns: 50% 50%;
+				gap: 10px;
+			}
+		}
+	}
+
+	.footer {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		gap: 15px;
+		margin-top: 10px;
+
+		& > button {
+			width: fit-content !important;
+			background: transparent;
+			font-size: 1.1rem;
+			cursor: pointer;
+			display: inline-block;
+			border: none !important;
+
+			&::first-letter {
+				text-transform: capitalize;
+			}
+		}
+
+		.btnSave {
+			color: $blue;
+		}
+
+		.btnCancel {
+			color: #8193a8;
+		}
+	}
+}
+
+.CalenderClassName {
+	z-index: 2;
+	position: absolute;
+	box-shadow: 5px 3px 20px rgba(41, 43, 88, 0.16);
+	height: fit-content;
+	min-width: fit-content;
+	margin: auto;
+	padding: 1rem 1.5rem 1rem 1.5rem;
+	border-radius: 10px;
+	// width: 292px !important;
+	width: 100% !important;
+	&.top {
+		bottom: 100%;
+	}
+	&.bottom {
+		top: 100%;
+	}
+	&.left {
+		right: 0%;
+	}
+}
+
+.DateClassName {
+	z-index: 2;
+	position: absolute;
+	box-shadow: 5px 3px 20px rgba(41, 43, 88, 0.16);
+	height: fit-content;
+	min-width: fit-content;
+	margin: auto;
+	padding: 1rem 1.5rem 1rem 1.5rem;
+	border-radius: 10px;
+	// width: 292px !important;
+	width: 100% !important;
+	&.top {
+		bottom: 100%;
+	}
+	&.bottom {
+		top: 100%;
+	}
+	&.left {
+		right: 0%;
+	}
+}

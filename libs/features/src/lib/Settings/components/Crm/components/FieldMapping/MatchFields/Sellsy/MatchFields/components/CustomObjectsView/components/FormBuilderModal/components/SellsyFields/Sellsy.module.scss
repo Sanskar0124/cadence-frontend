@@ -1,0 +1,134 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.main {
+	flex: 0.24;
+	padding: 20px;
+	border-top: 1px solid #e7ebff;
+	display: flex;
+	flex-direction: column;
+
+	.header {
+		display: flex;
+		flex-direction: column;
+		gap: 0.7rem;
+		align-items: center;
+		width: 100%;
+		.title {
+			font-weight: 600;
+			display: flex;
+			align-items: center;
+			justify-self: center;
+			gap: 0.4rem;
+
+			.pdCount {
+				pointer-events: none;
+				display: flex;
+				align-items: center;
+				font-size: 0.9rem;
+				font-weight: 400;
+				justify-content: center;
+				padding-top: 2px;
+				padding-bottom: 2px;
+				transform: scale(1.05);
+			}
+		}
+		.tabNavBox {
+			width: 100%;
+			margin-bottom: 5px;
+			.tabNav {
+				border-radius: 25px;
+				width: 100%;
+				height: 40px;
+			}
+			.tabBtn {
+				border-radius: 15px;
+				font-weight: 400;
+				font-size: 1rem;
+			}
+			.activePill {
+				border-radius: 20px;
+			}
+			.activeBtn {
+				color: $whiteShade1;
+				font-weight: 600;
+			}
+		}
+	}
+	.body {
+		position: relative;
+		height: 56.7vh;
+		.pd {
+			&::-webkit-scrollbar {
+				display: none;
+				width: 0;
+			}
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			position: absolute;
+
+			margin-top: 1rem;
+			overflow: scroll;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 0.9rem;
+			.subSection {
+				width: 95%;
+				.subSectionHeader {
+					font-weight: 600;
+					margin-bottom: 0.4rem;
+					color: $lightBlue;
+				}
+				.subSectionFields {
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					gap: 0.5rem;
+
+					.field {
+						//these styles should be same as in ringoverFields .field class
+						position: relative;
+						height: 45px;
+						width: 100%;
+						display: flex;
+						justify-content: center;
+						padding-left: 35px;
+						padding-right: 20px;
+						padding-top: 13px;
+						text-align: center;
+						border-radius: 10px;
+						color: $mainPurple;
+						background: linear-gradient(
+							106.52deg,
+							rgba(162, 130, 232, 0.12) -11.57%,
+							rgba(126, 142, 231, 0.12) 50.39%,
+							rgba(68, 153, 233, 0.12) 116.35%
+						);
+						&::-webkit-scrollbar {
+							display: none;
+							width: 0;
+						}
+						.whiteBox {
+							position: absolute;
+							width: 15px;
+							height: 27px;
+							border-radius: 10px;
+							background: $white;
+							left: 13px;
+							top: 10px;
+						}
+						.fieldLabel {
+							width: 180px;
+							text-overflow: ellipsis;
+							white-space: nowrap;
+							overflow: hidden;
+							text-overflow: ellipsis;
+						}
+					}
+				}
+			}
+		}
+	}
+}

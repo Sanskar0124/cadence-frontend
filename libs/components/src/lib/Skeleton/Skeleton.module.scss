@@ -1,0 +1,30 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.skeletonLoader {
+	background-color: $whiteShade2;
+	position: relative;
+	border-radius: 5px;
+	min-height: 1.3em;
+	overflow: hidden;
+	&::after {
+		display: block;
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		transform: translateX(-100%);
+		background: linear-gradient(
+			90deg,
+			transparent,
+			rgba(255, 255, 255, 0.5),
+			transparent
+		);
+		animation: loading 0.8s infinite;
+	}
+}
+
+@keyframes loading {
+	100% {
+		transform: translateX(100%);
+	}
+}

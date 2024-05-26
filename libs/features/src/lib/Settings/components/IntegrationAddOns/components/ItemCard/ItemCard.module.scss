@@ -1,0 +1,86 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.itemCard {
+	border-radius: 15px;
+	width: 100%;
+	height: 90px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 1px solid #f5f6f7;
+	box-shadow: -2px 4px 20px rgba(57, 71, 89, 0.04);
+	padding-right: 20px;
+	overflow: hidden;
+	.left {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+		.icon {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 90px;
+			width: 80px;
+		}
+		.info {
+			.name {
+				font-weight: 700;
+			}
+			.configuredStatus {
+				width: fit-content;
+				padding: 5px 8px;
+				border-radius: 4px;
+				color: $red;
+				background: linear-gradient(
+					315deg,
+					rgba(255, 136, 136, 0.05) 0%,
+					rgba(240, 95, 95, 0.05) 100%
+				);
+				&.configured {
+					background: linear-gradient(
+						90deg,
+						rgba(54, 205, 207, 0.05) 0%,
+						rgba(64, 224, 207, 0.05) 100%
+					);
+					color: $darkGreen;
+				}
+			}
+		}
+	}
+
+	&.lusha {
+		.left .icon {
+			background: #dfdfe0;
+		}
+	}
+
+	&.kaspr {
+		.left .icon {
+			background: #f1edfb;
+		}
+	}
+
+	&.hunter {
+		.left .icon {
+			background: #ffe8e1;
+		}
+	}
+
+	&.dropcontact {
+		.left .icon {
+			background: #ddf5f2;
+		}
+	}
+
+	&.snov {
+		.left .icon {
+			background: #f2e4f1;
+		}
+	}
+
+	&.linkedin_extension {
+		.left .icon {
+			background: #e0ecf4;
+		}
+	}
+}

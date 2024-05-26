@@ -1,0 +1,141 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.pageContainer {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	.logo {
+		position: absolute;
+		left: 20px;
+		top: 20px;
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		> div {
+			.cadence {
+				text-transform: capitalize;
+			}
+			span {
+				display: block;
+				&:first-child {
+					font-size: 1.1rem;
+					font-weight: 700;
+				}
+				&:last-child {
+					font-size: 0.9rem;
+				}
+			}
+		}
+	}
+	.progressContainer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 40px;
+		width: 100%;
+		.bar {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 15px;
+			width: 70%;
+
+			& > span {
+				color: $mainPurple;
+				font-weight: 600;
+				font-size: 1.42rem;
+			}
+
+			/* Fallback stuff */
+			progress[value] {
+				appearance: none;
+				border: none;
+				border-radius: 50px;
+				box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25) inset;
+				color: dodgerblue;
+				z-index: 10;
+				height: 34px;
+				order: 1;
+				width: 100%;
+			}
+
+			/* WebKit styles */
+			progress[value]::-webkit-progress-bar {
+				background-color: $white;
+				border-radius: 50px;
+			}
+
+			progress[value]::-webkit-progress-value {
+				background: $primaryGradient;
+				border-radius: 20px;
+				position: relative;
+				transition: width 0.5s linear;
+			}
+
+			/* Firefox styles */
+			progress[value]::-moz-progress-bar {
+				background: $primaryGradient;
+				border-radius: 20px;
+				position: relative;
+				transition: width 0.5s linear;
+			}
+		}
+
+		.loader {
+			.spinner {
+				width: 32px;
+				height: 32px;
+				div {
+					width: 30px;
+					height: 30px;
+					border-color: $mainPurple transparent transparent transparent;
+				}
+			}
+		}
+		.logs {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 20px;
+			& > span {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				color: #8193a8;
+				font-size: 1.42rem;
+				&.active {
+					color: $black;
+				}
+			}
+		}
+		.error {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			align-items: center;
+			span {
+				color: $red;
+				font-size: 20px;
+				font-weight: 700;
+			}
+			& > p {
+				color: $red;
+			}
+			& > button {
+				margin-top: 20px;
+			}
+		}
+		.success {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			align-items: center;
+			& > button {
+				margin-top: 20px;
+			}
+		}
+	}
+}

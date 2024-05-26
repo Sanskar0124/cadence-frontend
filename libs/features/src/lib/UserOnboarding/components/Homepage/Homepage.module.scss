@@ -1,0 +1,134 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.homepage {
+	display: flex;
+	align-items: center;
+	height: 100vh;
+	.titles {
+		.title {
+			font-family: "Open Sans";
+			font-size: 2.5rem;
+			font-weight: 700;
+			line-height: 49px;
+			color: $mainPurple;
+			margin-bottom: 1rem;
+			display: block;
+			&::first-letter {
+				text-transform: capitalize;
+			}
+		}
+		.subtitle {
+			max-width: 350px;
+			margin-bottom: 3rem;
+			font-family: "Open Sans";
+			font-size: 1.25rem;
+			font-weight: 400;
+			line-height: 28px;
+			letter-spacing: 0.01em;
+			display: inline-block;
+			&::first-letter {
+				text-transform: capitalize;
+			}
+		}
+		.selectLang {
+			position: absolute;
+			bottom: 50px;
+		}
+		.steps {
+			display: flex;
+			.step {
+				transform: translate(-25px);
+				display: flex;
+				align-items: center;
+				// border: 1px solid red;
+				width: 160px;
+				justify-content: center;
+				position: relative;
+				// justify-content: center;
+				// &.index1{
+				// 	wid
+				// }
+				// &.index2 {
+				// 	width: 160px;
+				// 	.divider {
+				// 		margin-left: 0.4rem;
+				// 	}
+				// }
+				.stepName {
+					display: flex;
+					align-items: center;
+					flex-direction: column;
+					gap: 1rem;
+					.number {
+						border: 2px solid $mainPurple;
+						width: 47px;
+						height: 47px;
+						border-radius: 25px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						font-size: 1.33rem;
+						font-weight: 700;
+						color: $mainPurple;
+					}
+					.name {
+						font-family: "Open Sans";
+						font-size: 1rem;
+						font-weight: 600;
+						line-height: 19px;
+						color: $lightBlue;
+					}
+				}
+				.divider {
+					min-width: 4.2rem;
+					margin-left: 0.2rem;
+					margin-right: 0.2rem;
+					height: 5px;
+					position: absolute;
+					right: -30px;
+					transform: translateY(-14px);
+					background: linear-gradient(
+						106.52deg,
+						rgba(162, 130, 232, 0.32) -11.57%,
+						rgba(126, 142, 231, 0.32) 50.39%,
+						rgba(68, 153, 233, 0.32) 116.35%
+					);
+				}
+			}
+			margin-bottom: 3.8rem;
+		}
+	}
+	.startButton {
+		position: relative;
+		.button {
+			height: 50px;
+
+			width: 175px;
+		}
+	}
+	.marquee {
+		height: 100vh;
+		width: 600px;
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		right: 0.5rem;
+		img {
+			position: absolute;
+			right: 0;
+			width: 100%;
+			animation: marquee 75s linear infinite;
+			&:hover {
+				animation-play-state: paused;
+			}
+		}
+	}
+	@keyframes marquee {
+		0% {
+			top: 70%;
+		}
+		100% {
+			top: -480%;
+		}
+	}
+}

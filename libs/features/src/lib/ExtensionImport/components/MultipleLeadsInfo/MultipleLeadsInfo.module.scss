@@ -1,0 +1,132 @@
+@import "libs/themes/src/lib/styles/variables";
+.pageContainer {
+	display: flex;
+	justify-content: center;
+	.innerBox {
+		position: relative;
+
+		.upperBoundary {
+			z-index: 2;
+			position: absolute;
+			height: 10px;
+			left: 0%;
+			right: 0%;
+			top: 0px;
+			background: linear-gradient(
+				106.52deg,
+				#a282e8 -11.57%,
+				#7e8ee7 50.39%,
+				#4499e9 116.35%
+			);
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+		}
+		.multipleLeadsInfo {
+			width: 30%;
+			min-width: 450px;
+			box-shadow: 5px 10px 50px rgba(41, 43, 88, 0.2);
+			height: 97%;
+			background: $white;
+			border: 1px solid #e7ebff;
+			border-radius: 10px;
+			padding: 2rem;
+			overflow: auto;
+
+			position: relative;
+
+			> .inputGroup {
+				margin: 2rem 0 3rem 0;
+				> label {
+					display: inline-block;
+					&::first-letter {
+						text-transform: capitalize;
+					}
+				}
+			}
+
+			> .total {
+				> h3 {
+					color: $lightBlue;
+					font-weight: 600;
+					text-align: center;
+					margin-bottom: 0.5rem;
+
+					> span {
+						color: $black;
+						font-weight: 600;
+					}
+				}
+
+				> .spinner {
+					div {
+						border: 2px solid red !important;
+					}
+				}
+			}
+
+			> .searchBar {
+				margin: 1rem auto;
+				border: 1px solid #dadce0;
+			}
+
+			> .list {
+				height: 250px;
+				margin-bottom: 20px;
+				overflow-y: auto;
+				&::-webkit-scrollbar {
+					display: none;
+				}
+
+				> .lead {
+					width: calc(100% - 10px);
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					margin-bottom: 1rem;
+					height: 32px;
+					background: $white;
+					border-radius: 10px;
+
+					.btn {
+						font-weight: 600;
+						font-size: 0.714rem;
+						line-height: 14px;
+						height: 24px;
+						width: fit-content;
+						display: flex;
+						justify-content: center;
+						border-radius: 8px;
+						flex-direction: column;
+						padding: 3px 9px;
+						margin-right: -10px;
+						text-transform: capitalize;
+					}
+
+					> .left {
+						font-weight: 400;
+						font-size: 1rem;
+						line-height: 20px;
+					}
+
+					> .buttons {
+						display: flex;
+						justify-content: center;
+						gap: 15px;
+						margin-right: -10px;
+						:nth-child(1) {
+							align-self: center;
+						}
+					}
+				}
+			}
+
+			> .btn {
+				display: block;
+				margin: auto;
+				font-weight: 600;
+				box-shadow: 1px 8px 24px rgba(125, 142, 231, 0.4);
+				border-radius: 15px;
+			}
+		}
+	}
+}

@@ -1,0 +1,66 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.inputSelectBox {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	.current {
+		display: flex;
+		position: relative;
+		.inputBox {
+			width: 65%;
+			position: relative;
+			.inputSelect {
+				border-radius: 15px 0 0 15px;
+			}
+			.enrichLogo {
+				position: absolute;
+				top: 20%;
+				right: 2%;
+				width: 1.7rem;
+				height: 1.7rem;
+				border-radius: 50%;
+
+				img {
+					width: 1.5rem;
+				}
+			}
+		}
+		.selectBox {
+			width: 28%;
+		}
+		.delete {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			cursor: pointer;
+			margin-right: 0px;
+		}
+		.radioBtn {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			margin-right: 6px;
+			margin-left: 6px;
+			margin-top: 9px;
+			width: 1.6em;
+			height: 1.6em;
+			background: #fff;
+			border-radius: 50%;
+			background: #e4e6ea;
+
+			&.primary {
+				background: $primaryGradient;
+			}
+			&:disabled {
+				opacity: 0.5;
+				cursor: not-allowed;
+			}
+		}
+	}
+	.addMore {
+		.button {
+			min-width: 120px;
+		}
+	}
+}

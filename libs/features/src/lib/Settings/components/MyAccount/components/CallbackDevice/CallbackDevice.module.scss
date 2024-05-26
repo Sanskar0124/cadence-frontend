@@ -1,0 +1,19 @@
+@import "libs/themes/src/lib/styles/variables";
+@import "../../../../Settings.module.scss";
+
+.container {
+	.settings {
+		.options {
+			width: 60%;
+			display: grid;
+			grid-template-columns: repeat(2, minmax(150px, 1fr));
+			gap: 10px;
+			.greyBox {
+				width: 100%;
+				.name {
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+}

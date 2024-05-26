@@ -1,0 +1,64 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	.left {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+
+		.back {
+			font-size: 1rem;
+			font-weight: 500;
+		}
+
+		.titlePlaceholder {
+			width: 12ch;
+			min-height: 20px;
+			margin-bottom: 5px;
+			border: 0.2px solid #dfe1e6;
+		}
+
+		a {
+			cursor: pointer;
+			color: $blue;
+			font-weight: 400;
+			text-decoration: underline;
+			display: inline-block;
+			&::first-letter {
+				text-transform: capitalize;
+			}
+		}
+	}
+
+	.right {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		width: 31%;
+
+		button {
+			height: 40px !important;
+			// padding: 10px 20px;
+			// display: flex;
+			// align-items: center;
+			// color: $black;
+			// box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+			// border-radius: 15px;
+			// gap: 13px;
+			div {
+				width: max-content;
+			}
+		}
+	}
+}
+
+.mainContainer {
+	flex: 1;
+	display: flex;
+	margin-top: 20px;
+	overflow: hidden;
+}

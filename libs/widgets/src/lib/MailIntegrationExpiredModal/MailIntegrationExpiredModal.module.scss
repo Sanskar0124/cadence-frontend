@@ -1,0 +1,31 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.modal {
+	width: 80vw;
+	max-width: 400px;
+	text-align: center;
+
+	.icon {
+		margin: 2rem auto;
+	}
+
+	.title {
+		font-size: 1.3rem;
+		font-weight: 600;
+		margin-bottom: 0.5rem;
+	}
+
+	.subTitle {
+		font-size: 1rem;
+		font-weight: 400;
+		margin-bottom: 2.5rem;
+		display: inline-block;
+		&::first-letter {
+			text-transform: capitalize;
+		}
+	}
+
+	.btn {
+		width: 100%;
+	}
+}

@@ -1,0 +1,44 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.header {
+	margin-bottom: 28px;
+	.tabBtn {
+		color: $lightBlue;
+		font-weight: 600;
+		font-size: 1.14rem;
+		display: inline-block;
+		&::first-letter {
+			text-transform: capitalize;
+		}
+	}
+
+	.activeTab {
+		color: $mainPurple;
+		font-weight: 600;
+	}
+}
+.body {
+	.input {
+		margin-bottom: 20px;
+		display: inline-block;
+		&::first-letter {
+			text-transform: capitalize;
+		}
+		.inputBox {
+			display: flex;
+			align-items: center;
+			gap: 15px;
+		}
+	}
+	.button {
+		button {
+			font-weight: 600;
+			font-size: 1rem;
+			line-height: 19px;
+			color: $black;
+		}
+	}
+	.info {
+		margin-top: 1rem;
+	}
+}

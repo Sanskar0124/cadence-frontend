@@ -1,0 +1,62 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.lead {
+	display: flex;
+	justify-content: space-between;
+	padding: 5px;
+	border-radius: 20px;
+	transition: background-color 0.5 ease-in-out;
+	.left {
+		height: 100%;
+		display: flex;
+		gap: 10px;
+
+		.salesforceBox {
+			width: 40px;
+			height: 40px;
+			object-fit: cover;
+			cursor: pointer;
+			// display: none;
+			// border-radius: 50%;
+		}
+
+		.info {
+			display: flex;
+			flex-direction: column;
+			text-overflow: ellipsis;
+			.name {
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 19px;
+				color: #567191;
+				text-overflow: ellipsis;
+			}
+		}
+	}
+
+	&:hover {
+		background-color: #f0f8fe;
+	}
+	.right {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+
+		.close {
+			width: 19px;
+			height: 19px;
+			margin-left: 2px;
+			padding: 1px;
+			color: $white;
+			background: #567191;
+			border-radius: 50%;
+			cursor: pointer;
+		}
+
+		.addBack {
+			color: $blue;
+			font-weight: bold;
+			cursor: pointer;
+		}
+	}
+}

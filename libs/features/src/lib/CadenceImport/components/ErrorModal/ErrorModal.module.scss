@@ -1,0 +1,36 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.errorModal {
+	max-width: 360px;
+	min-height: 200px;
+	width: 100%;
+	padding: 44px 20px 40px 20px !important;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	.warning {
+		font-size: 1.1rem;
+		max-width: 340px;
+		text-align: center;
+		&::first-letter {
+			text-transform: capitalize;
+		}
+
+		.name {
+			margin-top: 1.4rem;
+			font-size: 1.3rem;
+			font-weight: 700;
+			margin-bottom: 0.8rem;
+		}
+
+		.advice {
+			margin-top: 0.8rem;
+		}
+		.errorMsg {
+			a {
+				color: $darkblue;
+			}
+		}
+	}
+}

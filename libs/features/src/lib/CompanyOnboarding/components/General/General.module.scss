@@ -1,0 +1,108 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.generalContainer {
+	position: relative;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 2rem 2.4rem;
+	background-color: $white;
+	border: 1px solid #e7ebff;
+	border-radius: 20px;
+
+	.header {
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+
+		.title {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			text-transform: capitalize;
+
+			.icon {
+				width: 24px;
+				height: 24px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: $lightBlue;
+				border-radius: 6px;
+
+				> svg {
+					color: $white;
+				}
+			}
+
+			> h3 {
+				font-size: 20px;
+				font-weight: 700;
+				line-height: 27px;
+				color: $black;
+			}
+		}
+
+		.subTitle {
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 19px;
+			color: $black;
+			display: inline-block;
+			&::first-letter {
+				text-transform: capitalize;
+			}
+		}
+	}
+
+	.body {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		margin-top: 30px;
+		padding: 10px;
+		overflow-y: scroll;
+
+		.block {
+			margin-bottom: 2.86rem;
+
+			.labels {
+				color: #394759;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			> h5 {
+				font-size: 14px;
+				font-weight: 600;
+				color: $lightBlue;
+				margin-bottom: 0.71rem;
+				&::first-letter {
+					text-transform: capitalize;
+				}
+			}
+		}
+
+		.customTask {
+			height: 30px;
+			display: flex;
+			align-items: center;
+			gap: 20px;
+
+			> p {
+				font-size: 1rem;
+				font-weight: 400;
+				color: $black;
+				display: inline-block;
+				&::first-letter {
+					text-transform: capitalize;
+				}
+			}
+			.toggle {
+				height: 25px;
+			}
+		}
+	}
+}

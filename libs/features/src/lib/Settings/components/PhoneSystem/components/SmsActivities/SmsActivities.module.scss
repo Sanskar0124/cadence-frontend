@@ -1,0 +1,55 @@
+@import "libs/themes/src/lib/styles/variables";
+@import "../../../../Settings.module.scss";
+
+.container {
+	.settings {
+		display: flex;
+		flex-direction: column;
+		gap: 25px;
+		.syncSms {
+			display: flex;
+			align-items: center;
+			gap: 70px;
+		}
+		.smsHelp {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			svg {
+				cursor: pointer;
+			}
+			& > div {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+				&:first-child {
+					margin-bottom: 10px;
+				}
+				& > div {
+					background-color: #f5f6f7;
+					color: $lightBlue;
+					padding: 6px 10px;
+					border-radius: 10px;
+					display: flex;
+					gap: 10px;
+					justify-content: space-between;
+					align-items: center;
+					width: 90%;
+				}
+				& > span {
+					background: rgba(129, 147, 168, 0.05);
+					color: $lightBlue;
+					padding: 4px;
+					border-radius: 10px;
+					width: fit-content;
+				}
+				p {
+					color: $lightBlue;
+					&::first-letter {
+						text-transform: capitalize;
+					}
+				}
+			}
+		}
+	}
+}

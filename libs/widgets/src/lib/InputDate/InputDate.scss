@@ -1,0 +1,34 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.input-date {
+	width: 100%;
+	color: $black;
+
+	@media screen and (max-width: 500px) {
+		flex: 100%;
+	}
+
+	.input-fields {
+		display: flex;
+
+		& > div {
+			margin: 0 5px;
+
+			&:first-child {
+				margin-left: 0;
+			}
+
+			&.DD {
+				width: 25%;
+			}
+
+			&.MM {
+				width: 40%;
+			}
+
+			&.YYYY {
+				width: 35%;
+			}
+		}
+	}
+}

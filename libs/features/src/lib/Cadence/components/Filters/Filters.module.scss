@@ -1,0 +1,103 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.filters {
+	width: 100%;
+	height: 100%;
+	max-height: 100%;
+	overflow: hidden;
+	color: $black;
+	.closeBtn {
+		position: absolute;
+		z-index: 3;
+		left: 15px;
+		top: 24px;
+		border: none;
+		background: none;
+		color: $lightBlue;
+		width: 1.7rem;
+		height: 1.7rem;
+		border-radius: 50%;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		& > svg {
+			width: 100%;
+			height: 100%;
+		}
+
+		&:hover {
+			background: $whiteShade1;
+		}
+	}
+	.header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 30px;
+		.heading {
+			font-weight: 600;
+			padding-left: 1.6rem;
+			color: $black;
+		}
+		margin-bottom: 1.5rem;
+	}
+	.body {
+		height: 100%;
+		overflow: auto;
+		padding-bottom: 3rem;
+		&::-webkit-scrollbar {
+			display: none;
+			width: 0;
+		}
+		.filterType {
+			position: relative;
+			margin-bottom: 1.5rem;
+			.taskType {
+				height: 1.88rem;
+				font-weight: 600;
+				font-size: 1rem;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				.label {
+					display: inline-block;
+					&::first-letter {
+						text-transform: capitalize;
+					}
+				}
+			}
+			.filterOptions {
+				margin-top: 0.7rem;
+				display: flex;
+				flex-wrap: wrap;
+				column-gap: 1rem;
+				row-gap: 0.7rem;
+				justify-content: space-between;
+				button {
+					height: 40px !important;
+					font-size: 1rem;
+					flex: 40%;
+					white-space: nowrap;
+					// display: inline-block;
+					box-shadow: none;
+					&:hover {
+						box-shadow: none;
+						background: #f0f8fe;
+					}
+					&::first-letter {
+						text-transform: capitalize;
+					}
+					&.active {
+						background: $primaryGradient;
+						color: $white;
+						&:hover {
+							opacity: 10;
+						}
+					}
+				}
+			}
+		}
+	}
+}

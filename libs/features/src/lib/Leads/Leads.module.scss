@@ -1,0 +1,83 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.tasks {
+	max-width: 100%;
+	overflow: hidden;
+
+	.header {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 20px;
+
+		& > div {
+			display: flex;
+			.title {
+				color: $lightBlue;
+				text-transform: capitalize;
+			}
+		}
+
+		.right {
+			.search {
+				width: 350px;
+				position: relative;
+			}
+		}
+
+		.divider {
+			position: relative;
+			height: 45px;
+
+			&::before {
+				position: absolute;
+				top: 0;
+				content: "";
+				height: 100%;
+				width: 1px;
+				background: $primaryGradient;
+			}
+		}
+		.calendarBtn {
+			padding: 0 !important;
+		}
+		.filterBtn,
+		.divider,
+		.calendarBtn {
+			margin-left: 20px;
+		}
+	}
+
+	.body {
+		height: calc(100vh - 105px);
+		gap: 10px;
+		display: flex;
+		transition: 0.25s ease-in-out;
+		.tasksContainer {
+			flex: 1;
+			overflow-y: scroll;
+			border-radius: 10px;
+			background-color: $white;
+			padding: 10px 10px;
+			display: flex;
+			flex-direction: column;
+			&::-webkit-scrollbar {
+				display: none;
+			}
+		}
+
+		.noTasks {
+			height: 100%;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			h4 {
+				color: $veryLightBlue;
+				font-size: 1.3rem;
+				font-weight: 700;
+			}
+		}
+	}
+}

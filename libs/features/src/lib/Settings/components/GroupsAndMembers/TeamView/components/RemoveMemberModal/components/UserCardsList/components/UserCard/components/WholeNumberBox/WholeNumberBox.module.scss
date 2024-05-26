@@ -1,0 +1,43 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.numberBox {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+
+	.changeCount {
+		margin-right: -5px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		color: #767676;
+		visibility: hidden;
+		gap: 13.33px;
+
+		&.show {
+			visibility: visible;
+		}
+
+		> svg {
+			cursor: pointer;
+		}
+	}
+
+	> .changeCount:not(:last-child) {
+		margin-left: 5px;
+	}
+
+	.input {
+		width: 57px;
+		height: 40px;
+		padding: 0 7px;
+		font-size: 14px;
+		text-align: center;
+		color: $lightBlue;
+		background: $white;
+		border: 1px solid #dadce0;
+		border-radius: 15px;
+		outline: none;
+	}
+}

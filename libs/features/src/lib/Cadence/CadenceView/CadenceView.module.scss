@@ -1,0 +1,236 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.cadenceView {
+	.header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 1rem;
+		padding-right: 0.8rem;
+
+		.left {
+			display: flex;
+			flex-direction: column;
+			gap: 7px;
+			z-index: 1;
+			button {
+				display: block;
+				background: none;
+				border: none;
+				color: $black;
+
+				svg {
+					transform: translateY(2px);
+				}
+			}
+
+			.heading {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				min-height: 20px;
+				min-width: 200px;
+				.name {
+					max-width: 700px;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+				}
+				.id {
+					display: flex;
+					align-items: center;
+					gap: 5px;
+					background: rgba(129, 147, 168, 0.1);
+					border-radius: 10px;
+					height: 30px;
+					padding: 5px 10px;
+
+					svg {
+						cursor: pointer;
+					}
+					span {
+						max-width: 100px;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						white-space: nowrap;
+					}
+				}
+
+				.cadenceType {
+					width: fit-content;
+					height: 26px;
+					background: rgba(91, 107, 225, 0.1);
+					border-radius: 10px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					padding: 5px 10px;
+					text-transform: uppercase;
+					color: #5b6be1;
+					font-weight: 600;
+					font-size: 12px;
+					cursor: pointer;
+					border: 1px solid transparent;
+					& > div {
+						border-radius: 10px;
+					}
+				}
+
+				.cadenceType:hover {
+					background: rgba(91, 107, 225, 0.15);
+					border-color: rgba(91, 107, 225, 0.12);
+				}
+			}
+
+			.createdAt {
+				color: $lightBlue;
+				transform: translateY(-5px);
+				> div {
+					display: inline-block;
+					&::first-letter {
+						text-transform: capitalize;
+					}
+					margin-right: 3px;
+				}
+
+				.cadenceDescription {
+					position: relative;
+
+					.descriptionIcon {
+						width: 15px;
+						height: 15px;
+						cursor: pointer;
+						margin-right: 0.5rem;
+						transform: translateY(-1px);
+					}
+
+					.descriptionTool {
+						position: absolute;
+						top: -8px;
+						bottom: 0;
+						width: fit-content;
+					}
+				}
+			}
+		}
+
+		.right {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+			.optionBtn {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+				border-radius: 20px;
+				padding: 1rem 1.5rem;
+				color: $lightBlue;
+				height: 44px;
+			}
+
+			.dropdownBtn {
+				text-transform: capitalize;
+				svg {
+					color: $lightBlue;
+				}
+			}
+			button {
+				// text-transform: capitalize;
+				.buttonLoader {
+					transform: translateX(-3px);
+					div {
+						border: 2px solid $veryLightBlue;
+						border-color: $veryLightBlue transparent transparent transparent;
+					}
+				}
+			}
+		}
+	}
+
+	.subHeader {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-right: 0.8rem;
+		.subHeaderRight {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			gap: 1rem;
+			.searchBar {
+				min-width: 160px;
+			}
+			.dropDown {
+				padding: 10px;
+
+				& > button:disabled {
+					background-color: transparent;
+					color: rgba(129, 147, 168, 0.5) !important;
+				}
+			}
+			.dropdownLabels {
+				display: inline-flex;
+				width: 100%;
+				align-items: center;
+				gap: 7px;
+				color: $black;
+			}
+			.primaryBtn {
+				width: fit-content;
+				padding: 1rem 2rem;
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				font-weight: 600;
+				color: $lightBlue;
+				background: $white;
+				border-radius: 20px;
+				box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+				border: none;
+				cursor: pointer;
+				div {
+					width: max-content;
+					&::first-letter {
+						text-transform: capitalize;
+					}
+				}
+
+				svg {
+					color: $lightBlue;
+				}
+
+				&.active {
+					color: $white;
+					background: $primaryGradient;
+
+					svg {
+						color: $white;
+					}
+				}
+
+				&:not(.active):hover {
+					opacity: 0.8;
+					transition: 0.2s ease-in-out;
+				}
+			}
+			.workflowBtn {
+				border-radius: 15px;
+			}
+		}
+
+		&.steps {
+			margin-bottom: 1rem;
+		}
+
+		.tabBtn {
+			font-weight: 600;
+			color: $lightBlue;
+			text-transform: capitalize;
+		}
+
+		.activeTab {
+			color: $mainPurple;
+		}
+	}
+}

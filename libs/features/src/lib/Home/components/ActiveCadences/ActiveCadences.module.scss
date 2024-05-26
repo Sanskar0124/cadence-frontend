@@ -1,0 +1,55 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.container {
+	margin-top: 30px;
+	position: relative;
+	.header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 20px;
+		&::first-letter {
+			text-transform: capitalize;
+		}
+	}
+	.cadences {
+		padding: 0 10px;
+		margin-top: 10px;
+		display: flex;
+		flex-direction: column;
+		height: calc(100vh - 569px);
+		overflow: scroll;
+		.fallback {
+			justify-self: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+			& > span {
+				font-size: 1.1rem;
+				font-weight: 600;
+				color: $veryLightBlue;
+				transform: translateY(-20px);
+				&::first-letter {
+					text-transform: uppercase;
+				}
+			}
+			& > button {
+				margin-top: 20px;
+			}
+			@media screen and (max-height: 800px) {
+				& > svg {
+					display: none;
+				}
+				& > span {
+					font-size: 1.1rem;
+					transform: none;
+				}
+				& > button {
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,83 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.selectUser {
+	position: relative;
+	.selectUserBtn {
+		font-weight: 400;
+		border-radius: 15px;
+		height: 40px !important;
+		> p {
+			width: 80px;
+			text-align: left;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			// text-transform: capitalize;
+		}
+	}
+	.capitalize {
+		text-transform: capitalize;
+	}
+	.capitalizeFirstLetter {
+		&::first-letter {
+			text-transform: capitalize;
+		}
+	}
+	.noEmp {
+		text-align: center;
+		margin: 50px 0;
+		font-weight: 600;
+		text-transform: uppercase;
+		color: $lightBlue;
+	}
+	.dropdown {
+		position: absolute;
+		top: 110%;
+		border-radius: 20px;
+		right: 0;
+		background: $white;
+		z-index: 10;
+		display: none;
+		flex-direction: column;
+		gap: 15px;
+		padding: 15px;
+		width: 400px;
+		box-shadow: 5px 10px 50px rgba(41, 43, 88, 0.2);
+		&.open {
+			display: flex;
+		}
+		.tabs {
+			border-radius: 20px;
+			border: 1px solid #d8ecff;
+			height: 40px;
+
+			.tabBtns {
+				border-radius: 15px;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				gap: 7px;
+				color: $black;
+			}
+
+			.tabBtnActive {
+				color: #fff;
+			}
+
+			.activePill {
+				border-radius: 15px;
+			}
+		}
+		.totalSelected {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 0 8px 0 15px;
+			& > span {
+				color: $lightBlue;
+				font-weight: 600;
+				text-transform: capitalize;
+			}
+		}
+	}
+}

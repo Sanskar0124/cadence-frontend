@@ -1,0 +1,61 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.connection {
+	background-color: $white;
+	border-radius: 15px;
+	height: 56px;
+	padding: 0 20px;
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+	transition: width 0.3s;
+	cursor: pointer;
+	width: 70px;
+	overflow: hidden;
+	&:not(.active):hover {
+		opacity: 0.8;
+		transition: 0.2s ease-in-out;
+	}
+	.icon {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.caution {
+			background-color: $white;
+			height: 19px;
+			width: 18px;
+			padding: 1px;
+			border-radius: 50%;
+			position: absolute;
+			top: -7px;
+			right: -7px;
+		}
+	}
+	.expanded {
+		display: none;
+		align-items: center;
+		justify-content: space-between;
+		gap: 50px;
+		box-shadow: none;
+		width: 100%;
+		& > span {
+			color: $red;
+			font-weight: 600;
+			white-space: nowrap;
+		}
+		& > div {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+		}
+	}
+	&.active {
+		padding: 0 15px;
+		width: 415px;
+		.expanded {
+			display: flex;
+		}
+	}
+}

@@ -1,0 +1,92 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.modal {
+	.title {
+		margin-top: -1.5px;
+		font-weight: 700;
+		font-size: 1.2rem;
+	}
+	.signatureBox {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		margin: 30px 0;
+		width: 300px;
+		max-height: 400px;
+		overflow-y: scroll;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+		.signature {
+			display: flex;
+			align-items: center;
+			background: rgba(245, 246, 247, 1);
+			min-height: 50px;
+			border-radius: 20px;
+			.radio {
+				margin: 0 15px;
+				& > span {
+					border-radius: 8px;
+					height: 24px;
+					width: 24px;
+					i {
+						svg {
+							width: 1rem;
+							height: 1rem;
+						}
+					}
+				}
+			}
+			.checkbox {
+				margin: 0 15px;
+				height: 24px;
+				width: 24px;
+				& > span {
+					border-radius: 8px;
+					height: 24px;
+					width: 24px;
+					i {
+						svg {
+							width: 1rem;
+							height: 1rem;
+						}
+					}
+				}
+			}
+			.name {
+				max-width: 220px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: wrap;
+				color: $black;
+				&.active {
+					font-weight: 600;
+				}
+			}
+		}
+		.fallback {
+			text-align: center;
+			margin: 50px 0;
+			font-weight: 500;
+			color: $lightBlue;
+			text-transform: uppercase;
+		}
+	}
+	.placeholder {
+		margin: 30px 0;
+		& > div {
+			margin: 10px 0;
+			height: 50px;
+			width: 300px;
+		}
+	}
+	.blankBtn,
+	.saveBtn {
+		width: 100%;
+		text-transform: capitalize;
+	}
+	.blankBtn {
+		font-weight: 700;
+		margin-bottom: 10px;
+	}
+}

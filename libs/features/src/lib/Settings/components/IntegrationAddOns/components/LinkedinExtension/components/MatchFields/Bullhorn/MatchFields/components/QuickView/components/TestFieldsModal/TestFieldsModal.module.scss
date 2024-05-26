@@ -1,0 +1,87 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.testFieldsModal {
+	width: 550px;
+	padding: 20px 22px !important;
+	.header {
+		transform: translate(0, -1px);
+		font-size: 1.2rem;
+		font-weight: 700;
+	}
+	.body {
+		margin-top: 2rem;
+		color: $lightBlue;
+		font-weight: 600;
+		.urlInput {
+			margin-top: 0.9rem;
+			border-radius: 15px;
+		}
+		.result {
+			max-height: 60vh;
+			margin-top: 1rem;
+			overflow-y: auto;
+			&::-webkit-scrollbar {
+				display: none;
+				width: 0;
+			}
+		}
+
+		.sideLink {
+			margin: 0.5rem 0 1.8rem 0;
+			a {
+				font-size: 13px;
+				text-decoration: underline;
+				color: #037dfc;
+			}
+		}
+	}
+	.errorLog,
+	.missingFields {
+		margin-bottom: 1.1rem;
+		.title {
+			display: flex;
+			align-items: center;
+			margin-bottom: 0.6rem;
+			gap: 0.4rem;
+		}
+		.fields {
+			div {
+				margin-right: 0.7rem;
+				margin-bottom: 0.5rem;
+				border-radius: 10px;
+				padding-left: 7px;
+				padding-right: 7px;
+				padding-top: 4px;
+				padding-bottom: 4px;
+				font-size: 1rem;
+				font-weight: 400;
+				display: inline-block;
+			}
+			&.error {
+				div {
+					color: $redShade3;
+					background: linear-gradient(
+						315deg,
+						rgba(255, 136, 136, 0.08) 0%,
+						rgba(240, 95, 95, 0.08) 100%
+					);
+				}
+			}
+			&.missing {
+				div {
+					color: $mainPurple;
+					background: linear-gradient(
+						106.52deg,
+						rgba(162, 130, 232, 0.08) -11.57%,
+						rgba(126, 142, 231, 0.08) 50.39%,
+						rgba(68, 153, 233, 0.08) 116.35%
+					);
+				}
+			}
+		}
+	}
+	.fetchButton {
+		//  margin-top: 1.8rem;
+		width: 100%;
+	}
+}

@@ -1,0 +1,13 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.sidebar {
+	border-radius: 10px;
+	height: 100%;
+	max-height: 100%;
+	overflow: hidden;
+	background-color: $white;
+	transition: all 0.3s ease-in-out;
+	width: 100%;
+	position: relative;
+	padding: 20px;
+}

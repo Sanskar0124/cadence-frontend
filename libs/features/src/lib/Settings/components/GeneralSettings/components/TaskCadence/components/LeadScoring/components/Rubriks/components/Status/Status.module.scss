@@ -1,0 +1,63 @@
+@import "../../Rubriks.module.scss";
+
+.statusUpdate {
+	display: flex;
+	flex-direction: column;
+	// justify-content: space-between;
+	// align-items: center;
+	margin-bottom: 1em;
+	width: 75%;
+	border-radius: 15px;
+	padding: 3px 20px;
+	background: $whiteShade1 !important;
+	& > * {
+		background: $whiteShade1 !important;
+	}
+
+	&.exception {
+		background: none !important;
+	}
+
+	&.exception > * {
+		background: none !important;
+	}
+	.collapseHeader {
+		width: 100%;
+		justify-content: space-around;
+		align-items: center;
+		text-transform: capitalize;
+	}
+
+	.statuses {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 5px 15px;
+		padding-top: 3px;
+		padding-bottom: 10px;
+		width: 100%;
+		gap: 1em;
+		.statusContainers {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			& > p {
+				color: $lightBlue;
+			}
+			.inputBox {
+				display: flex;
+				align-items: center;
+				& > p {
+					color: $lightBlue;
+				}
+				.input {
+					text-align: center;
+					background-color: #fff !important;
+					border: 1px solid #dadce0;
+					border-radius: 15px;
+					margin-right: 1rem;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,55 @@
+@import "libs/themes/src/lib/styles/variables";
+.csvColumns {
+	padding: 20px;
+	border-left: 1px solid $grey;
+	.values {
+		overflow-y: scroll;
+		height: calc(100vh - 180px);
+		h2 {
+			margin: 20px 0 5px 0;
+			color: $black;
+			font-weight: 600;
+		}
+		.group {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 10px 18px;
+			padding-right: 0 28px;
+
+			div {
+				width: 100%;
+				padding: 10px 10px 10px 22px;
+
+				background: #eef1f4;
+				border-radius: 10px;
+				position: relative;
+				display: flex;
+				align-items: center;
+				h1 {
+					color: $lightBlue;
+					font-weight: 400;
+					width: 100%;
+					text-align: center;
+				}
+				span {
+					width: 9px;
+					height: 24px;
+					background: $white;
+					border-radius: 10px;
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+	.skeletonGrid {
+		display: grid;
+		gap: 10px 18px;
+		grid-template-columns: 1fr 1fr;
+		margin-top: 44px;
+		padding: 0 18px;
+		.skeleton {
+			min-width: 180px;
+			height: 40px;
+		}
+	}
+}

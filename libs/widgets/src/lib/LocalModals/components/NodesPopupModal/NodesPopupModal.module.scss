@@ -1,0 +1,62 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.NodesPopupModal {
+	height: 90vh;
+	width: 520px;
+	padding: 0;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	> svg {
+		margin-top: 1.75rem;
+	}
+
+	> h3 {
+		margin: 1.8rem 0 2.75rem;
+		font-weight: 600;
+		font-size: 1.15rem;
+	}
+
+	.btn {
+		width: 100%;
+	}
+}
+
+.nodes {
+	height: 75vh;
+	width: 100%;
+	overflow-y: scroll;
+	margin-top: 40px;
+	margin-bottom: 25px;
+}
+.top {
+	height: 15vh;
+	width: 100%;
+}
+
+.nodes::-webkit-scrollbar {
+	width: 0;
+}
+
+.placeholder {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	height: 80vh;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	gap: 10px;
+	width: 520px;
+	& > div {
+		flex-grow: 1;
+		// height: 100%;
+		width: 90%;
+	}
+}
+
+.nopadModal {
+	padding: 0 !important;
+}

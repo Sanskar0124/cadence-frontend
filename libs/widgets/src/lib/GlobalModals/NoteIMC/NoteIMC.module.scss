@@ -1,0 +1,29 @@
+.noteIMC {
+	width: 33vw;
+	.header {
+		font-size: 18px;
+		font-weight: 600;
+		padding: 0.2em;
+		&::first-letter {
+			text-transform: capitalize;
+		}
+	}
+	.divider {
+		border-bottom: 1px solid #8193a87e;
+	}
+	.footer {
+		margin-top: 0.5em;
+		width: 100%;
+
+		> button {
+			display: inline-block;
+			&::first-letter {
+				text-transform: capitalize;
+			}
+		}
+	}
+}
+
+.noteIMC > * {
+	text-align: left;
+}

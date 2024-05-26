@@ -1,0 +1,69 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.teamSettingsModal {
+	width: 100%;
+	max-width: 440px;
+
+	.heading {
+		margin-bottom: 30px;
+		display: flex;
+		justify-content: space-between;
+
+		h3 {
+			font-size: 16px;
+			font-weight: 700;
+			color: $black;
+			display: inline-block;
+			&::first-letter {
+				text-transform: capitalize;
+			}
+		}
+
+		.deleteBtn {
+			border: none;
+			display: flex;
+			align-items: center;
+			font-size: 14px;
+			font-weight: 600;
+			color: $redShade2;
+			background: none;
+			gap: 8px;
+			margin-right: 40px;
+			// display: inline-block;
+			&::first-letter {
+				text-transform: capitalize;
+			}
+
+			&:disabled {
+				opacity: 0.7;
+				cursor: not-allowed;
+			}
+		}
+	}
+
+	.main {
+		.inputGroup {
+			padding-bottom: 20px;
+			label {
+				display: inline-block;
+				::first-letter {
+					text-transform: capitalize;
+				}
+			}
+
+			&:nth-last-child(1) {
+				padding-bottom: 0;
+			}
+		}
+	}
+
+	.footer {
+		margin-top: 40px;
+
+		.saveBtn {
+			width: 100%;
+			border-radius: 15px;
+			box-shadow: 1px 8px 24px rgba(125, 142, 231, 0.4);
+		}
+	}
+}

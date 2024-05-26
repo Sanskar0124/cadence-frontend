@@ -1,0 +1,42 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.lead {
+	display: flex;
+	justify-content: space-between;
+
+	.left {
+		height: 100%;
+		display: flex;
+		gap: 10px;
+
+		.info {
+			display: flex;
+			flex-direction: column;
+
+			p {
+				font-size: 14px;
+
+				&:nth-child(1) {
+					font-weight: 400;
+					color: $lightBlue;
+				}
+
+				&:nth-child(2) {
+					font-weight: 600;
+					color: $black;
+				}
+			}
+		}
+	}
+
+	.right {
+		display: flex;
+		align-items: center;
+
+		.close {
+			width: 16px;
+			height: 16px;
+			cursor: pointer;
+		}
+	}
+}

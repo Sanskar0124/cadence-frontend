@@ -1,0 +1,108 @@
+@import "libs/themes/src/lib/styles/variables";
+.selectCadence {
+	position: relative;
+	.dropdown {
+		border-radius: 20px;
+		background: $white;
+		z-index: 10;
+		flex-direction: column;
+		gap: 20px;
+		padding: 15px 0;
+		display: flex;
+		.tabs {
+			border-radius: 15px;
+			border: 1px solid #d8ecff;
+			height: 40px;
+			.tabBtns {
+				border-radius: 10px;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				text-transform: capitalize;
+				gap: 7px;
+				color: $black;
+				width: 50px;
+			}
+
+			.tabBtnActive {
+				color: #fff;
+			}
+
+			.activePill {
+				border-radius: 10px;
+			}
+		}
+		.clear {
+			display: flex;
+			justify-content: flex-end;
+			margin-bottom: -18px;
+		}
+		.list {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			overflow-y: scroll;
+			height: calc(100vh - 400px);
+			padding-right: 5px;
+			.cadence {
+				min-height: 40px;
+				padding: 5px 0 5px 15px;
+				cursor: pointer;
+				border-radius: 20px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				.info {
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					overflow: hidden;
+				}
+				.tick {
+					min-width: 40px;
+					height: 40px;
+					background: $primaryGradient;
+					border-radius: 17px;
+					display: none;
+					align-items: center;
+					justify-content: center;
+					color: $white;
+					margin-left: 20px;
+				}
+				&.selected {
+					background: $primaryGradientLight;
+					.tick {
+						display: flex;
+					}
+					.info {
+						font-weight: 600;
+					}
+				}
+			}
+		}
+		.noCadence {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			flex-direction: column;
+			font-weight: 400;
+			color: $veryLightBlue;
+			font-weight: 700;
+			height: calc(100vh - 400px);
+			.btnCreateCadence {
+				margin-top: 15px !important;
+			}
+		}
+	}
+	.placeholder {
+		width: 99%;
+		min-height: 43px;
+		margin: 10px 0;
+		&:first-child {
+			margin-top: 0;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

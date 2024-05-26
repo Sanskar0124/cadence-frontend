@@ -1,0 +1,287 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.card {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	padding: 0px 15px;
+	cursor: pointer;
+	border-radius: 10px;
+	min-height: 82px;
+
+	&.loading {
+		width: 100%;
+		margin-bottom: 10px;
+		pointer-events: none;
+	}
+
+	&:hover,
+	&.active {
+		background-color: #f0f8fe;
+	}
+
+	&.disabled {
+		&:hover {
+			background-color: initial;
+			cursor: unset;
+		}
+	}
+
+	.left {
+		display: flex;
+		align-items: center;
+		gap: 2rem;
+		// width: 40%;
+		.hotLead {
+			margin-top: 0.35rem;
+			margin-right: -1.5rem;
+		}
+		.icon {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-right: 10px;
+			min-width: 40px;
+			min-height: 40px;
+			background: linear-gradient(
+				106.52deg,
+				rgba(135, 151, 233, 0.1) -11.57%,
+				rgba(166, 135, 233, 0.1) -11.56%,
+				rgba(82, 162, 235, 0.1) 116.35%
+			);
+			border-radius: 10px;
+
+			svg {
+				width: 17px;
+				height: 17px;
+			}
+		}
+
+		.leadInfo {
+			width: 230px;
+			// width: 50%;
+
+			.accountName {
+				max-width: 180px;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+			}
+
+			.accountSize {
+				max-width: 170px;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+			}
+
+			.leadName {
+				max-width: 170px;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+			}
+		}
+
+		.cadencesInfo {
+			display: flex;
+			gap: 30px;
+			align-items: center;
+
+			> .cadenceTaskInfo {
+				display: flex;
+				&.paused {
+					.icon {
+						position: relative;
+						background: #f7f9fc;
+
+						> svg {
+							opacity: 0.5;
+						}
+
+						> .pauseIcon {
+							position: absolute;
+							right: -5px;
+							bottom: -5px;
+							color: #ff9b4a;
+						}
+					}
+				}
+
+				> .cadenceInfo {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+
+					> .cadenceStep {
+						color: $lightBlue;
+						text-transform: capitalize;
+						white-space: nowrap;
+					}
+
+					> .cadenceName {
+						font-weight: 600;
+						white-space: nowrap;
+						text-overflow: ellipsis;
+						max-width: 280px;
+						overflow: hidden;
+						&.overflow {
+							max-width: 140px;
+							overflow: hidden;
+						}
+					}
+				}
+			}
+		}
+
+		.taskInfo {
+			transition: 0.25s ease-in-out;
+			display: flex;
+		}
+
+		.taskInfo,
+		.leadInfo {
+			& > div {
+				&:first-child {
+					display: flex;
+					align-items: center;
+					color: $lightBlue;
+					font-size: 1rem;
+					line-height: 19px;
+
+					span {
+						display: inline-block;
+					}
+
+					i {
+						margin: 0 4px;
+					}
+				}
+
+				&:last-child {
+					font-weight: 700;
+				}
+			}
+		}
+		.middle {
+			.moreCadences {
+				width: 40px;
+				height: 40px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-weight: 700;
+				color: $mainPurple;
+				border-radius: 10px;
+				background: linear-gradient(
+					106.52deg,
+					rgba(135, 151, 233, 0.1) -11.57%,
+					rgba(166, 135, 233, 0.1) -11.56%,
+					rgba(82, 162, 235, 0.1) 116.35%
+				);
+			}
+		}
+	}
+
+	.right {
+		width: 50%;
+		display: flex;
+		align-items: center;
+		gap: 2rem;
+		justify-content: flex-end;
+
+		.activity {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			width: 280px;
+
+			&.sidebarOpen {
+				display: none;
+			}
+
+			> .activityIcon {
+				width: 40px;
+				height: 40px;
+				border-radius: 10px;
+				background: #eff1f3;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: $lightBlue !important;
+			}
+
+			> .activityInfo {
+				> .activityTime {
+					color: $lightBlue;
+				}
+
+				> .activityName {
+					font-weight: 600;
+					max-width: 180px;
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+				}
+			}
+		}
+
+		.tags {
+			width: 100px;
+			display: flex;
+			align-items: flex-end;
+			flex-direction: column;
+			gap: 5px;
+
+			div {
+				font-weight: 700;
+				font-size: 12px;
+				padding: 5px 10px;
+				text-transform: capitalize;
+				line-height: 13px;
+				color: white;
+				border-radius: 8px;
+				// width: max-content;
+				margin: 0 5px;
+				width: fit-content;
+				text-align: center;
+				width: 88px;
+				height: 28px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				&.english {
+					width: 90px;
+				}
+				&.french {
+					width: 130px;
+				}
+				&.spanish {
+					width: 130px;
+				}
+
+				&.new_lead {
+					background: $ringoverGradient;
+				}
+
+				&.ongoing {
+					display: none;
+				}
+
+				&.converted {
+					background: $veryLightBlue;
+				}
+
+				&.trash {
+					background: $red;
+				}
+
+				&.duplicate {
+					background: $orangeGradient;
+				}
+			}
+		}
+	}
+}

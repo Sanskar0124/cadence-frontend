@@ -1,0 +1,11 @@
+.wrapper {
+	width: fit-content;
+	height: fit-content;
+	position: relative;
+
+	.placeholder {
+		inset: 0;
+		position: absolute;
+		box-shadow: 0 0 0 0.5px #dadce0;
+	}
+}

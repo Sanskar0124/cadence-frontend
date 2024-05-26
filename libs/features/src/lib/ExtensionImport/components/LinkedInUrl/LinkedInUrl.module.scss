@@ -1,0 +1,162 @@
+@import "libs/themes/src/lib/styles/variables";
+.container {
+	width: 35%;
+	min-width: 400px;
+	height: 97%;
+	background: $white;
+	border: 1px solid #e7ebff;
+	border-radius: 10px;
+	.linkedinUrl {
+		padding: 0rem 1rem 3rem;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		.upperBoundary {
+			position: absolute;
+			height: 8px;
+			left: 0%;
+			right: 0%;
+			top: 0px;
+			background: linear-gradient(
+				106.52deg,
+				#a282e8 -11.57%,
+				#7e8ee7 50.39%,
+				#4499e9 116.35%
+			);
+		}
+		.header {
+			height: 40px;
+			width: 100%;
+			display: flex;
+			margin: 30px 0 35px 0;
+			justify-content: space-between;
+			.logo {
+				display: flex;
+
+				align-items: center;
+				gap: 5px;
+
+				> div {
+					p {
+						display: block;
+						color: $blackShade6;
+
+						&:first-child {
+							font-size: 1.1rem;
+							font-weight: 700;
+							&::first-letter {
+								text-transform: capitalize;
+							}
+						}
+
+						&:last-child {
+							font-size: 0.9rem;
+							font-weight: 400;
+							line-height: 16px;
+						}
+					}
+				}
+			}
+
+			.sfConnected {
+				display: flex;
+				align-items: center;
+				gap: 7px;
+				.sfTick {
+					height: 13px;
+					width: 13px;
+					display: flex;
+					justify-content: center;
+					padding: 2.3px;
+					border-radius: 60%;
+
+					background: $primaryGradient;
+				}
+				> span {
+					color: $lightBlue;
+					font-weight: 400;
+					font-size: 0.9rem;
+					display: inline-block;
+					&::first-letter {
+						text-transform: capitalize;
+					}
+				}
+			}
+		}
+
+		.main {
+			> p {
+				margin-bottom: 2rem;
+				font-weight: 600;
+				display: inline-block;
+				&::first-letter {
+					text-transform: capitalize;
+				}
+			}
+
+			.inputGroup {
+				margin-bottom: 2rem;
+				label {
+					text-transform: capitalize;
+				}
+
+				.input {
+					height: 40px;
+					border-radius: 15px;
+					margin-bottom: 1.2rem;
+				}
+			}
+
+			.error {
+				margin: 1rem 0;
+			}
+
+			.btn {
+				margin: 35px auto;
+				border-radius: 15px;
+				width: 197px;
+				height: 48px;
+				box-shadow: 1px 8px 24px rgba(125, 142, 231, 0.4);
+				font-weight: 600;
+				display: block;
+			}
+		}
+		.mainSalesforce {
+			display: flex;
+			flex-direction: column;
+			margin: auto;
+			align-items: center;
+			gap: 1rem;
+			text-align: center;
+			width: 65%;
+
+			> h3 {
+				font-weight: 700;
+				font-size: 1.1rem;
+			}
+
+			> p {
+				color: $lightBlue;
+			}
+
+			> .btn {
+				display: flex;
+				align-items: center;
+				gap: 7px;
+				color: $blackShade6;
+				font-weight: 600;
+				font-size: 0.9rem;
+				margin-top: 1.5rem;
+				background: #f5f6f7;
+				box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+				padding: 0.85rem 2rem;
+				height: 40px;
+				border-radius: 15px;
+
+				svg {
+					color: $lightBlue;
+				}
+			}
+		}
+	}
+}

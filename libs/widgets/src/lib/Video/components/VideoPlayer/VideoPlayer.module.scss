@@ -1,0 +1,114 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.videoPlayer {
+	position: relative;
+	video {
+		width: 100%;
+		height: 100%;
+		object-fit: fill;
+	}
+	.controls {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		position: absolute;
+		bottom: 0;
+		height: 100px;
+		width: 100%;
+		background: rgba(57, 71, 89, 0.3);
+		button {
+			border: none;
+			background: transparent;
+		}
+		.actions {
+			color: white;
+			height: 32px;
+			width: 32px;
+		}
+		.time {
+			color: white;
+			font-weight: 600;
+		}
+
+		input[type="range"] {
+			-webkit-appearance: none !important;
+			background: rgba(255, 255, 255, 0.4);
+			border-radius: 12px;
+			height: 8px;
+			width: 65%;
+		}
+
+		input[type="range"]::-webkit-slider-thumb {
+			cursor: pointer;
+		}
+		input[type="range"]::-webkit-progress-bar {
+			-webkit-appearance: none !important;
+			background: white;
+		}
+
+		input[type="range"]::-moz-range-track {
+			width: 100%;
+			cursor: pointer;
+			border-radius: 1.3px;
+			border: 0.2px solid #010101;
+		}
+		input[type="range"]::-moz-range-thumb {
+			box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+			border: 1px solid #000000;
+			height: 36px;
+			width: 16px;
+			border-radius: 3px;
+			background: #ffffff;
+			cursor: pointer;
+		}
+		input[type="range"]::-ms-track {
+			width: 100%;
+			height: 8.4px;
+			cursor: pointer;
+			background: transparent;
+			border-color: transparent;
+			border-width: 16px 0;
+			color: transparent;
+		}
+		input[type="range"]::-ms-thumb {
+			box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+			border: 1px solid #000000;
+			height: 36px;
+			width: 16px;
+			border-radius: 3px;
+			background: #ffffff;
+			cursor: pointer;
+		}
+	}
+	.closeIcon {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		cursor: pointer;
+		border: none;
+		background: none;
+		font-size: 1rem;
+		z-index: 10;
+		color: $lightBlue;
+		&.leftClose {
+			right: unset;
+			left: 20px;
+		}
+		width: 1.7rem;
+		height: 1.7rem;
+		border-radius: 50%;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		& > svg {
+			width: 100%;
+			height: 100%;
+		}
+
+		&:hover {
+			background: $whiteShade1;
+		}
+	}
+}

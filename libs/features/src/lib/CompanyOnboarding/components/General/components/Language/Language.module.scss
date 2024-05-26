@@ -1,0 +1,22 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.language {
+	button {
+		display: flex;
+		align-items: center;
+		text-transform: capitalize;
+		border-radius: 20px;
+		height: 49px;
+		svg {
+			padding: 1px 0.5px;
+			margin-right: 10px;
+			border-radius: 2px;
+			transform: translateX(-0.3px);
+			width: 28px;
+			height: 19px;
+			&.active {
+				background: white;
+			}
+		}
+	}
+}

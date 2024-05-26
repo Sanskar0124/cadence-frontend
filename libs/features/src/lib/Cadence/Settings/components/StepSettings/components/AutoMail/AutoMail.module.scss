@@ -1,0 +1,39 @@
+@import "../../StepSettings.module.scss";
+
+.autoMail {
+	.tabs {
+		margin: 20px 0;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		> div {
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: none;
+			padding: 0 20px;
+			height: 40px;
+			border: 1px solid #798ee7;
+			border-radius: 10px;
+			font-weight: 700;
+			color: $lightBlue;
+			&.active {
+				background: rgba(166, 178, 239, 0.12);
+			}
+			button {
+				display: flex;
+				align-items: center;
+				margin-left: 10px;
+				border: none;
+				background: none;
+				color: $red;
+			}
+		}
+	}
+}
+.header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}

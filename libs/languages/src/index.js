@@ -1,0 +1,26 @@
+import Pipedrive from "./lib/pages/Pipedrive/Pipedrive";
+import Salesforce from "./lib/pages/Salesforce/Salesforce";
+
+export { default as Common } from "./lib/pages/Common/Common";
+export { default as Activity } from "./lib/pages/Activity/Activity";
+export { default as Cadence } from "./lib/pages/Cadence/Cadence";
+export { default as Errors } from "./lib/pages/Errors/Errors";
+export { default as Notifications } from "./lib/pages/Notifications/Notifications";
+export { default as People } from "./lib/pages/People/People";
+export { default as Profile } from "./lib/pages/Profile/Profile";
+export { default as Settings } from "./lib/pages/Settings/Settings";
+export { default as Statistics } from "./lib/pages/Statistics/Statistics";
+export { default as Tasks } from "./lib/pages/Tasks/Tasks";
+export { default as Templates } from "./lib/pages/Templates/Templates";
+export { default as Email } from "./lib/pages/Email/Email";
+export { default as Salesforce } from "./lib/pages/Salesforce/Salesforce";
+export { default as Zoho } from "./lib/pages/Zoho/Zoho";
+export { default as Bullhorn } from "./lib/pages/Bullhorn/Bullhorn";
+export { default as Pipedrive } from "./lib/pages/Pipedrive/Pipedrive";
+export { default as useIntegrationTranslations } from "./lib/pages/Integration/useIntegrationTranslations";
+export { default as Hubspot } from "./lib/pages/Hubspot/Hubspot";
+export { default as Sellsy } from "./lib/pages/Sellsy/Sellsy";
+export { default as Dynamics } from "./lib/pages/Dynamics/Dynamics";
+export { default as Home } from "./lib/pages/Home/Home";
+export { default as Addons } from "./lib/pages/Addons/Addons";
+export { default as Tour } from "./lib/pages/Tour/Tour";

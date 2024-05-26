@@ -1,0 +1,23 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.promptInfo {
+	position: absolute;
+	width: 350px;
+	position: absolute;
+	background: $white;
+	height: fit-content;
+	padding: 15px;
+	border-radius: 10px;
+	z-index: 9999999;
+	top: 10px;
+	left: 220px;
+	box-shadow: 5px 10px 50px 0px rgba(41, 43, 88, 0.2);
+
+	.header {
+		margin-bottom: 15px;
+	}
+
+	li {
+		margin-bottom: 10px;
+	}
+}

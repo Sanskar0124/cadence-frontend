@@ -1,0 +1,15 @@
+@import "libs/themes/src/lib/styles/variables";
+@import "../../../../Settings.module.scss";
+
+.container {
+	.settings {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		.name {
+			&::first-letter {
+				text-transform: uppercase;
+			}
+		}
+	}
+}

@@ -1,0 +1,14 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.triggers {
+	.addTriggerButton {
+		width: 180px;
+		font-size: 0.95rem;
+		color: $black;
+		font-weight: 600;
+		> svg {
+			transform: translateY(1px);
+			margin-right: 13.3px;
+		}
+	}
+}

@@ -1,0 +1,133 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.heading {
+	margin-right: 32px;
+	margin-bottom: 40px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	h3 {
+		font-size: 16px;
+		font-weight: 700;
+		color: $black;
+	}
+
+	button {
+		display: inline;
+		font-size: 14px;
+		font-weight: 400;
+		color: #037dfc !important;
+		background: none;
+		border: none;
+		&::first-letter {
+			text-transform: capitalize;
+		}
+	}
+}
+
+.body {
+	display: flex;
+	flex-direction: column;
+	> label {
+		padding-bottom: 10px;
+		color: $lightBlue;
+		font-weight: 600;
+		display: inline-block;
+		&::first-letter {
+			text-transform: capitalize;
+		}
+	}
+
+	.searchBar {
+		border: 1px solid #dadce0;
+		border-radius: 20px;
+		position: relative;
+		text-transform: none;
+	}
+
+	.header {
+		height: max-content;
+		margin: 20px 28px 20px 10px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		> p {
+			font-size: 14px;
+			font-weight: 400;
+			color: $black;
+			&::first-letter {
+				text-transform: capitalize;
+			}
+
+			> span {
+				white-space: pre;
+			}
+		}
+
+		.distnStatus {
+			height: 26px;
+			display: flex;
+			align-items: center;
+			gap: 10px;
+
+			> label span {
+				transform: translateY(-50%);
+			}
+		}
+	}
+
+	.usersList {
+		margin: 0 10px 10px;
+	}
+
+	.settingsLabel {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		> label {
+			padding-bottom: 10px;
+			color: $lightBlue;
+			font-weight: 600;
+			display: inline-block;
+			&::first-letter {
+				text-transform: capitalize;
+			}
+		}
+		> span {
+			font-size: 0.8rem;
+			color: $red;
+			&::first-letter {
+				text-transform: capitalize;
+			}
+		}
+	}
+
+	.checks {
+		margin-top: 20px;
+		display: flex;
+		gap: 40px;
+
+		.check {
+			display: flex;
+			gap: 10px;
+			p {
+				display: inline-block;
+				&::first-letter {
+					text-transform: capitalize;
+				}
+			}
+		}
+	}
+}
+
+.footer {
+	margin-top: 40px;
+
+	.reassignBtn {
+		width: 100%;
+		border-radius: 15px;
+		box-shadow: 1px 8px 24px rgba(125, 142, 231, 0.4);
+	}
+}

@@ -1,0 +1,179 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.createCadenceModal {
+	width: 440px;
+
+	.heading {
+		margin-top: -2px;
+
+		h3 {
+			transform: translateY(-2px);
+			color: $black;
+			font-size: 1.25rem;
+		}
+	}
+
+	.main {
+		margin: 20px 0;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+		.headText {
+			font-style: normal;
+			font-weight: 700;
+			font-size: 14px;
+			display: block;
+			color: #567191;
+		}
+		.titleSelector {
+			width: 100%;
+			padding-left: 20px;
+		}
+
+		.launchCadence {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.launchTitle {
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 19px;
+				color: $lightBlue;
+			}
+		}
+
+		.label {
+			margin-left: 20px;
+		}
+
+		.scheduleGroup {
+			padding: 5px 0;
+			> label {
+				font-size: 14px;
+				color: $black;
+			}
+
+			.inputTime {
+				&::-webkit-scrollbar {
+					display: none;
+				}
+			}
+		}
+		.inputGroup {
+			> label {
+				margin-bottom: 0.5rem;
+				color: $lightBlue;
+				display: inline-block;
+				&::first-letter {
+					text-transform: capitalize;
+				}
+			}
+			&.error {
+				label {
+					color: $red;
+				}
+				input {
+					border-color: $red;
+				}
+				textarea {
+					border-color: $red;
+				}
+				> div > div {
+					border-color: $red;
+				}
+			}
+
+			> .inputGroupAdvanced {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				cursor: pointer;
+				label {
+					margin-bottom: 0px;
+				}
+				.arrowBtn {
+					background: none;
+					border: none;
+
+					transition: 0.25s ease;
+
+					svg {
+						color: $lightBlue;
+					}
+
+					&.arrowBtnUp {
+						transform: rotate(-180deg);
+					}
+				}
+			}
+			.advancedGroup {
+				// display: none;
+				height: 0;
+				max-height: 0;
+				overflow: hidden;
+				opacity: 0;
+				transition: 0.25s ease-in-out;
+				background: linear-gradient(
+					106.52deg,
+					rgba(162, 130, 232, 0.05) -11.57%,
+					rgba(126, 142, 231, 0.05) 50.39%,
+					rgba(68, 153, 233, 0.05) 116.35%
+				);
+				border-radius: 10px;
+				padding: 10px;
+				.checkBoxGroup {
+					display: none;
+					align-items: center;
+					justify-content: flex-start;
+					gap: 30px;
+					margin-bottom: 1rem;
+
+					> .checkBox {
+						transform: translateY(-10px);
+					}
+
+					> p {
+						color: $black;
+					}
+				}
+				&.showAdvancedGroup {
+					height: auto;
+					// display: block;
+					max-height: 100vh;
+					opacity: 1;
+					.checkBoxGroup {
+						display: flex;
+					}
+				}
+			}
+
+			.inputDescription {
+				height: 72px !important;
+			}
+
+			.wordCounter {
+				text-align: right;
+				color: $lightBlue;
+			}
+		}
+
+		.tAndC {
+			margin-top: 10px;
+			color: $lightBlue;
+		}
+	}
+
+	.footer {
+		.createBtn {
+			width: 100%;
+			border-radius: 15px;
+			display: inline-block;
+			&::first-letter {
+				text-transform: capitalize;
+			}
+		}
+	}
+}

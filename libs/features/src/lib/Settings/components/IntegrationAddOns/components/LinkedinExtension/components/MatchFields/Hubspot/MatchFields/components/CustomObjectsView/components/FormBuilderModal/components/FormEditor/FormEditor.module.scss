@@ -1,0 +1,179 @@
+@import "libs/themes/src/lib/styles/variables";
+.main {
+	flex: 0.76;
+	padding: 20px;
+	border-top: 1px solid #e7ebff;
+	border-right: 1px solid #e7ebff;
+	margin: 0;
+
+	.header {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 10px;
+		.heading {
+			font-weight: 700;
+			font-size: 1.143rem;
+			line-height: 22px;
+			color: $black;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
+			max-width: 120px;
+		}
+		.instruction {
+			display: flex;
+			font-weight: 400;
+			font-size: 1rem;
+			line-height: 19px;
+			color: $lightBlue;
+			// gap: 20px;
+			// button {
+			// 	font-size: 0.714rem;
+			// 	font-weight: 400;
+
+			// 	svg {
+			// 		&:nth-of-type(2) {
+			// 			// transform: translate(-16.5px, 2px);
+			// 			margin: 3.5px 0 0 -16.5px;
+			// 		}
+			// 	}
+			// }
+		}
+	}
+
+	.body {
+		display: flex;
+		flex-direction: column;
+		overflow-y: scroll;
+		&.contact {
+			max-height: 528px;
+		}
+		&.lead {
+			max-height: 460px;
+		}
+		.formRow {
+			display: flex;
+			padding: 20px 2px;
+			gap: 12px;
+
+			.formColumn {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				// background: rgba(245, 246, 247, 0.08);
+				border: "none";
+				border-radius: 15px;
+				min-height: 84px;
+				&.showBorder {
+					border: 1px dashed rgba(86, 113, 145, 0.64);
+				}
+				&.showDisableBorder {
+					border: 1px dashed rgba(86, 113, 145, 0.24);
+				}
+				.dragItem {
+					width: 100%;
+
+					.radioBox {
+						display: flex;
+						flex-wrap: wrap;
+						justify-content: space-between;
+						gap: 10px;
+						.label {
+							display: flex;
+							align-self: center;
+							font-weight: 400;
+							font-size: 1rem;
+							line-height: 19px;
+							color: $black;
+						}
+						.btnBox {
+							display: flex;
+							justify-content: flex-start;
+							width: fit-content;
+							gap: 40px;
+							.btn {
+								display: flex;
+								justify-content: center;
+								gap: 10px;
+								.radio {
+									align-self: center;
+									span {
+										border: 1px solid #dadce0;
+										box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+										border-radius: 24px;
+									}
+								}
+								.btnLabel {
+									font-weight: 400;
+									font-size: 1rem;
+									line-height: 19px;
+									align-self: center;
+									color: $black;
+									text-transform: capitalize;
+								}
+							}
+						}
+					}
+					.date {
+						color: $veryLightBlue;
+					}
+					.edit {
+						width: 100%;
+						display: flex;
+						justify-content: space-between;
+						background: $whiteShade1;
+						border-radius: 15px;
+						padding-left: 12px;
+						padding-right: 12px;
+						min-height: 44px;
+						.left {
+							display: flex;
+							gap: 14px;
+							align-self: center;
+							.dots {
+								align-self: center;
+								display: flex;
+							}
+							.editLabel {
+								font-weight: 600;
+								font-size: 14px;
+								align-self: center;
+								line-height: 19px;
+								color: $lightBlue;
+							}
+						}
+						.right {
+							display: flex;
+							align-self: center;
+							cursor: pointer;
+						}
+					}
+				}
+			}
+		}
+		.button {
+			align-self: center;
+			display: flex;
+			flex-direction: column;
+			font-size: 1rem;
+			button {
+				&:nth-of-type(1) {
+					margin: 20px 0;
+					font-weight: 600;
+					color: $blackShade6;
+					align-self: center;
+				}
+				&:nth-of-type(2) {
+					margin: 12px 0 20px 0;
+					font-weight: 700;
+					color: #ffffff;
+					align-self: center;
+				}
+			}
+		}
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,237 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.cadenceCard {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+	padding: 15px;
+	cursor: pointer;
+	border-radius: 10px;
+
+	&.loading {
+		width: 100%;
+		margin-bottom: 10px;
+		pointer-events: none;
+	}
+
+	&:hover,
+	&.active {
+		background-color: #f0f8fe;
+	}
+
+	> div {
+		padding: 5px;
+
+		> span {
+			display: inline-block;
+			width: 100px;
+			padding: 5px;
+			border-radius: 6px;
+			color: #fff;
+			text-align: center;
+			font-weight: 500;
+			font-size: 1.1rem;
+		}
+	}
+
+	.status {
+		width: 120px;
+		text-align: center;
+	}
+
+	.favorite {
+		padding: 5px 0;
+	}
+
+	.leads {
+		width: 60px;
+
+		> span {
+			width: fit-content;
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			background: linear-gradient(
+				106.52deg,
+				rgba(135, 151, 233, 0.1) -11.57%,
+				rgba(166, 135, 233, 0.1) -11.56%,
+				rgba(82, 162, 235, 0.1) 116.35%
+			);
+			border-radius: 100px;
+			padding: 5px 10px;
+			color: $mainPurple;
+		}
+	}
+
+	// NAME
+	.cadenceName {
+		width: 250px;
+		font-weight: 600;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+
+	.steps {
+		width: 60px;
+		text-align: center;
+	}
+
+	.createdBy {
+		width: 150px;
+		text-align: center;
+	}
+
+	.createdOn {
+		width: 150px;
+		text-align: center;
+	}
+
+	// TAG
+	.tag {
+		.inbound {
+			background: linear-gradient(315deg, #72bbf1 0%, #549ef7 100%);
+		}
+
+		.outbound {
+			background: $redGradient2;
+		}
+	}
+
+	// PRIORITY
+	.priority {
+		.standard {
+			// width: 100px;
+			background: linear-gradient(100.92deg, #3fdecf -79.01%, #49a2ff 139.27%);
+		}
+
+		.high {
+			// width: 100px;
+			background: $primaryGradient;
+
+			svg {
+				margin-left: 5px;
+			}
+		}
+	}
+
+	// STATUS
+	.status {
+		.notStarted,
+		.processing {
+			width: 100%;
+			font-size: 14px;
+			text-align: center;
+			color: $black;
+		}
+
+		.inProgress {
+			width: 100%;
+			font-size: 14px;
+			text-align: center;
+			background: $ringoverGradient;
+		}
+
+		.scheduled,
+		.paused {
+			background: $veryLightBlue;
+			display: flex;
+			font-size: 14px;
+			text-align: center;
+			justify-content: center;
+			width: 100%;
+			svg {
+				margin-left: 5px;
+				transform: translate(1px, 2px);
+			}
+
+			> span {
+				&[tooltip]:hover::before {
+					content: attr(tooltip);
+					position: absolute;
+					background: rgba(243, 244, 253, 1);
+					background: $black;
+					color: #fff;
+					border-radius: 8px;
+					font-weight: 500;
+					padding: 4px 8px;
+					line-height: 17px;
+					width: max-content;
+					max-width: 250px;
+					transform: translate(40px, -2px);
+					z-index: 10000;
+				}
+			}
+		}
+
+		.paused {
+			width: 100%;
+			text-align: center;
+			background: $orangeGradient;
+
+			> span {
+				&[tooltip]:hover::before {
+					content: attr(tooltip);
+					position: absolute;
+					background: rgba(243, 244, 253, 1);
+					background: $black;
+					color: #fff;
+					border-radius: 8px;
+					font-weight: 500;
+					padding: 4px 8px;
+					line-height: 17px;
+					width: max-content;
+					max-width: 250px;
+					transform: translate(40px, -2px);
+					z-index: 10000;
+				}
+			}
+		}
+
+		.stopped {
+			width: 100%;
+			font-size: 14px;
+			text-align: center;
+			background: $redGradient;
+		}
+	}
+
+	.actions {
+		width: 120px;
+		> div {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 1rem;
+			position: relative;
+
+			.actionBtn {
+				> div > div {
+					transform: translate(-3px, -1px);
+					div {
+						border-color: $lightBlue transparent transparent transparent;
+					}
+				}
+
+				svg {
+					transform: translateY(3px);
+				}
+			}
+			.dropdownBtn {
+				text-transform: capitalize;
+				svg {
+					color: $lightBlue;
+				}
+			}
+
+			.dotsBtn svg {
+				transform: translateY(-3px);
+			}
+			.actionBtn svg {
+				transform: translateY(3px);
+			}
+		}
+	}
+}

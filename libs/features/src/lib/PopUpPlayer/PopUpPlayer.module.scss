@@ -1,0 +1,137 @@
+@import "../../styles/variables";
+
+.popUpPlayer {
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		background: rgba(255, 255, 255, 0.8);
+		box-shadow: 2px 2px 40px rgba(0, 35, 35, 0.05);
+		backdrop-filter: blur(30px);
+		border-radius: 20px;
+		position: relative;
+		height: 100vh;
+		.logo {
+			margin-top: 28px;
+			margin-left: 28px;
+		}
+
+		.buttons {
+			position: absolute;
+			display: flex;
+			width: 100%;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+			bottom: 20px;
+		}
+		.player {
+			height: fit-content;
+			width: fit-content;
+			max-width: 95%;
+			max-height: 85vh;
+			//  height: 595px;
+
+			// width: 85%;
+			margin: auto;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 20px;
+			box-shadow: 5px 10px 50px rgba(41, 43, 88, 0.2);
+			position: relative;
+			.fullScreenIcon {
+				position: absolute;
+				right: 20px;
+				top: 20px;
+				z-index: 99;
+				cursor: pointer;
+			}
+			.controls {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 15px;
+				position: absolute;
+				bottom: 0;
+				height: 70px;
+				width: 100%;
+				padding: 0 15px;
+				border-radius: 0px 0px 10px 10px;
+				background: rgba(57, 71, 89, 0.3);
+				transition: opacity 0.3s;
+				button {
+					border: none;
+					background: transparent;
+				}
+				.actions {
+					color: white;
+					height: 32px;
+					width: 32px;
+				}
+				.time {
+					color: white;
+					font-weight: 600;
+					width: 175px;
+				}
+
+				input[type="range"] {
+					-webkit-appearance: none !important;
+					background: rgba(255, 255, 255, 0.4);
+					border-radius: 12px;
+					height: 8px;
+					width: 100%;
+				}
+
+				input[type="range"]::-webkit-slider-thumb {
+					cursor: pointer;
+				}
+				input[type="range"]::-webkit-progress-bar {
+					-webkit-appearance: none !important;
+					background: white;
+				}
+			}
+
+			&.playing .controls {
+				opacity: 0;
+			}
+
+			&:hover .controls {
+				opacity: 1;
+			}
+
+			.loader {
+				height: 80vh;
+				width: 85vw;
+				background-color: $grey;
+			}
+
+			.spinnerWrapper {
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background: rgba(255, 255, 255, 0.4);
+				.bufferLoading {
+					position: absolute;
+					top: 0;
+					left: 0;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					z-index: 98 !important;
+					width: 100%;
+					height: 100%;
+					// background-color: $whiteShade2;
+					div {
+						width: 60px;
+						height: 60px;
+						border: 4px solid $mainPurple;
+						border-color: $mainPurple transparent transparent transparent;
+					}
+				}
+			}
+		}
+	}
+}

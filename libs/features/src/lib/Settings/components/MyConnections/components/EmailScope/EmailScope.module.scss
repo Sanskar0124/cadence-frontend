@@ -1,0 +1,64 @@
+@import "libs/themes/src/lib/styles/variables";
+@import "../../../../Settings.module.scss";
+
+.container {
+	.settings {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		> p {
+			display: inline-block;
+			&::first-letter {
+				text-transform: capitalize;
+			}
+		}
+
+		.greyBox {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			height: 50px;
+			width: 400px;
+			border-radius: 20px;
+			background-color: #f5f6f7;
+			padding: 10px;
+			border: 1px solid #a282e8;
+
+			& > div {
+				display: flex;
+				align-items: center;
+				gap: 20px;
+			}
+		}
+	}
+}
+
+.upgradeModal {
+	width: 640px;
+	height: 690px;
+	position: relative;
+	.stpesWrapper {
+		margin-top: 10px;
+		height: calc(100% - 48px);
+		border-radius: 15px;
+		padding: 10px;
+		.steps {
+			margin: 10px 0;
+			h2 {
+				margin: 10px 0;
+			}
+
+			p {
+				margin-bottom: 10px;
+				margin-left: 10px;
+			}
+			.boldText {
+				font-weight: 600;
+			}
+			.linktext {
+				color: #5ea5e9;
+				font-weight: 600;
+			}
+		}
+	}
+}

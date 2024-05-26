@@ -1,0 +1,97 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.integrationStatusModal {
+	min-width: 800px;
+	.header {
+		margin-bottom: 2.3rem;
+	}
+	.body {
+		margin-bottom: 1rem;
+
+		.row {
+			display: grid;
+			grid-template-columns: 50% 50%;
+			gap: 1rem;
+			justify-content: center;
+		}
+
+		.bottom {
+			margin-bottom: 0rem;
+
+			.inputReasonWrapper {
+				border: 1px solid #dadce0;
+				border-radius: 15px;
+				display: flex;
+				padding-left: 0.5rem;
+				padding-right: 0.5rem;
+
+				.inputReason {
+					border: none;
+				}
+
+				.buttonAddWrapper {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					gap: 0.5rem;
+
+					.buttonAdd {
+						font-size: 1rem;
+					}
+				}
+			}
+
+			.typedReasons {
+				height: 200px;
+				margin-top: 1rem;
+				padding: 1rem;
+				overflow-y: scroll;
+
+				&::-webkit-scrollbar {
+					display: none;
+				}
+
+				.reasonsRow {
+					display: grid;
+					grid-template-columns: 50% 50%;
+					column-gap: 1rem;
+					justify-content: center;
+
+					.reason {
+						max-width: 368px;
+						border-radius: 15px;
+						font-weight: 400;
+						padding: 1rem;
+						background-color: #f5f6f7;
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+						margin-bottom: 0.7rem;
+
+						.buttonReasonRemove {
+							width: min-content;
+							cursor: pointer;
+						}
+					}
+				}
+			}
+		}
+
+		.title {
+			font-weight: 700;
+			color: $lightBlue;
+			margin-bottom: 0.2rem;
+		}
+		.label {
+			margin-bottom: 1rem;
+			font-weight: 400;
+			text-transform: none;
+		}
+		.input {
+			margin-bottom: 2rem;
+		}
+	}
+	.footer {
+		margin-bottom: 0.7rem;
+	}
+}

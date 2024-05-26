@@ -1,0 +1,88 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.activityPreview {
+	flex: 1;
+	margin-left: 0.3rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+
+	.title {
+		color: $black;
+		font-weight: 600;
+		text-align: left;
+		&.positive {
+			color: $lightBlue;
+		}
+		&.hot {
+			color: #ffb12a;
+		}
+
+		&.cold,
+		&.negative {
+			color: #f77272;
+		}
+	}
+
+	.description {
+		font-weight: 400;
+		color: $black;
+		margin-top: 3px;
+	}
+
+	.actions {
+		display: flex;
+		gap: 0.5em;
+		width: 75%;
+		height: 75%;
+		padding-top: 0.75em;
+	}
+
+	&.call {
+		> .title {
+			display: flex;
+			align-items: center;
+			gap: 7px;
+
+			svg {
+				transform: translateY(2px);
+			}
+
+			> .note {
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				gap: 7px;
+				color: $veryLightBlue;
+				max-width: 50%;
+				text-overflow: ellipsis;
+				overflow-x: none;
+				position: relative;
+
+				&[tooltip]:hover::before {
+					content: attr(tooltip);
+					position: absolute;
+					background: rgba(243, 244, 253, 1);
+					border-radius: 8px;
+					font-weight: 500;
+					padding: 4px 8px;
+					line-height: 17px;
+					width: max-content;
+					max-width: 250px;
+					color: $mainPurple;
+					transform: translateX(20px);
+					z-index: 10000;
+				}
+			}
+		}
+		.audioPlayer {
+			margin: 3px 0;
+		}
+	}
+	.noteDescription {
+		max-width: 450px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}

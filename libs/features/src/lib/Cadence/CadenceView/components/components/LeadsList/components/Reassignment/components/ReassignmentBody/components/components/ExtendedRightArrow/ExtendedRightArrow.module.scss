@@ -1,0 +1,29 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.extendedRightArrow {
+	display: flex;
+	width: 56px;
+	height: 74px;
+	.armBox {
+		display: flex;
+		flex-direction: row-reverse;
+		width: 42px;
+		height: 74px;
+		.arm {
+			display: flex;
+			width: 21px;
+			height: 68px;
+			border-left: 2px solid rgb(129, 147, 168, 0.56);
+			border-bottom: 2px solid rgb(129, 147, 168, 0.56);
+		}
+	}
+	.arrowHead {
+		display: flex;
+		align-self: flex-end;
+		width: 0;
+		height: 0;
+		border-top: 7px solid transparent;
+		border-left: 14px solid rgb(129, 147, 168, 0.56);
+		border-bottom: 7px solid transparent;
+	}
+}

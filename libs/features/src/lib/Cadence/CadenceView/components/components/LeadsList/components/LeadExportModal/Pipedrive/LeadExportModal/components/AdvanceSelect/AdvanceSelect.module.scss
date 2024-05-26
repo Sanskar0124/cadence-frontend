@@ -1,0 +1,17 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.loader div {
+	border-color: grey transparent transparent transparent !important;
+}
+
+.noOptions {
+	color: $blackShade7;
+}
+
+.createOption {
+	display: flex;
+	align-items: center;
+	color: $blackShade7;
+	cursor: pointer;
+	gap: 10px;
+}

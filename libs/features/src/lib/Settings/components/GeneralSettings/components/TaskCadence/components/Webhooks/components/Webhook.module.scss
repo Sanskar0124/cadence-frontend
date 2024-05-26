@@ -1,0 +1,179 @@
+@import "libs/themes/src/lib/styles/variables";
+
+@import "libs/themes/src/lib/styles/variables";
+
+.collapsibleContainer {
+	width: 100%;
+	position: relative;
+	margin-bottom: 1rem;
+
+	.header {
+		width: 93%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-left: 7px;
+		position: relative;
+
+		.title {
+			font-weight: 600;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 0.5rem;
+
+			.iconWrapper {
+				position: relative;
+				margin-top: 0.2rem;
+				.resposeImage {
+					border-radius: 10px;
+					position: absolute;
+					top: 70%;
+					z-index: 999;
+					left: 20px;
+					width: 310px;
+				}
+			}
+		}
+	}
+	.warning {
+		display: flex;
+		align-items: center;
+		gap: 4px;
+		border-radius: 10px;
+		background: linear-gradient(
+			315deg,
+			rgba(255, 136, 136, 0.1) 0%,
+			rgba(240, 95, 95, 0.1) 100%
+		);
+		color: $red;
+		padding: 5px 10px;
+		margin-right: 10px;
+	}
+
+	.btns {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		gap: 0.25rem;
+		.typeToggle {
+			display: flex;
+			gap: 10px;
+			align-items: center;
+			margin-right: 22px;
+
+			> .toggle {
+				display: block;
+			}
+
+			> span {
+				color: $lightBlue;
+				font-weight: 600;
+			}
+		}
+		button {
+			background: none;
+			border: none;
+			font-weight: 500;
+			padding: 5px 7px;
+			border-radius: 10px;
+		}
+
+		.saveBtn {
+			color: $blue;
+			text-transform: capitalize;
+
+			&:hover {
+				background: rgba(94, 165, 233, 0.14);
+			}
+
+			.spinner {
+				div {
+					border: 2px solid $blue;
+					border-color: $blue transparent transparent transparent;
+				}
+			}
+		}
+
+		.deleteBtn {
+			color: $red;
+			text-transform: capitalize;
+
+			&:hover {
+				background: rgba(255, 136, 136, 0.14);
+			}
+
+			.spinner {
+				div {
+					border: 2px solid $red;
+					border-color: $red transparent transparent transparent;
+				}
+			}
+		}
+	}
+
+	.WebhookSetting {
+		border-radius: 10px;
+		padding: 15px 20px;
+		.setting {
+			margin-bottom: 20px;
+			.title {
+				margin-bottom: 10px;
+				font-weight: 600;
+			}
+
+			.webhookTypeOption {
+				color: hsl(0, 0%, 50%) !important;
+			}
+			input:disabled {
+				background: #fafafa;
+			}
+		}
+		.actionButton {
+			width: 145px;
+			padding: 11px 18px;
+			font-size: 0.95rem;
+			color: $lightBlue;
+			font-weight: 600;
+			> svg {
+				transform: translateY(1px);
+				margin-right: 13.3px;
+			}
+		}
+	}
+}
+
+.optionLabel {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	gap: 5px;
+
+	.label {
+		display: flex;
+		max-width: 80%;
+		flex-direction: column;
+		justify-content: center;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	.tag {
+		border-radius: 8px;
+		display: flex;
+		padding: 2px 8px;
+		font-weight: 400;
+		gap: 6px;
+		align-items: center;
+
+		&.selected {
+			background: rgba(255, 255, 255, 0.12);
+			color: #ffffff;
+		}
+		&.notSelected {
+			color: #567191;
+			background: rgba(129, 147, 168, 0.05);
+		}
+	}
+}

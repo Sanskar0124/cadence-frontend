@@ -1,0 +1,343 @@
+import { useState, useEffect } from "react";
+import { DEFAULT_SF_FIELDS_STRUCT, DEFAULT_VALUES, VIEWS } from "../../constants";
+import styles from "./DNDView.module.scss";
+import RingoverFields from "./components/RingoverFields/RingoverFields";
+import SalesforceFields from "./components/SalesforceFields/SalesforceFields";
+import { TabNavSlider } from "@cadence-frontend/widgets";
+import { TabNavThemes } from "@cadence-frontend/themes";
+import { CONTACT_ACCOUNT } from "./constants";
+import { DragDropContext } from "react-beautiful-dnd";
+import { useSettings } from "@cadence-frontend/data-access";
+import { checkIfChanges, UnParseRingoverFields, validateFields } from "../../utils";
+import { useContext } from "react";
+import { MessageContext } from "@cadence-frontend/contexts";
+import WarningModal from "./components/WarningModal/WarningModal";
+import { LOCAL_STORAGE_KEYS } from "@cadence-frontend/constants";
+import { View } from "@cadence-frontend/icons";
+
+const DNDView = ({
+	currentView,
+	setCurrentView,
+	ringoverFields,
+	setRingoverFields,
+	currentlyHovered,
+	setCurrentlyHovered,
+	setDisableNext,
+	postDataRef,
+	setIfUnsavedChanges,
+	originalRingoverFieldsResponse,
+	setOriginalRingoverFieldsResponse,
+	setSaveBtnLoading,
+}) => {
+	const {
+		updateRingoverMatchFields,
+		fetchLeadFieldsMutate,
+		fetchAccountFieldsMutate,
+		fetchContactSfFieldsMutate,
+		//loading states
+		ringoverMatchFieldsLoading,
+		updateRingoverMatchFieldsLoading,
+		fetchLeadSfFieldsLoading,
+		fetchAccountSfFieldsLoading,
+		fetchContactSfFieldsLoading,
+	} = useSettings({ enabled: false });
+	const { addError, addSuccess } = useContext(MessageContext);
+	const [warningModal, setWarningModal] = useState(DEFAULT_SF_FIELDS_STRUCT);
+	const [selectedField, setSelectedField] = useState(null);
+
+	//salesforce field states
+	const [originalSFFields, setOriginalSFFields] = useState(DEFAULT_SF_FIELDS_STRUCT);
+	const [availableSFFields, setAvailableSFFields] = useState(DEFAULT_SF_FIELDS_STRUCT);
+
+	//useEffect to disableNext
+	useEffect(() => {
+		setDisableNext(ringoverMatchFieldsLoading || updateRingoverMatchFieldsLoading);
+	}, [ringoverMatchFieldsLoading, updateRingoverMatchFieldsLoading]);
+
+	useEffect(() => {
+		fetchSFFields();
+	}, []);
+
+	//fetch SF Fields ||| P.S emails,phoneNumbers array to be converted to diff fields  ||Unparse Fn
+
+	//useEffect to update originalSFFields dep-> 3 fetch APIs
+	const fetchSFFields = () => {
+		fetchLeadFieldsMutate(VIEWS.LEAD, {
+			onSuccess: sfFieldsFromServer => {
+				setDefaultFieldsWhileOnboarding(sfFieldsFromServer, VIEWS.LEAD);
+				setOriginalSFFields(prev => ({
+					...prev,
+					[VIEWS.LEAD]: sfFieldsFromServer
+						?.sort((a, b) => a.label.localeCompare(b.label))
+						?.map((field, i) => ({ index: i, ...field })), //will have name, type, picklistVlaues(conditionally)
+				}));
+			},
+			onError: () => addError({ text: "Make sure you have signed in with salesforce" }),
+		});
+		fetchContactSfFieldsMutate(VIEWS.CONTACT, {
+			onSuccess: sfFieldsFromServer => {
+				setDefaultFieldsWhileOnboarding(sfFieldsFromServer, VIEWS.CONTACT);
+				setOriginalSFFields(prev => ({
+					...prev,
+					[VIEWS.CONTACT]: sfFieldsFromServer
+						?.sort((a, b) => a.label.localeCompare(b.label))
+						?.map((field, i) => ({ index: i, ...field })), //will have name, type, picklistVlaues(conditionally)
+				}));
+			},
+		});
+		fetchAccountFieldsMutate(VIEWS.ACCOUNT, {
+			onSuccess: sfFieldsFromServer => {
+				setDefaultFieldsWhileOnboarding(sfFieldsFromServer, VIEWS.ACCOUNT);
+				setOriginalSFFields(prev => ({
+					...prev,
+					[VIEWS.ACCOUNT]: sfFieldsFromServer
+						?.sort((a, b) => a.label.localeCompare(b.label))
+						?.map((field, i) => ({ index: i, ...field })), //will have name, type, picklistVlaues(conditionally)
+				}));
+			},
+		});
+	};
+
+	const setDefaultFieldsWhileOnboarding = (sfFieldsFromServer, view) => {
+		if (!["onboarding", "reconfigure"].includes(window.location.pathname.split("/")[2]))
+			return;
+		if (localStorage.getItem(LOCAL_STORAGE_KEYS.FIELD_MAP_DEFAULT_SET) === true) return;
+
+		let defaultFields = [];
+		sfFieldsFromServer.forEach(sf => {
+			if (Object.values(DEFAULT_VALUES[view]).includes(sf.name)) defaultFields.push(sf);
+		});
+		setRingoverFields(prev => ({
+			...prev,
+			[view]: prev[view].map(f => {
+				if (
+					Object.keys(DEFAULT_VALUES[view]).includes(f.uid) &&
+					defaultFields.find(df => df.name === DEFAULT_VALUES[view][f.uid])
+				) {
+					f.value = defaultFields.find(df => df.name === DEFAULT_VALUES[view][f.uid]);
+				}
+				return f;
+			}),
+		}));
+	};
+
+	//useEffect to update availbaleSFField state from dep-> ringoverFields, originalFields fetch API
+	useEffect(() => {
+		setAvailableSFFields({
+			[VIEWS.ACCOUNT]: originalSFFields[VIEWS.ACCOUNT].filter(
+				item =>
+					ringoverFields[VIEWS.ACCOUNT].filter(field => field.value?.name === item.name)
+						.length === 0
+			),
+			[VIEWS.CONTACT]: originalSFFields[VIEWS.CONTACT].filter(
+				item =>
+					ringoverFields[VIEWS.CONTACT].filter(field => field.value?.name === item.name)
+						.length === 0
+			),
+			[VIEWS.LEAD]: originalSFFields[VIEWS.LEAD].filter(
+				item =>
+					ringoverFields[VIEWS.LEAD].filter(field => field.value?.name === item.name)
+						.length === 0
+			),
+		});
+	}, [ringoverFields, originalSFFields]);
+
+	//send update request to server for currentView with its corresponding state ||| back to array ||| Parse Fn
+	const updateRingoverFields = ({ cb }) => {
+		setSaveBtnLoading(true);
+		const warnings = validateFields(ringoverFields);
+		if (
+			warnings[VIEWS.LEAD].length +
+				warnings[VIEWS.ACCOUNT].length +
+				warnings[VIEWS.CONTACT].length ===
+			0
+		) {
+			//if no warnings are there
+			const body = {
+				lead_map: UnParseRingoverFields(ringoverFields[VIEWS.LEAD], VIEWS.LEAD),
+				contact_map: UnParseRingoverFields(ringoverFields[VIEWS.CONTACT], VIEWS.CONTACT),
+				account_map: UnParseRingoverFields(ringoverFields[VIEWS.ACCOUNT], VIEWS.ACCOUNT),
+				default_integration_status: ringoverFields.default_integration_status,
+			};
+
+			updateRingoverMatchFields(body, {
+				onError: err => {
+					addError({
+						text: err?.response?.data?.msg,
+						desc: err?.response?.data?.error,
+						cId: err?.response?.data?.correlationId,
+					});
+				},
+				onSuccess: () => {
+					addSuccess("Fields are saved");
+					setOriginalRingoverFieldsResponse(body);
+					//If the user is onboarding and saved field mapping then this value will be used to avoid inserting default values as it is saved once
+					if (window.location.pathname.includes("onboarding"))
+						localStorage.setItem(LOCAL_STORAGE_KEYS.FIELD_MAP_DEFAULT_SET, true);
+					cb();
+				},
+				onSettled: () => setSaveBtnLoading(false),
+			});
+		} else {
+			setWarningModal(warnings);
+			setSaveBtnLoading(false);
+		}
+	};
+
+	//useEffect to save fields before doing next
+	useEffect(() => {
+		postDataRef.current = updateRingoverFields; //updateRingoverFields receives a callback to run handleNext from stepper
+	}, [ringoverFields]);
+
+	//handle all drag n drop events
+
+	const handleDragEnd = e => {
+		if (!e.destination) return;
+		if (e.destination.droppableId === e.source.droppableId) return; //sf->sf case handled
+		//ids need to be parsed cz they are stringified
+		//firstly we get the updated values of the draggableSFNode by filtering it from SF Fields, (helps in determining type of the dragging node)
+		const draggableData =
+			originalSFFields[currentView].filter(
+				osf => osf.name === JSON.parse(e.draggableId).name
+			)?.[0] ?? {};
+		const sourceData = JSON.parse(e.source.droppableId);
+		const destinationData = JSON.parse(e.destination.droppableId);
+
+		//data is an object {type:"",name:''/label:''...}
+		if (sourceData.type === "sf") {
+			//sf->ringover case handled
+			if (!destinationData.type.includes(draggableData.type)) {
+				addError({ text: `Please drag a field of type "${destinationData.type}"` });
+			} else {
+				setRingoverFields(prev => ({
+					...prev,
+					[currentView]: prev[currentView].map(item => {
+						if (item.label === destinationData.label) {
+							item.value = draggableData; //draggableData is a object {name:"",type:"",...}
+						}
+						return item;
+					}),
+				}));
+			}
+		} else if (destinationData.type === "sf") {
+			//ringover->sf-case handled
+
+			setRingoverFields(prev => ({
+				...prev,
+				[currentView]: prev[currentView].map((item, index) => {
+					if (item.label === sourceData.label) {
+						item.value = { name: "" };
+					}
+					return item;
+				}),
+			}));
+		} else if (sourceData.type !== "sf" && destinationData.type !== "sf") {
+			//ringover->ringover case
+			//swapringoverFields (not implemented yet)
+			if (!destinationData.type.includes(draggableData.type)) {
+				addError({ text: `Please drag a field of type "${destinationData.type}"` });
+			} else {
+				setRingoverFields(prev => ({
+					...prev,
+					[currentView]: prev[currentView].map((item, index) => {
+						if (item.label === sourceData.label) {
+							item.value = { name: "" }; //initialized back to original value in constants
+						} else if (item.label === destinationData.label) {
+							item.value = draggableData;
+						}
+						return item;
+					}),
+				}));
+			}
+		}
+	};
+
+	//handle window events for selected fields
+	const handleKeyDown = e => {
+		if ((e.code === "Delete" || e.code === "Backspace") && selectedField?.value) {
+			//delete that field from matched ringoverField
+			//for this we can just trigger our onDragEnd fn passing values in correct format
+			handleDragEnd({
+				source: {
+					droppableId: JSON.stringify({
+						type: selectedField.type,
+						label: selectedField.label,
+					}),
+				},
+				destination: { droppableId: JSON.stringify({ type: "sf" }) },
+				draggableId: JSON.stringify(selectedField.value),
+			});
+		}
+	};
+
+	useEffect(() => {
+		window.addEventListener("keyup", handleKeyDown);
+		return () => {
+			window.removeEventListener("keyup", handleKeyDown);
+		};
+	}, [selectedField]);
+
+	return (
+		<div className={styles.DNDView}>
+			{(currentView === VIEWS.CONTACT || currentView === VIEWS.ACCOUNT) && (
+				<div className={styles.header}>
+					<TabNavSlider
+						theme={TabNavThemes.SLIDER}
+						buttons={CONTACT_ACCOUNT}
+						value={currentView}
+						setValue={setCurrentView}
+						activeBtnClassName={styles.activeTab}
+						btnClassName={styles.tabBtn}
+						width="210px"
+					/>
+				</div>
+			)}
+			<DragDropContext onDragEnd={e => handleDragEnd(e)}>
+				<div className={styles.body}>
+					<SalesforceFields
+						availableSFFields={availableSFFields[currentView]}
+						loading={
+							fetchAccountSfFieldsLoading ||
+							fetchContactSfFieldsLoading ||
+							fetchLeadSfFieldsLoading
+						}
+					/>
+					<RingoverFields
+						fields={ringoverFields[currentView]}
+						setFields={val => {
+							setRingoverFields(prev => ({
+								...prev,
+								[currentView]: val,
+							}));
+						}}
+						currentlyHovered={currentlyHovered}
+						loading={
+							fetchAccountSfFieldsLoading ||
+							fetchContactSfFieldsLoading ||
+							fetchLeadSfFieldsLoading ||
+							ringoverMatchFieldsLoading
+						}
+						setCurrentlyHovered={setCurrentlyHovered}
+						setSelectedField={setSelectedField}
+						selectedField={selectedField}
+						originalSFFieldsForCurrentView={originalSFFields[currentView]}
+						currentView={currentView}
+						defaultIntStatus={ringoverFields.default_integration_status}
+						setDefaultIntStatus={val =>
+							setRingoverFields(prev => ({ ...prev, default_integration_status: val }))
+						}
+						isContactAccountStatusMapped={Boolean(
+							ringoverFields[VIEWS.CONTACT].find(f => f.uid === "__integration_status")
+								.value.name !== "" &&
+								ringoverFields[VIEWS.ACCOUNT].find(f => f.uid === "__integration_status")
+									.value.name !== ""
+						)}
+					/>
+				</div>
+			</DragDropContext>
+			<WarningModal modal={warningModal} setModal={setWarningModal} />
+		</div>
+	);
+};
+
+export default DNDView;

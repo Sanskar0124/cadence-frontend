@@ -1,0 +1,53 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 15px;
+	.exit {
+		display: flex;
+		align-self: flex-start;
+	}
+	.buttons {
+		display: flex;
+		justify-content: flex-end;
+		gap: 20px;
+		.tabNavBox {
+			display: flex;
+			width: 100%;
+			.tabNav {
+				border-radius: 25px;
+				width: 100%;
+				height: 40px;
+			}
+			.tabBtn {
+				border-radius: 15px;
+				font-weight: 400;
+				font-size: 1rem;
+			}
+			.activePill {
+				border-radius: 20px;
+			}
+			.activeBtn {
+				color: $whiteShade1;
+				font-weight: 600;
+			}
+		}
+		.count {
+			display: flex;
+			padding: 6px 12px;
+			justify-content: center;
+			align-self: center;
+			border-radius: 10px;
+			background: rgba(86, 113, 145, 0.03);
+			color: $lightBlue;
+			font-weight: 600;
+			font-size: 1rem;
+		}
+
+		.btn {
+			display: flex;
+			align-self: center;
+		}
+	}
+}

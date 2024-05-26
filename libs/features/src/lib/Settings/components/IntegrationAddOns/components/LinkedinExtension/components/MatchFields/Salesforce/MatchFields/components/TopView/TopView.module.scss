@@ -1,0 +1,65 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.topView {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	.left {
+		flex: 1;
+		.title {
+			text-transform: capitalize;
+			span {
+				background-color: $lightBlue;
+				border-radius: 6px;
+				width: 27px;
+				height: 27px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-right: 0.4rem;
+			}
+			display: flex;
+			align-items: center;
+			font-weight: 700;
+		}
+		.subtitle {
+			margin-top: 0.3rem;
+			font-weight: 400;
+			font-size: 1rem;
+		}
+	}
+	.right {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 4rem;
+		.option {
+			display: flex;
+			cursor: pointer;
+			align-items: center;
+			span {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 36px;
+				width: 36px;
+				border-radius: 10px;
+				margin-right: 0.5rem;
+				text-transform: capitalize;
+				&.active {
+					background: $primaryGradient;
+				}
+				&.inactive {
+					border: 1px solid $mainPurple;
+				}
+			}
+			&.active {
+				.title {
+					color: $mainPurple;
+					font-weight: 600;
+					text-transform: capitalize;
+				}
+			}
+		}
+	}
+}

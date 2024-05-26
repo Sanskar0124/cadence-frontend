@@ -1,0 +1,700 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.companyNameHoverable {
+	max-width: 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	cursor: pointer;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.companyInfo {
+	.companyName,
+	.jobPosition {
+		display: inline-block;
+		max-width: 150px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	p {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+	}
+}
+
+.container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 0.8rem;
+	.tags {
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		gap: 0.5em;
+		margin: 3px;
+	}
+	.duplicateTag {
+		color: $redShade2;
+		font-size: 0.75rem;
+		font-weight: 800;
+		height: 20px;
+		text-transform: capitalize;
+		cursor: pointer;
+	}
+	.hotLead {
+		display: flex;
+		align-items: center;
+		color: $lightBlue;
+
+		gap: 0.7em;
+		> * {
+			display: flex;
+			align-items: center;
+		}
+		.hotLeadActions {
+			margin-left: -14px;
+			display: flex;
+			align-items: center;
+			gap: 0.7em;
+			margin-right: 0.3em !important;
+
+			svg {
+				margin-top: 0.1em;
+				cursor: pointer;
+			}
+		}
+		.hotLeadActions.hidden {
+			display: none;
+		}
+		.hotLeadActions.visible {
+			display: flex;
+		}
+	}
+
+	.hotLead.showRemove {
+		background: #ffffff;
+		box-shadow: -2px 8px 20px rgba(41, 43, 88, 0.2);
+		// width: 178px;
+		height: 40px;
+		padding: 6px 6px 6px 6px;
+		border-radius: 15px;
+	}
+
+	.logos {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.4rem;
+		margin-top: 0.4rem;
+		margin-bottom: 0.8rem;
+		svg {
+			width: 42px;
+			height: 42px;
+		}
+
+		.salesforceLoading {
+			width: 50px;
+			height: 50px;
+		}
+
+		.relatedLeadsBtn {
+			.count {
+				position: absolute;
+				top: -10px;
+				right: -10px;
+				background: linear-gradient(315deg, #ff8888 0%, #f05f5f 100%);
+				border: 1px solid white;
+				color: $white;
+				font-weight: 700;
+				font-size: 0.75rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 25px;
+				height: 25px;
+				border-radius: 50%;
+			}
+		}
+	}
+
+	& > span:first-child {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5em;
+
+		& > svg {
+			cursor: pointer;
+		}
+	}
+
+	& > .leadName {
+		font-weight: 700;
+		font-size: 20px;
+		text-transform: capitalize;
+		display: flex;
+		// align-items: center;
+		justify-content: center;
+		// width: fit-content;
+		gap: 0.2em;
+		margin-bottom: 5px;
+	}
+
+	& > div {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: fit-content;
+		gap: 0.2em;
+		width: 100%;
+
+		& > span {
+			display: flex;
+			gap: 0.2em;
+			align-items: center;
+			justify-content: center;
+		}
+		& > div {
+			display: flex;
+			gap: 0.2em;
+			align-items: center;
+			justify-content: center;
+			& > span {
+				display: flex;
+				gap: 0.2em;
+				align-items: center;
+				justify-content: center;
+				margin-right: 1em;
+			}
+		}
+	}
+
+	.leadNameContainer {
+		position: relative;
+		width: 100%;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		gap: 0.2em;
+		margin-bottom: 5px;
+		& > span {
+			font-weight: 700;
+			font-size: 20px;
+			text-transform: capitalize;
+			cursor: pointer;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		.editLeadBtn {
+			background: none;
+			border: none;
+			color: $lightBlue;
+			position: absolute;
+			right: 15px;
+			width: 1.7rem;
+			height: 1.7rem;
+			border-radius: 50%;
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			& > svg {
+				width: 100%;
+				height: 100%;
+			}
+
+			&:hover {
+				background: $whiteShade1;
+			}
+
+			&:disabled {
+				opacity: 0.5;
+				pointer-events: none;
+			}
+
+			.editTooltip::before {
+				top: 150%;
+				transform: translateX(-70%);
+			}
+		}
+	}
+
+	.accountPhone {
+		cursor: pointer;
+
+		&:hover {
+			text-decoration: underline;
+		}
+
+		svg {
+			color: $lightBlue;
+			margin-right: 3px;
+		}
+	}
+
+	.phoneNumbers {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+
+		svg {
+			margin-right: 3px;
+		}
+	}
+
+	.zipCountry {
+		svg {
+			color: $lightBlue;
+		}
+	}
+
+	.salesforceData {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		.crm,
+		.marketingInsights {
+			display: flex;
+			align-items: center;
+			color: $lightBlue;
+			button {
+				border: none;
+				background: none;
+				text-decoration: underline;
+			}
+			svg {
+				margin-right: 5px;
+				color: $lightBlue;
+			}
+		}
+
+		.potentialLicence {
+			display: flex;
+			align-items: center;
+			color: $lightBlue;
+			svg {
+				margin-right: 5px;
+				color: $lightBlue;
+			}
+		}
+	}
+
+	.cadenceDetails {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		width: 100%;
+		margin-top: 2em;
+
+		& > span:first-child {
+			font-weight: 600;
+		}
+		& > span {
+			margin-right: 0em;
+			display: inline-block;
+			&::first-letter {
+				text-transform: capitalize;
+			}
+		}
+
+		.moreBtnWrapper {
+			position: absolute;
+
+			right: 10px;
+			.dropDown {
+				width: max-content;
+			}
+		}
+
+		.btnMore {
+			background: none !important;
+			box-shadow: none !important;
+			padding: 10px !important;
+			height: 0 !important;
+			&:hover {
+				background: $whiteShade1 !important;
+			}
+		}
+
+		.menuOptionBtn {
+			text-align: left;
+			display: inline-block;
+			&::first-letter {
+				text-transform: capitalize;
+			}
+		}
+		.more {
+			background: none;
+			border: none;
+			position: absolute;
+			top: 0.2em;
+			right: 0;
+			width: 1.7rem;
+			height: 1.7rem;
+			border-radius: 50%;
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			& > svg {
+				width: 100%;
+				height: 100%;
+			}
+
+			&:hover {
+				background: $whiteShade1;
+			}
+
+			.moreTooltip::before {
+				top: 150%;
+				transform: translateX(-75%);
+			}
+		}
+
+		> .dropDownMenu {
+			width: 170px;
+			max-height: 0;
+			display: flex;
+			flex-direction: column;
+
+			align-items: flex-start;
+			gap: 5px;
+			background: #fff;
+			border-radius: 15px;
+			visibility: hidden;
+			opacity: 0;
+			position: absolute;
+			right: 5px;
+			top: 35px;
+			z-index: 1000;
+			transition: 0.25s ease-in;
+			// box-shadow: 5px 10px 50px rgba(41, 43, 88, 0.2);
+			filter: drop-shadow(5px 10px 50px rgba(41, 43, 88, 0.2));
+			padding: 10px;
+			// background: lightcoral;
+
+			&.isActive {
+				visibility: visible;
+				opacity: 1;
+				max-height: 300px;
+			}
+
+			.menuOptionBtn {
+				text-align: left;
+				display: inline-block;
+				&::first-letter {
+					text-transform: capitalize;
+				}
+			}
+
+			> button {
+				background: none;
+				border: none;
+				padding: 10px;
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				color: $black;
+				border-radius: 15px;
+				box-shadow: none;
+				&:hover {
+					background: #f0f8fe;
+				}
+			}
+		}
+	}
+
+	.variables {
+		flex-wrap: wrap;
+		div {
+			display: flex;
+			align-items: center;
+			margin: 0 5px;
+			.btn {
+				color: #394759;
+				font-weight: 400;
+				padding: 0;
+				gap: 4px;
+				height: 20px !important;
+				&:disabled {
+					padding: 0;
+					background: transparent !important;
+				}
+			}
+
+			.btn:hover {
+				background: transparent !important;
+			}
+		}
+	}
+}
+
+.btnContainer {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	margin-top: 1.5em;
+	text-transform: capitalize;
+
+	& > div {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+	}
+	.btn1 {
+		width: 50%;
+		padding: 1em 1em;
+		border-radius: 20px;
+		box-shadow: 1.2px 8.2px 24.0528px rgba(54, 205, 207, 0.3);
+		text-transform: capitalize;
+
+		& > div {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-weight: 700;
+			color: white;
+			text-transform: capitalize;
+			gap: 0.75em;
+		}
+	}
+	.btn2 {
+		width: 50%;
+		padding: 1em 0.75em;
+		border-radius: 20px;
+		margin-bottom: 0.5em;
+		& > div {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-weight: 600;
+			color: white;
+			text-transform: capitalize;
+			gap: 0.75em;
+		}
+	}
+}
+
+.futureStep {
+	width: 100%;
+	display: flex;
+	margin-top: 1.5em;
+	& > p {
+		& > span {
+			font-weight: 700;
+		}
+	}
+}
+
+.dropDown {
+	width: 50%;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	min-height: 10em;
+	max-height: 10em;
+	overflow: scroll;
+	background-color: $whiteShade1;
+	top: 50%;
+	padding: 0.5em 1em;
+	border-bottom-left-radius: 1em;
+	border-bottom-right-radius: 1em;
+	z-index: 1;
+	& > .dropDownItem {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.5em;
+		padding-left: 1em;
+		border-radius: 1.5em;
+
+		&:hover {
+			font-weight: 700;
+		}
+		& > span {
+			color: $lightBlue;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 1em;
+		}
+	}
+}
+.dropDown::-webkit-scrollbar {
+	width: 0px;
+}
+
+.emails {
+	max-width: 450px;
+	cursor: pointer;
+	&:hover {
+		text-decoration: underline;
+	}
+	svg {
+		color: $lightBlue;
+		transform: translateY(1.5px);
+	}
+	& > a {
+		width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+}
+
+.mobile {
+	cursor: pointer;
+	position: relative;
+
+	.phoneOptions {
+		position: absolute;
+		top: 20px;
+		left: 0;
+		width: 171px;
+		background-color: white;
+		box-shadow: 5px 10px 50px rgba(41, 43, 88, 0.2);
+		border-radius: 15px;
+		z-index: 100;
+		display: flex;
+		flex-direction: column;
+		padding: 10px;
+		font-size: 14px;
+
+		div {
+			padding: 12px 10px;
+			border-radius: 15px;
+			&:hover {
+				background-color: #f0f8fe;
+			}
+		}
+	}
+
+	svg {
+		color: $lightBlue;
+	}
+
+	& > a:hover {
+		text-decoration: underline;
+	}
+
+	& > a {
+		color: $black;
+	}
+}
+
+.emailContainer {
+	width: 70%;
+	flex-wrap: wrap;
+	& > span {
+		& > a {
+			color: $black;
+		}
+	}
+	// @media screen and (max-width: 1366px) {
+	// 	width:40em;
+	// }
+	// @media screen and (max-width: 1280px) {
+	// 	width:34em;
+	// }
+}
+
+.viewScript {
+	color: $blue;
+	cursor: pointer;
+	text-transform: capitalize;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.taskComplete {
+	margin-top: 1em;
+	width: 590px !important;
+}
+
+.clickable {
+	cursor: pointer;
+	max-width: 200px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	&:hover {
+		text-decoration: underline;
+		text-underline-offset: 2px;
+	}
+}
+
+.taskScheduled {
+	overflow: hidden;
+	margin-top: 1em;
+	position: relative;
+	width: 100%;
+	height: 96px;
+	background: linear-gradient(
+		135deg,
+		rgba(255, 207, 79, 0.1) 0%,
+		rgba(255, 155, 74, 0.1) 100%
+	);
+	border-radius: 20px;
+	.content {
+		display: flex;
+		flex-direction: column;
+		.icon {
+			background: $orangeGradient;
+			border-radius: 50%;
+			width: 30px;
+			height: 30px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: $white;
+		}
+		span {
+			color: $orange;
+			font-weight: 700;
+		}
+		p {
+			font-size: 0.78rem;
+			color: $orange;
+		}
+	}
+
+	.bgLogo1,
+	.bgLogo2 {
+		position: absolute;
+		opacity: 0.08;
+		z-index: 1;
+	}
+	.bgLogo1 {
+		top: -60px;
+		left: 20px;
+	}
+	.bgLogo2 {
+		bottom: -68px;
+		right: 15px;
+	}
+}

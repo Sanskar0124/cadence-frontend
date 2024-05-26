@@ -1,0 +1,455 @@
+{
+	"msg": "Fetched cadence statistics",
+	"data": {
+		"in_progress": {
+			"company": [
+				{
+					"cadence_id": 8,
+					"name": " Outbound prospecting Cadence"
+				},
+				{
+					"cadence_id": 23,
+					"name": "Auto_Bounce_mail"
+				},
+				{
+					"cadence_id": 33,
+					"name": "auto_ab_skip_bounce"
+				},
+				{
+					"cadence_id": 104,
+					"name": "Test cadence 2"
+				},
+				{
+					"cadence_id": 142,
+					"name": "Automatic_Reply_skip_test"
+				},
+				{
+					"cadence_id": 249,
+					"name": "scheduled_automatic_mail"
+				},
+				{
+					"cadence_id": 250,
+					"name": "end_cadence_test"
+				},
+				{
+					"cadence_id": 30028,
+					"name": "sms test"
+				},
+				{
+					"cadence_id": 30030,
+					"name": "sms test (copy)"
+				},
+				{
+					"cadence_id": 120022,
+					"name": "Urgent1stNode-Cadence"
+				},
+				{
+					"cadence_id": 120057,
+					"name": "23rd March Launch Resume Test"
+				},
+				{
+					"cadence_id": 120060,
+					"name": "23rd March Unsub Test"
+				},
+				{
+					"cadence_id": 120073,
+					"name": "X1_CTest (i)"
+				},
+				{
+					"cadence_id": 120097,
+					"name": "FInal Launch Resume"
+				},
+				{
+					"cadence_id": 120105,
+					"name": "Major Major (copy)"
+				},
+				{
+					"cadence_id": 120106,
+					"name": "Major Major Last"
+				},
+				{
+					"cadence_id": 120107,
+					"name": "Last to Last"
+				},
+				{
+					"cadence_id": 120108,
+					"name": "End_cadence_test_29M"
+				},
+				{
+					"cadence_id": 120110,
+					"name": "End_cadence_test_2"
+				},
+				{
+					"cadence_id": 120118,
+					"name": "stop owner change"
+				}
+			],
+			"personal": [
+				{
+					"cadence_id": 139,
+					"name": "Final WA Result"
+				},
+				{
+					"cadence_id": 147,
+					"name": "Final LinkedIn Custom Variable "
+				},
+				{
+					"cadence_id": 148,
+					"name": "Whatsapp test cadence"
+				},
+				{
+					"cadence_id": 159,
+					"name": "LinkedIn Custom Variable 3"
+				},
+				{
+					"cadence_id": 160,
+					"name": "Whatsapp test"
+				},
+				{
+					"cadence_id": 163,
+					"name": "Data Check test"
+				},
+				{
+					"cadence_id": 165,
+					"name": "Data check test 2"
+				},
+				{
+					"cadence_id": 169,
+					"name": "Mail test"
+				},
+				{
+					"cadence_id": 225,
+					"name": "test 3"
+				},
+				{
+					"cadence_id": 30031,
+					"name": "sms test 2"
+				},
+				{
+					"cadence_id": 30107,
+					"name": "csv test"
+				},
+				{
+					"cadence_id": 120007,
+					"name": "Test cadence for csv import"
+				},
+				{
+					"cadence_id": 120011,
+					"name": "TestingAutoScript"
+				},
+				{
+					"cadence_id": 120058,
+					"name": "Testing Import Postman TC3"
+				},
+				{
+					"cadence_id": 120067,
+					"name": "first task"
+				},
+				{
+					"cadence_id": 120098,
+					"name": "pause cadence 123"
+				},
+				{
+					"cadence_id": 120101,
+					"name": "move to cadence task"
+				},
+				{
+					"cadence_id": 120124,
+					"name": "calendly demo"
+				},
+				{
+					"cadence_id": 120126,
+					"name": "TEST EMAIL NEW"
+				},
+				{
+					"cadence_id": 120130,
+					"name": "Callback test TC 2"
+				},
+				{
+					"cadence_id": 120134,
+					"name": "TEST EMAIL BUGFIX"
+				},
+				{
+					"cadence_id": 120135,
+					"name": "Callback test TC 4"
+				},
+				{
+					"cadence_id": 120138,
+					"name": "launch cadence"
+				},
+				{
+					"cadence_id": 120139,
+					"name": "launch cadence 2"
+				}
+			],
+			"team": [
+				{
+					"cadence_id": 30005,
+					"name": "Schedule_Start_3"
+				},
+				{
+					"cadence_id": 30100,
+					"name": "Yoloiedit"
+				},
+				{
+					"cadence_id": 30102,
+					"name": "Yoloiedit (copy)"
+				}
+			]
+		},
+		"not_started": {
+			"personal": [
+				{
+					"cadence_id": 48,
+					"name": "Connection with X"
+				},
+				{
+					"cadence_id": 150,
+					"name": "linkedin"
+				},
+				{
+					"cadence_id": 120129,
+					"name": "Testing Call Back TC1"
+				}
+			],
+			"company": [
+				{
+					"cadence_id": 144,
+					"name": "Reply_Skip_automated_mail"
+				},
+				{
+					"cadence_id": 154,
+					"name": "Testing the LinkedIn Extension for Leads & Contacts on dev environment by sparsh sharma"
+				},
+				{
+					"cadence_id": 226,
+					"name": "Optimized Imports"
+				},
+				{
+					"cadence_id": 30047,
+					"name": "Jan_Extension_2023"
+				}
+			],
+			"team": [
+				{
+					"cadence_id": 243,
+					"name": "Import Test Cadence"
+				},
+				{
+					"cadence_id": 30004,
+					"name": "Schedule_Start_2"
+				},
+				{
+					"cadence_id": 30052,
+					"name": "test loading state in step"
+				},
+				{
+					"cadence_id": 30093,
+					"name": "Test Cadence"
+				}
+			]
+		},
+		"paused": {
+			"personal": [
+				{
+					"cadence_id": 65,
+					"name": "Auto email test"
+				},
+				{
+					"cadence_id": 68,
+					"name": "Test mail reply"
+				},
+				{
+					"cadence_id": 79,
+					"name": "reply test"
+				},
+				{
+					"cadence_id": 94,
+					"name": "Whatsapp"
+				},
+				{
+					"cadence_id": 136,
+					"name": "Email test 3"
+				},
+				{
+					"cadence_id": 141,
+					"name": "Call Cadence"
+				},
+				{
+					"cadence_id": 146,
+					"name": "LinkedIn Custom Variable (copy)"
+				},
+				{
+					"cadence_id": 149,
+					"name": "Whatsapp test cadence (copy)"
+				},
+				{
+					"cadence_id": 155,
+					"name": "LinkedIn Custom Variable"
+				},
+				{
+					"cadence_id": 156,
+					"name": "LinkedIn Custom Variable 2"
+				},
+				{
+					"cadence_id": 157,
+					"name": "Semi automated email"
+				},
+				{
+					"cadence_id": 158,
+					"name": "Reply To test"
+				},
+				{
+					"cadence_id": 162,
+					"name": "Whatsapp test (copy)"
+				},
+				{
+					"cadence_id": 164,
+					"name": "Custom Task test"
+				},
+				{
+					"cadence_id": 232,
+					"name": "US sms testing"
+				},
+				{
+					"cadence_id": 235,
+					"name": "GS-Leads"
+				},
+				{
+					"cadence_id": 30042,
+					"name": "task service bug"
+				},
+				{
+					"cadence_id": 30062,
+					"name": "automated tasks test"
+				},
+				{
+					"cadence_id": 30099,
+					"name": "Check Steps"
+				},
+				{
+					"cadence_id": 120012,
+					"name": "Sanskar"
+				},
+				{
+					"cadence_id": 120068,
+					"name": "Reset Lead"
+				},
+				{
+					"cadence_id": 120128,
+					"name": "Callback test"
+				},
+				{
+					"cadence_id": 120133,
+					"name": "Callback test TC 3"
+				}
+			],
+			"company": [
+				{
+					"cadence_id": 72,
+					"name": "AB_TEST_STATS_@"
+				},
+				{
+					"cadence_id": 74,
+					"name": "Final_Duplicate_Ststs_test"
+				},
+				{
+					"cadence_id": 75,
+					"name": "dev variable check"
+				},
+				{
+					"cadence_id": 90,
+					"name": "All Leads come here"
+				},
+				{
+					"cadence_id": 143,
+					"name": "Semi_Automatic_Reply_skiptest"
+				},
+				{
+					"cadence_id": 167,
+					"name": "pause cadence"
+				},
+				{
+					"cadence_id": 244,
+					"name": "scheduled_step_2"
+				},
+				{
+					"cadence_id": 252,
+					"name": "end_cadence_schedule"
+				},
+				{
+					"cadence_id": 256,
+					"name": "Company Size Test"
+				},
+				{
+					"cadence_id": 30077,
+					"name": "ReplyAfter1min_Cadence"
+				},
+				{
+					"cadence_id": 120014,
+					"name": "In SF"
+				},
+				{
+					"cadence_id": 120059,
+					"name": "23rd March Bounce Test"
+				},
+				{
+					"cadence_id": 120061,
+					"name": "Leads/Contacts STORAGE"
+				},
+				{
+					"cadence_id": 120066,
+					"name": "24th March Launch Resume Test"
+				}
+			],
+			"team": [
+				{
+					"cadence_id": 107,
+					"name": "All Steps cadence"
+				},
+				{
+					"cadence_id": 140,
+					"name": "All Steps cadence (copy)"
+				},
+				{
+					"cadence_id": 233,
+					"name": "Schedule"
+				},
+				{
+					"cadence_id": 30002,
+					"name": "Schedule_Start"
+				},
+				{
+					"cadence_id": 30003,
+					"name": "Schedule_Pause"
+				}
+			]
+		},
+		"processing": {
+			"company": [
+				{
+					"cadence_id": 168,
+					"name": "pause cadence 2"
+				}
+			],
+			"personal": [
+				{
+					"cadence_id": 120008,
+					"name": "Test 2"
+				},
+				{
+					"cadence_id": 120053,
+					"name": "cadence workflow"
+				},
+				{
+					"cadence_id": 120054,
+					"name": "cadence 2"
+				},
+				{
+					"cadence_id": 120074,
+					"name": "automated task"
+				}
+			]
+		}
+	}
+}

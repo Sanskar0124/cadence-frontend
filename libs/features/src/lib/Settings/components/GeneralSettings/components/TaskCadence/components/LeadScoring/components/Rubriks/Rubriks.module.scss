@@ -1,0 +1,159 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.exception {
+	border-radius: 10px;
+	padding: 15px 20px;
+	width: 77%;
+}
+
+.title {
+	margin-bottom: 0.3rem;
+	color: $black;
+	font-weight: 600;
+	&::first-letter {
+		text-transform: capitalize;
+	}
+}
+
+.description {
+	font-size: 1rem;
+	margin-bottom: 0.75rem;
+	color: $lightBlue;
+	&::first-letter {
+		text-transform: capitalize;
+	}
+}
+
+.setting {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	margin-bottom: 1rem;
+	width: 75%;
+	// margin-bottom: 2.5rem;
+	.title {
+		&::first-letter {
+			text-transform: capitalize;
+		}
+	}
+	.description {
+		&::first-letter {
+			text-transform: capitalize;
+		}
+	}
+	.input {
+		border-radius: 15px;
+		text-align: center;
+		border: 1px solid #dadce0;
+		padding: 10px;
+		font-weight: 400;
+	}
+
+	.priorityInput {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+
+		> div {
+			display: flex;
+			align-items: center;
+			background: $whiteShade1;
+			padding: 0 10px;
+			border-radius: 5px;
+
+			> span {
+				font-weight: 600;
+			}
+		}
+
+		> span {
+			width: 7px;
+			height: 2px;
+			background: $black;
+		}
+	}
+
+	> .rubrik {
+		height: 60px;
+		padding: 0 5px;
+		background-color: $whiteShade1;
+		width: 100%;
+		border-radius: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&.exception {
+			background: none;
+		}
+
+		> .left {
+			display: flex;
+			flex-direction: column;
+			gap: 0.35rem;
+			margin: 1rem;
+			font-size: 14px;
+			> .icon {
+				color: $lightBlue;
+				width: 20px;
+			}
+			> .rubrikName {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				text-transform: capitalize;
+			}
+		}
+
+		.rubrikScore {
+			display: flex;
+			align-items: center;
+
+			> p {
+				margin-right: 0.75rem;
+				font-size: 14px;
+				display: inline-block;
+				color: $lightBlue;
+			}
+			.input {
+				text-align: center;
+				background-color: #fff;
+				border: 1px solid #dadce0;
+				border-radius: 15px;
+				margin-right: 1rem;
+			}
+		}
+
+		&.scoreThreshold {
+			background: linear-gradient(
+				135deg,
+				rgba(255, 207, 79, 0.1) 0%,
+				rgba(255, 155, 74, 0.1) 100%
+			);
+			border: 1px solid rgba(255, 177, 42, 0.24);
+			.input {
+				border-color: rgba(255, 177, 42, 0.24) !important;
+			}
+		}
+	}
+}
+
+.exceptionElement {
+	width: 100% !important;
+}
+
+.selectSetting {
+	margin-bottom: 1.5rem;
+
+	> .title {
+		margin-bottom: 0.5rem;
+		font-weight: 600;
+	}
+
+	.exceptionStack {
+		& > div {
+			background-color: transparent;
+		}
+	}
+}

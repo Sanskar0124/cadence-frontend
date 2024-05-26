@@ -1,0 +1,251 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.modal {
+	max-width: 800px;
+	width: 70%;
+	// height: 640px;
+	.header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-right: 40px;
+		margin-bottom: 20px;
+
+		.left,
+		.right {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+
+			& > div {
+				display: flex;
+				align-items: center;
+			}
+
+			p {
+				color: $lightBlue;
+			}
+		}
+
+		.left {
+			.title {
+				color: $mainPurple;
+			}
+		}
+	}
+	.subHeader {
+		margin: 15px 0 25px 0;
+
+		.title {
+			font-weight: 600 !important;
+			margin-bottom: 3px;
+			font-size: 16px;
+		}
+
+		.description {
+			color: $lightBlue;
+		}
+	}
+
+	.promptBody {
+		height: 460px;
+		position: relative;
+		overflow-y: scroll;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+		.inputGroup {
+			// margin-bottom: 10px;
+			.inputTitle {
+				font-weight: 600 !important;
+				margin-bottom: 3px;
+				color: $black;
+				&::first-letter {
+					text-transform: capitalize;
+				}
+			}
+			.label {
+				&::after {
+					content: "*";
+					// color: $mainPurple !important;
+				}
+			}
+
+			.inputDesc {
+				color: $lightBlue;
+			}
+
+			.info {
+				display: flex;
+				align-items: center;
+				gap: 6px;
+				position: relative;
+			}
+
+			.promptInputWrapper {
+				border: 1px solid #8193a852;
+				border-radius: 15px;
+				position: relative;
+				margin: 10px 0 10px 0;
+				.input {
+					border: none;
+				}
+
+				.miniMaxIcon {
+					position: absolute;
+
+					right: 10px;
+					bottom: 13px;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+
+	.emailBody {
+		height: 420px;
+		position: relative;
+		overflow-y: scroll;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+		.inputGroup {
+			margin-bottom: 5px;
+			.inputTitle {
+				margin-bottom: 5px;
+				color: $lightBlue;
+
+				&::first-letter {
+					text-transform: capitalize;
+				}
+			}
+
+			.editor {
+				border: none !important;
+				padding: 0 !important;
+				// height: calc(100vh - 370px) !important;
+				overflow-x: hidden;
+				word-wrap: break-word;
+
+				& > div {
+					padding: 0 !important;
+				}
+			}
+		}
+	}
+	.subFooter {
+		display: flex;
+		align-items: center;
+		margin: 10px 0;
+		gap: 10px;
+	}
+
+	.btnGenerateResult {
+		margin-top: 10px;
+	}
+}
+
+.loader {
+	height: 470px;
+	position: relative;
+
+	.loaderBody {
+		.loderInputGroup {
+			margin-bottom: 5px;
+			.inputTitle {
+				margin-bottom: 5px;
+				color: $lightBlue;
+
+				&::first-letter {
+					text-transform: capitalize;
+				}
+			}
+		}
+	}
+
+	.progressLoader {
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(255, 255, 255, 0.392);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		& > div {
+			// display: flex;
+			// flex-direction: column;
+			// align-items: center;
+
+			text-align: center;
+
+			/* Fallback stuff */
+			progress[value] {
+				appearance: none;
+				border: none;
+				color: dodgerblue;
+				z-index: 10;
+				order: 1;
+				width: 400px;
+				border-radius: 10px;
+				height: 8px;
+				margin: 15px 0 10px 0;
+			}
+
+			/* WebKit styles */
+			progress[value]::-webkit-progress-bar {
+				background: #5b6be163;
+				border-radius: 10px;
+			}
+
+			progress[value]::-webkit-progress-value {
+				background-color: $mainPurple;
+				border-radius: 10px;
+				position: relative;
+				transition: width 0.5s linear;
+			}
+
+			/* Firefox styles */
+			progress[value]::-moz-progress-bar {
+				background-color: $mainPurple;
+				border-radius: 10px;
+				position: relative;
+				transition: width 0.5s linear;
+			}
+
+			.progressWrapper {
+				width: 400px;
+
+				border-radius: 10px;
+				height: 8px;
+				position: relative;
+				margin: 15px 0 10px 0;
+				background: #5b6be163;
+
+				.progressBar {
+					position: absolute;
+
+					height: 8px;
+					background-color: $mainPurple;
+					opacity: 1;
+					// margin-top: 15px;
+					border-radius: 10px;
+					z-index: 9999;
+					// top: 0;
+					transition: ease-in all;
+				}
+
+				// .activeProgressBar{
+				// 	width: 80%;
+				// }
+			}
+		}
+	}
+}

@@ -1,0 +1,91 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.settings {
+	.header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 0 0 20px;
+		.left {
+			.title {
+				margin-top: 10px;
+				min-height: 20px;
+				min-width: 200px;
+				& > div::after {
+					background: linear-gradient(
+						90deg,
+						transparent,
+						rgba(180, 180, 180, 0.5),
+						transparent
+					);
+				}
+			}
+		}
+		.right {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+			.status {
+				height: 44px;
+				padding: 10px 20px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 14px;
+				font-weight: 600;
+				line-height: 20px;
+				border-radius: 15px;
+				gap: 10px;
+				&.saving {
+					min-width: 188px;
+					color: $lightBlue;
+					background: rgba(86, 113, 145, 0.05);
+					border: 1px solid rgba(86, 113, 145, 0.2);
+					.spinner {
+						width: 20px;
+						height: 20px;
+						div {
+							width: 20px;
+							height: 20px;
+							border: 3px solid $lightBlue;
+							border-color: $lightBlue transparent transparent transparent;
+						}
+					}
+				}
+				&.saved {
+					min-width: 188px;
+					color: #00b3a8;
+					background: linear-gradient(
+						315deg,
+						rgba(64, 224, 207, 0.05) 0%,
+						rgba(54, 205, 207, 0.05) 100%
+					);
+					border: 1px solid rgba(54, 205, 207, 0.5);
+					svg {
+						width: 16px;
+						height: 16px;
+					}
+				}
+			}
+			.error {
+				font-weight: 500;
+				color: $red;
+			}
+		}
+	}
+
+	.container {
+		height: calc(100vh - 110px);
+		display: grid;
+		grid-template-columns: 0.8fr 2.2fr;
+		gap: 3px;
+		& > div {
+			background-color: $white;
+			padding: 20px;
+			overflow-y: scroll;
+			&::-webkit-scrollbar {
+				display: none;
+			}
+		}
+	}
+}

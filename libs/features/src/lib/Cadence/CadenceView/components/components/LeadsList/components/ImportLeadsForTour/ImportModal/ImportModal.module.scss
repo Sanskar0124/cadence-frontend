@@ -1,0 +1,93 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.modal {
+	width: 478px;
+	.title {
+		margin-bottom: 20px;
+	}
+	.importLeadsBtn {
+		margin-top: 70px;
+	}
+	.fileStatus {
+		margin-top: 10px;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		position: relative;
+		.file {
+			border-radius: 10px;
+			border: 1px solid #e4e6ea;
+			background: rgba(129, 147, 168, 0.03);
+			display: flex;
+			align-items: center;
+			gap: 5px;
+			padding: 5px;
+			& > div {
+				display: flex;
+				flex-direction: column;
+				gap: 4px;
+				color: $veryLightBlue;
+			}
+		}
+		.status {
+			display: flex;
+			align-items: center;
+			gap: 5px;
+			color: $lightBlue;
+			&.success {
+				color: $green;
+			}
+		}
+		.tooltip {
+			position: absolute;
+			left: -423px;
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			padding: 24px;
+			border-radius: 15px;
+			width: 400px;
+			background: $white;
+			color: $black;
+			box-shadow: 0px 6px 14px 0px rgba(0, 0, 0, 0.13), 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+			& > span {
+				font-size: 1.28rem;
+				font-weight: 600;
+				line-height: 28px;
+			}
+			p {
+				line-height: 20px;
+			}
+		}
+	}
+	.grabIcon {
+		position: absolute;
+		width: fit-content;
+		animation: dragCsv 2s ease-in-out;
+		opacity: 0;
+		animation-delay: 1s;
+		div {
+			position: relative;
+			& > svg:last-child {
+				position: absolute;
+				bottom: -10px;
+				right: -10px;
+			}
+		}
+	}
+	@keyframes dragCsv {
+		0% {
+			opacity: 1;
+			bottom: -192px;
+			right: -321px;
+		}
+		90% {
+			opacity: 1;
+			bottom: 170px;
+			right: 85px;
+		}
+		95% {
+			opacity: 0;
+		}
+	}
+}

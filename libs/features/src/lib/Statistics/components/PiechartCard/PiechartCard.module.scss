@@ -1,0 +1,239 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.piechartcard {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	width: 49%;
+	height: 100%;
+	background: $white;
+	border: 1px solid #e7ebff;
+	border-radius: 10px;
+	&_title {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		text-transform: capitalize;
+		padding-left: 15px;
+		padding-top: 10px;
+		font-weight: 700;
+		font-size: 1.25rem;
+		line-height: 1.563rem;
+	}
+}
+
+.piechartcontent {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 80%;
+	&_piechart {
+		position: relative;
+		width: 50%;
+		height: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		z-index: 2;
+	}
+	&_details {
+		width: 50%;
+		height: 80%;
+		display: grid;
+		grid-template-columns: 46% 46%;
+		grid-template-rows: 30% 30% 30%;
+		row-gap: 5px;
+		justify-content: space-evenly;
+		align-content: center;
+		align-items: center;
+	}
+	&_center {
+		position: absolute;
+		height: 50%;
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		z-index: -1;
+		&_change {
+			padding: 0px 4px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			font-size: 0.875rem;
+			font-weight: 700;
+			border-radius: 5px;
+		}
+		&_value {
+			margin-top: 4px;
+			font-size: 1.313rem;
+			font-weight: 700;
+			color: $lightBlue;
+		}
+		&_exception {
+			padding-left: 3px;
+			font-size: 0.875rem;
+			font-weight: 400;
+			color: $lightBlue;
+			border-left: 1px dashed #b7b7b7;
+			> span {
+				font-weight: 700;
+				font-size: 0.75rem;
+			}
+		}
+	}
+}
+
+.detailcard {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	&_row1 {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-start;
+		width: 100%;
+		&_colorbox {
+			width: 20px;
+			height: 20px;
+			border-radius: 6px;
+		}
+		&_value {
+			margin-left: 4px;
+			font-size: 0.875rem;
+			font-weight: 700;
+			color: $lightBlue;
+		}
+		&_name {
+			margin-left: 4px;
+			font-size: 0.875rem;
+			font-weight: 300;
+			color: $lightBlue;
+		}
+		&_change {
+			width: 23%;
+			height: 15px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			margin-left: 4px;
+			font-size: 0.7rem;
+			font-weight: 700;
+			border-radius: 5px;
+		}
+	}
+	&_row2 {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-start;
+		width: 100%;
+		&_colorbox {
+			width: 20px;
+			height: 20px;
+			border-radius: 6px;
+		}
+		&_exception {
+			display: flex;
+			flex-direction: column;
+			div {
+				margin-left: 5px;
+				padding-left: 3px;
+				font-size: 0.75rem;
+				font-weight: 300;
+				color: $lightBlue;
+				border-left: 1px dashed #b7b7b7;
+				> span {
+					font-weight: 700;
+					font-size: 0.75rem;
+				}
+			}
+		}
+	}
+}
+
+.box {
+	&_call {
+		background: #ffb24d;
+	}
+	&_linkedin {
+		background: #a282e8;
+	}
+	&_email {
+		background: #3ddacf;
+	}
+	&_datacheck {
+		background: #fad956;
+	}
+	&_custom {
+		background: #fb7a96;
+	}
+	&_message {
+		background: #037dfc;
+	}
+	&_whatsapp {
+		background: #23d366;
+	}
+}
+
+.hover_text {
+	font-size: 11px;
+}
+
+.increase {
+	background: linear-gradient(
+		106.52deg,
+		#a282e820 -11.57%,
+		#7e8ee720 50.39%,
+		#4499e920 106.35%
+	);
+	color: $mainPurple;
+}
+
+.decrease {
+	background: linear-gradient(315deg, #ff888820 0%, #f05f5f20 100%);
+	color: $redShade2;
+}
+
+.noTasks {
+	margin-top: -10px;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	> p {
+		font-weight: 600;
+		font-size: 18px;
+		color: $veryLightBlue;
+		display: inline-block;
+		&::first-letter {
+			text-transform: capitalize;
+		}
+	}
+}
+
+.piePlaceholder {
+	width: 130px;
+	height: 130px;
+	border-radius: 50%;
+}
+
+.detailsPlaceholder {
+	width: 90%;
+	height: 30px;
+	border-radius: 10px;
+}

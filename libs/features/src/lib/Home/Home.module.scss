@@ -1,0 +1,55 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.homeContainer {
+	display: flex;
+	flex-direction: column;
+	.header {
+		display: flex;
+		justify-content: space-between;
+		height: 70px;
+	}
+	.body {
+		height: calc(100vh - 100px);
+		display: grid;
+		gap: 10px;
+		grid-template-columns: 1fr 340px;
+		overflow: hidden;
+		position: relative;
+		.container {
+			background-color: $white;
+			border-radius: 20px;
+			padding: 20px;
+		}
+		.left {
+			display: flex;
+			flex-direction: column;
+			overflow: hidden;
+			height: calc(100vh - 80px);
+			.container {
+				padding: 20px 0;
+			}
+		}
+		.right {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			overflow: hidden;
+			height: calc(100vh - 100px);
+			.container:first-child {
+				padding: 15px;
+				height: 320px;
+				@media screen and (max-height: 800px) {
+					height: 220px;
+				}
+			}
+		}
+
+		h2 {
+			color: $lightBlue;
+			font-weight: 400;
+			&::first-letter {
+				text-transform: uppercase;
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+.leadPage {
+	> .main {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+
+		> div {
+			width: 50%;
+			height: calc(100vh - 95px);
+			background: #fff;
+			border-radius: 20px;
+			padding: 2rem;
+			border: 1px solid #e7ebff;
+		}
+	}
+}

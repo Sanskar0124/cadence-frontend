@@ -1,0 +1,192 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.templatesContainer {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	.header,
+	.headerTemplateTypes {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 2rem;
+
+		.leftHeader {
+			.pageTitle {
+				flex: 1;
+				text-transform: capitalize;
+			}
+			.totalCountLoader {
+				width: 100%;
+			}
+
+			.totalTemplates {
+				color: $lightBlue;
+				&::first-letter {
+					text-transform: capitalize;
+				}
+			}
+		}
+		.templateTypes {
+			.tabs {
+				.tabBtns {
+					text-transform: capitalize;
+					color: $lightBlue;
+					font-weight: 600;
+					z-index: 0 !important;
+				}
+				.tabBtnActive {
+					color: $mainPurple;
+					z-index: 0 !important;
+				}
+			}
+		}
+
+		.headerOptions {
+			display: flex;
+			justify-content: flex-end;
+			gap: 1.25rem;
+
+			.addNewBtn {
+				border-radius: 20px;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				gap: 10px;
+				font-size: 1rem !important;
+				white-space: nowrap;
+			}
+
+			.filterBtn {
+				font-size: 1rem !important;
+				width: fit-content;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				> div {
+					display: flex;
+					gap: 5px;
+				}
+			}
+
+			.tabs {
+				border-radius: 20px;
+				border: 1px solid #d8ecff;
+
+				.tabBtns {
+					border-radius: 20px;
+					display: inline-flex;
+					align-items: center;
+					justify-content: center;
+					gap: 7px;
+					color: $lightBlue;
+				}
+
+				.tabBtnActive {
+					color: #fff;
+				}
+
+				.activePill {
+					border-radius: 16px;
+				}
+			}
+		}
+	}
+
+	.headerTemplateTypes {
+		justify-content: space-between;
+		display: flex;
+	}
+
+	.templateTypes {
+		flex: 1;
+		gap: 1rem;
+	}
+	.body {
+		height: 100%;
+		border-radius: 10px;
+		.placeHolderContainer {
+			width: 100%;
+			margin: auto;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-template-rows: auto;
+			row-gap: 1.8rem;
+			padding-bottom: 2rem;
+			overflow-y: scroll;
+			height: 70vh;
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
+		}
+
+		.templateHeaderEmail {
+			display: grid;
+			grid-template-columns: 1fr 1fr 2fr 2fr 1fr;
+			cursor: pointer;
+			padding: 15px 20px;
+			gap: 1rem;
+			align-items: center;
+			color: $veryLightBlue;
+			font-weight: 600;
+
+			.stats {
+				display: flex;
+				justify-content: center;
+			}
+			.actions {
+				display: flex;
+				justify-content: center;
+			}
+		}
+
+		.templateHeader {
+			display: grid;
+			grid-template-columns: 1fr 5fr 1fr;
+			cursor: pointer;
+			padding: 15px 20px;
+			gap: 1rem;
+			align-items: center;
+			color: $veryLightBlue;
+			font-weight: 600;
+
+			.actions {
+				display: flex;
+				justify-content: center;
+			}
+		}
+
+		.placeHolderContainerEmail {
+			width: 100%;
+			margin: auto;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: auto;
+			row-gap: 1.8rem;
+			padding-bottom: 2rem;
+			overflow-y: scroll;
+			height: 70vh;
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
+		}
+
+		.renderTemplates {
+			height: 100%;
+			max-height: 100%;
+			overflow-x: visible;
+
+			&::-webkit-scrollbar {
+				width: 0;
+				display: none;
+			}
+
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,85 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.modal {
+	width: 35vw;
+	.header {
+		margin: -2px 0 28px 0;
+
+		h3 {
+			color: $black;
+			font-size: 1.25rem;
+			display: inline-block;
+			&::first-letter {
+				text-transform: capitalize;
+			}
+		}
+	}
+
+	.text {
+		margin-bottom: 1.5rem;
+		color: $lightBlue;
+	}
+
+	.main {
+		.typeToggle {
+			display: flex;
+			gap: 10px;
+			align-items: center;
+			margin-bottom: 2rem;
+
+			> .toggle {
+				display: block;
+				span {
+					transform: translate(-5px, -7px);
+				}
+			}
+
+			> span {
+				color: $lightBlue;
+				font-weight: 600;
+			}
+		}
+
+		.inputGroup {
+			margin-bottom: 1.5rem;
+
+			> label {
+				display: inline-block;
+				&::first-letter {
+					text-transform: capitalize;
+				}
+			}
+
+			.inputDescription {
+				height: 128px !important;
+			}
+
+			.wordCounter {
+				text-align: right;
+				color: $lightBlue;
+			}
+		}
+	}
+
+	.shareWorkflowPrompt {
+		display: flex;
+		gap: 0.8em;
+		justify-content: flex-start;
+		align-items: center;
+		margin-top: 0.5em;
+		margin-right: 0.3em;
+	}
+
+	.footer {
+		margin-top: 1.5em;
+		.btn {
+			width: 100%;
+			border-radius: 15px;
+			margin-top: 2rem;
+			display: inline-block;
+			&::first-letter {
+				text-transform: capitalize;
+			}
+		}
+	}
+}

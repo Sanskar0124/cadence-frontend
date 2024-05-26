@@ -1,0 +1,16 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.changeIntegrationStatus {
+	.label {
+		color: $black;
+	}
+	& > div {
+		margin-bottom: 1rem;
+	}
+	.box {
+		margin: 20px 0;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

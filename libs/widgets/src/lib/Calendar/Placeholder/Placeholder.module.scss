@@ -1,0 +1,37 @@
+.calendarEventsPlaceholder {
+	& > div {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+		margin: 10px 0;
+		.time {
+			height: 40px;
+			width: 20%;
+		}
+		.event {
+			height: 40px;
+			width: 100%;
+		}
+	}
+}
+
+.calendarDurationPlaceholder {
+	display: flex;
+	.duration {
+		height: 36px;
+		width: 72px;
+		margin: 5px 10px;
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}
+
+.calendarSlotsPlaceholder {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(204px, 1fr));
+	.slot {
+		height: 47px;
+		margin: 4px 4px;
+	}
+}

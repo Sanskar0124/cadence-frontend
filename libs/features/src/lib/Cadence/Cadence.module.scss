@@ -1,0 +1,161 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.cadencePage {
+	.header {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 1rem;
+
+		.right {
+			display: flex;
+			gap: 20px;
+		}
+	}
+
+	.subHeader {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 1rem;
+
+		.tabBtn {
+			color: $lightBlue;
+			font-weight: 600;
+		}
+
+		.activeTab {
+			color: $mainPurple;
+		}
+	}
+
+	.main {
+		.cadenceHeader {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 20px;
+			padding: 5px 25px 5px 92px;
+			transition: 0.25s ease-in-out;
+
+			&.viewModeActive {
+				width: 70%;
+				padding: 5px 25px 5px 120px;
+			}
+			&.isAdmin {
+				padding: 5px 25px 5px 63px;
+			}
+
+			> div {
+				text-transform: uppercase;
+				color: #9e9ea7;
+				font-weight: 600;
+				text-align: center;
+				padding: 0 5px;
+				font-size: 0.95rem;
+			}
+
+			.people {
+				width: 60px;
+			}
+
+			.cadence_name {
+				width: 250px;
+				text-align: left;
+			}
+
+			.steps {
+				width: 60px;
+				display: flex;
+				gap: 3px;
+
+				&.sorted {
+					color: $mainPurple;
+					cursor: pointer;
+				}
+
+				> .arrows {
+					display: flex;
+					flex-direction: column;
+					gap: 1px;
+					justify-content: center;
+
+					svg {
+						cursor: pointer;
+
+						&.downArrow {
+							transform: rotate(180deg);
+						}
+					}
+				}
+			}
+			.created_on {
+				width: 150px;
+			}
+
+			.created_by {
+				width: 150px;
+			}
+
+			.status {
+				width: 120px;
+			}
+
+			.actions {
+				width: 130px;
+			}
+		}
+
+		.body {
+			gap: 10px;
+			display: flex;
+			transition: 0.25s ease-in-out;
+			border-radius: 10px;
+
+			.cadencesContainer {
+				height: calc(100vh - 190px);
+				flex: 1;
+				overflow-y: scroll;
+				border-radius: 10px;
+				background-color: $white;
+				padding: 10px 10px;
+				display: flex;
+				flex-direction: column;
+
+				&.withoutSubheader {
+					height: calc(100vh - 125px);
+				}
+
+				&::-webkit-scrollbar {
+					display: none;
+				}
+			}
+
+			.sidebarContainer {
+				position: relative;
+				transition: 0.25s ease-in-out;
+			}
+
+			.noCadence {
+				height: 100%;
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+
+				> div {
+					margin-top: 2rem;
+
+					> h4 {
+						color: $veryLightBlue;
+						font-size: 1.3rem;
+						font-weight: 700;
+						margin-bottom: 1rem;
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,156 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.feed {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	.header {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		@media screen and (max-height: 800px) {
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+		}
+		.filter {
+			position: relative;
+			.selectFilterBtn {
+				font-weight: 400;
+				border-radius: 15px;
+				height: 40px !important;
+				border: 1px solid #dadce0 !important;
+				box-shadow: none !important;
+				@media screen and (max-height: 800px) {
+					width: fit-content !important;
+				}
+				div {
+					display: flex;
+					justify-content: space-between;
+					max-width: 100%;
+					// width: 70px;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					svg {
+						align-self: center;
+					}
+				}
+			}
+
+			.dropdown {
+				position: absolute;
+				top: 110%;
+				border-radius: 20px;
+				left: 50%;
+				transform: translateX(-50%);
+				@media screen and (max-height: 800px) {
+					left: unset;
+					right: 0;
+					transform: translateX(0);
+				}
+				background: $white;
+				z-index: 10;
+				display: none;
+				flex-direction: column;
+				gap: 15px;
+				padding: 15px;
+				width: 272px;
+				box-shadow: 5px 10px 50px rgba(41, 43, 88, 0.2);
+				max-height: 400px;
+				&.open {
+					display: flex;
+				}
+
+				.totalSelected {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					padding: 0 8px 0 15px;
+					& > span {
+						color: $lightBlue;
+						font-weight: 400;
+						font-size: 13px;
+						::first-letter {
+							text-transform: capitalize;
+						}
+					}
+				}
+				.list {
+					display: flex;
+					flex-direction: column;
+					gap: 10px;
+					overflow-y: scroll;
+					height: calc(100vh - 630px);
+					@media screen and (max-height: 800px) {
+						height: calc(100vh - 480px);
+					}
+				}
+
+				.info {
+					display: flex;
+					align-items: center;
+					gap: 10px;
+
+					& > div {
+						display: flex;
+						flex-direction: column;
+						& > span {
+							&:last-child {
+								color: $lightBlue;
+							}
+							&::first-letter {
+								text-transform: capitalize;
+							}
+						}
+					}
+				}
+				.filter {
+					width: 100%;
+					padding: 5px 10px;
+					border-radius: 20px;
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					border: 1px solid transparent;
+					cursor: pointer;
+					&:hover {
+						background: #f0f8fe;
+					}
+					.tick {
+						width: 25px;
+						height: 25px;
+						background: $primaryGradient;
+						border-radius: 10px;
+						display: none;
+						align-items: center;
+						justify-content: center;
+						color: $white;
+					}
+					&.selected {
+						background: linear-gradient(
+							106.52deg,
+							rgba(162, 130, 232, 0.1) -11.57%,
+							rgba(126, 142, 231, 0.1) 50.39%,
+							rgba(68, 153, 233, 0.1) 116.35%
+						);
+
+						.info {
+							.icon {
+								svg {
+									color: #5b6be1;
+								}
+							}
+							span {
+								color: #5b6be1;
+							}
+						}
+						.tick {
+							display: flex;
+						}
+					}
+				}
+			}
+		}
+	}
+}

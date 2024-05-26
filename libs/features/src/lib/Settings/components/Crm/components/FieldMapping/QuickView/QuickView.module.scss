@@ -1,0 +1,173 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.quickView {
+	width: 60%;
+	min-width: 460px;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	position: relative;
+	overflow-y: scroll;
+	box-shadow: 5px 10px 32px rgba(41, 43, 88, 0.09);
+	border-radius: 15px;
+	padding: 20px;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	.header {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		gap: 1rem;
+		padding-bottom: 0.5rem;
+		.headerButton {
+			padding: 0 6px;
+			width: 110px !important;
+			height: 40px !important;
+			font-weight: 600;
+			color: $black;
+			font-size: 0.9rem;
+		}
+		.qual {
+			max-width: 90px;
+			white-space: nowrap;
+			overflow: hidden;
+			font-size: 0.9rem;
+			text-overflow: ellipsis;
+		}
+		.statusButton {
+			font-weight: 600;
+			color: $black;
+			font-size: 0.9rem;
+		}
+	}
+	.body {
+		// flex: 1;
+		cursor: default;
+		.redirections {
+			display: flex;
+			justify-content: center;
+			gap: 0.7rem;
+			margin-bottom: 0.5rem;
+		}
+		.name {
+			display: flex;
+			justify-content: center;
+			gap: 0.3rem;
+			font-weight: 700;
+			margin-bottom: 1rem;
+			div {
+				font-size: 1.3rem;
+			}
+		}
+		.companyInfo,
+		.emailInfo,
+		.phoneInfo,
+		.location {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 0.2rem;
+			font-size: 0.9rem;
+			margin-top: 0.5rem;
+		}
+
+		.phoneInfo {
+			flex-direction: column;
+			.primaryPhone {
+				display: flex;
+				gap: 0.5rem;
+				margin-bottom: 0.4rem;
+				align-items: center;
+			}
+			.alternatePhones {
+				display: flex;
+				flex-direction: row;
+				gap: 1.5rem;
+				margin-bottom: 0.4rem;
+				.apn13,
+				.apn24 {
+					display: flex;
+					flex-direction: column;
+				}
+				.apn {
+					width: max-content;
+					margin-bottom: 5px;
+					margin-right: 5px;
+				}
+			}
+		}
+		.emailInfo {
+			margin-top: 1rem;
+			flex-direction: column;
+			.primaryEmail {
+				display: flex;
+				gap: 0.5rem;
+				align-items: center;
+				margin-bottom: 0.4rem;
+			}
+			.alternateEmails {
+				display: flex;
+				flex-direction: row;
+				gap: 1.5rem;
+				.aem12,
+				.aem34 {
+					display: flex;
+					flex-direction: column;
+				}
+				.aem {
+					width: max-content;
+					margin-bottom: 5px;
+					margin-right: 5px;
+				}
+			}
+		}
+
+		span {
+			position: relative;
+			p {
+				text-transform: capitalize;
+				display: flex;
+				align-items: center;
+				gap: 5px;
+			}
+			&.notSet {
+				p {
+					color: $veryLightBlue;
+					opacity: 0.7;
+					svg {
+						color: $veryLightBlue;
+					}
+				}
+				&:hover::before {
+					animation: fade 0.2s ease-in-out;
+					content: "Not set";
+					position: absolute;
+					width: max-content;
+					z-index: 10000;
+					padding: 4px 8px;
+					background: #868486;
+					box-shadow: 5px 10px 50px rgba(41, 43, 88, 0.2);
+					border-radius: 10px;
+					color: $white;
+					font-weight: 400;
+					top: 110%;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+			}
+			&.disabled {
+				p {
+					color: $blackShade4;
+					opacity: 0.7;
+					svg {
+						color: $blackShade4;
+					}
+				}
+				&:hover::before {
+					display: none;
+				}
+			}
+		}
+	}
+}

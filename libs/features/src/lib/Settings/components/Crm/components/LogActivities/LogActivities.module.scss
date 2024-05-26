@@ -1,0 +1,33 @@
+@import "libs/themes/src/lib/styles/variables";
+@import "../../../../Settings.module.scss";
+
+.container {
+	.settings {
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+		.inputBox {
+			width: 60%;
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.helpLinks {
+			display: flex;
+			flex-direction: column;
+			margin-top: 10px;
+			gap: 0.71rem;
+			a {
+				cursor: pointer;
+				color: #037dfc;
+				font-weight: 400;
+				text-decoration: underline;
+				width: fit-content;
+			}
+			&:last-child {
+				text-transform: capitalize;
+			}
+		}
+	}
+}

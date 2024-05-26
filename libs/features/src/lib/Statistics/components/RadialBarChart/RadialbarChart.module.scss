@@ -1,0 +1,121 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.radialbarchartcard {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	width: 50%;
+	height: 100%;
+
+	.radialbarchartcontent {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		width: 50%;
+		height: 80%;
+
+		.detailcard {
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: center;
+			width: 100%;
+			height: 100%;
+			&_row1 {
+				width: 90%;
+				height: 60%;
+				display: flex;
+				justify-content: space-between;
+				align-content: center;
+				align-items: center;
+				margin-left: 1rem;
+
+				.colorbox {
+					width: 4px;
+					height: 15px;
+					border-radius: 2px;
+				}
+				.value {
+					width: 90%;
+					display: flex;
+					align-items: center;
+					gap: 8px;
+					margin-left: 4px;
+				}
+				.name {
+					margin-left: 4px;
+					width: 47%;
+					font-size: 0.89rem;
+					font-weight: 500;
+				}
+				.tasknumber {
+					width: 20%;
+					height: 20px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					text-align: center;
+					margin-left: 4px;
+					padding: 12px;
+					font-size: 0.9rem;
+					font-weight: 700;
+					border-radius: 5px;
+					background-color: rgba(139, 144, 180, 0.05);
+				}
+				.percentage {
+					width: 19%;
+				}
+			}
+		}
+	}
+	.radialbarchartfigure {
+		width: 50%;
+		height: 90%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		&_chart {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		&_details {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			.totalleads {
+				font-size: 1.3rem;
+				font-weight: 700;
+			}
+			.leadname {
+				color: $lightBlue;
+				font-size: 0.987rem;
+			}
+		}
+	}
+}
+
+.box {
+	&_completed {
+		background: #5b6be1;
+	}
+	&_pending {
+		background: transparent;
+	}
+	&_skipped {
+		background: linear-gradient(115.94deg, #f75a92 -12.55%, #ff9a9a 112.61%);
+	}
+	&_converted {
+		background: linear-gradient(90deg, #36cdcf 0%, #40e0cf 100%);
+	}
+	&_disqualified {
+		background: #f77272;
+	}
+	&_demobooked {
+		background: #5b6be1;
+	}
+}

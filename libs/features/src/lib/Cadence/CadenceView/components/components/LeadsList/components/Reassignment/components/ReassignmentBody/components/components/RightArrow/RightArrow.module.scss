@@ -1,0 +1,19 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.rightArrow {
+	display: flex;
+	.arrowLine {
+		display: flex;
+		align-self: center;
+		width: 42px;
+		border-bottom: 2px solid rgb(129, 147, 168, 0.56);
+	}
+	.arrowHead {
+		display: flex;
+		width: 0;
+		height: 0;
+		border-top: 7px solid transparent;
+		border-left: 14px solid rgb(129, 147, 168, 0.56);
+		border-bottom: 7px solid transparent;
+	}
+}

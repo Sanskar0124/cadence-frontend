@@ -1,0 +1,152 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.videoTemplates {
+	width: 100%;
+	// padding-bottom: 2rem;
+	// height: calc(100vh - 100px);
+	border-radius: 10px;
+	// overflow: scroll;
+	display: flex;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	.tableContainer {
+		flex: 1;
+		// background-color: $white;
+		// border: 1px solid #e7ebff;
+		height: calc(100vh - 200px);
+		display: flex;
+		flex-direction: column;
+		border-radius: 10px;
+
+		.tableHeader {
+			> div {
+				width: 100%;
+				align-items: center;
+				padding: 5px 25px;
+				display: grid;
+				transition: 0.25s ease-in-out;
+				grid-template-columns: 15% 31% 15% 32% 11%;
+				> div {
+					text-transform: uppercase;
+					color: #9e9ea7;
+					font-weight: 600;
+					font-size: 0.95rem;
+				}
+			}
+
+			.compressed {
+				grid-template-columns: 26% 27% 15%;
+			}
+		}
+	}
+
+	.table {
+		padding: 10px 10px;
+		// padding-bottom: 85px;
+		// height: auto;
+		background-color: white;
+		width: 100%;
+		border-radius: 10px;
+		overflow-x: scroll;
+		overflow-y: scroll;
+		border-collapse: separate;
+		border-spacing: 0;
+		transition: 0.25s ease-in-out;
+		row-gap: 5px;
+		display: block;
+		flex: 1;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+		thead,
+		th {
+			position: sticky;
+			padding: 15px 0px 5px 0px;
+			top: 0;
+
+			z-index: 1;
+			text-transform: capitalize;
+			color: $veryLightBlue;
+			background-color: white;
+			font-weight: 700;
+			font-size: 12px;
+			line-height: 16px;
+		}
+
+		thead > tr {
+			display: grid;
+			transition: 0.25s ease-in-out;
+			grid-template-columns: 14% 29% 18% 28% 11%;
+
+			&.compressed {
+				grid-template-columns: 24% 27% 49%;
+				z-index: 0;
+			}
+
+			> th {
+				text-align: left;
+				border: 10px solid #fff;
+				background-color: white;
+				text-transform: uppercase;
+			}
+
+			> th:first-of-type {
+				border-left: 10px solid #fff;
+			}
+
+			> th:last-of-type {
+				border-right: 10px solid #fff;
+			}
+
+			> th:nth-child(3),
+			> th:nth-child(4) {
+				text-align: center;
+			}
+			> th:last-child {
+				border: 10px solid #fff;
+				padding-left: 1rem;
+			}
+		}
+		tbody {
+			row-gap: 20px;
+			// overflow: scroll;
+			display: block;
+			height: auto;
+			&::-webkit-scrollbar {
+				display: none;
+			}
+		}
+	}
+
+	.sidevar {
+		border-radius: 10px;
+		overflow-y: hidden;
+		background-color: $white;
+		transition: all 0.3s ease-in-out;
+		width: 0;
+		// height: calc(100vh - 198px);
+		margin-top: 28px;
+		margin-left: 10px;
+		position: sticky;
+		top: 0;
+		padding: 0;
+		white-space: nowrap;
+		&.open {
+			// padding: 0 20px 20px;
+			width: 30%;
+		}
+
+		&.closed {
+			width: 0;
+		}
+
+		&::-webkit-scrollbar {
+			display: none;
+			width: 0;
+		}
+	}
+}

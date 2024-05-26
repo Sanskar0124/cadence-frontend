@@ -1,0 +1,8 @@
+:root {
+	--ck-color-base-border: white;
+	--ck-color-toolbar-background: white;
+	--ck-z-modal: 10000000000;
+}
+.ck.ck-button {
+	cursor: pointer;
+}

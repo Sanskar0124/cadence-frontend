@@ -1,0 +1,60 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.show_data {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: 90%;
+	gap: 15px;
+	margin-left: 0px;
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 19px;
+	color: #394759;
+	&_error {
+		color: $red;
+		margin-top: 15px;
+		p {
+			margin-bottom: 10px;
+			font-weight: 600;
+		}
+	}
+	&_division {
+		width: 100%;
+		border: 1px solid $grey;
+		margin-top: 10px;
+	}
+	&_subject {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		margin-top: 15px;
+		text-transform: capitalize;
+		p {
+			color: #567191;
+			margin-right: 10px;
+		}
+	}
+	&_body {
+		text-align: left;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 19px;
+		color: #394759;
+		margin-top: 15px;
+		margin-bottom: 15px;
+		p {
+			display: block;
+		}
+		img {
+			max-width: 100%;
+		}
+		figure {
+			width: 100% !important;
+		}
+	}
+}

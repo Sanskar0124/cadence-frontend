@@ -1,0 +1,255 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.singleNode {
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	&__main {
+		min-height: 55px;
+		width: 84%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		border: 1px solid $mainPurple;
+		border-radius: 20px;
+		// cursor: pointer;
+
+		&.ongoing {
+			background: rgba(91, 107, 225, 0.07);
+		}
+
+		// background-color: white;
+	}
+	&__alwaysshow {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		gap: 6px;
+		height: 50px;
+		border-radius: 20px;
+		// cursor: pointer;
+		// background-color: white;
+		&.after_purple {
+			&::after {
+				left: 13.2%;
+				top: 100%;
+				content: "";
+				height: 15px;
+				width: 2px;
+				z-index: -3;
+				position: absolute;
+				background: $mainPurple;
+			}
+		}
+		&.before_purple {
+			&::before {
+				left: 13.2%;
+
+				top: 41px;
+				content: "";
+				height: 15px;
+				width: 2px;
+				z-index: -3;
+				position: absolute;
+				background: $mainPurple;
+			}
+		}
+		&.after_verylightblue {
+			&::after {
+				left: 13.2%;
+
+				top: 100%;
+				content: "";
+				height: 15px;
+				width: 2px;
+				z-index: -3;
+				position: absolute;
+				background: $veryLightBlue;
+			}
+		}
+		&.before_verylightblue {
+			&::before {
+				left: 13.2%;
+
+				top: 41px;
+				content: "";
+				height: 15px;
+				width: 2px;
+				z-index: -3;
+				position: absolute;
+				background: $veryLightBlue;
+			}
+		}
+		&.after_red {
+			&::after {
+				left: 13.2%;
+
+				top: 100%;
+				content: "";
+				height: 15px;
+				width: 2px;
+				z-index: -3;
+				position: absolute;
+				background: $redShade3;
+			}
+		}
+		&.before_red {
+			&::before {
+				left: 13.2%;
+
+				top: 41px;
+				content: "";
+				height: 15px;
+				width: 2px;
+				z-index: -3;
+				position: absolute;
+				background: $redShade3;
+			}
+		}
+		&.after_green {
+			&::after {
+				left: 13.2%;
+
+				top: 100%;
+				content: "";
+				height: 15px;
+				width: 2px;
+				z-index: -3;
+				position: absolute;
+				background: $greenShade1;
+			}
+		}
+		&.before_green {
+			&::before {
+				left: 13.2%;
+
+				top: 41px;
+				content: "";
+				height: 15px;
+				width: 2px;
+				z-index: -3;
+				position: absolute;
+				background: $greenShade1;
+			}
+		}
+	}
+	&__timeWrapper {
+		margin-bottom: 18px;
+		margin-top: 18px;
+		margin-left: 29px;
+		height: 20px;
+		width: 421px;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		cursor: default;
+	}
+	&__time {
+		height: 20px;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		&__text {
+			margin-left: 10px;
+			color: $veryLightBlue;
+			font-weight: 600;
+		}
+		&__textcomplete {
+			margin-left: 10px;
+			font-weight: 600;
+			color: $lightBlue;
+		}
+	}
+	&__spacer {
+		height: 20px;
+		width: 100%;
+	}
+}
+
+.trackInfo {
+	position: absolute;
+	// width: 40px;
+	height: 50%;
+	right: 50px;
+	display: flex;
+	justify-content: flex-end;
+	.pausedText {
+		color: $orange;
+		font-weight: 400;
+		font-size: 12px;
+		margin-right: 15px;
+	}
+	span {
+		display: inline-block;
+		display: flex;
+		align-items: center;
+		font-size: 0.9rem;
+		margin-left: 1rem;
+		color: $mainPurple;
+		font-weight: 700;
+		svg {
+			color: $primaryGradient;
+		}
+	}
+}
+
+.nodePreview {
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	height: 100%;
+
+	.title {
+		display: flex;
+		align-items: center;
+		line-height: 19px;
+		color: $blackShade6;
+
+		p {
+			font-weight: 600;
+			margin-right: 5px;
+		}
+		.isAutomated {
+			margin-left: 10px;
+			transform: translateY(1.5px);
+		}
+	}
+}
+
+.icon {
+	overflow: visible;
+	width: 38px;
+	height: 38px;
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	margin-left: 10px;
+	z-index: 1;
+	color: $black;
+	svg {
+		width: 24px;
+		height: 24px;
+	}
+}
+
+.activeBox {
+	background: rgba(91, 107, 225, 0.07);
+	border-radius: 20px 20px 0px 0px;
+}
+
+.unactiveBox {
+	background: rgba(91, 107, 225, 0.07);
+	border-radius: 20px;
+}

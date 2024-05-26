@@ -1,0 +1,298 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.filter {
+	padding: 20px 0;
+	padding-bottom: 20px;
+	width: 0;
+	transition: all 0.3s ease-in-out;
+	overflow-y: hidden;
+	height: calc(100vh - 180px);
+
+	&.preview {
+		padding: 20px;
+		display: block;
+		width: 100%;
+	}
+
+	&.launch {
+		padding: 20px;
+		display: block;
+		transition: all 0.3s ease-in-out;
+		width: 100%;
+	}
+
+	.filterActions {
+		position: sticky;
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+		margin-bottom: 1.25rem;
+		.filterHeader {
+			display: flex;
+			justify-content: space-between;
+			.title {
+				display: flex;
+				gap: 1rem;
+
+				h3 {
+					font-weight: 600;
+					color: $black;
+					font-size: 1.125rem;
+					position: sticky;
+					&::first-letter {
+						text-transform: capitalize;
+					}
+				}
+			}
+			.filterResetBtn {
+				width: fit-content !important;
+				height: min-content !important;
+				padding: 2px 4px !important;
+				cursor: pointer;
+				font-size: 1rem;
+				height: fit-content;
+				text-transform: capitalize;
+			}
+		}
+
+		.tabs {
+			border-radius: 20px;
+			margin: 4px auto;
+			height: 40px;
+			background-color: #f5f6f7;
+			.tabBtns {
+				border-radius: 15px;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				gap: 7px;
+				color: $black;
+				width: 50px;
+			}
+
+			.tabBtnActive {
+				color: #fff;
+			}
+
+			.activePill {
+				color: #ccc;
+				border-radius: 15px;
+			}
+		}
+	}
+
+	.employeeList {
+		max-width: 26vw;
+		position: sticky;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		overflow-y: scroll;
+		height: calc(98vh - 400px);
+
+		& > div {
+			padding: 5px;
+			cursor: pointer;
+			border-radius: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			border: 1px solid transparent;
+
+			.info {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				img {
+					height: 40px;
+					width: 40px;
+					border-radius: 50%;
+					object-fit: cover;
+				}
+
+				& > div {
+					display: flex;
+					flex-direction: column;
+					span {
+						&:last-child {
+							color: $lightBlue;
+						}
+					}
+				}
+			}
+
+			.tick {
+				width: 40px;
+				height: 40px;
+				background: $primaryGradient;
+				border-radius: 17px;
+				display: none;
+				align-items: center;
+				justify-content: center;
+				color: $white;
+			}
+
+			&.selected {
+				background: #f5f6f7;
+				border: 1px solid #7e8ee7;
+
+				.tick {
+					display: flex;
+				}
+
+				.info > div > span:first-child {
+					font-weight: 700;
+				}
+			}
+		}
+	}
+
+	.sdList {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		overflow-y: scroll;
+		height: calc(100vh - 400px);
+		& > div {
+			padding: 5px;
+			cursor: pointer;
+			border-radius: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			border: 1px solid transparent;
+
+			.info {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+
+				img {
+					height: 40px;
+					width: 40px;
+					border-radius: 50%;
+				}
+
+				& > div {
+					display: flex;
+					flex-direction: column;
+					span {
+						&:last-child {
+							color: $lightBlue;
+						}
+					}
+				}
+			}
+			.arrow {
+				color: $lightBlue;
+			}
+			&.selected {
+				.arrow {
+					transform: rotate(180deg) translateY(-5px);
+				}
+			}
+		}
+
+		.dropdown {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: unset;
+			padding: 15px;
+			padding-left: 24px;
+			padding-right: 24px;
+			gap: 10px;
+			height: fit-content;
+			background: #f5f6f7;
+
+			.noEmp {
+				display: inline-block;
+				&::first-letter {
+					text-transform: capitalize;
+				}
+			}
+
+			& > div {
+				width: 100%;
+				padding: 5px;
+				border-radius: 20px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				border: 1px solid transparent;
+
+				.tick {
+					width: 40px;
+					height: 40px;
+					background: $primaryGradient;
+					border-radius: 17px;
+					display: none;
+					align-items: center;
+					justify-content: center;
+					color: $white;
+				}
+				&.selected {
+					background: $white;
+					border: 1px solid #7e8ee7;
+					.tick {
+						display: flex;
+					}
+				}
+			}
+		}
+	}
+}
+
+.placeholder {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	& > div {
+		width: 100%;
+		height: 50px;
+	}
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1249px) {
+	.tabs {
+		width: 290px !important;
+	}
+}
+
+@media screen and (min-width: 1250px) and (max-width: 1299px) {
+	.tabs {
+		width: 305px !important;
+	}
+}
+
+@media screen and (min-width: 1300px) and (max-width: 1349px) {
+	.tabs {
+		width: 320px !important;
+	}
+}
+@media screen and (min-width: 1350px) and (max-width: 1399px) {
+	.tabs {
+		min-width: 330px !important;
+	}
+}
+@media screen and (min-width: 1400px) and (max-width: 1449px) {
+	.tabs {
+		width: 344px !important;
+	}
+}
+@media screen and (min-width: 1450px) and (max-width: 1499px) {
+	.tabs {
+		width: 364px !important;
+	}
+}
+@media screen and (min-width: 1500px) and (max-width: 1550px) {
+	.tabs {
+		width: 374px !important;
+	}
+}
+
+@media screen and (min-width: 1500px) and (max-width: 1550px) {
+	.tabs {
+		width: 384px !important;
+	}
+}

@@ -1,0 +1,161 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.connectAccountsContainer {
+	position: relative;
+	border: 1px solid #e7ebff;
+	padding: 2rem 2.4rem;
+	background-color: $white;
+	border-radius: 20px;
+	height: 100%;
+	overflow-y: scroll;
+	&::-webkit-scrollbar {
+		width: 0;
+		display: none;
+	}
+	.header {
+		margin-bottom: 2.7rem;
+		.title {
+			display: flex;
+			align-items: center;
+			gap: 0.6rem;
+			.emailTitle {
+				text-transform: capitalize;
+			}
+			span {
+				display: inline-flex;
+				background-color: $lightBlue;
+				width: 1.8rem;
+				height: 1.8rem;
+				align-items: center;
+				justify-content: center;
+				border-radius: 6px;
+			}
+			margin-bottom: 0.3rem;
+		}
+		.subtitle {
+			color: $black;
+			font-size: 1rem;
+		}
+	}
+	.body {
+		.connectionsContainer {
+			margin-bottom: 2.3rem;
+			.cHeading {
+				font-size: 1.2rem;
+				font-weight: 700;
+				margin-bottom: 0.3rem;
+				display: inline-block;
+				&::first-letter {
+					text-transform: capitalize;
+				}
+				.importantTag {
+					background: linear-gradient(
+						315deg,
+						rgba(255, 136, 136, 0.1) 0%,
+						rgba(240, 95, 95, 0.1) 100%
+					);
+					border-radius: 8px;
+					color: $red;
+					padding: 5px 7px;
+					margin-left: 5px;
+					font-size: 0.71rem;
+					font-weight: 600;
+					display: inline-block;
+					transform: translateY(-2px);
+				}
+			}
+			.cTitle1 {
+				color: #394759;
+				font-weight: 600;
+				margin-top: 15px;
+				margin-bottom: 0.4rem;
+				&::first-letter {
+					text-transform: capitalize;
+				}
+			}
+			.cTitle {
+				color: $lightBlue;
+				font-weight: 400;
+				margin-bottom: 0.4rem;
+				&::first-letter {
+					text-transform: capitalize;
+				}
+			}
+			.cSubtitle {
+				color: $veryLightBlue;
+				font-weight: 400;
+				margin-bottom: 0.9rem;
+			}
+			.googleBtn {
+				border: none;
+				box-shadow: 0px 1px 1px 0px #00000026 !important;
+				font-weight: 600;
+			}
+			.emailSetup {
+				display: flex;
+				width: 85%;
+				.emailConfigure {
+					flex: 0.7;
+					.emails {
+						margin-top: 1.2rem;
+						& > div {
+							display: flex;
+							align-items: center;
+							justify-content: space-between;
+							height: 50px;
+							border-radius: 20px;
+							background-color: #f5f6f7;
+							margin: 10px 0;
+							padding: 5px;
+							width: 60%;
+							&:first-child {
+								margin-top: 0;
+							}
+							&:last-child {
+								margin-bottom: 0;
+							}
+							.input {
+								display: flex;
+								align-items: center;
+								.name {
+									line-height: 19px;
+									margin-left: 10px;
+									color: $black;
+								}
+							}
+							.buttons {
+								margin-right: 20px;
+								button {
+									font-size: 1rem;
+									font-weight: 400;
+									&:last-child {
+										margin-left: 10px;
+									}
+								}
+							}
+							&.active {
+								border: 1px solid #a282e8;
+							}
+						}
+					}
+				}
+				.emailSignatureConfigure {
+					flex: 0.5;
+				}
+			}
+			.helpLinks {
+				display: flex;
+				flex-direction: column;
+				gap: 0.3rem;
+				margin: 10px 0 40px;
+				a {
+					cursor: pointer;
+					color: $blue;
+					font-weight: 400;
+					text-decoration: underline;
+					width: fit-content;
+				}
+			}
+		}
+	}
+}

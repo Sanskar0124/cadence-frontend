@@ -1,0 +1,44 @@
+@import "../../Email.module.scss";
+
+.container {
+	.settings {
+		.helpLinks {
+			width: 70%;
+		}
+		.domainInputsContainer {
+			padding: 1em 0em;
+			width: 60%;
+			& > span {
+				color: $lightBlue;
+				display: inline-block;
+				margin-bottom: 5px;
+				&::first-letter {
+					text-transform: capitalize;
+				}
+			}
+			.input {
+				margin-bottom: 12px;
+			}
+		}
+
+		.dnsTableContainer {
+			padding-top: 2em;
+		}
+	}
+}
+
+.left {
+	> title {
+		text-transform: capitalize;
+	}
+	.description {
+		width: 70%;
+		display: inline-block;
+		&::first-letter {
+			text-transform: capitalize;
+		}
+	}
+}
+
+.right {
+}

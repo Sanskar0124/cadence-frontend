@@ -1,0 +1,49 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.successModalContainer {
+	width: 400px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	.swiperContainer {
+		width: 300px;
+		padding-top: 1rem;
+		margin-bottom: 1.2rem;
+		.slide {
+			text-align: center;
+			.imageContainer {
+				height: 150px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.title {
+				margin-top: 0.5rem;
+				font-weight: 600;
+				font-size: 1.1rem;
+				text-transform: capitalize;
+			}
+			.subtitle {
+				margin-top: 1rem;
+				margin-bottom: 3.4rem;
+			}
+			&.slide1 {
+				.title {
+					margin-top: -1rem;
+				}
+				.subtitle {
+				}
+			}
+			&.slide2 {
+				.imageContainer {
+					transform: translate(0, 15px);
+				}
+			}
+		}
+	}
+	.redirectButton {
+		margin-bottom: 0;
+		width: 100%;
+	}
+}

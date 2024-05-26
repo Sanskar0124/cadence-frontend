@@ -1,0 +1,83 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.title {
+	height: 63px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+	padding: 15px 20px 18px;
+
+	.closeBtn {
+		width: 1.7rem;
+		height: 1.7rem;
+		position: absolute;
+	}
+
+	.heading {
+		padding-left: 2rem;
+		font-size: 1.2rem;
+		font-weight: 600;
+		color: #394759;
+	}
+}
+
+.body {
+	// height: 100%;
+	overflow: auto;
+	// padding-bottom: 3rem;
+
+	&::-webkit-scrollbar {
+		display: none;
+		width: 0;
+	}
+
+	.filterType {
+		position: relative;
+		margin-bottom: 1.5rem;
+		padding: 0 20px;
+
+		.taskType {
+			height: 30px;
+			font-weight: 600;
+			font-size: 1rem;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			.label {
+				display: inline-block;
+				&::first-letter {
+					text-transform: uppercase;
+				}
+			}
+		}
+
+		.filterOptions {
+			margin-top: 0.7rem;
+			display: flex;
+			flex-wrap: wrap;
+			column-gap: 1rem;
+			row-gap: 0.7rem;
+			justify-content: space-between;
+
+			button {
+				height: 40px !important;
+				font-size: 1rem;
+				flex: 40%;
+				white-space: nowrap;
+				box-shadow: none;
+				&:hover {
+					box-shadow: none;
+					background: #f0f8fe;
+				}
+				&.active {
+					background: $primaryGradient;
+					color: $white;
+					&:hover {
+						opacity: 10;
+					}
+				}
+			}
+		}
+	}
+}

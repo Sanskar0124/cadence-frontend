@@ -1,0 +1,124 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.pageContainer {
+	display: flex;
+	justify-content: center;
+
+	.innerBox {
+		position: relative;
+		flex-direction: column;
+		display: flex;
+		width: fit-content;
+		height: 100%;
+
+		.upperBoundary {
+			position: absolute;
+			z-index: 2;
+			height: 8px;
+			left: 0px;
+			right: 0px;
+			top: 0px;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+			background: linear-gradient(
+				106.52deg,
+				#a282e8 -11.57%,
+				#7e8ee7 50.39%,
+				#4499e9 116.35%
+			);
+		}
+		.leadInfo {
+			width: 30%;
+			min-width: 509px;
+			box-shadow: 5px 10px 50px rgba(41, 43, 88, 0.2);
+			height: 97%;
+			background: $white;
+			border: 1px solid #e7ebff;
+			border-radius: 10px;
+			padding: 2rem;
+			overflow: auto;
+
+			position: relative;
+
+			> .inputGroup {
+				margin: 30px 0 45px 0;
+				width: 100%;
+
+				label {
+					color: $black;
+					display: inline-block;
+					&::first-letter {
+						text-transform: capitalize;
+					}
+				}
+			}
+
+			> .leadInfoHead {
+				display: flex;
+				margin: 1rem 0;
+
+				h3 {
+					font-size: 1.1rem;
+					font-weight: 600;
+					margin: 0 0;
+					display: inline-block;
+				}
+				.btnDup {
+					font-weight: 600;
+					font-size: 0.714rem;
+					margin-left: 5px;
+					height: 24px;
+					width: fit-content;
+					border-radius: 8px;
+					padding: 3px 9px;
+				}
+			}
+
+			.main {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 20px;
+				height: 240px;
+				overflow-y: auto;
+
+				&::-webkit-scrollbar {
+					display: none;
+				}
+			}
+
+			.duplicate {
+				margin-top: 50px;
+				> p {
+					font-weight: 600;
+					margin: 1.5rem auto 1rem;
+					text-align: center;
+				}
+
+				> .btns {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					gap: 20px;
+
+					.whiteBtn {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						gap: 7px;
+						background: #f5f6f7;
+						box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+						border-radius: 15px;
+					}
+				}
+			}
+
+			.btn {
+				display: block;
+				margin: 1.5rem auto 0;
+				font-weight: 600;
+				border-radius: 15px;
+				padding: 15px 32px;
+			}
+		}
+	}
+}

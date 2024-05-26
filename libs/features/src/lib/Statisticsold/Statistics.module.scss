@@ -1,0 +1,365 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.statistics {
+	overflow: scroll;
+	&_title {
+		display: flex;
+		margin-bottom: 25px;
+		.pageTitle {
+			flex: 1;
+			margin-right: 15px;
+			text-transform: capitalize;
+		}
+	}
+	&_body {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		&_piecharts {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+			height: 245px;
+		}
+		&_heatmap {
+			margin-top: 15px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+			width: 100%;
+			height: 55%;
+			background: $white;
+			border: 1px solid #e7ebff;
+			border-radius: 10px;
+			padding: 15px;
+			&_title {
+				display: flex;
+				width: 100%;
+				align-items: center;
+				justify-content: space-between;
+				&_left {
+					width: 100%;
+					display: flex;
+				}
+			}
+			&_content {
+				margin: 20px 0;
+				width: 100%;
+
+				& > div > div > div {
+					&:first-child {
+						margin-right: 48px;
+
+						// y labels
+						& > div:last-child > div {
+							text-align: left;
+							font-size: 10px;
+							color: $veryLightBlue;
+							margin-bottom: 5px;
+
+							&:last-child {
+								margin-bottom: 0;
+							}
+						}
+					}
+
+					&:last-child {
+						padding-right: 10px;
+
+						& > div:last-child > div:last-child > div > div {
+							width: 200px !important;
+						}
+					}
+				}
+			}
+		}
+		&_graph {
+			margin-top: 15px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+			width: 100%;
+			height: 340px;
+			background: $white;
+			border: 1px solid #e7ebff;
+			border-radius: 10px;
+			padding: 15px;
+			&_title {
+				display: flex;
+				width: 100%;
+				align-items: center;
+				justify-content: space-between;
+				&_left {
+					// height: 10%;
+					width: 100%;
+					display: flex;
+				}
+				&_right {
+					width: 100%;
+					display: flex;
+					gap: 10px;
+					justify-content: flex-end;
+					button {
+						height: 40px !important;
+						width: 60px !important;
+						border-radius: 15px;
+						&.active {
+							background: $primaryGradient;
+							color: $white;
+							&:hover {
+								opacity: 10;
+							}
+						}
+					}
+				}
+			}
+			&_content {
+				height: 90%;
+				width: 100%;
+			}
+		}
+	}
+}
+
+.graph_pageTitle {
+	margin-right: 15px;
+	text-transform: capitalize;
+}
+
+.filter {
+	> div {
+		border: none;
+		border-radius: 15px;
+		width: 180px;
+		z-index: 5 !important;
+		border-radius: 15px;
+		box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+		&::first-letter {
+			text-transform: capitalize !important;
+		}
+		&:hover {
+			box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15) !important;
+		}
+	}
+	&_wrapper {
+		width: 70%;
+		height: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		align-items: center;
+		gap: 10px;
+	}
+}
+
+.graphfilter {
+	transform: translateY(-4px);
+	z-index: 5 !important;
+	::first-letter {
+		text-transform: capitalize;
+	}
+	> div {
+		border: none;
+		border-radius: 15px;
+		width: max-content;
+		height: auto;
+		margin-top: 1px;
+	}
+}
+
+.ranktable {
+	width: 100%;
+	&_header {
+		position: sticky;
+		top: 0;
+		background: $background;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		padding: 20px;
+		font-weight: 700;
+		font-size: 0.75rem;
+		line-height: 15px;
+		text-align: center;
+		text-transform: uppercase;
+		color: $veryLightBlue;
+		z-index: 4;
+	}
+	&_body {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		border-radius: 10px;
+		background: $white;
+		overflow: auto;
+		padding: 10px;
+		gap: 10px;
+		&::-webkit-scrollbar {
+			width: 0;
+			display: none;
+		}
+
+		&_spinner {
+			height: 50px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 0 9px;
+			padding-top: 3px;
+			div {
+				height: 20px;
+				width: 20px;
+				border-color: $lightBlue transparent transparent transparent !important;
+			}
+		}
+	}
+}
+
+.header {
+	&_0 {
+		margin-right: 2.4rem;
+	}
+	&_1 {
+		// margin-left: 1.2%;
+		// font-size: 14px;
+		// width: 8%;
+
+		margin-left: 43px;
+		font-size: 14px;
+		width: 8%;
+		margin-right: -24px;
+	}
+	&_2 {
+		margin-left: 1.7%;
+		font-size: 14px;
+		width: 6.7%;
+	}
+	&_3 {
+		margin-left: 1.5%;
+		font-size: 14px;
+		width: 3.7%;
+	}
+	&_4 {
+		margin-left: 3.7%;
+		font-size: 14px;
+		width: 3.7%;
+	}
+	&_5 {
+		margin-left: 3.7%;
+		font-size: 14px;
+		width: 3.7%;
+	}
+	&_6 {
+		margin-left: 3.7%;
+		font-size: 14px;
+		width: fit-content;
+	}
+	&_7 {
+		margin-left: 4.7%;
+		font-size: 14px;
+		width: fit-content;
+	}
+	&_8 {
+		margin-left: 4%;
+		font-size: 14px;
+		width: 3.7%;
+	}
+	&_9 {
+		margin-left: 3.1%;
+		font-size: 14px;
+		width: 3.7%;
+	}
+	&_10 {
+		margin-left: 32px;
+		font-size: 14px;
+		width: 7%;
+		margin-right: -2rem;
+	}
+	&_11 {
+		margin-left: 3.7%;
+		font-size: 14px;
+		width: 4.7%;
+	}
+	&_12 {
+		margin-left: 2.7%;
+		font-size: 14px;
+		width: 3.7%;
+	}
+}
+
+// @media screen and (max-width: 1450px) {
+// 	.header {
+// 		&_2 {
+// 			margin-left: 14.8%;
+// 		}
+// 	}
+// }
+
+// @media screen and (max-width: 1350px) {
+// 	.header {
+// 		&_1 {
+// 			margin-left: 13.8%;
+// 		}
+// 	}
+// }
+
+.loadingCell {
+	height: "36px";
+}
+
+.card {
+	width: 100%;
+	height: 100%;
+	border-radius: 15px;
+	border: 1px solid $whiteShade2;
+
+	.top {
+		height: 55%;
+		border-radius: 15px 0 0 0;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 10px;
+
+		.round {
+			height: 50px;
+			width: 50px;
+			border-radius: 50%;
+			.skeleton {
+				width: 100%;
+				height: 100%;
+				border-radius: 50%;
+			}
+		}
+
+		.name {
+			width: 100%;
+			height: 15px;
+		}
+	}
+
+	.bottom {
+		height: 45%;
+		width: 100%;
+		border-radius: 0 0 15px 15px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.btn {
+			width: 150px;
+			height: 40px;
+		}
+	}
+}

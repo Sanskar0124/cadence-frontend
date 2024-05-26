@@ -1,0 +1,10 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.reassignmentContainer {
+	display: flex;
+	flex-direction: column;
+	background-color: $white;
+	margin: 19px 10px 10px 10px;
+	border-radius: 20px;
+	height: calc(100vh - 200px);
+}

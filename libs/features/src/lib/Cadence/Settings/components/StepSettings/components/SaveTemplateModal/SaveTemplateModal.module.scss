@@ -1,0 +1,39 @@
+@import "../../StepSettings.module.scss";
+
+.modal {
+	width: 400px;
+	.title {
+		display: inline-block;
+		&::first-letter {
+			text-transform: capitalize;
+		}
+	}
+
+	.groupInputBox {
+		margin: 30px 0;
+
+		input {
+			border: none !important;
+			outline: none !important;
+			background: none !important;
+		}
+
+		label {
+			text-transform: capitalize;
+		}
+	}
+
+	.inputBox {
+		margin: 30px 0;
+
+		label {
+			text-transform: capitalize;
+		}
+	}
+	.saveBtn {
+		display: inline-block;
+		&::first-letter {
+			text-transform: capitalize;
+		}
+	}
+}

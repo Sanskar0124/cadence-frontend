@@ -1,0 +1,21 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.timer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	.redDot {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background-color: $red;
+	}
+	.time {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 3px;
+		font-weight: 600;
+	}
+}

@@ -1,0 +1,39 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.container {
+	padding: 15px;
+	.header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		.logo {
+			display: flex;
+			align-items: center;
+			gap: 5px;
+			> div {
+				span {
+					display: block;
+					&:first-child {
+						font-size: 1.1rem;
+						font-weight: 700;
+					}
+					&:last-child {
+						font-size: 0.9rem;
+					}
+				}
+			}
+		}
+	}
+	.body {
+		position: relative;
+		margin-top: 40px;
+		z-index: 1;
+		height: calc(100vh - 100px);
+	}
+	.bgLogo {
+		position: absolute;
+		opacity: 0.08;
+		bottom: -378px;
+		left: -247px;
+	}
+}

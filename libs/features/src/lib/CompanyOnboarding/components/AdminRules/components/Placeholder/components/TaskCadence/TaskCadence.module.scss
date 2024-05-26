@@ -1,0 +1,48 @@
+@import "../../Placeholder.module.scss";
+
+.settingBody {
+	.title {
+		display: inline-block;
+		&::first-letter {
+			text-transform: capitalize;
+		}
+	}
+	.description {
+		display: inline-block;
+		&::first-letter {
+			text-transform: capitalize;
+		}
+	}
+	.setting {
+		margin-bottom: 2rem;
+
+		.title {
+			font-weight: 600;
+			font-size: 1rem;
+			display: inline-block;
+			&::first-letter {
+				text-transform: capitalize;
+			}
+		}
+
+		.description {
+			font-size: 1rem;
+			margin-top: 0.4rem;
+			margin-bottom: 0.5rem;
+			color: $lightBlue;
+			display: inline-block;
+			&::first-letter {
+				text-transform: capitalize;
+			}
+		}
+
+		.placeholder {
+			flex: 1;
+			width: 50%;
+			height: 44px;
+			display: flex;
+			border-radius: 10px;
+			margin-bottom: 1rem;
+		}
+	}
+}

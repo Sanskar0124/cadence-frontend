@@ -1,0 +1,135 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.singleActivity {
+	display: flex;
+	gap: 1.4rem;
+	min-height: 67px;
+	margin-bottom: 15px;
+	position: relative;
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+	&.cursor {
+		cursor: pointer;
+	}
+	&.loading {
+		margin-bottom: 1rem;
+		.icon {
+			&::after,
+			&::before {
+				width: 0;
+				height: 0;
+			}
+		}
+	}
+	&.disabled {
+		cursor: unset;
+	}
+	.date {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		text-transform: capitalize;
+		width: 53px;
+		> :first-child {
+			color: $black;
+			font-weight: 600;
+			text-align: right;
+			line-height: 20px;
+		}
+		> :last-child {
+			color: $lightBlue;
+			text-align: right;
+		}
+	}
+	.icon {
+		border-radius: 18px;
+		transform: translateY(3px);
+		overflow: visible;
+		width: 38px;
+		height: 38px;
+		background-color: $whiteShade1;
+		display: flex;
+		position: relative;
+		align-items: center;
+		justify-content: center;
+		box-shadow: 0px 1px 1px 0px #00000026;
+		z-index: 1;
+		color: $black;
+
+		svg {
+			width: 1.3rem;
+			height: 1.3rem;
+		}
+		// &::after,
+		&.after {
+			&::after {
+				top: 100%;
+			}
+		}
+		&.before {
+			&::before {
+				bottom: 100%;
+			}
+		}
+		&::before,
+		&::after {
+			content: "";
+			height: 45px;
+			width: 5px;
+			z-index: -3;
+			position: absolute;
+			background: $whiteShade1;
+		}
+		.custom {
+			height: 22px;
+			width: 22px;
+			border-radius: 50%;
+			background: #8193a82e;
+			border: 1px solid rgba(228, 230, 234, 0.87);
+			position: absolute;
+			bottom: -7px;
+			left: -7px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			svg {
+				width: 0.85rem;
+				height: 0.85rem;
+			}
+		}
+	}
+
+	.icon:not(.before) {
+		&::before {
+			display: none;
+		}
+	}
+
+	.icon:not(.after) {
+		&::after {
+			display: none;
+		}
+	}
+
+	.trackInfo {
+		position: absolute;
+		right: 10px;
+		display: flex;
+		top: 0px;
+		span {
+			display: inline-block;
+			display: flex;
+			align-items: center;
+			font-size: 0.9rem;
+			margin-left: 1rem;
+			color: $mainPurple;
+			font-weight: 700;
+			text-transform: capitalize;
+			svg {
+				margin-right: 3px;
+				color: $primaryGradient;
+			}
+		}
+	}
+}

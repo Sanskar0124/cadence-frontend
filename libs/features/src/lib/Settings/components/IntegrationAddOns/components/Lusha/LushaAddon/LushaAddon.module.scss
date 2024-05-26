@@ -1,0 +1,105 @@
+@import "libs/themes/src/lib/styles/variables";
+@import "../../../../../Settings.module.scss";
+
+.addon {
+	.header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 1rem;
+
+		> .left {
+			.titleContainer {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				margin-top: 1rem;
+
+				.title {
+					font-size: 1.5rem;
+				}
+			}
+		}
+
+		> .right {
+			> div {
+				display: flex;
+				align-items: center;
+				justify-content: flex-end;
+				gap: 10px;
+
+				.activated {
+					display: flex;
+					align-items: center;
+					gap: 1rem;
+					padding: 1rem;
+					background: $whiteShade1;
+					border: 1px solid $mainPurple;
+					border-radius: 20px;
+
+					p {
+						margin-right: 1rem;
+					}
+				}
+			}
+		}
+	}
+
+	> .main {
+		width: 100%;
+		// height: calc(100vh - 100px);
+		background: #fff;
+		border-radius: 20px;
+		padding: 1.5rem;
+		overflow-y: scroll;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+		> div {
+			margin-bottom: 2rem;
+		}
+
+		> .integrationSettings {
+			width: 100%;
+
+			input {
+				text-align: left;
+			}
+		}
+
+		> .fieldSettings {
+			width: 100%;
+
+			.tabs {
+				margin-top: 1rem;
+				.tabBtnActive {
+					color: $mainPurple;
+				}
+			}
+
+			.fieldsContainer {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				// gap: 1.75rem;
+				margin: 2.5rem 0;
+
+				.fields {
+					display: flex;
+					flex-direction: column;
+					gap: 1rem;
+
+					.inputGroup {
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+						gap: 2rem;
+					}
+				}
+			}
+		}
+	}
+}

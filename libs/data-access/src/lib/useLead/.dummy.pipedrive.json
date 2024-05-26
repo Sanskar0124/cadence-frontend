@@ -1,0 +1,644 @@
+{
+	"msg": "Lead fetched successfully",
+	"data": {
+		"lead": {
+			"data": {
+				"lead_id": 550164,
+				"first_name": "Aveline2",
+				"last_name": "Maharaja",
+				"full_name": "Aveline2 Maharaja",
+				"job_position": "CISO",
+				"user_id": "c2a7b3e1-4abd-496c-b4a3-af03dcb20d85",
+				"salesforce_lead_id": null,
+				"salesforce_contact_id": null,
+				"account_id": 511306,
+				"duplicate": null,
+				"linkedin_url": "utl",
+				"status": "new_lead",
+				"type": "header_form",
+				"created_at": "2022-12-09T05:38:07.000Z",
+				"integration_id": "10000",
+				"integration_type": "pipedrive_person",
+				"User": {
+					"user_id": "c2a7b3e1-4abd-496c-b4a3-af03dcb20d85",
+					"first_name": "Pipedrive Dnyaneshwar",
+					"last_name": "Birajdar",
+					"sd_id": "25f04ac8-377c-4e45-a7f6-900eab748d6b",
+					"User_Token": {
+						"salesforce_instance_url": null
+					},
+					"Pipedrive_Token": {
+						"access_token": "6cnmvP7apnpUwchhN81WEkUqxPAcWeLEEA5laIqjzkwYuNTNCL8TU1Q7tCJKkFTuIFxuOYVdlF8yKuvhENCFHebLF5FO5LTtxCPtbTK1pvyt39tiE9rBGH1FEKI3eszCHBJxbKu44Y74Cm8WwaLlyuaEj+bwbslJq4hRW9ct7AjMAZEYvB0SkuRieeaPyba4wdegix9W1TgJgRr0Oi/GnsDO0MYC23pbWe1ZURtQP2clI+8vmxb0KVmLxiMQ/saJIFdk8IVJ6OTQmrD+qtv89qegr5e+40WaNEt1e/v+JsijXUq9EAyii252jPcAiiOdA96uda191M1yEWS1kYZGgdhHSlQ2AybxdUQV0BotlZU=",
+						"refresh_token": "11227138:14741888:071e71a8f40af0abd60b0b2694d32fe3fd634381",
+						"instance_url": "https://ringover-sandbox3.pipedrive.com",
+						"pipedrive_token_id": 1,
+						"expires_in": 3599,
+						"is_logged_out": false,
+						"user_id": "c2a7b3e1-4abd-496c-b4a3-af03dcb20d85",
+						"created_at": "2022-09-22T10:29:33.000Z",
+						"updated_at": "2022-12-13T07:52:59.000Z"
+					},
+					"Company": {
+						"name": "Pipedrive dev test 1",
+						"company_id": "07aeb66f-c83c-4ce2-8154-1035fa68560d",
+						"Company_Setting": {
+							"company_settings_id": 240008,
+							"Pipedrive_Field_Map": {
+								"pfm_id": 4,
+								"person_map": {
+									"emails": "email",
+									"first_name": "first_name",
+									"job_position": "lost_deals_count",
+									"last_name": "last_name",
+									"phone_numbers": "phone"
+								},
+								"organization_map": {
+									"country": "address_country",
+									"name": "name"
+								},
+								"person_custom_object": [
+									{
+										"button_text": "Qualification",
+										"form": [
+											{
+												"editable": false,
+												"input_type": "int",
+												"pipedrive_endpoint": "organization",
+												"pipedrive_field": "closed_deals_count",
+												"pipedrive_label": "Closed deals",
+												"position": {
+													"column": 2,
+													"row": 0
+												},
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"input_type": "int",
+												"pipedrive_endpoint": "organization",
+												"pipedrive_field": "done_activities_count",
+												"pipedrive_label": "Done activities",
+												"position": {
+													"column": 2,
+													"row": 1
+												},
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"input_type": "int",
+												"pipedrive_endpoint": "organization",
+												"pipedrive_field": "id",
+												"pipedrive_label": "ID",
+												"position": {
+													"column": 0,
+													"row": 1
+												},
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"pipedrive_endpoint": "organization",
+												"pipedrive_field": "label",
+												"pipedrive_label": "Label",
+												"position": {
+													"column": 2,
+													"row": 2
+												},
+												"possible_values": [
+													{
+														"color": "green",
+														"id": 1,
+														"label": "Customer"
+													},
+													{
+														"color": "red",
+														"id": 2,
+														"label": "Hot lead"
+													},
+													{
+														"color": "yellow",
+														"id": 3,
+														"label": "Warm lead"
+													},
+													{
+														"color": "blue",
+														"id": 4,
+														"label": "Cold lead"
+													}
+												],
+												"type": "dropdown"
+											},
+											{
+												"editable": false,
+												"input_type": "date",
+												"pipedrive_endpoint": "organization",
+												"pipedrive_field": "last_activity_date",
+												"pipedrive_label": "Last activity date",
+												"position": {
+													"column": 1,
+													"row": 2
+												},
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"input_type": "int",
+												"pipedrive_endpoint": "organization",
+												"pipedrive_field": "lost_deals_count",
+												"pipedrive_label": "Lost deals",
+												"position": {
+													"column": 0,
+													"row": 2
+												},
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "varchar",
+												"pipedrive_endpoint": "organization",
+												"pipedrive_field": "name",
+												"pipedrive_label": "Name",
+												"position": {
+													"column": 0,
+													"row": 0
+												},
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"input_type": "date",
+												"pipedrive_endpoint": "organization",
+												"pipedrive_field": "next_activity_date",
+												"pipedrive_label": "Next activity date",
+												"position": {
+													"column": 2,
+													"row": 3
+												},
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"input_type": "double",
+												"pipedrive_endpoint": "organization",
+												"pipedrive_field": "open_deals_count",
+												"pipedrive_label": "Open deals",
+												"position": {
+													"column": 1,
+													"row": 3
+												},
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"input_type": "date",
+												"pipedrive_endpoint": "organization",
+												"pipedrive_field": "add_time",
+												"pipedrive_label": "Organization created",
+												"position": {
+													"column": 0,
+													"row": 3
+												},
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"input_type": "double",
+												"pipedrive_endpoint": "organization",
+												"pipedrive_field": "people_count",
+												"pipedrive_label": "People",
+												"position": {
+													"column": 2,
+													"row": 4
+												},
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"input_type": "int",
+												"pipedrive_endpoint": "organization",
+												"pipedrive_field": "activities_count",
+												"pipedrive_label": "Total activities",
+												"position": {
+													"column": 1,
+													"row": 4
+												},
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"input_type": "date",
+												"pipedrive_endpoint": "organization",
+												"pipedrive_field": "update_time",
+												"pipedrive_label": "Update time",
+												"position": {
+													"column": 0,
+													"row": 4
+												},
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"input_type": "int",
+												"pipedrive_endpoint": "organization",
+												"pipedrive_field": "won_deals_count",
+												"pipedrive_label": "Won deals",
+												"position": {
+													"column": 2,
+													"row": 5
+												},
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"input_type": "int",
+												"pipedrive_endpoint": "person",
+												"pipedrive_field": "undone_activities_count",
+												"pipedrive_label": "Activities to do",
+												"position": {
+													"column": 1,
+													"row": 5
+												},
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"input_type": "int",
+												"pipedrive_endpoint": "person",
+												"pipedrive_field": "closed_deals_count",
+												"pipedrive_label": "Closed deals",
+												"position": {
+													"column": 0,
+													"row": 5
+												},
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"input_type": "int",
+												"pipedrive_endpoint": "person",
+												"pipedrive_field": "done_activities_count",
+												"pipedrive_label": "Done activities",
+												"position": {
+													"column": 2,
+													"row": 6
+												},
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "varchar",
+												"pipedrive_endpoint": "person",
+												"pipedrive_field": "email",
+												"pipedrive_label": "Email",
+												"position": {
+													"column": 2,
+													"row": 7
+												},
+												"type": "input_select"
+											},
+											{
+												"editable": false,
+												"input_type": "int",
+												"pipedrive_endpoint": "person",
+												"pipedrive_field": "email_messages_count",
+												"pipedrive_label": "Email messages count",
+												"position": {
+													"column": 1,
+													"row": 6
+												},
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "varchar",
+												"pipedrive_endpoint": "person",
+												"pipedrive_field": "first_name",
+												"pipedrive_label": "First name",
+												"position": {
+													"column": 0,
+													"row": 6
+												},
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"pipedrive_endpoint": "person",
+												"pipedrive_field": "label",
+												"pipedrive_label": "Label",
+												"position": {
+													"column": 2,
+													"row": 8
+												},
+												"possible_values": [
+													{
+														"color": "green",
+														"id": 5,
+														"label": "Customer"
+													},
+													{
+														"color": "red",
+														"id": 6,
+														"label": "Hot lead"
+													},
+													{
+														"color": "yellow",
+														"id": 7,
+														"label": "Warm lead"
+													},
+													{
+														"color": "blue",
+														"id": 8,
+														"label": "Cold lead"
+													}
+												],
+												"type": "dropdown"
+											},
+											{
+												"editable": false,
+												"input_type": "date",
+												"pipedrive_endpoint": "person",
+												"pipedrive_field": "last_activity_date",
+												"pipedrive_label": "Last activity date",
+												"position": {
+													"column": 1,
+													"row": 8
+												},
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"input_type": "int",
+												"pipedrive_endpoint": "person",
+												"pipedrive_field": "id",
+												"pipedrive_label": "ID",
+												"position": {
+													"column": 0,
+													"row": 8
+												},
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"input_type": "date",
+												"pipedrive_endpoint": "person",
+												"pipedrive_field": "last_incoming_mail_time",
+												"pipedrive_label": "Last email received",
+												"position": {
+													"column": 2,
+													"row": 9
+												},
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"input_type": "date",
+												"pipedrive_endpoint": "person",
+												"pipedrive_field": "last_outgoing_mail_time",
+												"pipedrive_label": "Last email sent",
+												"position": {
+													"column": 1,
+													"row": 9
+												},
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "varchar",
+												"pipedrive_endpoint": "person",
+												"pipedrive_field": "last_name",
+												"pipedrive_label": "Last name",
+												"position": {
+													"column": 0,
+													"row": 9
+												},
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"input_type": "int",
+												"pipedrive_endpoint": "person",
+												"pipedrive_field": "lost_deals_count",
+												"pipedrive_label": "Lost deals",
+												"position": {
+													"column": 2,
+													"row": 10
+												},
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "varchar",
+												"pipedrive_endpoint": "person",
+												"pipedrive_field": "name",
+												"pipedrive_label": "Name",
+												"position": {
+													"column": 1,
+													"row": 10
+												},
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"input_type": "date",
+												"pipedrive_endpoint": "person",
+												"pipedrive_field": "next_activity_date",
+												"pipedrive_label": "Next activity date",
+												"position": {
+													"column": 0,
+													"row": 10
+												},
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"input_type": "date",
+												"pipedrive_endpoint": "person",
+												"pipedrive_field": "add_time",
+												"pipedrive_label": "Person created",
+												"position": {
+													"column": 2,
+													"row": 11
+												},
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"input_type": "double",
+												"pipedrive_endpoint": "person",
+												"pipedrive_field": "open_deals_count",
+												"pipedrive_label": "Open deals",
+												"position": {
+													"column": 1,
+													"row": 11
+												},
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "phone",
+												"pipedrive_endpoint": "person",
+												"pipedrive_field": "phone",
+												"pipedrive_label": "Phone",
+												"position": {
+													"column": 2,
+													"row": 12
+												},
+												"type": "input_select"
+											},
+											{
+												"editable": false,
+												"input_type": "int",
+												"pipedrive_endpoint": "person",
+												"pipedrive_field": "activities_count",
+												"pipedrive_label": "Total activities",
+												"position": {
+													"column": 0,
+													"row": 11
+												},
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"input_type": "date",
+												"pipedrive_endpoint": "person",
+												"pipedrive_field": "update_time",
+												"pipedrive_label": "Update time",
+												"position": {
+													"column": 2,
+													"row": 13
+												},
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"input_type": "int",
+												"pipedrive_endpoint": "person",
+												"pipedrive_field": "won_deals_count",
+												"pipedrive_label": "Won deals",
+												"position": {
+													"column": 1,
+													"row": 13
+												},
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"input_type": "int",
+												"pipedrive_endpoint": "organization",
+												"pipedrive_field": "email_messages_count",
+												"pipedrive_label": "Email messages count",
+												"position": {
+													"column": 1,
+													"row": 1
+												},
+												"type": "input_box"
+											}
+										]
+									}
+								],
+								"company_settings_id": 240008,
+								"created_at": "2022-09-22T10:29:33.000Z",
+								"updated_at": "2022-12-05T12:51:02.000Z"
+							},
+							"Webhooks": []
+						}
+					}
+				},
+				"Account": {
+					"account_id": 511306,
+					"salesforce_account_id": null,
+					"user_id": "c2a7b3e1-4abd-496c-b4a3-af03dcb20d85",
+					"name": "Ringover",
+					"size": "1-10",
+					"zipcode": null,
+					"country": "France",
+					"url": "ringover.com",
+					"linkedin_url": null,
+					"phone_number": null,
+					"integration_id": "135",
+					"integration_type": "pipedrive_organization"
+				},
+				"Lead_phone_numbers": [
+					{
+						"formatted_phone_number": "9999999999",
+						"time": "",
+						"lpn_id": 739006,
+						"phone_number": "9999999999",
+						"type": "phone",
+						"timezone": null,
+						"is_primary": true
+					}
+				],
+				"Lead_emails": [
+					{
+						"lem_id": 670213,
+						"email_id": "phalakshacg72@gmail.com",
+						"is_primary": true,
+						"type": "email"
+					}
+				],
+				"LeadToCadences": [
+					{
+						"status": "in_progress",
+						"Cadences": [
+							{
+								"cadence_id": 480041,
+								"name": "Mazaa",
+								"salesforce_cadence_id": null,
+								"status": "in_progress",
+								"unix_resume_at": null
+							}
+						],
+						"Tasks": [
+							{
+								"task_id": 540086,
+								"Node": {
+									"type": "message",
+									"step_number": 1
+								}
+							}
+						]
+					}
+				]
+			},
+			"msg": "Lead fetched successfully.",
+			"success": true
+		},
+		"activities": {
+			"data": [
+				{
+					"activity_id": 690135,
+					"name": "Mazaa Launched",
+					"type": "launch_cadence",
+					"status": "Cadence Launched by Pipedrive Dnyaneshwar Birajdar at 1670564288",
+					"comment": null,
+					"recording": null,
+					"voicemail": null,
+					"to_number": null,
+					"from_number": null,
+					"incoming": null,
+					"read": false,
+					"ringover_call_id": null,
+					"salesforce_task_id": null,
+					"message_id": null,
+					"sent_message_id": null,
+					"gmail_message_id": null,
+					"note_id": null,
+					"cadence_id": 480041,
+					"node_id": null,
+					"created_at": "2022-12-09T05:38:07.000Z",
+					"updated_at": "2022-12-09T05:38:07.000Z",
+					"lead_id": 550164,
+					"Cadence": {
+						"name": "Mazaa"
+					},
+					"Email": null
+				}
+			],
+			"msg": "Activities fetched successfully.",
+			"success": true
+		},
+		"nextNode": null
+	}
+}

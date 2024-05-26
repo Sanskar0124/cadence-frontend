@@ -1,0 +1,89 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.messageIMC {
+	width: 600px;
+	position: relative;
+	.header {
+		width: 100%;
+		.fallback {
+			padding: 10px 0 10px 22px;
+			color: $lightBlue;
+			text-transform: capitalize;
+		}
+		.inputGroup {
+			.select {
+				width: 100%;
+			}
+			display: flex;
+			align-items: center;
+			border-bottom: 1px solid #8193a87e;
+			&:first-of-type {
+				gap: 10px;
+			}
+			> label {
+				transform: translateY(5px);
+				color: $lightBlue;
+				display: inline-block;
+				font-weight: 400;
+			}
+
+			&:last-of-type {
+				gap: 28px;
+				margin-bottom: 0.8rem;
+			}
+		}
+	}
+
+	.heading {
+		font-size: 1.3rem;
+		display: inline-block;
+		margin-left: 0.75rem;
+		&::first-letter {
+			text-transform: capitalize;
+		}
+	}
+}
+
+.body {
+	width: 100%;
+	textarea {
+		padding: 0;
+		border-radius: 0;
+	}
+	.editor {
+		border: none;
+	}
+	.loaderWrapper {
+		height: 400px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.loader {
+			height: 37px;
+			width: 37px;
+			div {
+				height: 35px;
+				width: 35px;
+				border-color: $lightBlue transparent transparent transparent;
+			}
+		}
+	}
+}
+
+.footer {
+	width: 100%;
+	margin-top: 1em;
+	// position: absolute;
+}
+.buttons {
+	position: absolute;
+	right: 0;
+	bottom: 70px;
+	margin: 0;
+	display: flex;
+	justify-content: flex-start;
+	gap: 15px;
+	button {
+		font-size: 1rem;
+	}
+}

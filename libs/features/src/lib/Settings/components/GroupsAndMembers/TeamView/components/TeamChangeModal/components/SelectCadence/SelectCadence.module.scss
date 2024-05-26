@@ -1,0 +1,137 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.selectCadenceContainer {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-top: 20px;
+	.searchCadences {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		width: 100%;
+		.components {
+			display: flex;
+			justify-content: space-between;
+
+			.tabNavBox {
+				display: flex;
+				.tabNav {
+					border-radius: 25px;
+					width: 100%;
+					height: 40px;
+				}
+				.tabBtn {
+					border-radius: 15px;
+					font-weight: 400;
+					font-size: 1rem;
+				}
+				.activePill {
+					border-radius: 20px;
+				}
+				.activeBtn {
+					color: $whiteShade1;
+					font-weight: 600;
+				}
+			}
+		}
+
+		.cadencesList {
+			min-height: 45vh;
+			max-height: 45vh;
+			overflow-y: scroll;
+			&::-webkit-scrollbar {
+				display: none;
+				width: 0;
+			}
+			.listWrap {
+				display: flex;
+				flex-wrap: wrap;
+				width: 100%;
+				gap: 10px;
+				height: auto;
+			}
+		}
+	}
+}
+
+.placeholderBox {
+	display: flex;
+	flex-direction: column;
+	max-height: 45vh;
+	overflow-y: scroll;
+	gap: 10px;
+	width: 100%;
+	&::-webkit-scrollbar {
+		display: none;
+		width: 0;
+	}
+	.placeholder {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		div {
+			width: 97%;
+			min-height: 50px;
+			border-radius: 20px;
+		}
+	}
+}
+
+.cadence {
+	display: flex;
+	justify-content: space-between;
+	width: 49%;
+	height: 60px;
+	border-radius: 20px;
+	border: 1px solid $whiteShade1;
+	background: #fdfdfd;
+	padding: 10px 15px;
+	cursor: pointer;
+	.cadenceDetails {
+		display: flex;
+		width: 80%;
+		flex-direction: column;
+		.name {
+			display: flex;
+			overflow: hidden;
+			color: $black;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			font-size: 1rem;
+			font-weight: 400;
+		}
+		.info {
+			color: $veryLightBlue;
+			font-size: 1rem;
+			font-weight: 400;
+		}
+	}
+	.tick {
+		width: 40px;
+		height: 40px;
+		background: $primaryGradient;
+		border-radius: 17px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: $white;
+		visibility: hidden;
+	}
+	&.selected {
+		border-radius: 20px;
+		border: 1px solid $mainPurple;
+		background: linear-gradient(
+			107deg,
+			rgba(162, 130, 232, 0.08) -11.57%,
+			rgba(126, 142, 231, 0.08) 50.39%,
+			rgba(68, 153, 233, 0.08) 116.35%
+		);
+		.tick {
+			visibility: visible;
+		}
+		.name {
+			font-weight: 600;
+		}
+	}
+}

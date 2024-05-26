@@ -1,0 +1,23 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.importSheetModal {
+	width: 520px;
+	.title {
+		margin-left: 30px;
+		margin-bottom: 40px;
+	}
+	.inputGroup {
+		margin-bottom: 10px;
+		text-transform: capitalize;
+		width: 98%;
+	}
+	.sampleLink {
+		margin-bottom: 40px;
+		a {
+			font-size: 1rem;
+			font-weight: 400;
+			text-decoration-line: underline;
+			color: #037dfc;
+		}
+	}
+}

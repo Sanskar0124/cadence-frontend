@@ -1,0 +1,45 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.loaderWrapper {
+	height: calc(100vh - 400px);
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.footer {
+	position: sticky;
+	background-color: #fff;
+	z-index: 999;
+	bottom: 0em;
+	padding-top: 5px;
+	overflow: visible;
+	button {
+		width: 100%;
+		margin-top: 3px;
+	}
+	.error {
+		color: $red;
+		font-weight: 500;
+		.addLink {
+			color: $green;
+			cursor: pointer;
+		}
+	}
+}
+
+.buttons {
+	margin-top: 5px;
+	margin-bottom: 20px;
+	padding: 0 10px;
+	display: flex;
+	justify-content: flex-start;
+	gap: 15px;
+	button {
+		font-size: 1rem;
+	}
+	button:disabled {
+		background-color: transparent !important;
+	}
+}

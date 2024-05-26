@@ -1,0 +1,398 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.leadInfo {
+	width: 100%;
+
+	> .leadDetails {
+		text-align: center;
+		width: 100%;
+		margin: auto;
+		margin-bottom: 4rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		.leadTags {
+			display: flex;
+			flex-direction: row;
+			gap: 0.75em;
+			align-items: center;
+			margin-bottom: 1em;
+		}
+
+		.duplicateTag {
+			color: $redShade2;
+			display: flex;
+			align-items: center;
+			font-size: 0.8rem;
+			font-weight: 800;
+			height: 20px;
+			cursor: pointer;
+			text-transform: uppercase;
+		}
+
+		.hotLead {
+			display: flex;
+			align-items: center;
+			color: $lightBlue;
+			gap: 0.7em;
+
+			> * {
+				display: flex;
+				align-items: center;
+			}
+			.hotLeadActions {
+				display: flex;
+				align-items: center;
+				gap: 0.7em;
+
+				svg {
+					margin-top: 0.1em;
+					cursor: pointer;
+				}
+			}
+			.hotLeadActions.hidden {
+				display: none;
+			}
+			.hotLeadActions.visible {
+				display: flex;
+			}
+		}
+
+		.hotLead.showRemove {
+			background: #ffffff;
+			box-shadow: -2px 8px 20px rgba(41, 43, 88, 0.2);
+			// width: 178px;
+			height: 40px;
+			padding: 6px 10px 6px 6px;
+			border-radius: 15px;
+		}
+
+		> .icons {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			margin-bottom: 1rem;
+			.salesforceLoading {
+				width: 50px;
+				height: 50px;
+			}
+			svg {
+				cursor: pointer;
+			}
+			.relatedLeadsBtn {
+				.count {
+					position: absolute;
+					top: -10px;
+					right: -10px;
+					background: linear-gradient(315deg, #ff8888 0%, #f05f5f 100%);
+					border: 1px solid white;
+					color: $white;
+					font-weight: 700;
+					font-size: 0.75rem;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 25px;
+					height: 25px;
+					border-radius: 50%;
+				}
+			}
+		}
+
+		> .leadNameContainer {
+			width: 100%;
+			position: relative;
+
+			> .leadName {
+				font-size: 1.5rem;
+			}
+
+			> .timezone {
+				width: fit-content;
+				margin: auto;
+				font-weight: 600;
+				display: flex;
+				align-items: center;
+				gap: 5px;
+				color: $lightBlue;
+			}
+
+			> .editLeadBtn {
+				background: none;
+				border: none;
+				color: $lightBlue;
+				position: absolute;
+				top: 3px;
+				right: 0;
+				width: 1.7rem;
+				height: 1.7rem;
+				border-radius: 50%;
+				cursor: pointer;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				> svg {
+					width: 100%;
+					height: 100%;
+				}
+
+				&:hover {
+					background: $whiteShade1;
+				}
+
+				&:disabled {
+					opacity: 0.5;
+					pointer-events: none;
+				}
+
+				.editTooltip {
+					// padding: 10px;
+
+					&::before {
+						top: 150%;
+						transform: translateX(-70%);
+					}
+				}
+			}
+		}
+
+		> .details {
+			width: fit-content;
+			text-align: center !important;
+			margin: 1.5rem auto 3rem;
+
+			svg {
+				color: $lightBlue;
+			}
+
+			> div {
+				width: fit-content;
+				margin: auto;
+				margin-bottom: 0.25rem;
+			}
+
+			> .accountName {
+				display: flex;
+				align-items: center;
+				gap: 5px;
+				.companyName,
+				.jobPosition {
+					display: inline-block;
+					max-width: 150px;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+				}
+				p {
+					display: flex;
+					align-items: center;
+					gap: 5px;
+				}
+			}
+
+			> .emails,
+			> .phoneNumbers {
+				display: flex;
+				align-items: center;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 10px;
+
+				> span {
+					display: flex;
+					align-items: center;
+					gap: 5px;
+					color: $black;
+					cursor: pointer;
+
+					&:hover {
+						text-decoration: underline;
+					}
+
+					a {
+						max-width: 150px;
+						overflow-x: hidden;
+						text-overflow: ellipsis;
+					}
+				}
+			}
+
+			> .emails {
+				> span {
+					a {
+						max-width: 250px;
+						overflow-x: hidden;
+						text-overflow: ellipsis;
+						white-space: nowrap;
+					}
+				}
+			}
+			> .zipCountry {
+				display: flex;
+				align-items: center;
+				.sellsyAddress {
+					display: flex;
+					svg {
+						display: flex;
+						align-self: center;
+					}
+				}
+			}
+
+			> .variables {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-wrap: wrap;
+				div {
+					display: flex;
+					align-items: center;
+					margin: 0 5px;
+					.btn {
+						color: #394759;
+						font-weight: 400;
+						padding: 0;
+						gap: 4px;
+						height: 20px !important;
+						&:disabled {
+							padding: 0;
+							background: transparent !important;
+						}
+					}
+
+					.btn:hover {
+						background: transparent !important;
+					}
+				}
+			}
+		}
+
+		> .actionBtns {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+
+			.actionBtn {
+				width: 40px;
+				height: 40px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 50%;
+				flex-shrink: 0;
+				padding: 0;
+			}
+		}
+	}
+
+	> .cadenceInfo {
+		> h3 {
+			font-size: 1.2rem;
+			margin-bottom: 1rem;
+			&::first-letter {
+				text-transform: capitalize;
+			}
+		}
+
+		> .cadences {
+			height: calc(100vh - 526px);
+			overflow-y: scroll;
+			&::-webkit-scrollbar {
+				display: none;
+			}
+			> .cadence {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 0.75rem;
+
+				> .left {
+					display: flex;
+					align-items: center;
+					gap: 10px;
+
+					> .gradientIcon {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						width: 40px;
+						height: 40px;
+						background: linear-gradient(
+							106.52deg,
+							rgba(135, 151, 233, 0.1) -11.57%,
+							rgba(166, 135, 233, 0.1) -11.56%,
+							rgba(82, 162, 235, 0.1) 116.35%
+						);
+						border-radius: 10px;
+
+						svg {
+							width: 17px;
+							height: 17px;
+						}
+					}
+
+					> .stepInfo {
+						display: flex;
+						flex-direction: column;
+						justify-content: space-between;
+						div {
+							color: $lightBlue;
+							&::first-letter {
+								text-transform: capitalize;
+							}
+						}
+						> .cadenceName {
+							font-weight: 600;
+							cursor: pointer;
+							white-space: nowrap;
+							overflow: hidden;
+							text-overflow: ellipsis;
+							&:hover {
+								text-decoration: underline;
+								text-underline-offset: 2px;
+							}
+						}
+					}
+				}
+
+				.right {
+					display: flex;
+					gap: 10px;
+
+					.cadenceBtn {
+						padding: 0;
+					}
+					.stopTooltip {
+						&[tooltip]:hover::before {
+							top: 110%;
+							left: unset;
+							right: 0;
+							transform: initial;
+						}
+					}
+				}
+			}
+
+			> .noCadBtn {
+				margin-top: 55px;
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+				.noCadences {
+					text-align: center;
+					color: $veryLightBlue;
+				}
+				.addCad {
+					display: flex;
+					align-self: center;
+					padding: 10px 20px;
+					font-size: 1rem;
+					border-radius: 15px;
+					font-weight: 600;
+				}
+			}
+		}
+	}
+}

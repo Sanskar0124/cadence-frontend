@@ -1,0 +1,105 @@
+@import "libs/themes/src/lib/styles/variables";
+.pageContainer {
+	display: flex;
+	justify-content: center;
+
+	.success {
+		width: 550px;
+		height: 94vh;
+		padding: 1.5rem;
+		background: $white;
+		border: 1px solid #e7ebff;
+		border-radius: 10px;
+		position: relative;
+		.upperBoundary {
+			position: absolute;
+			height: 10px;
+			left: 0%;
+			right: 0%;
+			top: 0px;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+			background: linear-gradient(
+				106.52deg,
+				#a282e8 -11.57%,
+				#7e8ee7 50.39%,
+				#4499e9 116.35%
+			);
+		}
+		.main {
+			> .inputGroup {
+				margin: 1rem 0 2rem;
+
+				> .input {
+					text-decoration: underline;
+					font-weight: 400;
+					border: 1px solid #dadce0;
+					border-radius: 15px;
+					width: 100%;
+					height: 100%;
+					padding: 13px 16px;
+					font-weight: 600;
+					font-size: 1rem;
+					line-height: 18px;
+					outline: none;
+					cursor: pointer;
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+				}
+			}
+
+			> .completion {
+				padding: 1rem;
+				background: linear-gradient(
+					106.52deg,
+					rgba(162, 130, 232, 0.04) -11.57%,
+					rgba(126, 142, 231, 0.04) 50.39%,
+					rgba(68, 153, 233, 0.04) 116.35%
+				);
+				border-radius: 15px;
+
+				> .exportCompletion {
+					> div {
+						display: flex;
+						align-items: center;
+						gap: 10px;
+						margin-bottom: 1rem;
+
+						> p {
+							color: $mainPurple;
+							display: inline-block;
+							&::first-letter {
+								text-transform: capitalize;
+							}
+						}
+					}
+
+					> .progressBar {
+						width: 100%;
+						height: 10px;
+						border-radius: 10px;
+						background: $primaryGradient;
+					}
+				}
+			}
+		}
+		.btns {
+			display: flex;
+			justify-content: center;
+			margin-top: 30px;
+			align-items: center;
+			gap: 20px;
+
+			.whiteBtn {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 7px;
+				background: #f5f6f7;
+				box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+				border-radius: 15px;
+			}
+		}
+	}
+}

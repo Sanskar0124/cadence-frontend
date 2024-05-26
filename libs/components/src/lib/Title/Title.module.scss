@@ -1,0 +1,9 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.title {
+	font-weight: 700;
+	color: $black;
+	&::first-letter {
+		text-transform: uppercase;
+	}
+}

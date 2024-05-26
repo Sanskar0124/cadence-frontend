@@ -1,0 +1,16 @@
+@import "libs/themes/src/lib/styles/variables";
+@import "../../../../Settings.module.scss";
+
+.container {
+	align-items: center;
+	.settings {
+		& > a {
+			align-self: center;
+			color: $blue;
+			text-decoration: underline;
+			svg {
+				margin-right: 10px;
+			}
+		}
+	}
+}

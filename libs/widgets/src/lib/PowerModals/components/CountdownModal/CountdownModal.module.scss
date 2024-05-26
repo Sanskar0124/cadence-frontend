@@ -1,0 +1,36 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.modal {
+	width: 25vw;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	padding: 40px 0;
+	& > h3 {
+		font-size: 1.42rem;
+		font-weight: 600;
+	}
+	& > span {
+		display: flex;
+		align-items: center;
+		margin: 5px 0 25px;
+		color: $lightBlue;
+		svg {
+			margin: 0 5px;
+			color: $mainPurple;
+		}
+	}
+	.timer {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: rgba(91, 107, 225, 0.1);
+		border-radius: 50%;
+		width: 60px;
+		height: 60px;
+		color: $mainPurple;
+		font-weight: 700;
+		font-size: 2rem;
+	}
+}

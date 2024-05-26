@@ -1,0 +1,25 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.main {
+	width: 100%;
+	max-width: 600px;
+	.peopleWrapper {
+		height: 400px;
+		overflow: auto;
+		width: 100%;
+		margin-top: 20px;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+
+	.footer {
+		margin-top: 40px;
+
+		.removeBtn {
+			width: 100%;
+			border-radius: 15px;
+			box-shadow: 1px 8px 24px rgba(125, 142, 231, 0.4);
+		}
+	}
+}

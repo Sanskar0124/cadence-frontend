@@ -1,0 +1,3178 @@
+{
+	"msg": "Lead fetched successfully",
+	"data": {
+		"lead": {
+			"data": {
+				"lead_id": 544331,
+				"first_name": "Gizela",
+				"last_name": "Dee Dee",
+				"full_name": "Gizela Dee Dee",
+				"job_position": null,
+				"user_id": "99999999-9999-9999-9999-999999999999",
+				"salesforce_lead_id": "test_1666239495102",
+				"salesforce_contact_id": null,
+				"account_id": 513431,
+				"duplicate": null,
+				"linkedin_url": "https://www.linkedin.com/in/ziyan-karmali/",
+				"status": "new_lead",
+				"type": "header_form",
+				"created_at": "2022-12-08T12:26:30.000Z",
+				"integration_id": "test_1666239495102",
+				"integration_type": "salesforce_lead",
+				"User": {
+					"user_id": "99999999-9999-9999-9999-999999999999",
+					"first_name": "Yuvraj",
+					"last_name": "Singh",
+					"sd_id": "9ab80c58-1140-4ede-85d7-c00c826558b1",
+					"User_Token": {
+						"salesforce_instance_url": "https://d5g00000au0jdeaj-dev-ed.my.salesforce.com"
+					},
+					"Salesforce_Token": {
+						"access_token": "00D5g00000Au0Jd!ARQAQDmjhzbW_PFxqq5KWrae.vc5gH.TCFwfFKUJMfiJqvIMxCDuX3d3hW3dONgkBoXnETbuE5qynXVpEbFqgCrYHbKEbpzW",
+						"refresh_token": "5Aep861NGChdAifzi06sfRO5le_iMiYKdqqMcpXxI7IvMUpadVwUi2v5KzbV1oDfukzTJJkTFtgsiNhPOtfs1vm",
+						"instance_url": "https://d5g00000au0jdeaj-dev-ed.my.salesforce.com",
+						"salesforce_token_id": 9,
+						"is_logged_out": false,
+						"user_id": "99999999-9999-9999-9999-999999999999",
+						"created_at": "2022-09-22T09:44:02.000Z",
+						"updated_at": "2022-12-13T04:01:52.000Z"
+					},
+					"Company": {
+						"name": "ringover",
+						"company_id": "4192bff0-e1e0-43ce-a4db-912808c32493",
+						"Company_Setting": {
+							"company_settings_id": 1,
+							"Salesforce_Field_Map": {
+								"sfm_id": 10,
+								"account_map": {
+									"country": "BillingCountry",
+									"disqualification_reason": {
+										"name": "DisqualificationReason",
+										"picklist_values": [
+											{
+												"label": "Email invalid",
+												"value": "Email invalid"
+											},
+											{
+												"label": "user died",
+												"value": "user died"
+											},
+											{
+												"label": "Phone number is not valid",
+												"value": "Phone number is not valid"
+											}
+										]
+									},
+									"integration_status": {
+										"converted": {
+											"label": "Converted",
+											"value": "Converted"
+										},
+										"disqualified": {
+											"label": "Disqualified",
+											"value": "Disqualified"
+										},
+										"name": "OnBoarding__c",
+										"picklist_values": [
+											{
+												"label": "Disqualified",
+												"value": "Disqualified"
+											},
+											{
+												"label": "New",
+												"value": "New"
+											},
+											{
+												"label": "Recent",
+												"value": "Recent"
+											},
+											{
+												"label": "Progress",
+												"value": "Progress"
+											},
+											{
+												"label": "Converted",
+												"value": "Converted"
+											}
+										]
+									},
+									"name": "Name",
+									"phone_number": "Phone",
+									"size": {
+										"name": "CompanySize__c",
+										"picklist_values": [
+											{
+												"label": "1000-1200",
+												"value": "1000-1200"
+											},
+											{
+												"label": "1201-1300",
+												"value": "1201-1300"
+											},
+											{
+												"label": "1300-1350",
+												"value": "1300-1350"
+											}
+										]
+									},
+									"url": "Website",
+									"zip_code": "BillingPostalCode"
+								},
+								"lead_map": {
+									"company": "Company",
+									"country": "Country",
+									"disqualification_reason": {
+										"name": "DisqualificationReason",
+										"picklist_values": [
+											{
+												"label": "Email invalid",
+												"value": "Email invalid"
+											},
+											{
+												"label": "Phone number is not in use",
+												"value": "Phone number is not in use"
+											},
+											{
+												"label": "user has no phone and email",
+												"value": "user has no phone and email"
+											},
+											{
+												"label": "User Has No Phone And Email, address",
+												"value": "User Has No Phone And Email, address"
+											}
+										]
+									},
+									"emails": ["Email"],
+									"first_name": "FirstName",
+									"integration_status": {
+										"converted": {
+											"label": "Closed - Converted",
+											"value": "Closed - Converted"
+										},
+										"disqualified": {
+											"label": "Working - Contacted",
+											"value": "Working - Contacted"
+										},
+										"name": "Status",
+										"picklist_values": [
+											{
+												"label": "Open - Not Contacted",
+												"value": "Open - Not Contacted"
+											},
+											{
+												"label": "Working - Contacted",
+												"value": "Working - Contacted"
+											},
+											{
+												"label": "Closed - Converted",
+												"value": "Closed - Converted"
+											},
+											{
+												"label": "Closed - Not Converted",
+												"value": "Closed - Not Converted"
+											}
+										]
+									},
+									"job_position": "Title",
+									"last_name": "LastName",
+									"linkedin_url": "Linkedin__c",
+									"phone_numbers": ["Phone", "MobilePhone"],
+									"size": {
+										"name": "CompanySize__c",
+										"picklist_values": [
+											{
+												"label": "1-10",
+												"value": "1-10"
+											},
+											{
+												"label": "11-20",
+												"value": "11-20"
+											},
+											{
+												"label": "21-30",
+												"value": "21-30"
+											}
+										]
+									},
+									"url": "Website",
+									"zip_code": "PostalCode"
+								},
+								"contact_map": {
+									"emails": ["Email"],
+									"first_name": "FirstName",
+									"job_position": "Title",
+									"last_name": "LastName",
+									"linkedin_url": "URL_Profil_Linkedin__c",
+									"phone_numbers": ["Phone", "MobilePhone"],
+									"zoom_info": "Level__c"
+								},
+								"lead_custom_object": [
+									{
+										"button_text": "Qualificationing....",
+										"form": [
+											{
+												"editable": false,
+												"input_type": "date",
+												"position": {
+													"column": 2,
+													"row": 0
+												},
+												"salesforce_field": "ConvertedDate",
+												"salesforce_label": "Converted Date",
+												"sobject": "lead",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "datetime",
+												"position": {
+													"column": 1,
+													"row": 0
+												},
+												"salesforce_field": "EmailBouncedDate",
+												"salesforce_label": "Email Bounced Date",
+												"sobject": "lead",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"position": {
+													"column": 2,
+													"row": 1
+												},
+												"possible_values": [
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "--",
+														"validFor": null,
+														"value": "--"
+													}
+												],
+												"salesforce_field": "RingoverCadence__Active_Cadences__c",
+												"salesforce_label": "Active Cadences",
+												"sobject": "lead",
+												"type": "multi_select_dropdown"
+											},
+											{
+												"editable": true,
+												"input_type": "currency",
+												"position": {
+													"column": 1,
+													"row": 1
+												},
+												"salesforce_field": "AnnualRevenue",
+												"salesforce_label": "Annual Revenue",
+												"sobject": "lead",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"position": {
+													"column": 0,
+													"row": 1
+												},
+												"reference_field_name": {
+													"label": "Business Hours Name",
+													"name": "Name",
+													"sObject": "BusinessHours"
+												},
+												"reference_to": "BusinessHours",
+												"salesforce_field": "Business_Hours__c",
+												"salesforce_label": "Business Hours",
+												"sobject": "lead",
+												"type": "dropdown"
+											}
+										]
+									}
+								],
+								"contact_custom_object": [
+									{
+										"button_text": "Qualification",
+										"form": [
+											{
+												"editable": true,
+												"position": {
+													"column": 1,
+													"row": 0
+												},
+												"reference_field_name": {
+													"label": "Full Name",
+													"name": "Name",
+													"sObject": "User"
+												},
+												"reference_to": "User",
+												"salesforce_field": "OwnerId",
+												"salesforce_label": "Owner ID",
+												"sobject": "contact",
+												"type": "dropdown"
+											},
+											{
+												"editable": true,
+												"position": {
+													"column": 2,
+													"row": 0
+												},
+												"reference_field_name": {
+													"label": "Account Name",
+													"name": "Name",
+													"sObject": "Account"
+												},
+												"reference_to": "Account",
+												"salesforce_field": "PotentialAccountCandidate__c",
+												"salesforce_label": "PotentialAccountCandidate",
+												"sobject": "contact",
+												"type": "dropdown"
+											},
+											{
+												"editable": true,
+												"input_type": "phone",
+												"position": {
+													"column": 2,
+													"row": 1
+												},
+												"salesforce_field": "Fax",
+												"salesforce_label": "Account Fax",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "textarea",
+												"position": {
+													"column": 1,
+													"row": 1
+												},
+												"salesforce_field": "Description",
+												"salesforce_label": "Account Description",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 0,
+													"row": 1
+												},
+												"salesforce_field": "Name",
+												"salesforce_label": "Account Name",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "phone",
+												"position": {
+													"column": 0,
+													"row": 0
+												},
+												"salesforce_field": "Phone",
+												"salesforce_label": "Account Phone",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"position": {
+													"column": 2,
+													"row": 2
+												},
+												"possible_values": [
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Hot",
+														"validFor": null,
+														"value": "Hot"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Warm",
+														"validFor": null,
+														"value": "Warm"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Cold",
+														"validFor": null,
+														"value": "Cold"
+													}
+												],
+												"salesforce_field": "Rating",
+												"salesforce_label": "Account Rating",
+												"sobject": "account",
+												"type": "dropdown"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 1,
+													"row": 2
+												},
+												"salesforce_field": "AccountNumber",
+												"salesforce_label": "Account Number",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"input_type": "id",
+												"position": {
+													"column": 0,
+													"row": 2
+												},
+												"salesforce_field": "Id",
+												"salesforce_label": "Account ID",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"position": {
+													"column": 2,
+													"row": 3
+												},
+												"possible_values": [
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "No",
+														"validFor": null,
+														"value": "No"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Yes",
+														"validFor": null,
+														"value": "Yes"
+													}
+												],
+												"salesforce_field": "Active__c",
+												"salesforce_label": "Active",
+												"sobject": "account",
+												"type": "dropdown"
+											},
+											{
+												"editable": true,
+												"position": {
+													"column": 1,
+													"row": 3
+												},
+												"possible_values": [
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Prospect",
+														"validFor": null,
+														"value": "Prospect"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Customer - Direct",
+														"validFor": null,
+														"value": "Customer - Direct"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Customer - Channel",
+														"validFor": null,
+														"value": "Customer - Channel"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Channel Partner / Reseller",
+														"validFor": null,
+														"value": "Channel Partner / Reseller"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Installation Partner",
+														"validFor": null,
+														"value": "Installation Partner"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Technology Partner",
+														"validFor": null,
+														"value": "Technology Partner"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Other",
+														"validFor": null,
+														"value": "Other"
+													}
+												],
+												"salesforce_field": "Type",
+												"salesforce_label": "Account Type",
+												"sobject": "account",
+												"type": "dropdown"
+											},
+											{
+												"editable": true,
+												"position": {
+													"column": 0,
+													"row": 3
+												},
+												"possible_values": [
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Web",
+														"validFor": null,
+														"value": "Web"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Phone Inquiry",
+														"validFor": null,
+														"value": "Phone Inquiry"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Partner Referral",
+														"validFor": null,
+														"value": "Partner Referral"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Purchased List",
+														"validFor": null,
+														"value": "Purchased List"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Other",
+														"validFor": null,
+														"value": "Other"
+													}
+												],
+												"salesforce_field": "AccountSource",
+												"salesforce_label": "Account Source",
+												"sobject": "account",
+												"type": "dropdown"
+											},
+											{
+												"editable": true,
+												"input_type": "currency",
+												"position": {
+													"column": 2,
+													"row": 4
+												},
+												"salesforce_field": "AnnualRevenue",
+												"salesforce_label": "Annual Revenue",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 1,
+													"row": 4
+												},
+												"salesforce_field": "Site",
+												"salesforce_label": "Account Site",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 0,
+													"row": 4
+												},
+												"salesforce_field": "BillingCity",
+												"salesforce_label": "Billing City",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "double",
+												"position": {
+													"column": 2,
+													"row": 5
+												},
+												"salesforce_field": "BillingLongitude",
+												"salesforce_label": "Billing Longitude",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "double",
+												"position": {
+													"column": 1,
+													"row": 5
+												},
+												"salesforce_field": "BillingLatitude",
+												"salesforce_label": "Billing Latitude",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"position": {
+													"column": 0,
+													"row": 5
+												},
+												"possible_values": [
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Address",
+														"validFor": null,
+														"value": "Address"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "NearAddress",
+														"validFor": null,
+														"value": "NearAddress"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Block",
+														"validFor": null,
+														"value": "Block"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Street",
+														"validFor": null,
+														"value": "Street"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "ExtendedZip",
+														"validFor": null,
+														"value": "ExtendedZip"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Zip",
+														"validFor": null,
+														"value": "Zip"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Neighborhood",
+														"validFor": null,
+														"value": "Neighborhood"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "City",
+														"validFor": null,
+														"value": "City"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "County",
+														"validFor": null,
+														"value": "County"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "State",
+														"validFor": null,
+														"value": "State"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Unknown",
+														"validFor": null,
+														"value": "Unknown"
+													}
+												],
+												"salesforce_field": "BillingGeocodeAccuracy",
+												"salesforce_label": "Billing Geocode Accuracy",
+												"sobject": "account",
+												"type": "dropdown"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 2,
+													"row": 6
+												},
+												"salesforce_field": "BillingState",
+												"salesforce_label": "Billing State/Province",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"position": {
+													"column": 1,
+													"row": 6
+												},
+												"possible_values": [
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "In Sync",
+														"validFor": null,
+														"value": "Matched"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Different",
+														"validFor": null,
+														"value": "Different"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Reviewed",
+														"validFor": null,
+														"value": "Acknowledged"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Not Found",
+														"validFor": null,
+														"value": "NotFound"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Inactive",
+														"validFor": null,
+														"value": "Inactive"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Not Compared",
+														"validFor": null,
+														"value": "Pending"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Select Match",
+														"validFor": null,
+														"value": "SelectMatch"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Skipped",
+														"validFor": null,
+														"value": "Skipped"
+													}
+												],
+												"salesforce_field": "CleanStatus",
+												"salesforce_label": "Clean Status",
+												"sobject": "account",
+												"type": "dropdown"
+											},
+											{
+												"editable": true,
+												"input_type": "textarea",
+												"position": {
+													"column": 0,
+													"row": 6
+												},
+												"salesforce_field": "BillingStreet",
+												"salesforce_label": "Billing Street",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"position": {
+													"column": 2,
+													"row": 7
+												},
+												"possible_values": [
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "1000-1200",
+														"validFor": null,
+														"value": "1000-1200"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "1201-1300",
+														"validFor": null,
+														"value": "1201-1300"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "1300-1350",
+														"validFor": null,
+														"value": "1300-1350"
+													}
+												],
+												"salesforce_field": "CompanySize__c",
+												"salesforce_label": "CompanySize",
+												"sobject": "account",
+												"type": "dropdown"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 1,
+													"row": 7
+												},
+												"salesforce_field": "BillingPostalCode",
+												"salesforce_label": "Billing Zip/Postal Code",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 0,
+													"row": 7
+												},
+												"salesforce_field": "BillingCountry",
+												"salesforce_label": "Billing Country",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 2,
+													"row": 8
+												},
+												"salesforce_field": "DunsNumber",
+												"salesforce_label": "D-U-N-S Number",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"position": {
+													"column": 1,
+													"row": 8
+												},
+												"possible_values": [
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "High",
+														"validFor": null,
+														"value": "High"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Low",
+														"validFor": null,
+														"value": "Low"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Medium",
+														"validFor": null,
+														"value": "Medium"
+													}
+												],
+												"salesforce_field": "CustomerPriority__c",
+												"salesforce_label": "Customer Priority",
+												"sobject": "account",
+												"type": "dropdown"
+											},
+											{
+												"editable": false,
+												"position": {
+													"column": 0,
+													"row": 8
+												},
+												"reference_field_name": {
+													"label": "Full Name",
+													"name": "Name",
+													"sObject": "User"
+												},
+												"reference_to": "User",
+												"salesforce_field": "CreatedById",
+												"salesforce_label": "Created By ID",
+												"sobject": "account",
+												"type": "dropdown"
+											},
+											{
+												"editable": true,
+												"position": {
+													"column": 2,
+													"row": 9
+												},
+												"reference_field_name": {
+													"label": "Primary Business Name",
+													"name": "Name",
+													"sObject": "DandBCompany"
+												},
+												"reference_to": "DandBCompany",
+												"salesforce_field": "DandbCompanyId",
+												"salesforce_label": "D&B Company ID",
+												"sobject": "account",
+												"type": "dropdown"
+											},
+											{
+												"editable": true,
+												"position": {
+													"column": 1,
+													"row": 9
+												},
+												"reference_field_name": {
+													"label": "Full Name",
+													"name": "Name",
+													"sObject": "Contact"
+												},
+												"reference_to": "Contact",
+												"salesforce_field": "DecisionMaker__c",
+												"salesforce_label": "DecisionMaker",
+												"sobject": "account",
+												"type": "dropdown"
+											},
+											{
+												"editable": false,
+												"input_type": "datetime",
+												"position": {
+													"column": 0,
+													"row": 9
+												},
+												"salesforce_field": "CreatedDate",
+												"salesforce_label": "Created Date",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 2,
+													"row": 10
+												},
+												"salesforce_field": "Effectif__c",
+												"salesforce_label": "Effectif__c",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 1,
+													"row": 10
+												},
+												"salesforce_field": "Jigsaw",
+												"salesforce_label": "Data.com Key",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "int",
+												"position": {
+													"column": 0,
+													"row": 10
+												},
+												"salesforce_field": "NumberOfEmployees",
+												"salesforce_label": "Employees",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"position": {
+													"column": 2,
+													"row": 11
+												},
+												"possible_values": [
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Agriculture",
+														"validFor": null,
+														"value": "Agriculture"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Apparel",
+														"validFor": null,
+														"value": "Apparel"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Banking",
+														"validFor": null,
+														"value": "Banking"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Biotechnology",
+														"validFor": null,
+														"value": "Biotechnology"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Chemicals",
+														"validFor": null,
+														"value": "Chemicals"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Communications",
+														"validFor": null,
+														"value": "Communications"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Construction",
+														"validFor": null,
+														"value": "Construction"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Consulting",
+														"validFor": null,
+														"value": "Consulting"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Education",
+														"validFor": null,
+														"value": "Education"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Electronics",
+														"validFor": null,
+														"value": "Electronics"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Energy",
+														"validFor": null,
+														"value": "Energy"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Engineering",
+														"validFor": null,
+														"value": "Engineering"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Entertainment",
+														"validFor": null,
+														"value": "Entertainment"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Environmental",
+														"validFor": null,
+														"value": "Environmental"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Finance",
+														"validFor": null,
+														"value": "Finance"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Food & Beverage",
+														"validFor": null,
+														"value": "Food & Beverage"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Government",
+														"validFor": null,
+														"value": "Government"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Healthcare",
+														"validFor": null,
+														"value": "Healthcare"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Hospitality",
+														"validFor": null,
+														"value": "Hospitality"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Insurance",
+														"validFor": null,
+														"value": "Insurance"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Machinery",
+														"validFor": null,
+														"value": "Machinery"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Manufacturing",
+														"validFor": null,
+														"value": "Manufacturing"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Media",
+														"validFor": null,
+														"value": "Media"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Not For Profit",
+														"validFor": null,
+														"value": "Not For Profit"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Recreation",
+														"validFor": null,
+														"value": "Recreation"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Retail",
+														"validFor": null,
+														"value": "Retail"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Shipping",
+														"validFor": null,
+														"value": "Shipping"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Technology",
+														"validFor": null,
+														"value": "Technology"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Telecommunications",
+														"validFor": null,
+														"value": "Telecommunications"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Transportation",
+														"validFor": null,
+														"value": "Transportation"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Utilities",
+														"validFor": null,
+														"value": "Utilities"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Other",
+														"validFor": null,
+														"value": "Other"
+													}
+												],
+												"salesforce_field": "Industry",
+												"salesforce_label": "Industry",
+												"sobject": "account",
+												"type": "dropdown"
+											},
+											{
+												"editable": false,
+												"position": {
+													"column": 1,
+													"row": 11
+												},
+												"salesforce_field": "IsDeleted",
+												"salesforce_label": "Deleted",
+												"sobject": "account",
+												"type": "radio_button"
+											},
+											{
+												"editable": false,
+												"input_type": "string",
+												"position": {
+													"column": 0,
+													"row": 11
+												},
+												"salesforce_field": "JigsawCompanyId",
+												"salesforce_label": "Jigsaw Company ID",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"input_type": "datetime",
+												"position": {
+													"column": 2,
+													"row": 12
+												},
+												"salesforce_field": "LastReferencedDate",
+												"salesforce_label": "Last Referenced Date",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"input_type": "datetime",
+												"position": {
+													"column": 1,
+													"row": 12
+												},
+												"salesforce_field": "LastModifiedDate",
+												"salesforce_label": "Last Modified Date",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"input_type": "datetime",
+												"position": {
+													"column": 0,
+													"row": 12
+												},
+												"salesforce_field": "LastViewedDate",
+												"salesforce_label": "Last Viewed Date",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 2,
+													"row": 13
+												},
+												"salesforce_field": "Linkedin_Societe__c",
+												"salesforce_label": "Linkedin_Societe",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 1,
+													"row": 13
+												},
+												"salesforce_field": "Linkedin_Address__c",
+												"salesforce_label": "Linkedin_Address",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"position": {
+													"column": 0,
+													"row": 13
+												},
+												"reference_field_name": {
+													"label": "Full Name",
+													"name": "Name",
+													"sObject": "User"
+												},
+												"reference_to": "User",
+												"salesforce_field": "LastModifiedById",
+												"salesforce_label": "Last Modified By ID",
+												"sobject": "account",
+												"type": "dropdown"
+											},
+											{
+												"editable": false,
+												"input_type": "date",
+												"position": {
+													"column": 1,
+													"row": 14
+												},
+												"salesforce_field": "LastActivityDate",
+												"salesforce_label": "Last Activity",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"position": {
+													"column": 2,
+													"row": 14
+												},
+												"reference_field_name": {
+													"label": "Account Name",
+													"name": "Name",
+													"sObject": "Account"
+												},
+												"reference_to": "Account",
+												"salesforce_field": "MasterRecordId",
+												"salesforce_label": "Master Record ID",
+												"sobject": "account",
+												"type": "dropdown"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 0,
+													"row": 14
+												},
+												"salesforce_field": "NaicsCode",
+												"salesforce_label": "NAICS Code",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 2,
+													"row": 15
+												},
+												"salesforce_field": "NaicsDesc",
+												"salesforce_label": "NAICS Description",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "double",
+												"position": {
+													"column": 1,
+													"row": 15
+												},
+												"salesforce_field": "NumberofLocations__c",
+												"salesforce_label": "Number of Locations",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"position": {
+													"column": 0,
+													"row": 15
+												},
+												"possible_values": [
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Disqualified",
+														"validFor": null,
+														"value": "Disqualified"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "New",
+														"validFor": null,
+														"value": "New"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Recent",
+														"validFor": null,
+														"value": "Recent"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Progress",
+														"validFor": null,
+														"value": "Progress"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Converted",
+														"validFor": null,
+														"value": "Converted"
+													}
+												],
+												"salesforce_field": "OnBoarding__c",
+												"salesforce_label": "OnBoarding",
+												"sobject": "account",
+												"type": "dropdown"
+											},
+											{
+												"editable": true,
+												"position": {
+													"column": 2,
+													"row": 16
+												},
+												"reference_field_name": {
+													"label": "Name",
+													"name": "Name",
+													"sObject": "OperatingHours"
+												},
+												"reference_to": "OperatingHours",
+												"salesforce_field": "OperatingHoursId",
+												"salesforce_label": "Operating Hour ID",
+												"sobject": "account",
+												"type": "dropdown"
+											},
+											{
+												"editable": true,
+												"position": {
+													"column": 1,
+													"row": 16
+												},
+												"possible_values": [
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Public",
+														"validFor": null,
+														"value": "Public"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Private",
+														"validFor": null,
+														"value": "Private"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Subsidiary",
+														"validFor": null,
+														"value": "Subsidiary"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Other",
+														"validFor": null,
+														"value": "Other"
+													}
+												],
+												"salesforce_field": "Ownership",
+												"salesforce_label": "Ownership",
+												"sobject": "account",
+												"type": "dropdown"
+											},
+											{
+												"editable": true,
+												"position": {
+													"column": 0,
+													"row": 16
+												},
+												"reference_field_name": {
+													"label": "Account Name",
+													"name": "Name",
+													"sObject": "Account"
+												},
+												"reference_to": "Account",
+												"salesforce_field": "ParentId",
+												"salesforce_label": "Parent Account ID",
+												"sobject": "account",
+												"type": "dropdown"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 2,
+													"row": 17
+												},
+												"salesforce_field": "ShippingCity",
+												"salesforce_label": "Shipping City",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"input_type": "url",
+												"position": {
+													"column": 1,
+													"row": 17
+												},
+												"salesforce_field": "PhotoUrl",
+												"salesforce_label": "Photo URL",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"position": {
+													"column": 0,
+													"row": 17
+												},
+												"reference_field_name": {
+													"label": "Full Name",
+													"name": "Name",
+													"sObject": "User"
+												},
+												"reference_to": "User",
+												"salesforce_field": "OwnerId",
+												"salesforce_label": "Owner ID",
+												"sobject": "account",
+												"type": "dropdown"
+											},
+											{
+												"editable": true,
+												"input_type": "double",
+												"position": {
+													"column": 2,
+													"row": 18
+												},
+												"salesforce_field": "ShippingLatitude",
+												"salesforce_label": "Shipping Latitude",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"position": {
+													"column": 1,
+													"row": 18
+												},
+												"possible_values": [
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Address",
+														"validFor": null,
+														"value": "Address"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "NearAddress",
+														"validFor": null,
+														"value": "NearAddress"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Block",
+														"validFor": null,
+														"value": "Block"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Street",
+														"validFor": null,
+														"value": "Street"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "ExtendedZip",
+														"validFor": null,
+														"value": "ExtendedZip"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Zip",
+														"validFor": null,
+														"value": "Zip"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Neighborhood",
+														"validFor": null,
+														"value": "Neighborhood"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "City",
+														"validFor": null,
+														"value": "City"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "County",
+														"validFor": null,
+														"value": "County"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "State",
+														"validFor": null,
+														"value": "State"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Unknown",
+														"validFor": null,
+														"value": "Unknown"
+													}
+												],
+												"salesforce_field": "ShippingGeocodeAccuracy",
+												"salesforce_label": "Shipping Geocode Accuracy",
+												"sobject": "account",
+												"type": "dropdown"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 0,
+													"row": 18
+												},
+												"salesforce_field": "ShippingCountry",
+												"salesforce_label": "Shipping Country",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "textarea",
+												"position": {
+													"column": 2,
+													"row": 19
+												},
+												"salesforce_field": "ShippingStreet",
+												"salesforce_label": "Shipping Street",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 1,
+													"row": 19
+												},
+												"salesforce_field": "ShippingState",
+												"salesforce_label": "Shipping State/Province",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "double",
+												"position": {
+													"column": 0,
+													"row": 19
+												},
+												"salesforce_field": "ShippingLongitude",
+												"salesforce_label": "Shipping Longitude",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"position": {
+													"column": 2,
+													"row": 20
+												},
+												"possible_values": [
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Gold",
+														"validFor": null,
+														"value": "Gold"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Silver",
+														"validFor": null,
+														"value": "Silver"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Platinum",
+														"validFor": null,
+														"value": "Platinum"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Bronze",
+														"validFor": null,
+														"value": "Bronze"
+													}
+												],
+												"salesforce_field": "SLA__c",
+												"salesforce_label": "SLA",
+												"sobject": "account",
+												"type": "dropdown"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 1,
+													"row": 20
+												},
+												"salesforce_field": "SicDesc",
+												"salesforce_label": "SIC Description",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "date",
+												"position": {
+													"column": 0,
+													"row": 20
+												},
+												"salesforce_field": "SLAExpirationDate__c",
+												"salesforce_label": "SLA Expiration Date",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"input_type": "datetime",
+												"position": {
+													"column": 2,
+													"row": 21
+												},
+												"salesforce_field": "SystemModstamp",
+												"salesforce_label": "System Modstamp",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 1,
+													"row": 21
+												},
+												"salesforce_field": "SLASerialNumber__c",
+												"salesforce_label": "SLA Serial Number",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 0,
+													"row": 21
+												},
+												"salesforce_field": "Sic",
+												"salesforce_label": "SIC Code",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 2,
+													"row": 22
+												},
+												"salesforce_field": "TickerSymbol",
+												"salesforce_label": "Ticker Symbol",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 1,
+													"row": 22
+												},
+												"salesforce_field": "ShippingPostalCode",
+												"salesforce_label": "Shipping Zip/Postal Code",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 0,
+													"row": 22
+												},
+												"salesforce_field": "Tradestyle",
+												"salesforce_label": "Tradestyle",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 2,
+													"row": 23
+												},
+												"salesforce_field": "YearStarted",
+												"salesforce_label": "Year Started",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "url",
+												"position": {
+													"column": 1,
+													"row": 23
+												},
+												"salesforce_field": "Website",
+												"salesforce_label": "Website",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 0,
+													"row": 23
+												},
+												"salesforce_field": "URL_Profil_Linkedin__c",
+												"salesforce_label": "URL_Profil_Linkedin__c",
+												"sobject": "account",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"position": {
+													"column": 0,
+													"row": 24
+												},
+												"possible_values": [
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Maybe",
+														"validFor": null,
+														"value": "Maybe"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "No",
+														"validFor": null,
+														"value": "No"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Yes",
+														"validFor": null,
+														"value": "Yes"
+													}
+												],
+												"salesforce_field": "UpsellOpportunity__c",
+												"salesforce_label": "Upsell Opportunity",
+												"sobject": "account",
+												"type": "dropdown"
+											},
+											{
+												"editable": true,
+												"position": {
+													"column": 1,
+													"row": 24
+												},
+												"reference_field_name": {
+													"label": "Account Name",
+													"name": "Name",
+													"sObject": "Account"
+												},
+												"reference_to": "Account",
+												"salesforce_field": "AccountId",
+												"salesforce_label": "Account ID",
+												"sobject": "contact",
+												"type": "dropdown"
+											},
+											{
+												"editable": true,
+												"position": {
+													"column": 2,
+													"row": 24
+												},
+												"possible_values": [
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "--",
+														"validFor": null,
+														"value": "--"
+													}
+												],
+												"salesforce_field": "RingoverCadence__Active_Cadences__c",
+												"salesforce_label": "Active Cadences",
+												"sobject": "contact",
+												"type": "multi_select_dropdown"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 2,
+													"row": 25
+												},
+												"salesforce_field": "AssistantName",
+												"salesforce_label": "Assistant's Name",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "phone",
+												"position": {
+													"column": 1,
+													"row": 25
+												},
+												"salesforce_field": "Fax",
+												"salesforce_label": "Business Fax",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "date",
+												"position": {
+													"column": 0,
+													"row": 25
+												},
+												"salesforce_field": "Birthdate",
+												"salesforce_label": "Birthdate",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "phone",
+												"position": {
+													"column": 2,
+													"row": 26
+												},
+												"salesforce_field": "Phone",
+												"salesforce_label": "Business Phone",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "phone",
+												"position": {
+													"column": 1,
+													"row": 26
+												},
+												"salesforce_field": "AssistantPhone",
+												"salesforce_label": "Asst. Phone",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"position": {
+													"column": 0,
+													"row": 26
+												},
+												"possible_values": [
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "In Sync",
+														"validFor": null,
+														"value": "Matched"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Different",
+														"validFor": null,
+														"value": "Different"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Reviewed",
+														"validFor": null,
+														"value": "Acknowledged"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Not Found",
+														"validFor": null,
+														"value": "NotFound"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Inactive",
+														"validFor": null,
+														"value": "Inactive"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Not Compared",
+														"validFor": null,
+														"value": "Pending"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Select Match",
+														"validFor": null,
+														"value": "SelectMatch"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Skipped",
+														"validFor": null,
+														"value": "Skipped"
+													}
+												],
+												"salesforce_field": "CleanStatus",
+												"salesforce_label": "Clean Status",
+												"sobject": "contact",
+												"type": "dropdown"
+											},
+											{
+												"editable": false,
+												"input_type": "id",
+												"position": {
+													"column": 2,
+													"row": 27
+												},
+												"salesforce_field": "Id",
+												"salesforce_label": "Contact ID",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "textarea",
+												"position": {
+													"column": 1,
+													"row": 27
+												},
+												"salesforce_field": "Description",
+												"salesforce_label": "Contact Description",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"position": {
+													"column": 0,
+													"row": 27
+												},
+												"reference_field_name": {
+													"label": "Full Name",
+													"name": "Name",
+													"sObject": "User"
+												},
+												"reference_to": "User",
+												"salesforce_field": "CreatedById",
+												"salesforce_label": "Created By ID",
+												"sobject": "contact",
+												"type": "dropdown"
+											},
+											{
+												"editable": false,
+												"input_type": "datetime",
+												"position": {
+													"column": 0,
+													"row": 28
+												},
+												"salesforce_field": "CreatedDate",
+												"salesforce_label": "Created Date",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 1,
+													"row": 28
+												},
+												"salesforce_field": "Jigsaw",
+												"salesforce_label": "Data.com Key",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"position": {
+													"column": 2,
+													"row": 28
+												},
+												"salesforce_field": "IsDeleted",
+												"salesforce_label": "Deleted",
+												"sobject": "contact",
+												"type": "radio_button"
+											},
+											{
+												"editable": true,
+												"input_type": "email",
+												"position": {
+													"column": 2,
+													"row": 29
+												},
+												"salesforce_field": "Email",
+												"salesforce_label": "Email",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 1,
+													"row": 29
+												},
+												"salesforce_field": "Department",
+												"salesforce_label": "Department",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "datetime",
+												"position": {
+													"column": 0,
+													"row": 29
+												},
+												"salesforce_field": "EmailBouncedDate",
+												"salesforce_label": "Email Bounced Date",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"input_type": "string",
+												"position": {
+													"column": 2,
+													"row": 30
+												},
+												"salesforce_field": "Name",
+												"salesforce_label": "Full Name",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 1,
+													"row": 30
+												},
+												"salesforce_field": "FirstName",
+												"salesforce_label": "First Name",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 0,
+													"row": 30
+												},
+												"salesforce_field": "EmailBouncedReason",
+												"salesforce_label": "Email Bounced Reason",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"position": {
+													"column": 2,
+													"row": 31
+												},
+												"salesforce_field": "IsEmailBounced",
+												"salesforce_label": "Is Email Bounced",
+												"sobject": "contact",
+												"type": "radio_button"
+											},
+											{
+												"editable": true,
+												"position": {
+													"column": 1,
+													"row": 31
+												},
+												"reference_field_name": {
+													"label": "Name",
+													"name": "Name",
+													"sObject": "Individual"
+												},
+												"reference_to": "Individual",
+												"salesforce_field": "IndividualId",
+												"salesforce_label": "Individual ID",
+												"sobject": "contact",
+												"type": "dropdown"
+											},
+											{
+												"editable": true,
+												"input_type": "phone",
+												"position": {
+													"column": 0,
+													"row": 31
+												},
+												"salesforce_field": "HomePhone",
+												"salesforce_label": "Home Phone",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 2,
+													"row": 32
+												},
+												"salesforce_field": "Languages__c",
+												"salesforce_label": "Languages",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"input_type": "string",
+												"position": {
+													"column": 1,
+													"row": 32
+												},
+												"salesforce_field": "JigsawContactId",
+												"salesforce_label": "Jigsaw Contact ID",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"position": {
+													"column": 0,
+													"row": 32
+												},
+												"salesforce_field": "RingoverCadence__Has_Active_Cadence__c",
+												"salesforce_label": "Has Active Cadence",
+												"sobject": "contact",
+												"type": "radio_button"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 2,
+													"row": 33
+												},
+												"salesforce_field": "LastName",
+												"salesforce_label": "Last Name",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"input_type": "datetime",
+												"position": {
+													"column": 1,
+													"row": 33
+												},
+												"salesforce_field": "LastModifiedDate",
+												"salesforce_label": "Last Modified Date",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"input_type": "datetime",
+												"position": {
+													"column": 0,
+													"row": 33
+												},
+												"salesforce_field": "LastReferencedDate",
+												"salesforce_label": "Last Referenced Date",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"input_type": "datetime",
+												"position": {
+													"column": 2,
+													"row": 34
+												},
+												"salesforce_field": "LastCURequestDate",
+												"salesforce_label": "Last Stay-in-Touch Request Date",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"position": {
+													"column": 1,
+													"row": 34
+												},
+												"reference_field_name": {
+													"label": "Full Name",
+													"name": "Name",
+													"sObject": "User"
+												},
+												"reference_to": "User",
+												"salesforce_field": "LastModifiedById",
+												"salesforce_label": "Last Modified By ID",
+												"sobject": "contact",
+												"type": "dropdown"
+											},
+											{
+												"editable": true,
+												"position": {
+													"column": 0,
+													"row": 34
+												},
+												"possible_values": [
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Web",
+														"validFor": null,
+														"value": "Web"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Phone Inquiry",
+														"validFor": null,
+														"value": "Phone Inquiry"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Partner Referral",
+														"validFor": null,
+														"value": "Partner Referral"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Purchased List",
+														"validFor": null,
+														"value": "Purchased List"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Other",
+														"validFor": null,
+														"value": "Other"
+													}
+												],
+												"salesforce_field": "LeadSource",
+												"salesforce_label": "Lead Source",
+												"sobject": "contact",
+												"type": "dropdown"
+											},
+											{
+												"editable": true,
+												"position": {
+													"column": 1,
+													"row": 35
+												},
+												"possible_values": [
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Secondary",
+														"validFor": null,
+														"value": "Secondary"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Tertiary",
+														"validFor": null,
+														"value": "Tertiary"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Primary",
+														"validFor": null,
+														"value": "Primary"
+													}
+												],
+												"salesforce_field": "Level__c",
+												"salesforce_label": "Level",
+												"sobject": "contact",
+												"type": "dropdown"
+											},
+											{
+												"editable": false,
+												"input_type": "datetime",
+												"position": {
+													"column": 2,
+													"row": 35
+												},
+												"salesforce_field": "LastViewedDate",
+												"salesforce_label": "Last Viewed Date",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"input_type": "datetime",
+												"position": {
+													"column": 0,
+													"row": 35
+												},
+												"salesforce_field": "LastCUUpdateDate",
+												"salesforce_label": "Last Stay-in-Touch Save Date",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 2,
+													"row": 36
+												},
+												"salesforce_field": "MailingCountry",
+												"salesforce_label": "Mailing Country",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 1,
+													"row": 36
+												},
+												"salesforce_field": "MailingCity",
+												"salesforce_label": "Mailing City",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "double",
+												"position": {
+													"column": 0,
+													"row": 36
+												},
+												"salesforce_field": "MailingLatitude",
+												"salesforce_label": "Mailing Latitude",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "double",
+												"position": {
+													"column": 2,
+													"row": 37
+												},
+												"salesforce_field": "MailingLongitude",
+												"salesforce_label": "Mailing Longitude",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"input_type": "date",
+												"position": {
+													"column": 1,
+													"row": 37
+												},
+												"salesforce_field": "LastActivityDate",
+												"salesforce_label": "Last Activity",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"position": {
+													"column": 0,
+													"row": 37
+												},
+												"possible_values": [
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Address",
+														"validFor": null,
+														"value": "Address"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "NearAddress",
+														"validFor": null,
+														"value": "NearAddress"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Block",
+														"validFor": null,
+														"value": "Block"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Street",
+														"validFor": null,
+														"value": "Street"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "ExtendedZip",
+														"validFor": null,
+														"value": "ExtendedZip"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Zip",
+														"validFor": null,
+														"value": "Zip"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Neighborhood",
+														"validFor": null,
+														"value": "Neighborhood"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "City",
+														"validFor": null,
+														"value": "City"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "County",
+														"validFor": null,
+														"value": "County"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "State",
+														"validFor": null,
+														"value": "State"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Unknown",
+														"validFor": null,
+														"value": "Unknown"
+													}
+												],
+												"salesforce_field": "MailingGeocodeAccuracy",
+												"salesforce_label": "Mailing Geocode Accuracy",
+												"sobject": "contact",
+												"type": "dropdown"
+											},
+											{
+												"editable": false,
+												"position": {
+													"column": 2,
+													"row": 38
+												},
+												"reference_field_name": {
+													"label": "Full Name",
+													"name": "Name",
+													"sObject": "Contact"
+												},
+												"reference_to": "Contact",
+												"salesforce_field": "MasterRecordId",
+												"salesforce_label": "Master Record ID",
+												"sobject": "contact",
+												"type": "dropdown"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 1,
+													"row": 38
+												},
+												"salesforce_field": "MailingPostalCode",
+												"salesforce_label": "Mailing Zip/Postal Code",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "phone",
+												"position": {
+													"column": 0,
+													"row": 38
+												},
+												"salesforce_field": "MobilePhone",
+												"salesforce_label": "Mobile Phone",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "textarea",
+												"position": {
+													"column": 2,
+													"row": 39
+												},
+												"salesforce_field": "MailingStreet",
+												"salesforce_label": "Mailing Street",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 1,
+													"row": 39
+												},
+												"salesforce_field": "MailingState",
+												"salesforce_label": "Mailing State/Province",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "double",
+												"position": {
+													"column": 0,
+													"row": 39
+												},
+												"salesforce_field": "OtherLongitude",
+												"salesforce_label": "Other Longitude",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 2,
+													"row": 40
+												},
+												"salesforce_field": "OtherState",
+												"salesforce_label": "Other State/Province",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "phone",
+												"position": {
+													"column": 1,
+													"row": 40
+												},
+												"salesforce_field": "OtherPhone",
+												"salesforce_label": "Other Phone",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 0,
+													"row": 40
+												},
+												"salesforce_field": "OtherPostalCode",
+												"salesforce_label": "Other Zip/Postal Code",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"input_type": "url",
+												"position": {
+													"column": 2,
+													"row": 41
+												},
+												"salesforce_field": "PhotoUrl",
+												"salesforce_label": "Photo URL",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "double",
+												"position": {
+													"column": 1,
+													"row": 41
+												},
+												"salesforce_field": "OtherLatitude",
+												"salesforce_label": "Other Latitude",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"position": {
+													"column": 0,
+													"row": 41
+												},
+												"possible_values": [
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Address",
+														"validFor": null,
+														"value": "Address"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "NearAddress",
+														"validFor": null,
+														"value": "NearAddress"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Block",
+														"validFor": null,
+														"value": "Block"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Street",
+														"validFor": null,
+														"value": "Street"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "ExtendedZip",
+														"validFor": null,
+														"value": "ExtendedZip"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Zip",
+														"validFor": null,
+														"value": "Zip"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Neighborhood",
+														"validFor": null,
+														"value": "Neighborhood"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "City",
+														"validFor": null,
+														"value": "City"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "County",
+														"validFor": null,
+														"value": "County"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "State",
+														"validFor": null,
+														"value": "State"
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Unknown",
+														"validFor": null,
+														"value": "Unknown"
+													}
+												],
+												"salesforce_field": "OtherGeocodeAccuracy",
+												"salesforce_label": "Other Geocode Accuracy",
+												"sobject": "contact",
+												"type": "dropdown"
+											},
+											{
+												"editable": true,
+												"position": {
+													"column": 2,
+													"row": 42
+												},
+												"reference_field_name": {
+													"label": "Full Name",
+													"name": "Name",
+													"sObject": "Contact"
+												},
+												"reference_to": "Contact",
+												"salesforce_field": "ReportsToId",
+												"salesforce_label": "Reports To ID",
+												"sobject": "contact",
+												"type": "dropdown"
+											},
+											{
+												"editable": true,
+												"input_type": "textarea",
+												"position": {
+													"column": 1,
+													"row": 42
+												},
+												"salesforce_field": "OtherStreet",
+												"salesforce_label": "Other Street",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 0,
+													"row": 42
+												},
+												"salesforce_field": "OtherCountry",
+												"salesforce_label": "Other Country",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 2,
+													"row": 43
+												},
+												"salesforce_field": "Title",
+												"salesforce_label": "Title",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": false,
+												"input_type": "datetime",
+												"position": {
+													"column": 1,
+													"row": 43
+												},
+												"salesforce_field": "SystemModstamp",
+												"salesforce_label": "System Modstamp",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"position": {
+													"column": 0,
+													"row": 43
+												},
+												"possible_values": [
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Mr.",
+														"validFor": null,
+														"value": "Mr."
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Ms.",
+														"validFor": null,
+														"value": "Ms."
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Mrs.",
+														"validFor": null,
+														"value": "Mrs."
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Dr.",
+														"validFor": null,
+														"value": "Dr."
+													},
+													{
+														"active": true,
+														"defaultValue": false,
+														"label": "Prof.",
+														"validFor": null,
+														"value": "Prof."
+													}
+												],
+												"salesforce_field": "Salutation",
+												"salesforce_label": "Salutation",
+												"sobject": "contact",
+												"type": "dropdown"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 1,
+													"row": 44
+												},
+												"salesforce_field": "Source_site__c",
+												"salesforce_label": "Source_site",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 0,
+													"row": 44
+												},
+												"salesforce_field": "OtherCity",
+												"salesforce_label": "Other City",
+												"sobject": "contact",
+												"type": "input_box"
+											},
+											{
+												"editable": true,
+												"input_type": "string",
+												"position": {
+													"column": 1,
+													"row": 45
+												},
+												"salesforce_field": "URL_Profil_Linkedin__c",
+												"salesforce_label": "URL_Profil_Linkedin__c",
+												"sobject": "contact",
+												"type": "input_box"
+											}
+										]
+									}
+								],
+								"company_settings_id": 1,
+								"created_at": "2022-05-23T08:06:19.000Z",
+								"updated_at": "2022-12-12T08:34:23.000Z"
+							},
+							"Webhooks": [
+								{
+									"webhook_id": 100,
+									"webhook_type": "convert",
+									"http_method": "post",
+									"url": "https://products.free.beeceptor.com/",
+									"company_settings_id": 1,
+									"auth_token": "rf",
+									"created_at": "2022-11-16T10:17:05.000Z",
+									"updated_at": "2022-11-16T10:17:05.000Z"
+								}
+							]
+						}
+					}
+				},
+				"Account": {
+					"account_id": 513431,
+					"salesforce_account_id": null,
+					"user_id": "99999999-9999-9999-9999-999999999999",
+					"name": "Keasbey",
+					"size": null,
+					"zipcode": 17000,
+					"country": null,
+					"url": null,
+					"linkedin_url": null,
+					"phone_number": null,
+					"integration_id": null,
+					"integration_type": "salesforce_lead_account"
+				},
+				"Lead_phone_numbers": [
+					{
+						"formatted_phone_number": "",
+						"time": "",
+						"lpn_id": 727344,
+						"phone_number": "",
+						"type": "MobilePhone",
+						"timezone": null,
+						"is_primary": false
+					},
+					{
+						"formatted_phone_number": "918104744966",
+						"time": "3:47:32 PM",
+						"lpn_id": 727343,
+						"phone_number": "918104744966",
+						"type": "Phone",
+						"timezone": "Asia/Calcutta",
+						"is_primary": true
+					}
+				],
+				"Lead_emails": [
+					{
+						"lem_id": 664380,
+						"email_id": "bdnyaneshwar89+1666239495102@gmail.com",
+						"is_primary": true,
+						"type": "Email"
+					}
+				],
+				"LeadToCadences": [
+					{
+						"status": "in_progress",
+						"Cadences": [
+							{
+								"cadence_id": 540011,
+								"name": "reply late test",
+								"salesforce_cadence_id": "a025g00000CIxcqAAD",
+								"status": "paused",
+								"unix_resume_at": null
+							}
+						],
+						"Tasks": [
+							{
+								"task_id": 542983,
+								"Node": {
+									"type": "mail",
+									"step_number": 1
+								}
+							}
+						]
+					}
+				]
+			},
+			"msg": "Lead fetched successfully.",
+			"success": true
+		},
+		"activities": {
+			"data": [
+				{
+					"activity_id": 693245,
+					"name": "reply late test resumed",
+					"type": "resume_cadence",
+					"status": "Cadence Resumed",
+					"comment": null,
+					"recording": null,
+					"voicemail": null,
+					"to_number": null,
+					"from_number": null,
+					"incoming": null,
+					"read": false,
+					"ringover_call_id": null,
+					"salesforce_task_id": null,
+					"message_id": null,
+					"sent_message_id": null,
+					"gmail_message_id": null,
+					"note_id": null,
+					"cadence_id": null,
+					"node_id": null,
+					"created_at": "2022-12-09T10:21:56.000Z",
+					"updated_at": "2022-12-09T10:21:56.000Z",
+					"lead_id": 544331,
+					"Cadence": null,
+					"Email": null
+				},
+				{
+					"activity_id": 703599,
+					"name": "reply late test has been paused",
+					"type": "pause_cadence",
+					"status": "Cadence Paused",
+					"comment": null,
+					"recording": null,
+					"voicemail": null,
+					"to_number": null,
+					"from_number": null,
+					"incoming": null,
+					"read": false,
+					"ringover_call_id": null,
+					"salesforce_task_id": null,
+					"message_id": null,
+					"sent_message_id": null,
+					"gmail_message_id": null,
+					"note_id": null,
+					"cadence_id": 540011,
+					"node_id": null,
+					"created_at": "2022-12-09T10:35:29.000Z",
+					"updated_at": "2022-12-09T10:35:29.000Z",
+					"lead_id": 544331,
+					"Cadence": {
+						"name": "reply late test"
+					},
+					"Email": null
+				}
+			],
+			"msg": "Activities fetched successfully.",
+			"success": true
+		},
+		"nextNode": null
+	}
+}

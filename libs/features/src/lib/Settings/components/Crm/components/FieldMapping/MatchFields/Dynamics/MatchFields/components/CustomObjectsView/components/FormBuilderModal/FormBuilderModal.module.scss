@@ -1,0 +1,38 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.formBuilderModal {
+	width: 100%;
+	max-width: 1149px;
+	padding: 0 0 0 0 !important;
+
+	.main {
+		padding-top: 11px;
+		.header {
+			display: flex;
+			justify-content: space-between;
+			margin: 0px 40px 20px 10px;
+			padding: 0 20px;
+			align-items: center;
+
+			.heading {
+				font-weight: 700;
+				font-size: 1.25rem;
+				line-height: 22px;
+			}
+			.buttons {
+				display: flex;
+				gap: 20px;
+				button {
+					font-weight: 600;
+					font-size: 1rem;
+					line-height: 19px;
+					text-transform: capitalize;
+				}
+			}
+		}
+		.body {
+			width: 100%;
+			display: flex;
+		}
+	}
+}

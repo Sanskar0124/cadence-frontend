@@ -1,0 +1,267 @@
+import {
+	ENRICHMENT_SERVICES,
+	INTEGRATION_TYPE as CRM_INTEGRATION_TYPE,
+	LEAD_INTEGRATION_TYPES,
+} from "@cadence-frontend/constants";
+import { LinkedinBox, LushaLogo, Snov } from "@cadence-frontend/icons";
+import { Common as COMMON_TRANSLATION } from "@cadence-frontend/languages";
+
+export const INTEGRATION_TYPES = {
+	...ENRICHMENT_SERVICES,
+	LINKEDIN_EXTENSION: "linkedin_extension",
+};
+
+export const LEAD_INTEGRATION_TYPE_MAP = {
+	[CRM_INTEGRATION_TYPE.SALESFORCE]: {
+		defaultLeadType: LEAD_INTEGRATION_TYPES.SALESFORCE_LEAD,
+		leadTypeOptions: [
+			LEAD_INTEGRATION_TYPES.SALESFORCE_LEAD,
+			LEAD_INTEGRATION_TYPES.SALESFORCE_CONTACT,
+		],
+	},
+	[CRM_INTEGRATION_TYPE.PIPEDRIVE]: {
+		defaultLeadType: LEAD_INTEGRATION_TYPES.PIPEDRIVE_PERSON,
+		leadTypeOptions: [LEAD_INTEGRATION_TYPES.PIPEDRIVE_PERSON],
+	},
+	[CRM_INTEGRATION_TYPE.HUBSPOT]: {
+		defaultLeadType: LEAD_INTEGRATION_TYPES.HUBSPOT_CONTACT,
+		leadTypeOptions: [LEAD_INTEGRATION_TYPES.HUBSPOT_CONTACT],
+	},
+	[CRM_INTEGRATION_TYPE.GOOGLE_SHEETS]: {
+		defaultLeadType: LEAD_INTEGRATION_TYPES.GOOGLE_SHEETS_LEAD,
+		leadTypeOptions: [LEAD_INTEGRATION_TYPES.GOOGLE_SHEETS_LEAD],
+	},
+	[CRM_INTEGRATION_TYPE.EXCEL]: {
+		defaultLeadType: LEAD_INTEGRATION_TYPES.EXCEL_LEAD,
+		leadTypeOptions: [LEAD_INTEGRATION_TYPES.EXCEL_LEAD],
+	},
+	[CRM_INTEGRATION_TYPE.SHEETS]: {
+		defaultLeadType: LEAD_INTEGRATION_TYPES.GOOGLE_SHEETS_LEAD,
+		leadTypeOptions: [
+			LEAD_INTEGRATION_TYPES.GOOGLE_SHEETS_LEAD,
+			LEAD_INTEGRATION_TYPES.EXCEL_LEAD,
+		],
+	},
+	[CRM_INTEGRATION_TYPE.SELLSY]: {
+		defaultLeadType: LEAD_INTEGRATION_TYPES.SELLSY_CONTACT,
+		leadTypeOptions: [LEAD_INTEGRATION_TYPES.SELLSY_CONTACT],
+	},
+	[CRM_INTEGRATION_TYPE.DYNAMICS]: {
+		defaultLeadType: LEAD_INTEGRATION_TYPES.DYNAMICS_LEAD,
+		leadTypeOptions: [
+			LEAD_INTEGRATION_TYPES.DYNAMICS_LEAD,
+			LEAD_INTEGRATION_TYPES.DYNAMICS_CONTACT,
+		],
+	},
+	[CRM_INTEGRATION_TYPE.ZOHO]: {
+		defaultLeadType: LEAD_INTEGRATION_TYPES.ZOHO_LEAD,
+		leadTypeOptions: [
+			LEAD_INTEGRATION_TYPES.ZOHO_LEAD,
+			LEAD_INTEGRATION_TYPES.ZOHO_CONTACT,
+		],
+	},
+	[CRM_INTEGRATION_TYPE.BULLHORN]: {
+		defaultLeadType: LEAD_INTEGRATION_TYPES.BULLHORN_LEAD,
+		leadTypeOptions: [
+			LEAD_INTEGRATION_TYPES.BULLHORN_LEAD,
+			LEAD_INTEGRATION_TYPES.BULLHORN_CONTACT,
+			LEAD_INTEGRATION_TYPES.BULLHORN_CANDIDATE,
+		],
+	},
+};
+
+export const USER_ACCESS_FIELDS = {
+	[ENRICHMENT_SERVICES.LUSHA]: {
+		userAccessField: "lusha_service_enabled",
+		sdNewUsersAccessField: "enable_new_users_lusha",
+	},
+	[ENRICHMENT_SERVICES.KASPR]: {
+		userAccessField: "kaspr_service_enabled",
+		sdNewUsersAccessField: "enable_new_users_kaspr",
+	},
+	[ENRICHMENT_SERVICES.HUNTER]: {
+		userAccessField: "hunter_service_enabled",
+		sdNewUsersAccessField: "enable_new_users_hunter",
+	},
+	[ENRICHMENT_SERVICES.DROPCONTACT]: {
+		userAccessField: "dropcontact_service_enabled",
+		sdNewUsersAccessField: "enable_new_users_dropcontact",
+	},
+	[ENRICHMENT_SERVICES.SNOV]: {
+		userAccessField: "snov_service_enabled",
+		sdNewUsersAccessField: "enable_new_users_snov",
+	},
+};
+
+export const BUTTON_TEXT = {
+	UNAVAILABE: COMMON_TRANSLATION.EXTENSION_UNAVAILABE,
+	COMING_SOON: COMMON_TRANSLATION.COMING_SOON,
+	RECONFIGURE: COMMON_TRANSLATION.RECONFIGURE,
+	CONFIGURE: COMMON_TRANSLATION.CONFIGURE,
+	ACTIVATE: "Activate",
+	DEACTIVATE: "Deactivate",
+};
+
+export const ENRICHMENT_SUPPORT = {
+	[CRM_INTEGRATION_TYPE.SALESFORCE]: [
+		INTEGRATION_TYPES.LUSHA,
+		INTEGRATION_TYPES.KASPR,
+		INTEGRATION_TYPES.HUNTER,
+		INTEGRATION_TYPES.DROPCONTACT,
+		INTEGRATION_TYPES.SNOV,
+		INTEGRATION_TYPES.LINKEDIN_EXTENSION,
+	],
+	[CRM_INTEGRATION_TYPE.HUBSPOT]: [
+		INTEGRATION_TYPES.LUSHA,
+		INTEGRATION_TYPES.KASPR,
+		INTEGRATION_TYPES.HUNTER,
+		INTEGRATION_TYPES.DROPCONTACT,
+		INTEGRATION_TYPES.SNOV,
+		INTEGRATION_TYPES.LINKEDIN_EXTENSION,
+	],
+	[CRM_INTEGRATION_TYPE.PIPEDRIVE]: [
+		INTEGRATION_TYPES.LUSHA,
+		INTEGRATION_TYPES.KASPR,
+		INTEGRATION_TYPES.HUNTER,
+		INTEGRATION_TYPES.DROPCONTACT,
+		INTEGRATION_TYPES.SNOV,
+		INTEGRATION_TYPES.LINKEDIN_EXTENSION,
+	],
+	[CRM_INTEGRATION_TYPE.GOOGLE_SHEETS]: [
+		INTEGRATION_TYPES.LUSHA,
+		INTEGRATION_TYPES.KASPR,
+		INTEGRATION_TYPES.HUNTER,
+		INTEGRATION_TYPES.DROPCONTACT,
+		INTEGRATION_TYPES.SNOV,
+		INTEGRATION_TYPES.LINKEDIN_EXTENSION,
+	],
+	[CRM_INTEGRATION_TYPE.EXCEL]: [
+		INTEGRATION_TYPES.LUSHA,
+		INTEGRATION_TYPES.KASPR,
+		INTEGRATION_TYPES.HUNTER,
+		INTEGRATION_TYPES.DROPCONTACT,
+		INTEGRATION_TYPES.SNOV,
+		INTEGRATION_TYPES.LINKEDIN_EXTENSION,
+	],
+	[CRM_INTEGRATION_TYPE.SHEETS]: [
+		INTEGRATION_TYPES.LUSHA,
+		INTEGRATION_TYPES.KASPR,
+		INTEGRATION_TYPES.HUNTER,
+		INTEGRATION_TYPES.DROPCONTACT,
+		INTEGRATION_TYPES.SNOV,
+		INTEGRATION_TYPES.LINKEDIN_EXTENSION,
+	],
+	[CRM_INTEGRATION_TYPE.SELLSY]: [
+		INTEGRATION_TYPES.LUSHA,
+		INTEGRATION_TYPES.KASPR,
+		INTEGRATION_TYPES.HUNTER,
+		INTEGRATION_TYPES.DROPCONTACT,
+		INTEGRATION_TYPES.SNOV,
+		INTEGRATION_TYPES.LINKEDIN_EXTENSION,
+	],
+	[CRM_INTEGRATION_TYPE.DYNAMICS]: [
+		INTEGRATION_TYPES.LUSHA,
+		INTEGRATION_TYPES.KASPR,
+		INTEGRATION_TYPES.HUNTER,
+		INTEGRATION_TYPES.DROPCONTACT,
+		INTEGRATION_TYPES.SNOV,
+	],
+	[CRM_INTEGRATION_TYPE.ZOHO]: [
+		INTEGRATION_TYPES.LUSHA,
+		INTEGRATION_TYPES.KASPR,
+		INTEGRATION_TYPES.HUNTER,
+		INTEGRATION_TYPES.DROPCONTACT,
+		INTEGRATION_TYPES.SNOV,
+		INTEGRATION_TYPES.LINKEDIN_EXTENSION,
+	],
+	[CRM_INTEGRATION_TYPE.BULLHORN]: [
+		INTEGRATION_TYPES.LUSHA,
+		INTEGRATION_TYPES.KASPR,
+		INTEGRATION_TYPES.HUNTER,
+		INTEGRATION_TYPES.DROPCONTACT,
+		INTEGRATION_TYPES.SNOV,
+		INTEGRATION_TYPES.LINKEDIN_EXTENSION,
+	],
+};
+
+export const getEnrichments = integration_type => {
+	return [
+		{
+			id: 1,
+			type: INTEGRATION_TYPES.LUSHA,
+			name: "Lusha",
+			configuredField: "is_lusha_configured",
+			icon: <LushaLogo />,
+			disabled: !ENRICHMENT_SUPPORT[integration_type]?.includes(INTEGRATION_TYPES.LUSHA),
+		},
+		{
+			id: 2,
+			type: INTEGRATION_TYPES.KASPR,
+			name: "Kaspr",
+			configuredField: "is_kaspr_configured",
+			icon: (
+				<img
+					src="https://storage.googleapis.com/apt-cubist-307713.appspot.com/crm/assets/kaspr_logo.png"
+					alt=""
+				/>
+			),
+			disabled: !ENRICHMENT_SUPPORT[integration_type]?.includes(INTEGRATION_TYPES.KASPR),
+		},
+		{
+			id: 3,
+			type: INTEGRATION_TYPES.HUNTER,
+			name: "Hunter",
+			configuredField: "is_hunter_configured",
+			icon: (
+				<img
+					src="https://storage.googleapis.com/apt-cubist-307713.appspot.com/crm/assets/hunter_logo.png"
+					alt=""
+				/>
+			),
+			disabled: !ENRICHMENT_SUPPORT[integration_type]?.includes(INTEGRATION_TYPES.HUNTER),
+		},
+		{
+			id: 4,
+			type: INTEGRATION_TYPES.DROPCONTACT,
+			name: "Dropcontact",
+			configuredField: "is_dropcontact_configured",
+			icon: (
+				<img
+					src="https://storage.googleapis.com/apt-cubist-307713.appspot.com/crm/assets/dropcontact_logo.png"
+					alt=""
+				/>
+			),
+			disabled: !ENRICHMENT_SUPPORT[integration_type]?.includes(
+				INTEGRATION_TYPES.DROPCONTACT
+			),
+		},
+		{
+			id: 5,
+			type: INTEGRATION_TYPES.SNOV,
+			name: "Snov",
+			configuredField: "is_snov_configured",
+			icon: <Snov />,
+			disabled: !ENRICHMENT_SUPPORT[integration_type]?.includes(INTEGRATION_TYPES.SNOV),
+		},
+		{
+			id: 6,
+			type: INTEGRATION_TYPES.LINKEDIN_EXTENSION,
+			name: "Extension",
+			configuredField: "is_linkedin_activated",
+			icon: <LinkedinBox color="#3275B3" size="45px" />,
+			disabled: !ENRICHMENT_SUPPORT[integration_type]?.includes(
+				INTEGRATION_TYPES.LINKEDIN_EXTENSION
+			),
+		},
+	];
+};
+
+export const ENRICHMENT_ACTIONS = {
+	ADD: "add",
+	UPDATE: "update",
+};
+
+export const ENRICHMENT_ACTIONS_OPTIONS = {
+	[ENRICHMENT_ACTIONS.ADD]: "Update only if field is empty",
+	[ENRICHMENT_ACTIONS.UPDATE]: "Update even if there is an existing value",
+};

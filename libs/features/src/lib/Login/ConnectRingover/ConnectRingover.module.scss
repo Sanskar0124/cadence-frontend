@@ -1,0 +1,11 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.container {
+	button {
+		border-radius: 20px;
+		font-weight: 600;
+		p::first-letter {
+			text-transform: uppercase;
+		}
+	}
+}

@@ -1,0 +1,319 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.editor {
+	background-color: $white;
+	border: 1px solid #8193a852;
+	border-radius: 15px;
+	display: flex;
+	flex-direction: column;
+	> :first-child {
+		border: none !important;
+		box-shadow: none !important;
+		flex: 1;
+		ul {
+			padding-inline-start: 40px;
+			// padding: unset;
+		}
+		// max-height: 400px;
+		a {
+			color: $blue;
+			text-decoration: underline;
+			cursor: pointer;
+		}
+	}
+	.toolbar {
+		border-radius: 15px;
+		> div {
+			border-radius: 15px !important;
+		}
+		* svg {
+			color: $veryLightBlue;
+		}
+	}
+	.filesSelected {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 10px;
+		margin: 10px 0;
+
+		> span {
+			display: inline-flex;
+			align-items: center;
+			gap: 5px;
+			background: rgba(91, 107, 225, 0.08);
+			color: $mainPurple;
+			padding: 5px;
+			border-radius: 6px;
+
+			svg {
+				color: $mainPurple;
+				transform: translateY(2px);
+			}
+
+			button {
+				background: none;
+				border: none;
+			}
+		}
+	}
+	&.message {
+		//removing overflow: hidden due to height of custom variable dropdown with searchbox
+		//overflow: hidden;
+		textarea {
+			border-radius: 15px;
+			height: 100%;
+			outline: none;
+			padding: 10px;
+			resize: none;
+			border: none;
+			height: 100%;
+			&:disabled {
+				background: white;
+			}
+		}
+		.toolbar {
+			padding: 6px 4px;
+			.customVariables {
+				position: relative;
+				& > button {
+					border: none;
+					background: none;
+					padding: 6px 8px;
+					color: $lightBlue;
+					&:hover {
+						background: #e6e6e6;
+					}
+				}
+				.options {
+					padding: 5px 0;
+					background: $white;
+					position: absolute;
+					bottom: 110%;
+					display: flex;
+					flex-direction: column;
+					height: 280px;
+					width: 250px;
+					overflow-x: hidden;
+					overflow-y: scroll;
+					border-radius: 15px;
+					box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.15);
+					padding-top: 0;
+					.searchBox {
+						background-color: #ffffff;
+						width: 100%;
+						position: sticky;
+						top: 0;
+						padding-top: 8px;
+						padding-bottom: 8px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+					}
+					span,
+					button {
+						padding: 8px 15px;
+						font-weight: 600;
+					}
+					span {
+						color: #333;
+						font-size: 0.95rem;
+					}
+					button {
+						border: none;
+						background: none;
+						text-align: left;
+						font-size: 0.8rem;
+						color: #567191;
+						&:hover {
+							background: #e6e6e6;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.countActive {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: -webkit-fill-available;
+	padding-right: 10px;
+}
+.charCountWrapper {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	position: relative;
+}
+
+.customVariablesEditor,
+.customVariablesEditorAttachmentDisabled,
+.customVariablesEditorTemplate,
+.customVariablesEditorSend {
+	position: absolute;
+	& > button {
+		border: none;
+		background: none;
+		padding: 0 5px 2px 5px;
+		height: 29.9px;
+		color: rgba($lightBlue, 0.75);
+		font-size: 1rem;
+		font-weight: 600;
+		border-radius: 2px;
+		&:hover {
+			background: #f0f0f0;
+		}
+		.charCountWrapper {
+		}
+	}
+
+	.options {
+		padding: 5px 0;
+		background: $white;
+		position: absolute;
+		bottom: 110%;
+		display: flex;
+		flex-direction: column;
+		height: 310px;
+		width: 250px;
+		overflow-x: hidden;
+		border-radius: 15px;
+		box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.15);
+		padding-top: 0;
+		.searchBox {
+			background-color: #ffffff;
+			width: 100%;
+			position: sticky;
+			top: 0;
+			padding-top: 8px;
+			padding-bottom: 8px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		span,
+		button {
+			padding: 8px 15px;
+			font-weight: 600;
+		}
+		span {
+			color: #333;
+			font-size: 0.95rem;
+		}
+		button {
+			border: none;
+			background: none;
+			text-align: left;
+			font-size: 0.8rem;
+			color: #567191;
+			font-weight: 600;
+			&:hover {
+				background: #e6e6e6;
+			}
+		}
+	}
+}
+
+.customVariablesEditorTemplate {
+	left: 21.5rem;
+	bottom: 0.35rem;
+}
+
+.customVariablesEditorAttachmentDisabled {
+	left: 21.5rem;
+	bottom: 0.35rem;
+}
+
+.customVariablesEditorSend {
+	left: 23.8rem;
+	bottom: 0.35rem;
+}
+
+//custom variables
+.editor .toolbar > div > div > div.ck.ck-dropdown.editor-custom-variables-dropdown {
+	.ck-button__icon {
+		width: 30px;
+		height: 30px;
+	}
+	> div {
+		border-radius: 15px;
+		overflow: hidden;
+		max-height: 280px;
+		overflow-y: scroll;
+		.ck-button {
+			display: flex;
+			padding: 0;
+			align-items: center;
+			padding-left: 15px;
+			.ck-button__label {
+				font-weight: 600;
+				font-size: 0.8rem;
+				color: $lightBlue;
+			}
+		}
+		.ck-button.editor-custom-variables-heading {
+			pointer-events: none;
+			margin-top: 1rem;
+			.ck-button__label {
+				font-size: 0.95rem !important;
+				color: $black !important;
+			}
+		}
+		// .ck-button.editor-custom-variables-item {
+		// 	pointer-events: none;
+		// 	margin-top: 1rem;
+		// 	.ck-button__label {
+		// 		font-size: 0.95rem !important;
+		// 		color: $black !important;
+		// 	}
+		// }
+	}
+}
+#toolbar
+	> div
+	> div
+	> div.ck.ck-dropdown.editor-custom-variables-dropdown
+	> div::-webkit-scrollbar {
+	display: none;
+	width: 0;
+}
+
+.editor
+	.toolbar
+	> div
+	> div
+	> div.ck.ck-dropdown.ck-toolbar-dropdown
+	> div
+	> div
+	> div
+	> div.ck.ck-dropdown.ck-font-size-dropdown
+	> div
+	> ul
+	> li
+	> button {
+	color: $lightBlue !important;
+}
+
+.editor
+	.toolbar
+	> div
+	> div
+	> div.ck.ck-dropdown.ck-toolbar-dropdown
+	> div
+	> div
+	> div
+	> div.ck.ck-dropdown.ck-font-family-dropdown
+	> div
+	> ul
+	> li
+	> button {
+	color: $lightBlue !important;
+}
+
+.editor .ck-content .table table,
+.editor .ck-content .table td {
+	border: none;
+}

@@ -1,0 +1,2 @@
+export const PROMPT_PLACEHOLDER =
+	"Eg: \n\u2022 Write a compelling prospecting email targeting Sales Directors at insurance companies. \n\u2022 The goal is to raise their interest in Ringover CCaaS (Contact Center as a Service) solution. \n   By demonstrating empathy for their pain points and highlighting the key benefits we offer. \n\u2022 Tone: professional, empathetic and value-driven. \n\u2022 Length: maximum 200 words.";

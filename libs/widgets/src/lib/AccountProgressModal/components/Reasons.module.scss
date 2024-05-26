@@ -1,0 +1,32 @@
+.reasonWrapper {
+	background-color: #f5f6f7;
+	margin-top: -0.7rem;
+	transition: 0.3s all !important;
+	// border-top-left-radius: 0px;
+	// border-top-right-radius: 0px;
+	// border-bottom-left-radius: 20px;
+	// border-bottom-right-radius: 20px;
+	border-radius: 20px;
+	padding: 1rem;
+	.reasons {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.5rem;
+		.reasonLabel {
+			margin-left: 0rem;
+			padding: 0.5rem;
+			color: #394759;
+		}
+	}
+}
+
+.activeReasons {
+	height: auto;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+}
+
+.unactiveReasons {
+}

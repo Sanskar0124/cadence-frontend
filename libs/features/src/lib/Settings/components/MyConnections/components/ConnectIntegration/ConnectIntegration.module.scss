@@ -1,0 +1,49 @@
+@import "libs/themes/src/lib/styles/variables";
+@import "../../../../Settings.module.scss";
+
+.container {
+	align-items: center;
+
+	.integrationIdContainer {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		color: $lightBlue;
+		margin-top: 5px;
+		flex-wrap: nowrap;
+
+		.integrationId {
+			background: rgba(86, 113, 145, 0.05);
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			border-radius: 5px;
+			padding: 4px 8px;
+
+			svg {
+				cursor: pointer;
+			}
+		}
+	}
+	.settings {
+		button {
+			border-radius: 20px;
+			font-weight: 600;
+			p::first-letter {
+				text-transform: uppercase;
+			}
+		}
+		.integrationBtnTip {
+			width: fit-content;
+		}
+		.greyBox {
+			width: 400px;
+			border-radius: 20px;
+			height: 50px;
+			padding-left: 20px;
+			div {
+				gap: 10px;
+			}
+		}
+	}
+}

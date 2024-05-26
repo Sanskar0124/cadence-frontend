@@ -1,0 +1,53 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.pauseCadenceModal {
+	width: 400px;
+
+	> .heading {
+		margin-top: -1.5px;
+		margin-bottom: 1.5rem;
+
+		h3 {
+			font-size: 1.1rem;
+			color: $black;
+			font-weight: 600;
+			display: inline-block;
+			&::first-letter {
+				text-transform: capitalize;
+			}
+		}
+	}
+
+	> .subTitle {
+		margin-bottom: 1.5rem;
+		color: $mainPurple;
+		text-transform: capitalize;
+	}
+
+	> .main {
+		margin-bottom: 2rem;
+
+		> .inputGroup {
+			margin-bottom: 1.5rem;
+
+			> label {
+				color: $mainPurple;
+				margin-bottom: 0.5rem;
+
+				> span {
+					color: $darkRed;
+				}
+			}
+		}
+	}
+
+	> .footer {
+		> .pauseBtn {
+			width: 100%;
+			display: inline-block;
+			&::first-letter {
+				text-transform: capitalize;
+			}
+		}
+	}
+}

@@ -1,0 +1,147 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.singleActivity {
+	display: flex;
+	gap: 1.4rem;
+	min-height: 70px;
+	margin-bottom: 15px;
+	position: relative;
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+
+	&.cursor {
+		cursor: pointer;
+	}
+
+	&.loading {
+		margin-bottom: 1rem;
+		.icon {
+			&::after,
+			&::before {
+				width: 0;
+				height: 0;
+			}
+		}
+	}
+
+	.date {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		width: 54px;
+
+		> :first-child {
+			color: $black;
+			font-weight: 600;
+			text-align: right;
+			line-height: 20px;
+			text-transform: capitalize;
+		}
+
+		> :last-child {
+			color: $lightBlue;
+			text-align: right;
+		}
+	}
+
+	.icon {
+		border-radius: 50%;
+		transform: translateY(3px);
+		overflow: visible;
+		width: 38px;
+		height: 38px;
+		background-color: $whiteShade1;
+		display: flex;
+		position: relative;
+		align-items: center;
+		justify-content: center;
+		box-shadow: 0px 1px 1px 0px #00000026;
+		z-index: 1;
+		color: $lightBlue;
+
+		svg {
+			width: 1.3rem;
+			height: 1.3rem;
+		}
+		&.after {
+			&::after {
+				top: 100%;
+			}
+		}
+		&.before {
+			&::before {
+				bottom: 100%;
+			}
+		}
+		&::before,
+		&::after {
+			content: "";
+			height: 55px;
+			width: 5px;
+			z-index: -3;
+			position: absolute;
+			background: $whiteShade1;
+		}
+		.custom {
+			height: 22px;
+			width: 22px;
+			border-radius: 50%;
+			background: #8193a82e;
+			border: 1px solid rgba(228, 230, 234, 0.87);
+			position: absolute;
+			bottom: -7px;
+			left: -7px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			svg {
+				width: 0.85rem;
+				height: 0.85rem;
+			}
+		}
+	}
+
+	.icon:not(.before) {
+		&::before {
+			display: none;
+		}
+	}
+
+	.icon:not(.after) {
+		&::after {
+			display: none;
+		}
+	}
+
+	.trackInfo {
+		position: absolute;
+		right: 10px;
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		top: 0px;
+		span {
+			color: $mainPurple;
+			font-weight: 700;
+			svg {
+				color: $primaryGradient;
+			}
+		}
+
+		.otherIcon {
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: linear-gradient(
+				106.52deg,
+				rgba(135, 151, 233, 0.1) -11.57%,
+				rgba(166, 135, 233, 0.1) -11.56%,
+				rgba(82, 162, 235, 0.1) 116.35%
+			);
+		}
+	}
+}

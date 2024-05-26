@@ -1,0 +1,102 @@
+@import "libs/themes/src/lib/styles/variables";
+
+@mixin flexcenter {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.columncard {
+	@include flexcenter();
+	position: relative;
+	width: 372px;
+	box-sizing: border-box;
+	height: 566px;
+	box-shadow: 5px 10px 50px rgba(41, 43, 88, 0.2);
+	overflow: hidden;
+	&_header {
+		position: absolute;
+		z-index: 12;
+		background: $white;
+		top: 21px;
+		left: 20px;
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+	}
+
+	&_title {
+		font-weight: 700;
+		font-size: 0.875rem;
+		line-height: 1.375rem;
+		width: 75px;
+		height: 22px;
+		background: $white;
+		z-index: 12;
+	}
+	&_closeicon {
+		position: absolute;
+		right: 7%;
+		top: 22px;
+	}
+	&_columns {
+		@include flexcenter();
+		flex-direction: row;
+		width: 340px;
+		height: 40px;
+		background: $white;
+		border: 1px solid $whiteShade1;
+		border-radius: 10px;
+		padding: 10px;
+		gap: 12px;
+	}
+
+	&_taskname {
+		width: 265px;
+		height: 19px;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 19px;
+		&::first-letter {
+			text-transform: capitalize;
+		}
+	}
+	&_columncontainer {
+		display: grid;
+		padding: 0px;
+		gap: 10px;
+		margin-top: 7.5rem;
+		height: 800px;
+		flex-grow: 1;
+		overflow-y: scroll;
+	}
+	&_skeleton_details {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		gap: 10px;
+		align-items: center;
+	}
+}
+.message {
+	width: fit-content;
+	height: 19px;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 19px;
+	color: $lightBlue;
+	z-index: 12;
+}
+.detailsPlaceholder {
+	width: 100%;
+	height: 15px;
+	border-radius: 10px;
+}
+.dragactive {
+	background-color: white;
+}
+
+// ::-webkit-scrollbar-thumb {
+// 	background: white;
+// }

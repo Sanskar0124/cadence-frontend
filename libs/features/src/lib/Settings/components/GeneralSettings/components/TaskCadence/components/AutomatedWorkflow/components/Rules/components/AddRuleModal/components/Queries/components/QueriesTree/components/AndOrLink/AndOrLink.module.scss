@@ -1,0 +1,64 @@
+.nestedTabs {
+	position: relative;
+	display: flex;
+
+	.verticalLineWrapper {
+		display: flex;
+		justify-content: flex-start;
+		.vLine {
+			margin-left: 30px;
+			border-left: 4px solid #c0c6fe;
+			height: 84px;
+		}
+	}
+
+	.nestedTabsBtns {
+		// position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.tabSideLine {
+			width: 20px;
+			border-top: 4px solid #c0c6fe;
+			position: relative;
+		}
+		.tabsAllBtns {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 1rem;
+			.tabsWrapper {
+				width: fit-content;
+				background: linear-gradient(
+					106.52deg,
+					rgba(162, 130, 232, 0.12) -11.57%,
+					rgba(126, 142, 231, 0.12) 50.39%,
+					rgba(68, 153, 233, 0.12) 116.35%
+				);
+				padding: 0.3rem 0.5rem;
+				border: 1px solid #e7ebff;
+				border-radius: 15px;
+
+				.tabsOperator {
+					height: 40px;
+					background: transparent;
+				}
+				.activeBtnClassName {
+					color: #5b6be1 !important;
+				}
+				.activePillClassName {
+					background: #ffffff;
+					border-radius: 10px;
+					height: 34px;
+				}
+				.tabButton {
+					padding: 0.65rem 1.5rem;
+					border-radius: 20px;
+					font-weight: 600;
+					color: #567191;
+				}
+			}
+		}
+	}
+}

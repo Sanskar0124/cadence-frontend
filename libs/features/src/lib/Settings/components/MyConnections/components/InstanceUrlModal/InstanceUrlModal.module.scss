@@ -1,0 +1,57 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.instanceUrlModal {
+	width: 100%;
+	max-width: 440px;
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	justify-content: center;
+
+	.header {
+		display: flex;
+		flex-direction: column;
+		padding: 0 20px;
+		justify-content: center;
+		margin-top: 20px;
+		.instanceUrl {
+			display: flex;
+			align-self: center;
+			border-radius: 10px;
+			justify-content: center;
+			margin-bottom: 10px;
+			svg {
+				align-self: center;
+				width: 40px;
+				height: 40px;
+			}
+		}
+		.msg {
+			font-weight: 600;
+			font-size: 1.143rem;
+			line-height: 22px;
+			color: $black;
+			display: flex;
+			align-self: center;
+			margin-bottom: 1px;
+		}
+		.headTo {
+			font-weight: 400;
+			font-size: 1rem;
+			line-height: 19px;
+			text-align: center;
+			display: flex;
+			align-self: center;
+		}
+	}
+	.btn {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		button {
+			font-weight: 600;
+			font-size: 1rem;
+			line-height: 19px;
+		}
+	}
+}

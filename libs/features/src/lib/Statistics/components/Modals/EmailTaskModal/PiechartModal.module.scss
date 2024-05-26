@@ -1,0 +1,254 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.piechartcard {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	width: 446px;
+	height: 269px;
+	background: $white;
+	border: 1px solid #e7ebff;
+	border-radius: 10px;
+	position: relative;
+	box-shadow: 5px 10px 50px rgba(41, 43, 88, 0.2);
+	position: absolute;
+	left: 14rem;
+	top: 12.5rem;
+	z-index: 14;
+	cursor: pointer;
+
+	&_title {
+		width: 100%;
+		position: absolute;
+		height: 22px;
+		left: 20px;
+		top: 20px;
+		font-weight: 700;
+		font-size: 1rem;
+		line-height: 1.375rem;
+		&::first-letter {
+			text-transform: capitalize;
+		}
+	}
+}
+
+.piechartcontent {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 80%;
+	position: absolute;
+	left: 10px;
+	top: 42px;
+	gap: 10px;
+
+	&_piechart {
+		position: relative;
+		width: 35%;
+		height: 70%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		z-index: 2;
+		padding: 8px;
+	}
+	&_details {
+		width: 60%;
+		max-height: 70%;
+		height: 50%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+	&_center {
+		height: 30%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		z-index: -1;
+		&_change {
+			padding: 0px 4px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			font-size: 0.875rem;
+			font-weight: 700;
+			border-radius: 5px;
+		}
+		&_value {
+			margin-top: -10px;
+			font-size: 1.25rem;
+			font-weight: 700;
+		}
+
+		&_exception {
+			font-size: 0.875rem;
+			font-weight: 400;
+			color: $lightBlue;
+			> div {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				> p {
+					font-size: 0.75rem;
+					> span {
+						padding-left: 5px;
+						border-left: 1px dashed #b7b7b7;
+						font-size: 0.75rem;
+						font-weight: 700;
+					}
+				}
+			}
+			> span {
+				padding-left: 5px;
+				border-left: 1px dashed #b7b7b7;
+				font-weight: 700;
+				font-size: 0.75rem;
+			}
+		}
+	}
+}
+
+.detailcard {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	width: 90%;
+	height: 100%;
+	gap: 4px;
+	&_row1 {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-start;
+		width: 100%;
+		gap: 5px;
+
+		&_colorbox {
+			width: 4px;
+			height: 24px;
+			border-radius: 2px;
+			flex-shrink: 0;
+		}
+		&_value {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-left: 4px;
+			font-size: 0.875rem;
+			font-weight: 700;
+			height: 24px;
+			width: 45px;
+			padding: 4px 8px;
+			border-radius: 5px;
+		}
+		&_name {
+			margin-left: 4px;
+			font-size: 12px;
+			font-weight: 400;
+			line-height: 16px;
+			width: 100%;
+			min-width: 110px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			color: $lightBlue;
+			&::first-letter {
+				text-transform: capitalize;
+			}
+		}
+	}
+}
+
+.box {
+	&_0 {
+		background: #9f80e5;
+	}
+	&_1 {
+		background: #bda9ed;
+	}
+	&_2 {
+		background: #d2c2f3;
+	}
+	&_3 {
+		background: #e7e0f8;
+	}
+}
+.background {
+	&_0 {
+		background: rgba(91, 107, 225, 0.05);
+		color: #9f80e5;
+	}
+	&_1 {
+		background: rgba(161, 129, 230, 0.05);
+		color: #a080e6;
+	}
+	&_2 {
+		background: rgba(161, 129, 230, 0.05);
+		color: #a080e6;
+	}
+	&_3 {
+		background: rgba(161, 129, 230, 0.05);
+		color: #a080e6;
+	}
+}
+
+.hover_text {
+	font-size: 11px;
+}
+
+.increase {
+	background: linear-gradient(
+		106.52deg,
+		#a282e820 -11.57%,
+		#7e8ee720 50.39%,
+		#4499e920 106.35%
+	);
+	color: $mainPurple;
+}
+
+.decrease {
+	background: linear-gradient(315deg, #ff888820 0%, #f05f5f20 100%);
+	color: $redShade2;
+}
+
+.noTasks {
+	margin-top: -10px;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	> p {
+		font-weight: 600;
+		font-size: 18px;
+		color: $veryLightBlue;
+		display: inline-block;
+		&::first-letter {
+			text-transform: capitalize;
+		}
+	}
+}
+
+.piePlaceholder {
+	width: 130px;
+	height: 130px;
+	border-radius: 50%;
+}
+
+.detailsPlaceholder {
+	width: 90%;
+	height: 30px;
+	border-radius: 10px;
+}

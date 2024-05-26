@@ -1,0 +1,140 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.selectFilterView {
+	position: relative;
+	.selectViewBtn {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+
+		& > span {
+			display: flex;
+			align-items: center;
+			svg {
+				color: $lightBlue;
+			}
+		}
+		& > p {
+			margin-right: 30px;
+			max-width: 120px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+	.dropdown {
+		position: absolute;
+		top: 110%;
+		border-radius: 15px;
+		right: 0;
+		background: $white;
+		z-index: 10;
+		display: none;
+		flex-direction: column;
+		gap: 20px;
+		padding: 15px;
+		width: 310px;
+		box-shadow: 5px 8px 20px rgba(41, 43, 88, 0.1);
+		height: 340px;
+		// overflow-y: scroll;
+		&.open {
+			display: flex;
+		}
+		.tabs {
+			border-radius: 20px;
+			border: 1px solid #d8ecff;
+			height: 40px;
+			.tabBtns {
+				border-radius: 15px;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				text-transform: capitalize;
+				gap: 7px;
+				color: $black;
+				width: 50px;
+			}
+
+			.tabBtnActive {
+				color: #fff;
+			}
+
+			.activePill {
+				border-radius: 15px;
+			}
+		}
+		.viewList {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			overflow-y: scroll;
+
+			height: 100%;
+			.viewRow {
+				height: 20px;
+				padding: 5px;
+				cursor: pointer;
+				margin-bottom: 8px;
+
+				border-radius: 20px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				.info {
+					max-width: 250px;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					overflow: hidden;
+				}
+				.tick {
+					width: 40px;
+					height: 40px;
+					background: $primaryGradient;
+					border-radius: 17px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					color: $white;
+					display: none;
+				}
+				&.selected {
+					background: $primaryGradientLight;
+					padding: 20px 0px 20px 13px;
+					margin-right: 5px;
+					.tick {
+						display: block;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+					}
+					.info {
+						font-weight: 600;
+					}
+				}
+			}
+
+			.noFilterView {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				height: 100%;
+				flex-direction: column;
+				font-weight: 400;
+				// margin-top: 90px;
+				color: $veryLightBlue;
+			}
+		}
+	}
+	.placeholder {
+		width: 99%;
+		min-height: 34px;
+		margin: 10px 0;
+		&:first-child {
+			margin-top: 0;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

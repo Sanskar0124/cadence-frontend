@@ -1,0 +1,9 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.loaderWrapper {
+	height: calc(100vh - 400px);
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

@@ -1,0 +1,173 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.preview {
+	max-width: 896px;
+	width: 100%;
+	max-height: 90vh;
+
+	.headingText {
+		align-self: center;
+		font-weight: 700;
+		font-size: 1.143rem;
+		line-height: 22px;
+		color: $black;
+		margin-bottom: 10px;
+		max-width: 200px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.body {
+		display: flex;
+		flex-direction: column;
+		overflow-y: scroll;
+		max-height: 70vh;
+
+		.formRow {
+			display: flex;
+			padding: 0 0;
+			gap: 14px;
+			.formColumn {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				padding: 2px;
+				label {
+					max-width: 250px;
+					overflow: hidden;
+					text-overflow: ellipsis;
+				}
+				// background: rgba(245, 246, 247, 0.08);
+				border: "none";
+				border-radius: 15px;
+				min-height: 84px;
+				&.showBorder {
+					border: 1px dashed rgba(86, 113, 145, 0.64);
+				}
+				.dragItem {
+					width: 100%;
+					.disabled {
+						background-color: rgb(250, 246, 246);
+					}
+					.smartTagsBox {
+						display: flex;
+						gap: 5px;
+						flex-wrap: wrap;
+						border: none;
+						margin: 5px 0;
+
+						.smartTag {
+							display: flex;
+							gap: 4px;
+							height: 32px;
+							border-radius: 10px;
+							padding: 8px 10px 8px 10px;
+							background-color: $whiteShade1;
+							justify-content: center;
+							.name {
+								display: flex;
+								color: $black;
+								height: 1.143rem;
+								font-size: 0.857rem;
+								align-self: center;
+							}
+							.icon {
+								display: flex;
+								width: 1rem;
+								height: 1rem;
+								align-self: center;
+								cursor: pointer;
+							}
+						}
+					}
+					.radioBox {
+						display: flex;
+						flex-wrap: wrap;
+						justify-content: space-between;
+						gap: 10px;
+						.label {
+							display: flex;
+							align-self: center;
+							font-weight: 400;
+							font-size: 1rem;
+							line-height: 19px;
+							color: $black;
+							&.required {
+								&::after {
+									content: "*";
+									color: $red;
+								}
+							}
+						}
+						.btnBox {
+							display: flex;
+							justify-content: flex-start;
+							width: fit-content;
+							gap: 40px;
+							.btn {
+								display: flex;
+								justify-content: center;
+								gap: 10px;
+								.radio {
+									align-self: center;
+									span {
+										border: 1px solid #dadce0;
+										box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+										border-radius: 24px;
+									}
+								}
+								.btnLabel {
+									font-weight: 400;
+									font-size: 1rem;
+									line-height: 19px;
+									align-self: center;
+									color: $black;
+									text-transform: capitalize;
+								}
+							}
+						}
+					}
+					.edit {
+						width: 100%;
+						display: flex;
+						justify-content: space-between;
+						background: $whiteShade1;
+						border-radius: 15px;
+						padding-left: 12px;
+						padding-right: 12px;
+						min-height: 44px;
+						.left {
+							display: flex;
+							gap: 14px;
+							align-self: center;
+							.dots {
+								align-self: center;
+								display: flex;
+							}
+							.editLabel {
+								font-weight: 600;
+								font-size: 14px;
+								align-self: center;
+								line-height: 19px;
+								color: $lightBlue;
+							}
+						}
+						.right {
+							display: flex;
+							align-self: center;
+							cursor: pointer;
+						}
+					}
+				}
+			}
+		}
+	}
+	.buttonSave {
+		margin-top: 20px;
+		> button {
+			text-transform: capitalize;
+		}
+	}
+}

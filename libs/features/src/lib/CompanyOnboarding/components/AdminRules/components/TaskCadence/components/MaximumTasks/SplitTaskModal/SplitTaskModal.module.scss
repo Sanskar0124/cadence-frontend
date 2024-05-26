@@ -1,0 +1,36 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.modal {
+	width: 30vw;
+	text-align: center;
+
+	.icon {
+		margin: 2rem auto;
+		color: $mainPurple;
+	}
+
+	.text {
+		font-size: 1.15rem;
+		font-weight: 600;
+
+		span {
+			font-size: 1.2rem;
+			font-weight: 600;
+			color: $mainPurple;
+		}
+	}
+
+	& > p {
+		font-size: 1.15rem;
+		font-weight: 600;
+		margin: 1rem 0 3rem;
+
+		span {
+			color: $mainPurple;
+		}
+	}
+
+	.btn {
+		width: 100%;
+	}
+}

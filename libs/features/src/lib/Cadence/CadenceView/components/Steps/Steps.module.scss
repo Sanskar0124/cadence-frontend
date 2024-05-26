@@ -1,0 +1,401 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.container {
+	display: flex;
+	gap: 10px;
+
+	.sidebar {
+		transition: 0.25s ease-in-out;
+	}
+}
+
+.steps {
+	height: calc(100vh - 190px);
+	overflow-y: scroll;
+	width: 100%;
+	background: #fff;
+	border-radius: 20px;
+	padding: 1.25rem;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	.waitTime {
+		width: fit-content;
+		display: flex;
+		align-items: center;
+		margin: 5px 0 5px 13px;
+		padding: 13px 18px;
+		position: relative;
+		border-radius: 10px;
+		background: $white;
+		color: $lightBlue;
+		font-weight: 600;
+
+		&::before,
+		&::after {
+			position: absolute;
+			content: "";
+			width: 2px;
+			height: 15px;
+			background: rgba(121, 142, 231, 0.18);
+			left: 24px;
+		}
+
+		&::before {
+			bottom: 80%;
+		}
+
+		&::after {
+			top: 80%;
+		}
+
+		svg {
+			margin-right: 15px;
+		}
+	}
+
+	.step {
+		padding: 0.75rem;
+		border-radius: 20px;
+		background: $white;
+		border: 1px solid rgba(91, 107, 225, 0.3);
+		display: flex;
+		justify-content: space-between;
+		cursor: pointer;
+		transition: 0.25s ease;
+
+		.left {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 100%;
+			.header {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				width: 100%;
+				.stepName {
+					display: flex;
+					align-items: center;
+					gap: 10px;
+					.stepIcon {
+						background: linear-gradient(
+							106.52deg,
+							rgba(162, 130, 232, 0.12) -11.57%,
+							rgba(126, 142, 231, 0.12) 50.39%,
+							rgba(68, 153, 233, 0.12) 116.35%
+						);
+						border-radius: 10px;
+						min-width: 36px;
+						height: 36px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						svg {
+							width: 20px;
+							height: 20px;
+							color: rgba(126, 142, 231, 1);
+						}
+					}
+					.stepInfo {
+						display: flex;
+						flex-direction: column;
+						gap: 5px;
+						overflow: hidden;
+						h3 {
+							display: flex;
+							gap: 5px;
+							font-weight: 400;
+							color: $black;
+
+							span {
+								font-weight: 600;
+								margin-right: 5px;
+								text-transform: capitalize;
+							}
+							.name {
+								display: flex;
+								gap: 5px;
+								font-weight: 400;
+								color: $black;
+								text-transform: capitalize;
+							}
+							.capitalize {
+								display: block;
+								gap: 5px;
+								font-weight: 400;
+								color: $black;
+								text-transform: none !important;
+							}
+							.urgentTag {
+								background: linear-gradient(
+									115.94deg,
+									rgba(247, 90, 146, 0.12) -12.55%,
+									rgba(255, 154, 154, 0.12) 112.61%
+								);
+								border-radius: 8px;
+								color: #fb7a96;
+								padding: 3px 5px;
+								width: fit-content;
+								font-size: 0.71rem;
+								font-weight: 600;
+								text-transform: capitalize;
+							}
+						}
+						p {
+							display: grid;
+							line-height: 14px;
+							letter-spacing: 0.2px;
+							> span {
+								display: block;
+								font-size: 0.8rem;
+								font-weight: 400;
+								overflow: hidden;
+								white-space: nowrap;
+								text-overflow: ellipsis;
+								color: $veryLightBlue;
+							}
+						}
+					}
+				}
+				.stepStats {
+					display: flex;
+					align-items: center;
+					.toggleBox {
+						display: flex;
+						padding-right: 3px;
+						gap: 10px;
+						justify-content: center;
+						align-items: center;
+						.toggle {
+							display: flex;
+							justify-content: center;
+							align-self: center;
+							gap: 10px;
+							div {
+								font-weight: 400;
+								font-size: 0.857rem;
+								color: $lightBlue;
+							}
+						}
+					}
+				}
+			}
+			.mailBox {
+				margin-top: 20px;
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				width: 100%;
+				gap: 20px;
+				.body {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					gap: 25px;
+					.mailHead {
+						width: 100%;
+						display: flex;
+						justify-content: space-between;
+						.mail {
+							display: flex;
+							gap: 15px;
+							overflow: hidden;
+							div {
+								display: flex;
+								justify-content: center;
+								flex-direction: column;
+								align-self: center;
+								text-align: center;
+								min-width: 47px;
+								height: 22px;
+								background: linear-gradient(
+									315deg,
+									rgba(153, 153, 153, 0.12) 0%,
+									rgba(194, 193, 193, 0.12) 100%
+								);
+								border-radius: 8px;
+								font-weight: 600;
+								font-size: 10px;
+								line-height: 14px;
+								color: $lightBlue;
+							}
+
+							p {
+								display: grid;
+								align-self: center;
+								flex-direction: column;
+								line-height: 14px;
+								letter-spacing: 0.2px;
+								overflow: hidden;
+								> span {
+									display: block;
+									font-size: 0.8rem;
+									font-weight: 400;
+									white-space: nowrap;
+									overflow: hidden;
+									text-overflow: ellipsis;
+									color: $veryLightBlue;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		&.activeStep {
+			border: 1px solid #5b6be1;
+			background: linear-gradient(
+					0deg,
+					rgba(91, 107, 225, 0.07),
+					rgba(91, 107, 225, 0.07)
+				),
+				#ffffff;
+		}
+
+		.statistics {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			gap: 10px;
+			padding: 6px 10px;
+			& > div > div {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 0.5em;
+				padding: 6px 10px;
+				border-radius: 100px;
+				background: $primaryGradientLight;
+				svg {
+					width: 1.1rem;
+					height: 1.1rem;
+				}
+				& > span {
+					color: $mainPurple;
+				}
+				&.red {
+					background: $redGradient1;
+					& > span {
+						color: $red;
+					}
+				}
+				&.pink {
+					background: linear-gradient(
+						115.94deg,
+						rgba(247, 90, 146, 0.2) -12.55%,
+						rgba(255, 154, 154, 0.2) 112.61%
+					);
+					& > span {
+						color: #fb7a96;
+					}
+				}
+				&.orange {
+					background: linear-gradient(
+						135deg,
+						rgba(255, 207, 79, 0.2) 0%,
+						rgba(255, 155, 74, 0.2) 100%
+					);
+					& > span {
+						color: $orange;
+					}
+				}
+				&.green {
+					background: linear-gradient(
+						315deg,
+						rgba(64, 224, 207, 0.2) 0%,
+						rgba(54, 205, 207, 0.2) 100%
+					);
+					& > span {
+						color: #00b3a8;
+					}
+				}
+				&.hide {
+					display: none;
+				}
+			}
+			.statsLoading {
+				width: 45px;
+				height: 30px;
+			}
+		}
+	}
+	.placeholder {
+		& > div > div {
+			&:first-child {
+				height: 40px;
+				width: 165px;
+				margin: 10px 0;
+			}
+			&:last-child {
+				height: 80px;
+				width: 100%;
+			}
+		}
+		& > div:first-child > div:first-child {
+			display: none;
+		}
+	}
+
+	.noSteps {
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		h4 {
+			color: $black;
+			font-size: 16px;
+			font-weight: 700;
+			margin-top: 2rem;
+		}
+		p {
+			color: $lightBlue;
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 21px;
+			letter-spacing: 0em;
+			text-align: center;
+			width: 37%;
+			height: 42px;
+			margin-top: 10px;
+			@media screen and (max-width: 960px) {
+				width: 100%;
+			}
+		}
+		.btncontainer {
+			display: flex;
+			width: 50%;
+			height: 52px;
+			align-items: center;
+			justify-content: center;
+			gap: 25px;
+			margin-top: 25px;
+			@media screen and (max-width: 960px) {
+				margin-top: 2rem;
+				width: 100%;
+			}
+		}
+
+		.addStepBtn {
+			display: flex;
+			padding: 15px 24px;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			gap: 10px;
+			border-radius: 15px;
+			box-shadow: 1px 8px 24px 0px rgba(125, 142, 231, 0.4);
+		}
+		.useTemplateBtn {
+			color: $mainPurple;
+			border: 1px solid $mainPurple;
+			box-shadow: none;
+			cursor: pointer;
+		}
+	}
+}

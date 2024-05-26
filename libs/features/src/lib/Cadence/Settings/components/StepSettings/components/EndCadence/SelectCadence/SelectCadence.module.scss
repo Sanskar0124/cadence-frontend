@@ -1,0 +1,98 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.selectCadence {
+	position: relative;
+
+	.dropdown {
+		background: none !important;
+
+		border-radius: 20px;
+		background: $white;
+		z-index: 10;
+		flex-direction: column;
+		gap: 20px;
+		padding: 15px;
+		display: flex;
+		.tabs {
+			margin: auto;
+			border-radius: 15px;
+			border: 1px solid #d8ecff;
+			height: 40px;
+			.tabBtns {
+				border-radius: 10px;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				gap: 7px;
+				color: $black;
+				width: 50px;
+			}
+
+			.tabBtnActive {
+				color: #fff;
+			}
+
+			.activePill {
+				border-radius: 10px;
+			}
+		}
+		.list {
+			background: transparent;
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			overflow-y: scroll;
+			height: calc(100vh - 400px);
+			.cadence {
+				height: 40px;
+				padding: 5px 0 5px 15px;
+				cursor: pointer;
+				border-radius: 20px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				.info {
+					max-width: 250px;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					overflow: hidden;
+				}
+				.tick {
+					width: 40px;
+					height: 40px;
+					background: $primaryGradient;
+					border-radius: 17px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					color: $white;
+					visibility: hidden;
+				}
+				&.selected {
+					background: $primaryGradientLight;
+					.tick {
+						visibility: visible;
+					}
+					.info {
+						font-weight: 600;
+					}
+				}
+			}
+		}
+
+		.searchBar {
+			width: 60px;
+		}
+	}
+	.placeholder {
+		width: 99%;
+		min-height: 50px;
+		margin: 10px 0;
+		&:first-child {
+			margin-top: 0;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

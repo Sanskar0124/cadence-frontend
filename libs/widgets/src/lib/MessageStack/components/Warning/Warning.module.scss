@@ -1,0 +1,51 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.warningBox {
+	position: relative;
+	width: 380px;
+	max-width: 380px;
+	min-height: 50px;
+	height: max-content;
+	max-height: 200px;
+	overflow: auto;
+	background: $yellowGradient;
+	padding: 15px 35px 15px 12px;
+	color: $white;
+	border-radius: 15px;
+	display: flex;
+	align-items: flex-start;
+
+	@keyframes animateAlertIn {
+		0% {
+			transform: translateX(300px);
+		}
+
+		100% {
+			transform: translateX(0px);
+		}
+	}
+
+	&.isActive {
+		animation: animateAlertIn 0.25s ease-in;
+	}
+
+	.closeIcon {
+		position: absolute;
+		top: 13px;
+		right: 8px;
+		cursor: pointer;
+	}
+	.warningText {
+		font-size: 1rem;
+		font-weight: 600;
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		padding-right: 20px;
+		svg {
+			margin-right: 10px;
+			min-width: 20px;
+			min-height: 20px;
+		}
+	}
+}

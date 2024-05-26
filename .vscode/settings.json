@@ -1,0 +1,7 @@
+{
+	"liveServer.settings.port": 5501,
+	"search.exclude": {
+		"**/node_modules": false
+	},
+	"git.mergeEditor": false
+}

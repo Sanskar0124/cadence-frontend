@@ -1,0 +1,83 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.stepsContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	width: 100%;
+	.singleStepProgress {
+		display: flex;
+		justify-content: space-between;
+		.stepWrapper {
+			flex: 1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			.stepCircle {
+				width: 24px;
+				height: 24px;
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: $white;
+				font-weight: 700;
+				border: 2px solid #5b6be152;
+				z-index: 2;
+				background: $white;
+			}
+			.stepLine {
+				background: #5b6be132;
+				position: absolute;
+				height: 4px;
+				right: 50%;
+				width: 100%;
+				overflow: hidden;
+				.stepLineInside {
+					width: 0%;
+					height: 100%;
+					background: $primaryGradient;
+					transition: all 2s ease-in-out;
+				}
+			}
+		}
+		.visitedStep {
+			.stepCircle {
+				width: 40px;
+				height: 40px;
+				border: none;
+				background: $primaryGradient;
+			}
+			.stepLine {
+				.stepLineInside {
+					width: 100%;
+				}
+			}
+		}
+	}
+	.singleStepLabel {
+		display: flex;
+		justify-content: space-between;
+		.labelText {
+			font-weight: 600;
+			font-size: 1rem;
+			flex: 1;
+			text-align: center;
+			font-size: 1rem;
+			color: $veryLightBlue;
+			font-weight: 400;
+			text-transform: capitalize;
+			&.visited {
+				color: $mainPurple;
+			}
+			&.current {
+				font-weight: 600;
+				color: $black;
+			}
+			&::first-letter {
+				text-transform: uppercase;
+			}
+		}
+	}
+}

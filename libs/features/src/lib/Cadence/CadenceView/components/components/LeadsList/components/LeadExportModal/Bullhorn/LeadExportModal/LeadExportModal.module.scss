@@ -1,0 +1,37 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.preview {
+	max-width: 896px;
+	width: 100%;
+	.headingText {
+		display: flex;
+		align-self: center;
+		margin-bottom: 40px;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 22px;
+		color: $black;
+	}
+	.inputGroup {
+		width: 31%;
+		min-height: 84px;
+		label {
+			max-width: 250px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		.disabled {
+			background-color: rgb(250, 246, 246);
+		}
+	}
+	.body {
+		height: 350px;
+		margin-top: 20px;
+		padding-right: 15px;
+		overflow-y: scroll;
+	}
+	.buttonSave {
+		margin-top: 40px;
+	}
+}

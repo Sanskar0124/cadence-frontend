@@ -1,0 +1,17 @@
+@import "../../Rubriks.module.scss";
+
+.rubrik {
+	height: 100px !important;
+}
+
+.duration {
+	display: flex;
+
+	.input {
+		text-align: center;
+		background-color: #fff;
+		border-radius: 15px;
+		margin-right: 0.5em;
+		border: 1px solid #dadce0;
+	}
+}

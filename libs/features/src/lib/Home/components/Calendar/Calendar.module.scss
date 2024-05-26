@@ -1,0 +1,353 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.calendar {
+	.header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		.date {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 3px;
+			span {
+				color: $lightBlue;
+				text-transform: capitalize;
+				&.date {
+					color: $black;
+					font-weight: 700;
+					font-size: 1.42rem;
+				}
+				&:first-child {
+					margin-right: 7px;
+				}
+			}
+			&.isSpanish {
+				span {
+					&:first-child {
+						margin-right: 0;
+					}
+					&:nth-child(2) {
+						margin-left: 5px;
+						margin-right: 5px;
+					}
+				}
+			}
+		}
+		.buttons {
+			display: flex;
+			align-items: center;
+			gap: 5px;
+
+			.calendarTypeBtn {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background: $grey;
+				color: $white;
+				border: none;
+				border-radius: 8px;
+				&.active {
+					background: #4285f4;
+				}
+				&.reminder.active {
+					background: $blueGradient;
+				}
+			}
+			.reminderTooltip {
+				&[tooltip]:hover::before {
+					transform: translateX(-80%);
+				}
+			}
+			.addBtn {
+				padding: 0;
+				margin-left: 10px;
+			}
+		}
+	}
+	.events {
+		height: 250px;
+		@media screen and (max-height: 800px) {
+			height: 150px;
+		}
+		overflow-y: scroll;
+		margin-top: 20px;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+		.event {
+			display: flex;
+			align-items: center;
+			& > div {
+				&:first-child {
+					padding: 0 15px 20px 0;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-end;
+					span {
+						&:first-child {
+							color: $lightBlue;
+							font-size: 0.85rem;
+							margin-bottom: 5px;
+						}
+						&:last-child {
+							color: $veryLightBlue;
+							font-size: 0.71rem;
+						}
+					}
+					border-right: 2px solid #faf9f9;
+				}
+				&:last-child {
+					position: relative;
+					overflow: hidden;
+					cursor: pointer;
+					margin: 0 0 20px 15px;
+					background: #fafafa;
+					width: 100%;
+					border-radius: 10px;
+					padding: 14px 15px 14px 20px;
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					.info {
+						display: flex;
+						flex-direction: column;
+						.eventName {
+							color: $lightBlue;
+							font-weight: 600;
+							font-size: 0.85rem;
+							white-space: nowrap;
+							text-overflow: ellipsis;
+							max-width: 170px;
+							overflow: hidden;
+						}
+						.eventDesc {
+							margin-top: 5px;
+							color: $lightBlue;
+							white-space: nowrap;
+							text-overflow: ellipsis;
+							max-width: 170px;
+							overflow: hidden;
+						}
+					}
+					.reminderIcon {
+						width: 24px;
+						height: 24px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						background: $blueGradient;
+						color: $white;
+						border-radius: 8px;
+					}
+				}
+			}
+			&:hover {
+				& > div {
+					&:first-child {
+						span {
+							&:first-child {
+								color: $black;
+								font-weight: 700;
+							}
+							&:last-child {
+								font-weight: 600;
+							}
+						}
+					}
+					&:last-child {
+						.eventName {
+							color: $mainPurple;
+							font-weight: 700;
+						}
+						&::before {
+							content: "";
+							height: 100%;
+							width: 6px;
+							background: $primaryGradient;
+							position: absolute;
+							left: 0;
+							top: 0;
+						}
+					}
+				}
+			}
+		}
+		.noEvents {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			color: $veryLightBlue;
+			font-weight: 600;
+			transform: translateY(-20px);
+			.spinner {
+				transform: translateX(-3px);
+				div {
+					border: 2px solid $veryLightBlue;
+					border-color: $veryLightBlue transparent transparent transparent;
+				}
+			}
+			button {
+				margin-top: 30px;
+			}
+			@media screen and (max-height: 800px) {
+				& > svg {
+					display: none;
+				}
+			}
+		}
+		.placeholder {
+			& > div {
+				height: 50px;
+				width: 100%;
+			}
+		}
+	}
+}
+.detailModal {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin-top: -30px;
+	// width: 34%;
+	height: auto;
+	@media only screen and (max-width: 1500px) {
+		width: 30%;
+	}
+	@media only screen and (max-width: 1300px) {
+		width: 35%;
+	}
+	@media only screen and (max-width: 1100px) {
+		width: 44%;
+	}
+	@media only screen and (max-width: 855px) {
+		width: 49%;
+	}
+}
+.detailModalEvent {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin-top: -30px;
+	padding: 17px;
+	width: 24%;
+	height: auto;
+	@media only screen and (max-width: 1500px) {
+		width: 30%;
+	}
+	@media only screen and (max-width: 1300px) {
+		width: 35%;
+	}
+	@media only screen and (max-width: 1100px) {
+		width: 44%;
+	}
+	@media only screen and (max-width: 855px) {
+		width: 49%;
+	}
+}
+.headerConfirm {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 35px;
+	.icon {
+		align-self: center;
+		.i {
+			height: 42.4px;
+			width: 42.4px;
+		}
+	}
+	.heading {
+		align-self: center;
+		font-weight: 600;
+		font-size: 1.342rem;
+		line-height: 22px;
+		color: $blackShade6;
+		margin: 18px 0 7px 0;
+		text-transform: capitalize;
+	}
+	.subHeading {
+		font-weight: 400;
+		font-size: 1.1rem;
+		word-break: keep-all;
+		line-height: 19px;
+		align-self: center;
+		color: $blackShade6;
+	}
+}
+.content {
+	margin: 30px 20px;
+	display: flex;
+	flex-direction: column;
+	div {
+		margin: 1px 0;
+		display: flex;
+		div {
+			display: inline-block;
+
+			font-weight: 400;
+			font-size: 1rem;
+			line-height: 19px;
+			&.contentLabel {
+				width: 122px;
+				color: $lightBlue;
+				text-transform: capitalize;
+			}
+			&.contentValue {
+				// width: 190px;
+				// word-break: keep-all;
+				color: $blackShade6;
+				&.meet {
+					text-transform: capitalize;
+				}
+			}
+
+			&.contentValueMeet {
+				// width: 190px;
+				word-break: break-all;
+				color: $blackShade6;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				overflow: hidden;
+				&.meet {
+					text-transform: capitalize;
+				}
+			}
+		}
+	}
+}
+.copy {
+	// right: 30px;
+	cursor: pointer;
+	display: flex;
+	align-self: center;
+
+	.copyIcon {
+		margin-left: 5px;
+		height: 23px;
+		width: 23px;
+	}
+}
+.linkBox {
+	position: relative;
+	display: flex;
+}
+.confirmBtn {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	box-shadow: 1px 8px 24px rgba(125, 142, 231, 0.4);
+	border-radius: 15px;
+	button {
+		padding: 10px 80px;
+		width: 100%;
+		height: 49px;
+		border-radius: 15px;
+		text-transform: capitalize;
+	}
+}
+.capitalize {
+	text-transform: capitalize;
+}

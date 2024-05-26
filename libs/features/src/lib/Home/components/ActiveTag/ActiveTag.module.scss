@@ -1,0 +1,36 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 20px;
+	.tabNav {
+		padding: 0;
+		.tabBtn {
+			display: inline-block;
+			color: $lightBlue;
+			font-weight: 600;
+			transition: none;
+			border-width: 5px;
+			border-color: rgba(114, 187, 241, 0.12);
+			&::first-letter {
+				text-transform: capitalize;
+			}
+		}
+		.activeTab {
+			&.purple {
+				color: $mainPurple;
+				border-color: $mainPurple;
+			}
+			&.orange {
+				color: $orange;
+				border-color: $orange;
+			}
+			&.red {
+				color: $red;
+				border-color: $red;
+			}
+		}
+	}
+}

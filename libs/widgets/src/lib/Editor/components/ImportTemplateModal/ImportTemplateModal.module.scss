@@ -1,0 +1,177 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.modal {
+	width: 30vw;
+	height: 650px;
+	position: relative;
+	// top: 8vh;
+
+	.tabs {
+		border-radius: 20px;
+		border: 1px solid #d8ecff;
+		height: 48px;
+		margin-bottom: 14px;
+
+		.tabBtns {
+			border-radius: 15px;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			gap: 7px;
+			color: $black;
+		}
+
+		.tabBtnActive {
+			color: #fff;
+		}
+
+		.activePill {
+			border-radius: 15px;
+		}
+	}
+
+	.title {
+		font-weight: 700;
+		font-size: 1.2rem;
+		margin-bottom: 18px;
+		display: inline-block;
+		&::first-letter {
+			text-transform: capitalize;
+		}
+	}
+
+	.templateBoxWapper {
+		width: 100%;
+		height: 390px;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		&::-webkit-scrollbar {
+			// display: none;
+		}
+	}
+
+	.templateBox {
+		width: 100%;
+		margin: 10px 0;
+		// overflow-y: auto;
+		// // height: calc(100vh - 400px);
+		height: 370px;
+
+		// &::-webkit-scrollbar {
+		// 	display: none;
+		// }
+
+		.fallback {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 34vh;
+			font-weight: 600;
+			color: $lightBlue;
+		}
+
+		.template {
+			display: flex;
+			align-items: center;
+			background: rgba(245, 246, 247, 1);
+			min-height: 50px;
+			padding-right: 14px;
+			border-radius: 20px;
+			margin-bottom: 1rem;
+
+			.radio {
+				margin: 0 15px;
+
+				& > span {
+					border-radius: 8px;
+					height: 24px;
+					width: 24px;
+
+					i {
+						svg {
+							width: 1rem;
+							height: 1rem;
+						}
+					}
+				}
+			}
+
+			.checkbox {
+				margin: 0 15px;
+				height: 24px;
+				width: 24px;
+				& > span {
+					border-radius: 8px;
+					height: 24px;
+					width: 24px;
+					i {
+						svg {
+							width: 1rem;
+							height: 1rem;
+						}
+					}
+				}
+			}
+			.name {
+				width: 100%;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: wrap;
+				color: $black;
+
+				&.active {
+					font-weight: 600;
+				}
+			}
+		}
+
+		.fallback {
+			text-align: center;
+			color: $black;
+		}
+	}
+
+	.placeholder {
+		margin: 10px 0;
+		width: 100%;
+		// min-height: calc(100vh - 500px);
+		// height: 100px;
+
+		& > div {
+			margin: 10px 0;
+			height: 50px;
+			width: 100%;
+		}
+	}
+
+	.placeholders {
+		margin: 10px 0;
+		width: 100%;
+		// min-height: calc(100vh - 500px);
+		// height: 100px;
+
+		& > div {
+			margin: 10px 0;
+			height: 45px;
+			width: 100%;
+		}
+	}
+
+	.blankBtn,
+	.saveBtn {
+		width: 100%;
+	}
+
+	.saveBtn {
+		margin-top: 10px;
+	}
+
+	.blankBtn {
+		font-weight: 700;
+		margin-bottom: 10px;
+	}
+
+	.searchBar {
+		margin-bottom: 20px;
+	}
+}

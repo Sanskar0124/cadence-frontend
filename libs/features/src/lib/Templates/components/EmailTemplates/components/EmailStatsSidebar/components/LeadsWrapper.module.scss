@@ -1,0 +1,27 @@
+.leads {
+	display: flex;
+	flex-flow: row nowrap;
+	margin: 10px;
+	.namesWrapper {
+		max-width: 70%;
+		overflow-x: hidden;
+		margin-right: auto;
+		span {
+			display: block;
+		}
+		.leadname {
+			font-weight: bold;
+		}
+	}
+}
+
+.iconsWrapper {
+	display: flex;
+	// background-color: gray;
+	justify-content: space-between;
+	align-items: center;
+	vertical-align: middle;
+	.salesforcebox {
+		cursor: pointer;
+	}
+}

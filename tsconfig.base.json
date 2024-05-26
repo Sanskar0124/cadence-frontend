@@ -1,0 +1,37 @@
+{
+	"compileOnSave": false,
+	"compilerOptions": {
+		"rootDir": ".",
+		"sourceMap": true,
+		"declaration": false,
+		"moduleResolution": "node",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"importHelpers": true,
+		"target": "es2015",
+		"module": "esnext",
+		"lib": ["es2017", "dom"],
+		"skipLibCheck": true,
+		"skipDefaultLibCheck": true,
+		"baseUrl": ".",
+		"paths": {
+			"@cadence-frontend/utils": ["libs/utils/src/index.js"],
+			"@cadence-frontend/languages": ["libs/languages/src/index.js"],
+			"@cadence-frontend/assets": ["libs/assets/src/index.js"],
+			"@cadence-frontend/data-access": ["libs/data-access/src/index.js"],
+			"@cadence-frontend/environments": ["libs/environments/src/index.js"],
+			"@cadence-frontend/constants": ["libs/constants/src/index.js"],
+			"@cadence-frontend/icons": ["libs/icons/src/index.js"],
+			"@cadence-frontend/themes": ["libs/themes/src/index.js"],
+			"@cadence-frontend/atoms": ["libs/atoms/src/index.js"],
+			"@cadence-frontend/components": ["libs/components/src/index.js"],
+			"@cadence-frontend/widgets": ["libs/widgets/src/index.js"],
+			"@cadence-frontend/features": ["libs/features/src/index.js"],
+			"@cadence-frontend/contexts": ["libs/contexts/src/index.js"],
+			"@salesforce/context": ["apps/salesforce/src/app/context"],
+			"@cadence-frontend/rbac": ["libs/rbac/src/index.js"],
+			"@cadence-frontend/test-utils": ["libs/test-utils/src/index.js"]
+		}
+	},
+	"exclude": ["node_modules", "tmp"]
+}

@@ -1,0 +1,6 @@
+import { INTEGRATION_TYPE as CRM_INTEGRATIONS } from "@cadence-frontend/constants";
+
+export const SMS_SYNC_DISABLED_INTEGRATIONS = [
+	CRM_INTEGRATIONS.EXCEL,
+	CRM_INTEGRATIONS.SHEETS,
+];

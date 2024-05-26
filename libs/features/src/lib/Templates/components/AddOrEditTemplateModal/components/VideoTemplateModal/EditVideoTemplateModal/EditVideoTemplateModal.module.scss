@@ -1,0 +1,14 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.editVideoTemplateModal {
+	.main {
+		display: flex;
+		flex-direction: column;
+		margin-top: 10px;
+		gap: 20px;
+	}
+
+	.saveBtn {
+		text-transform: capitalize;
+	}
+}

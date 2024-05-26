@@ -1,0 +1,60 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.inputTime {
+	width: 100%;
+
+	.inputFields {
+		// display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 0.4rem;
+
+		.timeInputFields {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			// display: grid;
+			// justify-content: center;
+			// grid-template-columns: 50% 50%;
+			gap: 5px;
+			margin-bottom: 10px;
+
+			.min {
+				.minRinght {
+					display: flex;
+					gap: 5px;
+				}
+			}
+		}
+
+		.input {
+			text-align: center;
+			padding: 10px;
+			width: 65px !important;
+			height: 32px !important;
+			border-radius: 10px;
+
+			&.inputLeft {
+				text-align: left;
+				padding-left: 2rem;
+			}
+		}
+
+		.colon {
+			display: flex;
+			align-items: center;
+			font-size: 1.3rem;
+			color: $black;
+		}
+
+		.a {
+			.tabNav {
+				height: 37px;
+				// .tabNavBtn {
+				// 	padding: 0.5rem 1rem;
+				// }
+			}
+		}
+	}
+}

@@ -1,0 +1,102 @@
+/* Modal z-index is 10000 */
+
+@import "styles/variables.scss";
+
+@mixin font {
+	font-family: "Open Sans", sans-serif;
+}
+
+#root {
+	position: relative;
+	width: 100%;
+	max-width: 1600px;
+	height: 100vh;
+	margin: auto;
+	overflow: hidden;
+	background: $background;
+	@media screen and (min-width: 1600px) {
+		border-radius: 20px;
+		// max-height: calc(100vh - 60px);
+	}
+}
+// body {
+// 	@media screen and (min-width: 1600px) {
+// 		padding: 30px;
+// 	}
+// }
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	@include font;
+}
+
+//global styles
+
+html {
+	font-size: 14px;
+}
+
+// @media screen and (max-width: 1300px) {
+// 	html {
+// 		font-size: 12px;
+// 	}
+// }
+
+body {
+	background: $white;
+	overflow-x: hidden;
+	background: linear-gradient(180deg, #cbeff3 0%, #b6cde8 100%);
+	backdrop-filter: blur(30px);
+}
+
+button {
+	cursor: pointer;
+	outline: none;
+}
+
+a {
+	text-decoration: none;
+	color: initial;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+// .error {
+// 	color: $red;
+// 	font-weight: 500;
+// }
+
+// .success {
+// 	color: #00c900;
+// 	font-weight: 500;
+// }
+
+.disabled-link {
+	pointer-events: none;
+}
+
+//Scrollbar
+
+*::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+	background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+	border-radius: 3px;
+	background: $primaryGradient;
+}
+
+//to align circular progressbar text center
+.CircularProgressbar .CircularProgressbar-text {
+	transform: translateY(3px);
+}

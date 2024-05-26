@@ -1,0 +1,34 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.list {
+	display: flex;
+	gap: 0.8em;
+	padding-top: 1em;
+	flex-wrap: wrap;
+	.tag {
+		display: flex;
+		padding: 7px 10px;
+		justify-content: center;
+		align-items: center;
+		gap: 0.5em;
+		border-radius: 10px;
+		background: rgba(86, 113, 145, 0.12);
+		width: fit-content;
+		.selectedRecipient {
+			color: $lightBlue;
+			font-size: 12px;
+			line-height: 14px;
+			text-transform: capitalize;
+			max-width: 150px;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+		svg {
+			color: $veryLightBlue;
+			width: 12px;
+			height: 12px;
+			cursor: pointer;
+		}
+	}
+}

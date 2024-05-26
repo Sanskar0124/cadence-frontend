@@ -1,0 +1,135 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.fetchedQuickView {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	position: relative;
+	color: $black;
+	overflow: hidden;
+	.body {
+		// flex: 1;
+		margin: 1.4rem 1rem 1.5rem 1rem;
+		padding-bottom: 3rem;
+		padding-top: 1.7rem;
+		box-shadow: 5px 10px 32px 0px #292b5817;
+		border-radius: 15px;
+		cursor: default;
+		.integrationStatus {
+			margin-bottom: 1.7rem;
+			display: flex;
+			justify-content: center;
+			.integrationStatusButton {
+				display: flex;
+				justify-content: center;
+				padding-left: 1rem;
+				padding-right: 1rem;
+				border-radius: 10px;
+				width: max-content !important;
+				min-width: 100px !important;
+				height: 45px !important;
+				font-weight: 700;
+				pointer-events: none;
+				background: $whiteShade1;
+				color: $lightBlue !important;
+				box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.15);
+			}
+		}
+		.redirections {
+			display: flex;
+			justify-content: center;
+			gap: 0.7rem;
+		}
+		.name {
+			display: flex;
+			justify-content: center;
+			gap: 0.3rem;
+			font-weight: 700;
+			margin-bottom: 1rem;
+			div {
+				font-size: 1.3rem;
+			}
+		}
+		.companyInfo,
+		.emailInfo,
+		.phoneInfo,
+		.location {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 0.2rem;
+			font-size: 0.9rem;
+			margin-top: 0.5rem;
+		}
+		.phoneInfo,
+		.emailInfo {
+			gap: 0.5rem;
+			flex-direction: column;
+			.hoverContainer {
+				display: flex;
+				gap: 0.7rem;
+				row-gap: 0.2rem;
+				flex-wrap: wrap;
+				padding-left: 3rem;
+				padding-right: 3rem;
+				align-content: center;
+				justify-content: center;
+				div {
+					display: flex;
+					align-items: center;
+				}
+				svg {
+					margin-right: 0.3rem;
+				}
+			}
+		}
+		.companyInfo svg {
+			transform: translateY(-2px);
+		}
+		.companyName,
+		.jobPosition {
+			display: inline-block !important;
+			max-width: 120px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		.email {
+			display: inline-block !important;
+			max-width: 350px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		.error {
+			font-weight: 600;
+			display: inline-flex;
+			align-items: center;
+		}
+	}
+	.footer {
+		height: max-content;
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+		img {
+			width: 100%;
+		}
+	}
+	@media screen and (max-height: 720px) {
+		.body {
+			flex: 2;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+		.footer {
+			flex: 1;
+			img {
+				width: 0;
+			}
+		}
+	}
+}

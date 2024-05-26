@@ -1,0 +1,21 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.sidebar {
+	// width: 410px;
+	height: 100%;
+	min-width: 342px;
+	border-radius: 20px;
+	overflow: hidden;
+	overflow-y: scroll;
+	// transition: width 0.3s ease-in-out;
+	position: relative;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	&.open {
+		background-color: #ffffff;
+		border: 1px solid #e7ebff;
+	}
+}

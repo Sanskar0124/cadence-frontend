@@ -1,0 +1,164 @@
+@import "libs/themes/src/lib/styles/variables";
+.inputCalendar {
+	width: 47%;
+}
+.calendarModal {
+	width: 100%;
+	padding-left: 25px;
+	max-width: 818px;
+	max-height: 93.4vh;
+	overflow: auto;
+	// height:80%
+}
+@media screen and (max-width: 868px) {
+	.calendarModal {
+		max-width: 708px;
+	}
+}
+.calendarModal > div {
+	display: flex;
+	// text-transform: capitalize;
+}
+.heading {
+	width: 72px;
+	height: 22px;
+	margin-top: 1px;
+	padding-bottom: 42px;
+	font-weight: 700;
+	font-size: 1.142rem;
+	line-height: 22px;
+	color: $blackShade6;
+	text-transform: capitalize;
+}
+
+.calendarHeaderTwo {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+
+	.salesPersonSelect {
+		width: 100%;
+	}
+	.selectSalesperson {
+		width: 108%;
+		margin-bottom: 14px;
+	}
+}
+.calendarHeaderTwo > div {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 25px;
+	// .label {
+	// 	::first-letter {
+	// 		text-transform: capitalize;
+	// 	}
+	// }
+}
+.viewEvents {
+	position: relative;
+
+	width: 55%;
+
+	.viewEventDiv {
+		margin: 0.7rem 0 0 3rem;
+		padding: 0.9rem 0 1rem 2rem;
+		border-radius: 20px;
+		background: rgba(228, 230, 234, 0.12);
+		.date {
+			color: $blackShade6;
+			font-weight: 700;
+			font-size: 1.143rem;
+			display: flex;
+			justify-content: space-between;
+			padding-bottom: 10px;
+		}
+		.events {
+			overflow-y: scroll;
+			height: 380px;
+			margin: 8px 20px 0 0px;
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
+			.noEvents {
+				font-weight: 700;
+				margin: 20px 0;
+				height: 80%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				span {
+					display: inline-block;
+					&::first-letter {
+						text-transform: capitalize;
+					}
+				}
+			}
+			.eventInfo {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 3px 0;
+				.editevent {
+					cursor: pointer;
+				}
+				div {
+					display: flex;
+					flex-direction: column;
+					span:first-child {
+						color: $blackShade6;
+						font-weight: 600;
+						font-size: 0.9rem;
+						line-height: 14px;
+						margin: 10px 0 3px 0;
+					}
+					span:last-child {
+						color: $lightBlue;
+						font-weight: 400;
+						font-size: 1rem;
+						line-height: 19px;
+						margin: 3px 0 10px 0;
+					}
+				}
+				button {
+					border: none;
+					background: none;
+				}
+			}
+		}
+	}
+	.buttons {
+		width: 90%;
+		margin-left: auto;
+		display: flex;
+		justify-content: center;
+		margin-top: 12px;
+		button {
+			color: $blackShade6;
+			border-radius: 15px;
+			padding: 12px 20px;
+			width: 67%;
+			height: auto;
+			font-weight: 600;
+			font-size: 1rem;
+			line-height: 20px;
+			letter-spacing: 0.85px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			&:nth-of-type(1) {
+				margin-right: 6px;
+			}
+			&:nth-of-type(2) {
+				margin-left: 6px;
+			}
+
+			svg {
+				margin-top: -1px;
+			}
+		}
+	}
+}

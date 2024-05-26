@@ -1,0 +1,28 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.importLeads {
+	width: 100%;
+	height: calc(100vh - 244px);
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	gap: 60px;
+	align-items: center;
+	justify-content: center;
+	& > div {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		color: $veryLightBlue;
+		& > span {
+			font-size: 1.28rem;
+			font-weight: 700;
+		}
+		& > p {
+			font-size: 1.14rem;
+		}
+		& > svg {
+			margin-bottom: 28px;
+		}
+	}
+}

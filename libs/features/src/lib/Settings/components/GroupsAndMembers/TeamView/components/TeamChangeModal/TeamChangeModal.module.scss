@@ -1,0 +1,148 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.teamChangeModal {
+	width: 100%;
+	max-width: 788px;
+
+	.heading {
+		margin-bottom: 20px;
+		h3 {
+			font-size: 16px;
+			font-weight: 700;
+			color: $black;
+			display: inline-block;
+			&::first-letter {
+				text-transform: capitalize;
+			}
+		}
+	}
+
+	.body {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		width: 100%;
+		.memberBox {
+			display: flex;
+			flex-direction: column;
+			.member {
+				display: flex;
+				justify-content: space-between;
+				width: 75%;
+				.memberDetails {
+					display: flex;
+					gap: 10px;
+					.image {
+						width: 40px;
+						height: 40px;
+						object-fit: cover;
+						border-radius: 50%;
+					}
+					.roleAndName {
+						display: flex;
+						flex-direction: column;
+						gap: 2px;
+						.name {
+							display: flex;
+							font-size: 1rem;
+							font-weight: 400;
+							color: $black;
+						}
+						.role {
+							display: flex;
+							font-size: 1rem;
+							font-weight: 400;
+							color: $lightBlue;
+						}
+					}
+				}
+				.count {
+					display: flex;
+					gap: 10px;
+					.countLeads {
+						display: flex;
+						align-self: center;
+						justify-content: center;
+						min-width: 60px;
+						min-height: 35px;
+						color: $mainPurple;
+						padding: 8px;
+						border-radius: 10px;
+						background: linear-gradient(
+							107deg,
+							rgba(162, 130, 232, 0.12) -11.57%,
+							rgba(126, 142, 231, 0.12) 50.39%,
+							rgba(68, 153, 233, 0.12) 116.35%
+						);
+					}
+				}
+			}
+		}
+		.teamBox {
+			display: flex;
+			flex-direction: column;
+		}
+		.actionBox {
+			display: flex;
+			flex-direction: column;
+			.actions {
+				display: flex;
+				width: 100%;
+				gap: 2%;
+				.optionBox {
+					display: flex;
+					gap: 10px;
+					width: 31.6%;
+					.radio {
+						display: flex;
+						align-self: center;
+					}
+					.option {
+						display: flex;
+						align-self: center;
+						font-size: 1rem;
+						font-weight: 400;
+						color: $black;
+					}
+				}
+			}
+		}
+	}
+	.warning {
+		display: flex;
+		width: 100%;
+		padding: 10px;
+		gap: 10px;
+		border-radius: 10px;
+		margin-top: 20px;
+		&.unlink {
+			background: linear-gradient(
+				135deg,
+				rgba(255, 207, 79, 0.05) 0%,
+				rgba(255, 155, 74, 0.05) 100%
+			);
+		}
+		&.remove {
+			background: linear-gradient(
+				315deg,
+				rgba(255, 136, 136, 0.05) 0%,
+				rgba(240, 95, 95, 0.05) 100%
+			);
+		}
+		.icon {
+			display: flex;
+		}
+		.msg {
+			display: flex;
+			color: $black;
+			font-size: 1rem;
+			font-weight: 400;
+		}
+	}
+
+	.btn {
+		display: flex;
+		justify-content: center;
+		margin-top: 20px;
+	}
+}

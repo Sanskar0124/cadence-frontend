@@ -1,0 +1,50 @@
+name: Deploy to Github Actions - Branch refactored-app
+
+on:
+  push:
+    branches:
+      - refactored-app
+
+jobs:
+  Deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
+      - name: List files in the repository
+        run: |
+          ls
+      - name: Build project
+        run: |
+          git checkout refactored-app 
+          yarn
+          npx nx run salesforce:build:dev
+          shopt -s extglob
+          mkdir tmp
+          mv dist tmp
+          mv app.yaml tmp
+          rm -rf !(tmp)
+          rm -rf .[!.]*
+          mv tmp/* .
+          rmdir tmp
+          ls
+      - name: Initialize Google Cloud SDK
+        uses: zxyle/publish-gae-action@master
+        with:
+          service_account_email: ${{ secrets.GCP_SA_EMAIL }}
+          service_account_key: ${{ secrets.GCP_SA_KEY }}
+          project_id: ${{ secrets.PROJECT_ID }}
+
+      - name: Publish app to Google App Engine ☁️
+        run: |
+          # This client-secret.json is converted by GCP_SA_KEY.
+          gcloud auth activate-service-account ${{ secrets.GCP_SA_EMAIL }} --key-file=client-secret.json
+          gcloud config set project ${{ secrets.PROJECT_ID }}
+          sed -i 's/cadence-support/cadence-support-frontend-refactored/g' app.yaml
+          cat app.yaml
+          gcloud -q app deploy app.yaml --promote
+      - run: echo "🍏 This job's status is ${{ job.status }}."

@@ -1,0 +1,33 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.modal {
+	width: 700px;
+
+	.title {
+		color: $black;
+		font-weight: 600;
+		display: inline-block;
+		&::first-letter {
+			text-transform: capitalize;
+		}
+	}
+
+	.inputBox {
+		margin: 20px 0;
+		width: 100%;
+		label {
+			text-transform: capitalize;
+		}
+	}
+	.buttons {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		button {
+			text-transform: capitalize;
+			&:first-child {
+				margin-right: 40px;
+			}
+		}
+	}
+}

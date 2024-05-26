@@ -1,0 +1,109 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.maps {
+	.head {
+		margin-top: 10px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 5px;
+		color: $veryLightBlue;
+		font-weight: 600;
+		place-items: center;
+		padding: 20px 0;
+	}
+	.map {
+		flex: 1;
+		position: relative;
+		background: #f9fafb;
+		border-radius: 0px 0px 10px 10px;
+		height: 100%;
+		.rf {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			&::-webkit-scrollbar {
+				display: none;
+				width: 0;
+			}
+			overflow: scroll;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 0.8rem;
+			padding-top: 20px;
+			padding-bottom: 100px;
+			.row {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				width: 100%;
+				align-content: center;
+				position: relative;
+				min-height: 40px;
+				overflow-x: hidden;
+				overflow-y: scroll;
+				.col1 {
+					border-radius: 10px 5px 5px 10px;
+					background: $white;
+					left: 2%;
+					right: 48%;
+					z-index: 2;
+					margin-right: 2px;
+					sup {
+						color: $red;
+					}
+					span {
+						position: absolute;
+						background-color: $white;
+						min-width: 59px;
+						min-height: 26px;
+						border-radius: 8px;
+						right: -17px;
+						top: 50%;
+						transform: translateY(-50%);
+					}
+				}
+				.col2 {
+					right: 0;
+					left: 52%;
+					overflow: hidden;
+					z-index: 1;
+					border-radius: 5px 10px 10px 5px;
+				}
+				.col1,
+				.col2 {
+					position: absolute;
+					height: 100%;
+					top: 0;
+					bottom: 0;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+				.field {
+					height: 100%;
+					width: 100%;
+					overflow-x: scroll;
+
+					border-radius: 10px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					&::-webkit-scrollbar {
+						display: none;
+						width: 0;
+					}
+					&.valActive {
+						background-color: #eef1f4;
+						color: $veryLightBlue;
+					}
+					&.valInactive {
+						border: 1px dashed #9ba1ab;
+					}
+				}
+			}
+		}
+	}
+}

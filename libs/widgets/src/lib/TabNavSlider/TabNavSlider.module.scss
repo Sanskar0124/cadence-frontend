@@ -1,0 +1,54 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.tabNavContainer {
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	position: relative;
+	padding: 0.35rem 0.5rem;
+
+	.activePill {
+		transition: 0.5s left;
+		background: $primaryGradient;
+		position: absolute;
+		left: 0;
+		height: 85%;
+		top: 50%;
+		transform: translateY(-50%);
+		border-radius: 5px;
+	}
+
+	&.white {
+		background: #fff;
+	}
+
+	&.grey {
+		background: $whiteShade1;
+	}
+
+	&.slider {
+		border-radius: 0;
+		padding: 0.35rem 0.6rem;
+		.activePill {
+			height: 3px;
+			top: 95%;
+		}
+
+		.inactivePill {
+			left: 0.35rem;
+			background: linear-gradient(
+				106.52deg,
+				rgba(162, 130, 232, 0.12) -11.57%,
+				rgba(126, 142, 231, 0.12) 50.39%,
+				rgba(68, 153, 233, 0.12) 116.35%
+			);
+			border-radius: 100px;
+		}
+
+		.inactive {
+			height: 5px;
+			top: 95%;
+		}
+	}
+}

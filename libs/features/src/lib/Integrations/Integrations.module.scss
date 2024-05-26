@@ -1,0 +1,35 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.integrationsContainer {
+	width: 100%;
+	.header {
+		.tabNav {
+			margin-top: 20px;
+			.tabBtn {
+				color: $lightBlue;
+				font-weight: 600;
+				font-size: 1.14rem;
+			}
+			.activeTab {
+				color: $mainPurple;
+				font-weight: 700;
+			}
+			.activePill {
+				height: 3px;
+			}
+		}
+	}
+
+	.container {
+		background: $white;
+		border-radius: 20px;
+		border: 1px solid #e7ebff;
+		margin-top: 10px;
+		height: calc(100vh - 100px);
+		padding: 20px;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+		grid-auto-rows: max-content;
+	}
+}

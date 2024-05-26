@@ -1,0 +1,106 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.switchCrmModal {
+	.switchContainer {
+		max-width: 850px;
+		& > .header {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 20px;
+			margin-bottom: 40px;
+			.title {
+				display: flex;
+				align-items: center;
+				gap: 8px;
+			}
+			.desc {
+				width: 60%;
+				text-align: center;
+			}
+		}
+		.options {
+			margin-bottom: 40px;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			gap: 20px;
+			& > div {
+				cursor: pointer;
+				height: 310px;
+				border-radius: 10px;
+				border: 1px solid rgba(129, 147, 168, 0.12);
+				padding: 20px 16px;
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+				&.active {
+					box-shadow: 5px 4px 24px 0px rgba(126, 142, 231, 0.06);
+					border-color: $mainPurple;
+					.header > span {
+						color: $mainPurple;
+					}
+				}
+				.header {
+					display: flex;
+					align-items: center;
+					gap: 10px;
+					& > span {
+						font-weight: 600;
+					}
+				}
+				.changes {
+					display: flex;
+					flex-direction: column;
+					gap: 10px;
+					& > div {
+						& > span {
+							display: flex;
+							align-items: center;
+							gap: 5px;
+						}
+						& > p {
+							font-size: 0.87rem;
+							color: $lightBlue;
+							width: 90%;
+						}
+						svg {
+							width: 20px;
+							height: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.confirmContainer {
+		max-width: 508px;
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+		align-items: center;
+		.header {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 10px;
+			svg {
+				margin: 20px 0;
+			}
+			& > p {
+				text-align: center;
+				width: 70%;
+				line-height: 20px;
+			}
+		}
+		.info {
+			width: 80%;
+			ol li {
+				margin: 16px 0;
+				line-height: 20px;
+				& > span {
+					font-weight: 600;
+				}
+			}
+		}
+	}
+}

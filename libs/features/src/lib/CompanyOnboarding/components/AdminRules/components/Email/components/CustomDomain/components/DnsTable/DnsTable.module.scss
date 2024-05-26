@@ -1,0 +1,15 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.dnsTableCell {
+	span {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 0.5em;
+	}
+}
+
+.verification {
+	color: $mainPurple;
+	text-transform: capitalize;
+}

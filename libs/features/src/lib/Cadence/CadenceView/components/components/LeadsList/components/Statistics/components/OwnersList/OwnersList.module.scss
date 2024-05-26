@@ -1,0 +1,80 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.listContainer {
+	height: 75%;
+
+	.listHeader {
+		padding: 10px 20px;
+		display: flex;
+		justify-content: space-between;
+		font-size: 12px;
+		font-weight: 600;
+		color: #8193a8;
+	}
+
+	.listBody {
+		height: 95%;
+		padding: 0 20px;
+		overflow-y: auto;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+		.listItem {
+			padding: 10px 0 12px 0;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			.owner {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+
+				.ownerImage {
+					width: 38px;
+					height: 38px;
+					border-radius: 50%;
+				}
+
+				.ownerInfo {
+					display: flex;
+					flex-direction: column;
+
+					.name {
+						font-size: 14px;
+						font-weight: 400;
+						line-height: 22px;
+						color: rgba(57, 71, 89, 0.8);
+					}
+
+					.role {
+						font-size: 14px;
+						font-weight: 400;
+						color: rgba(86, 113, 145, 0.8);
+					}
+
+					.blankPlaceholder {
+						height: 12px;
+						width: 20ch;
+						margin-bottom: 5px;
+					}
+				}
+			}
+
+			.leadsNo {
+				color: $mainPurple;
+				font-size: 16px;
+				font-weight: 600;
+				text-align: right;
+				opacity: 0.8;
+			}
+
+			.placeholderLeads {
+				height: 16px;
+				width: 5ch;
+			}
+		}
+	}
+}

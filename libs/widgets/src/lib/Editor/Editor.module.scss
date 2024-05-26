@@ -1,0 +1,141 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.editor {
+	background-color: $white;
+	border: 1px solid #8193a852;
+	border-radius: 15px;
+	display: flex;
+	flex-direction: column;
+	> :first-child {
+		border: none !important;
+		box-shadow: none !important;
+		flex: 1;
+		ul {
+			padding-inline-start: 40px;
+			// padding: unset;
+		}
+		// max-height: 400px;
+		a {
+			color: $blue;
+			text-decoration: underline;
+			cursor: pointer;
+		}
+	}
+	.toolbar {
+		border-radius: 15px;
+		> div {
+			border-radius: 15px !important;
+		}
+		* svg {
+			color: $veryLightBlue;
+		}
+	}
+}
+
+.loaderWrapper {
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.filesSelected {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 10px;
+	margin: 10px 0;
+	margin-left: 5px;
+	width: 90%;
+	& > div {
+		width: fit-content;
+		display: flex;
+		flex-direction: column;
+		max-width: 100%;
+		.fileName {
+			max-width: 100%;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+		> span {
+			display: inline-flex;
+			align-items: center;
+			gap: 5px;
+			background: rgba(91, 107, 225, 0.08);
+			color: $mainPurple;
+			padding: 5px;
+			border-radius: 6px;
+
+			svg {
+				color: $mainPurple;
+				transform: translateY(2px);
+			}
+
+			button {
+				background: none;
+				border: none;
+			}
+			span {
+				div {
+					div {
+						div {
+							border-color: #5b6be1 transparent transparent transparent;
+						}
+					}
+				}
+			}
+		}
+		progress {
+			width: 100%;
+		}
+	}
+}
+.editor .toolbar > div > div > div.ck.ck-dropdown.editor-custom-variables-dropdown {
+	.ck-button__icon {
+		width: 30px;
+		height: 30px;
+	}
+	> div {
+		border-radius: 15px;
+		overflow: hidden;
+		max-height: 280px;
+		overflow-y: scroll;
+		.ck-button {
+			display: flex;
+			padding: 0;
+			align-items: center;
+			padding-left: 15px;
+			.ck-button__label {
+				font-weight: 600;
+				font-size: 0.8rem;
+				color: $lightBlue;
+			}
+		}
+		.ck-button.editor-custom-variables-heading {
+			pointer-events: none;
+			margin-top: 1rem;
+			.ck-button__label {
+				font-size: 0.95rem !important;
+				color: $black !important;
+			}
+		}
+		// .ck-button.editor-custom-variables-item {
+		// 	pointer-events: none;
+		// 	margin-top: 1rem;
+		// 	.ck-button__label {
+		// 		font-size: 0.95rem !important;
+		// 		color: $black !important;
+		// 	}
+		// }
+	}
+}
+#toolbar
+	> div
+	> div
+	> div.ck.ck-dropdown.editor-custom-variables-dropdown
+	> div::-webkit-scrollbar {
+	display: none;
+	width: 0;
+}

@@ -1,0 +1,36 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.reassignmentSettingModal {
+	width: 100%;
+	max-width: 631px;
+	.heading {
+		margin-bottom: 28px;
+		font-size: 1.2rem;
+		font-weight: 700;
+	}
+	.body {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		.selectOption {
+			display: flex;
+			flex-direction: column;
+			gap: 5px;
+			.option {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+			}
+			.note {
+				display: flex;
+				color: $red;
+				font-size: 0.875rem;
+				font-weight: 400;
+			}
+		}
+		.reassignmentBtn {
+			display: flex;
+			justify-content: center;
+		}
+	}
+}

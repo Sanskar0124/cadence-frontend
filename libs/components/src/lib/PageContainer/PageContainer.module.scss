@@ -1,0 +1,13 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.pageContainer {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	overflow: hidden;
+	background: $background;
+	@media screen and (min-width: 1600px) {
+		border-radius: 20px;
+	}
+}

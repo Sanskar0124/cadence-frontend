@@ -1,0 +1,96 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.endCadence {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 20px 0;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	.box {
+		display: flex;
+		flex-direction: column;
+
+		gap: 10px;
+		.heading {
+			font-weight: 600;
+			font-size: 1rem;
+			color: $mainPurple;
+		}
+
+		.table {
+			display: flex;
+			.col {
+				display: flex;
+				flex-direction: column;
+				width: 50%;
+				gap: 10px;
+				.singleCol {
+					display: flex;
+					flex-direction: column;
+					gap: 3px;
+					.label {
+						margin-bottom: 0 !important;
+						text-transform: capitalize;
+					}
+					.labelValue {
+						font-weight: 400;
+						font-size: 1rem;
+						color: $black;
+					}
+					.owner {
+						display: flex;
+						gap: 10px;
+						margin-top: 5px;
+						img {
+							width: 40px;
+							height: 40px;
+							border-radius: 50%;
+						}
+						.ownerName {
+							font-weight: 400;
+							font-size: 1rem;
+							color: $black;
+							align-self: center;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.division {
+		border: 1px solid #e4e6ea;
+		margin: 20px 0;
+		height: 0px;
+		background: #e4e6ea;
+	}
+}
+.noSelectionBox {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	height: 50px;
+	.noSelection {
+		display: flex;
+		align-self: center;
+		width: 100%;
+		flex-direction: column;
+		justify-content: center;
+		.text {
+			align-self: center;
+			text-align: center;
+			width: 100%;
+			font-weight: 400;
+			font-size: 1.142rem;
+			color: $veryLightBlue;
+			.bold {
+				color: $black;
+				font-weight: 400;
+				font-size: 1.142rem;
+			}
+		}
+	}
+}

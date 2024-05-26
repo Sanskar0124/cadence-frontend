@@ -1,0 +1,42 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.replaceCadenceModal {
+	width: 80vw;
+	max-width: 600px;
+
+	.heading {
+		margin: -2px 0 28px 0;
+
+		h3 {
+			font-size: 1.3rem;
+			display: inline-block;
+			&::first-letter {
+				text-transform: capitalize;
+			}
+		}
+	}
+
+	.subTitle {
+		color: $lightBlue;
+		display: inline-block;
+		&::first-letter {
+			text-transform: capitalize;
+		}
+		// margin-bottom: 1rem;
+	}
+
+	.main {
+		margin-bottom: 1rem;
+		label {
+			color: $mainPurple;
+		}
+	}
+
+	.replaceBtn {
+		width: 100%;
+		display: inline-block;
+		&::first-letter {
+			text-transform: capitalize;
+		}
+	}
+}

@@ -1,0 +1,245 @@
+@import "libs/themes/src/lib/styles/variables";
+.header {
+	text-align: left;
+	color: $blackShade6;
+	margin: -1.5px 0 20px 0;
+	font-weight: 700;
+	font-size: 1.142rem;
+	text-transform: capitalize;
+}
+
+.container {
+	width: 100%;
+}
+.containerSmall {
+	display: flex;
+	flex-direction: column;
+	// align-items:flex-end;
+	// justify-content: flex-end;
+	width: 60%;
+
+	// padding-left: 3em;
+}
+
+.customTaskModal {
+	width: 100%;
+	max-width: 735px;
+	overflow: auto;
+	// height: max-content;
+	// max-height: 98vh;
+}
+
+.customTaskModal > * {
+	text-align: left;
+}
+.label {
+	text-align: left;
+	margin-bottom: 0.8em;
+}
+
+.bodyContainer {
+	width: 100%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	&::-webkit-scrollbar {
+		width: 0;
+		display: none;
+	}
+}
+.body {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: 1.5em;
+	justify-content: center;
+
+	align-items: center;
+	// height: 75vh;
+	// // border: 2px solid red;
+	// overflow-y: scroll;
+	// &::-webkit-scrollbar {
+	// 	width: 0;
+	// 	display: none;
+	// }
+
+	&.container {
+		text-align: left;
+	}
+	.actionLabel {
+		text-align: left;
+		margin-bottom: 0.8em;
+		width: 100%;
+		display: inline-block;
+		&:first-letter {
+			text-transform: capitalize !important;
+		}
+	}
+	.durLabel {
+		text-align: left;
+		margin-bottom: -1em;
+		width: 100%;
+		display: inline-block;
+		&::first-letter {
+			text-transform: capitalize;
+		}
+	}
+	& > div:first-child {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		justify-self: flex-start;
+		& > div:nth-child(2) {
+			display: flex;
+			align-items: center;
+			width: 100%;
+			justify-self: flex-start;
+			gap: 0.2em;
+		}
+	}
+	.salesPerson {
+		width: 100%;
+	}
+
+	& > .timeInputs {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		justify-self: flex-start;
+		gap: 33px;
+	}
+	& > div {
+		width: 100%;
+		& > .timeInputs {
+			display: flex;
+			align-items: center;
+			width: 100%;
+			justify-self: flex-start;
+			gap: 33px;
+		}
+	}
+}
+
+.checkbox {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 0.5em;
+	& > input:checked {
+		background-color: #a282e8;
+	}
+}
+
+// .calendar {
+// 	z-index: 2;
+// 	position: absolute;
+// 	box-shadow: 5px 3px 20px rgba(41, 43, 88, 0.16);
+// 	height: fit-content;
+// 	width: 55%;
+// 	padding: 1rem 1.5rem 1rem 1.5rem;
+// 	border-radius: 10px;
+// }
+// .inactiveDisplay {
+// 	display: none;
+// }
+
+.message {
+	display: flex;
+	justify-content: left;
+	width: 100%;
+
+	.astrix {
+		color: red;
+	}
+}
+
+.btn {
+	text-align: left;
+	width: 80%;
+}
+
+.btnSave {
+	width: 100%;
+	height: 50px;
+	box-shadow: 1px 8px 24px rgba(125, 142, 231, 0.4);
+	border-radius: 15px;
+	text-align: center;
+	text-transform: capitalize;
+}
+
+.footer {
+	margin: 20px 0 10px 0;
+	& > .error {
+		width: 100%;
+		text-align: left;
+		color: $red;
+		margin-top: -1em;
+	}
+}
+
+.icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 7px;
+	cursor: pointer;
+	margin-right: 22px;
+	width: 120px;
+	border-radius: 10px;
+	height: 40px;
+	background: $primaryGradientLight;
+	color: $mainPurple;
+}
+
+.iconActive {
+	composes: icon;
+	background: $primaryGradient;
+	// box-shadow: 1px 8px 24px 0px rgba(125, 142, 231, 0.4);
+}
+
+.duration {
+	display: flex;
+	align-items: center;
+	gap: 1em;
+	justify-content: space-between;
+	width: 100%;
+	cursor: pointer;
+	& > .dur {
+		// padding: 1em;
+		border-radius: 10px;
+		width: 124px;
+		height: 40px;
+		font-weight: 600;
+		display: flex;
+		align-self: center;
+		justify-content: center;
+		align-items: center;
+		background: $whiteShade1;
+	}
+
+	& > .durActive {
+		// padding: 1em;
+		border-radius: 10px;
+		width: 124px;
+		font-weight: 600;
+		height: 40px;
+		display: flex;
+		align-self: center;
+		justify-content: center;
+		color: white;
+		align-items: center;
+		background: $primaryGradient;
+	}
+}
+
+.asterisk {
+	color: $red;
+}
+.errorMsg {
+	// margin-left: 1rem;
+	color: red;
+	justify-content: left;
+	width: 100%;
+	margin-top: 0px;
+}

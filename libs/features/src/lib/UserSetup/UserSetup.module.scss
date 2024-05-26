@@ -1,0 +1,179 @@
+@import "../../styles/variables";
+
+.userSetupContainer {
+	display: flex;
+	justify-content: center;
+
+	.container {
+		background: rgba(255, 255, 255, 0.8);
+		box-shadow: 2px 2px 40px rgba(0, 35, 35, 0.05);
+		border-radius: 20px;
+		max-width: 530px;
+		width: 100%;
+		padding: 40px 100px 80px 100px;
+		height: fit-content;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: flex;
+		flex-direction: column;
+
+		.logo {
+			margin-bottom: 36px;
+			display: flex;
+			align-items: center;
+			gap: 5px;
+
+			> div {
+				.cadence {
+					text-transform: capitalize;
+				}
+				span {
+					display: block;
+
+					&:first-child {
+						font-size: 1.1rem;
+						font-weight: 700;
+					}
+
+					&:last-child {
+						font-size: 0.9rem;
+					}
+				}
+			}
+		}
+
+		.title {
+			margin-bottom: 32px;
+			display: flex;
+			flex-direction: column;
+			gap: 4px;
+
+			title {
+				display: inline-block;
+				&::first-letter {
+					text-transform: capitalize;
+				}
+			}
+
+			> p {
+				font-size: 14px;
+				font-weight: 600;
+				line-height: 22px;
+				color: #567191;
+			}
+		}
+
+		.successTitle {
+			margin-top: 80px;
+			display: flex;
+			align-items: center;
+			gap: 10px;
+
+			> * {
+				font-weight: 700;
+				font-size: 21px;
+				line-height: 33px;
+			}
+
+			> p {
+				color: #5b6be1;
+				display: inline-block;
+				&::first-letter {
+					text-transform: capitalize;
+				}
+			}
+		}
+
+		.descPara {
+			margin-top: 20px;
+			padding-bottom: 30px;
+			font-size: 15px;
+			font-weight: 600;
+			line-height: 22px;
+			text-align: center;
+			color: #567191;
+			display: inline-block;
+			&::first-letter {
+				text-transform: capitalize;
+			}
+		}
+
+		.inputBox {
+			position: relative;
+			&:not(:last-of-type) {
+				margin-bottom: 24px;
+			}
+			label {
+				text-transform: capitalize;
+			}
+
+			.errorMsg {
+				display: none;
+				margin-top: 10px;
+				padding-left: 8px;
+				font-weight: 400;
+				font-size: 12px;
+				line-height: 16px;
+				align-items: center;
+				color: $red;
+				gap: 6px;
+			}
+
+			.hidePassword {
+				cursor: pointer;
+				position: absolute;
+				right: 15px;
+				top: 44px;
+			}
+
+			&.error {
+				label {
+					color: $red;
+					display: inline-block;
+					&::first-letter {
+						text-transform: capitalize;
+					}
+				}
+
+				input {
+					color: $red;
+					border-color: $red;
+				}
+
+				.errorMsg {
+					display: flex;
+				}
+			}
+		}
+
+		> button {
+			margin-top: 40px;
+			height: 50px;
+			border-radius: 15px;
+			box-shadow: 1px 8px 24px rgba(125, 142, 231, 0.4);
+		}
+		.langTabNav {
+			position: absolute;
+			top: 44px;
+			right: 95px;
+			& > button {
+				display: flex;
+				padding: 3px 5px;
+			}
+		}
+	}
+
+	.loadingSpinner {
+		width: 65px;
+		height: 63px;
+
+		div {
+			width: 60px;
+			height: 60px;
+			border: 4px solid $mainPurple;
+			border-color: $mainPurple transparent transparent transparent;
+		}
+	}
+}

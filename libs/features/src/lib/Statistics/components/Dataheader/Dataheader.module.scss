@@ -1,0 +1,64 @@
+@import "libs/themes/src/lib/styles/variables";
+
+@mixin flexcenter {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.dataheader {
+	@include flexcenter();
+	// width: 100%;
+	// height:100%;
+	gap: 1.5rem;
+}
+.data {
+	&_item {
+		@include flexcenter();
+		flex-direction: column;
+		font-size: 0.875rem;
+		padding: 14px;
+		width: 111.11px;
+		height: 69px;
+		background: #f9f9fe;
+		border-radius: 10px;
+		gap: 10px;
+		color: $mainPurple;
+		flex-grow: 1;
+	}
+	&_name {
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 16px;
+		text-transform: capitalize;
+		width: 101px;
+		text-align: center;
+		white-space: nowrap;
+		overflow: hidden;
+		margin-bottom: -6px;
+		text-overflow: ellipsis;
+	}
+	&_value {
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 19px;
+		text-align: center;
+	}
+	&_disqualified {
+		color: $redShade2;
+		background: #fff8f8;
+	}
+	&_converted {
+		color: $darkGreen;
+		background: $lightGreenGradient;
+	}
+}
+.linePlaceholders {
+	display: flex;
+	gap: 20px;
+	width: 100%;
+	border-radius: 10px;
+	.linePlaceholder {
+		width: 111.11px;
+		height: 69px;
+	}
+}

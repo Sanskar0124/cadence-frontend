@@ -1,0 +1,59 @@
+definitions:
+  steps:
+    - step: &app-engine-build
+        name: Build
+        image: node:16
+        size: 2x
+        caches: # optional
+          - node
+        script:
+          - yarn
+          - npm run nx run salesforce:build:$BITBUCKET_BRANCH
+          - shopt -s extglob
+          - mkdir tmp
+          - mv dist tmp
+          - mv app.yaml tmp
+          - rm -rf !(tmp)
+          - rm -rf .[!.]*
+          - mv tmp/* .
+          - rmdir tmp
+          - ls
+        artifacts:
+          - dist/**
+          - package-lock.json
+          - package.json
+    - step: &app-engine-deploy
+        name: Deploy to app engine
+        image: node:16
+        script:
+          - sed -i "s/cadence-frontend/cadence-frontend-$BITBUCKET_BRANCH/g" app.yaml
+          - pipe: atlassian/google-app-engine-deploy:1.1.1
+            variables:
+              KEY_FILE: $GCP_KEY
+              PROJECT: $GCP_PROJECT_ID
+              PROMOTE: "true"
+              STOP_PREVIOUS_VERSION: "true"
+    - step: &compute-engine-deploy
+        name: Deploy in GCE
+        image: google/cloud-sdk:latest
+        script:
+          - source set_env.sh
+          - if [ "$BITBUCKET_BRANCH" == master ]; then SERVER=$REMOTE_MASTER ; fi
+          - export SERVER
+          - pipe: atlassian/ssh-run:0.4.1
+            variables:
+              SSH_USER: "$USERNAME"
+              SERVER: "$SERVER"
+              MODE: "command"
+              COMMAND: "./deploy-cadence.sh"
+
+pipelines:
+  branches:
+    devvvvvvvv:
+      - step: *app-engine-build
+      - step: *app-engine-deploy
+    # staging:
+    # - step: *app-engine-build
+    # - step: *app-engine-deploy
+    # master:
+    #   - step: *compute-engine-deploy

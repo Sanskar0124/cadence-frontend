@@ -1,0 +1,42 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.taskStack {
+	width: 100%;
+	max-width: 700px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+	gap: 1rem;
+	margin-top: 15px;
+	&.isSpanish {
+		max-width: 800px;
+	}
+	.task {
+		display: flex;
+		gap: 10px;
+		background-color: $whiteShade1;
+		padding: 10px;
+		border-radius: 15px;
+		align-items: center;
+		height: 40px;
+		.taskCheckBox {
+			width: 27px;
+			transform: translate(0, -10px);
+		}
+		.taskIcon {
+			display: flex;
+			align-items: center;
+			color: $lightBlue;
+		}
+		.taskName {
+			flex: 1;
+			display: flex;
+			align-items: center;
+			color: $black;
+		}
+		// .taskName::first-letter {
+		// 	text-transform: capitalize;
+		// 	color: red;
+		// }
+	}
+}

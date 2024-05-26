@@ -1,0 +1,70 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.workingDaysSettings {
+	display: flex;
+}
+
+//styles for each component
+.settingsTypeContainer {
+	scroll-margin-top: 40px;
+	// display: flex;
+
+	.header {
+		> title {
+			text-transform: capitalize;
+		}
+	}
+
+	.title {
+		font-weight: 600;
+		text-transform: capitalize;
+	}
+
+	.description {
+		font-size: 1rem;
+		margin-top: 0.4rem;
+		margin-bottom: 1.4rem;
+		color: $lightBlue;
+		font-weight: 400;
+		&::first-letter {
+			text-transform: capitalize;
+		}
+	}
+
+	.header {
+		margin-bottom: 1.1rem;
+		.title {
+			font-weight: 700;
+			text-transform: capitalize;
+		}
+	}
+
+	// .left {
+	// 	flex: 1;
+
+	// 	.exceptions {
+	// 		display: flex;
+	// 		flex-direction: column;
+	// 		gap: 1rem;
+	// 		margin-top: 1rem;
+
+	// 		.teamExceptionButton {
+	// 			width: 200px;
+	// 			padding: 11px 18px;
+	// 			font-size: 0.95rem;
+	// 			box-shadow: none;
+	// 			color: $lightBlue;
+	// 			font-weight: 600;
+	// 		}
+	// 	}
+	// }
+
+	// .right {
+	// 	margin-left: 1rem;
+	// 	flex: 1.7;
+
+	// 	.title {
+	// 		font-weight: 600;
+	// 	}
+	// }
+}

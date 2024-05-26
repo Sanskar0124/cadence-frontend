@@ -1,0 +1,6 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+git restore --staged libs/environments/src/environments/environment.js
+npx pretty-quick --staged
+

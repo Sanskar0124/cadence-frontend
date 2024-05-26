@@ -1,0 +1,21 @@
+module.exports = {
+	projects: [
+		,
+		"<rootDir>/libs/utils",
+		"<rootDir>/libs/languages",
+		"<rootDir>/libs/assets",
+		"<rootDir>/libs/data-access",
+		"<rootDir>/libs/environments",
+		"<rootDir>/libs/constants",
+		"<rootDir>/apps/salesforce",
+		"<rootDir>/libs/icons",
+		"<rootDir>/libs/themes",
+		"<rootDir>/libs/atoms",
+		"<rootDir>/libs/features",
+		"<rootDir>/libs/contexts",
+		"<rootDir>/libs/components",
+		"<rootDir>/libs/widgets",
+		"<rootDir>/libs/rbac",
+		"<rootDir>/libs/test-utils",
+	],
+};

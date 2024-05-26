@@ -1,0 +1,55 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.toggle {
+	position: relative;
+	cursor: pointer;
+	user-select: none;
+	width: 40px;
+	height: 20px;
+	.checkmark {
+		background-color: $red;
+		position: absolute;
+		left: 0;
+		width: 40px;
+		height: 20px;
+		border-radius: 20px;
+		transition: 0.3s;
+		&:after {
+			content: "";
+			position: absolute;
+			left: 3px;
+			top: 3px;
+			width: 14px;
+			height: 14px;
+			background: $white;
+			border-radius: 50%;
+			transition: 0.3s;
+		}
+	}
+	&.purple {
+		.checkmark {
+			background-color: $veryLightBlue;
+		}
+		input {
+			&:checked ~ .checkmark {
+				background: $primaryGradient;
+			}
+			&:disabled ~ .checkmark {
+				opacity: 0.5;
+				cursor: not-allowed;
+			}
+		}
+	}
+	input {
+		display: none;
+		&:checked ~ .checkmark {
+			background: $green;
+		}
+		&:disabled ~ .checkmark {
+			opacity: 0.5;
+		}
+		&:checked ~ .checkmark:after {
+			left: 23px;
+		}
+	}
+}

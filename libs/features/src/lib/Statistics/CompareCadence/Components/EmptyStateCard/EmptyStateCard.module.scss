@@ -1,0 +1,274 @@
+@import "libs/themes/src/lib/styles/variables";
+
+@mixin display-flex {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+@mixin display-flex-column {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.emptystatecontainer {
+	@include display-flex();
+	padding: 96px 128.112px 133px 128px;
+	justify-content: center;
+	border-radius: 10px;
+	background: $white;
+	width: 100%;
+
+	.stepscontainer {
+		@include display-flex-column();
+		align-items: center;
+		gap: 108px;
+
+		.details {
+			@include display-flex-column();
+			align-items: center;
+			width: 487px;
+			height: 47px;
+
+			.subtitle {
+				color: $veryLightBlue;
+				font-size: 18px;
+				font-weight: 700;
+				line-height: normal;
+			}
+			.desc {
+				font-size: 16px;
+				font-weight: 400;
+				line-height: normal;
+				color: $veryLightBlue;
+			}
+		}
+		.stepdetails {
+			display: flex;
+			align-items: flex-start;
+			gap: 106px;
+			width: 944px;
+			height: 170px;
+			position: relative;
+			.selectcadence {
+				@include display-flex-column();
+				align-items: center;
+				gap: 50px;
+				width: 247px;
+				height: 152px;
+				position: relative;
+
+				.cadence_right {
+					margin-left: auto;
+					position: absolute;
+					z-index: 3;
+					right: 0%;
+					bottom: -1px;
+				}
+				.cadence_left {
+					z-index: 15 !important;
+					position: absolute;
+					left: 0%;
+				}
+
+				.cadence {
+					@include display-flex();
+					display: flex;
+					width: 224px;
+					padding: 10px;
+					height: auto;
+					align-items: center;
+					gap: 4px;
+					border: 0.5px solid $whiteShade3;
+					background: $white;
+					border-radius: 5.766px;
+					box-shadow: 0px 4.612903594970703px 20.758066177368164px 0px
+						rgba(41, 43, 88, 0.05);
+
+					.details {
+						@include display-flex();
+						align-items: flex-start;
+						gap: 15px;
+						width: 303px;
+						height: 22.9px;
+						.cadenceicon {
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							padding: 5.676px;
+							width: 22.9px;
+							height: 22.9px;
+							background: $lightBlueGradient;
+							border-radius: 8.514px;
+						}
+						.gradientbg {
+							background: $primaryGradient;
+						}
+						.nameanddetails {
+							@include display-flex-column();
+							gap: 1.135px;
+							flex: 1 0 0;
+							.name {
+								overflow: hidden;
+								color: $black;
+								text-overflow: ellipsis;
+								white-space: nowrap;
+								font-size: 7.946px;
+								font-weight: 600;
+								line-height: normal;
+								width: 165px;
+							}
+							.cadenceinfo {
+								display: flex;
+								align-items: center;
+								gap: 1.703px;
+								width: 100%;
+								height: 19px;
+								> span {
+									font-weight: 400;
+									font-size: 7.946px;
+									line-height: 19px;
+									color: $veryLightBlue;
+									font-family: "Open Sans";
+									font-style: normal;
+								}
+							}
+						}
+					}
+				}
+				.selectedcadence {
+					border: 0.549px solid $mainPurple !important;
+					background: linear-gradient(
+							0deg,
+							rgba(91, 107, 225, 0.05) 0%,
+							rgba(91, 107, 225, 0.05) 100%
+						),
+						$white !important;
+					border-radius: 6.592px !important;
+					box-shadow: 0px 4.394366264343262px 19.774648666381836px 0px
+						rgba(41, 43, 88, 0.1) !important;
+				}
+			}
+
+			.selectkpi {
+				@include display-flex-column();
+				align-items: center;
+				gap: 51px;
+				width: 292px;
+				height: 150px;
+				position: relative;
+				.taskcontainer {
+					@include display-flex();
+					gap: 6.628px;
+					align-items: flex-start;
+					justify-content: center;
+					flex-wrap: wrap;
+					width: 292px;
+					height: 77px;
+					.taskname {
+						display: flex;
+						padding: 10.605px;
+						justify-content: center;
+						align-items: center;
+						gap: 6.628px;
+						width: fit-content;
+						background: $white;
+						border-radius: 6.628px;
+						border: 0.663px solid #ebebeb;
+						font-size: 9.28px;
+						font-weight: 400;
+						line-height: 13.257px;
+					}
+					.isSelect {
+						border-radius: 6.628px;
+						border: 0.5px solid $mainPurple;
+						background: rgba(91, 107, 225, 0.05);
+						color: $mainPurple;
+					}
+				}
+			}
+			.selecttimeframe {
+				@include display-flex-column();
+				align-items: center;
+				gap: 32px;
+				width: 193px;
+				height: 170px;
+				.dropdown {
+					@include display-flex-column();
+					width: 120px;
+					height: 116px;
+					padding: 7px;
+					justify-content: center;
+					gap: 2px;
+					border-radius: 10px;
+					background: $white;
+					box-shadow: 0px 4px 18px 0px rgba(41, 43, 88, 0.1);
+					.filtername {
+						font-size: 10px;
+						font-weight: 400;
+						line-height: 13.257px;
+						color: $black;
+						padding: 6px;
+					}
+				}
+			}
+		}
+	}
+}
+.title {
+	color: $black;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: normal;
+}
+.selected {
+	border-radius: 5px;
+	background: linear-gradient(
+		124deg,
+		rgba(162, 130, 232, 0.08) 0%,
+		rgba(126, 142, 231, 0.08) 48.44%,
+		rgba(68, 153, 233, 0.08) 100%
+	);
+	color: $mainPurple !important;
+	width: 97px;
+}
+.arrow1 {
+	position: absolute;
+	left: 28.5%;
+	top: 1.8%;
+}
+.arrow2 {
+	position: absolute;
+	left: 64.5%;
+	top: 1.8%;
+}
+@media screen and (max-width: 960px) {
+	.emptystatecontainer {
+		height: auto;
+		.stepscontainer {
+			.details {
+				width: 100%;
+				.desc {
+					width: 430px;
+				}
+			}
+			.stepdetails {
+				width: 100%;
+				@include display-flex-column();
+				justify-content: center;
+				align-items: center;
+				height: auto;
+			}
+		}
+	}
+	.arrow1 {
+		transform: rotate(90deg);
+		top: 28%;
+		left: 40%;
+	}
+	.arrow2 {
+		transform: rotate(90deg);
+		top: 65.5%;
+		left: 40%;
+	}
+}

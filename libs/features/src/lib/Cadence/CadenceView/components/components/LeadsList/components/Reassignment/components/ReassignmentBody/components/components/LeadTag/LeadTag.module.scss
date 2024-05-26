@@ -1,0 +1,25 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.leadTag {
+	display: flex;
+	padding: 8px;
+	gap: 10px;
+	height: 40px;
+	background-color: rgba(0, 161, 224, 0.05);
+	border-radius: 10px;
+
+	.icon {
+		display: flex;
+		align-self: center;
+	}
+	.leadName {
+		display: flex;
+		align-self: center;
+		max-width: 150px;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		font-size: 1rem;
+		font-weight: 400;
+	}
+}

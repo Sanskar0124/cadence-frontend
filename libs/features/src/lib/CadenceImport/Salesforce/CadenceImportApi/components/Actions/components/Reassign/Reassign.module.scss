@@ -1,0 +1,29 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.reassign {
+	position: relative;
+	.reassignBtn {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		& > span {
+			display: flex;
+			align-items: center;
+			svg {
+				color: $lightBlue;
+			}
+		}
+		& > p {
+			margin-right: 30px;
+			max-width: 120px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+
+	.reassignmentModal {
+		width: 100%;
+		max-width: 600px;
+	}
+}

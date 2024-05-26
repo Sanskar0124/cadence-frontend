@@ -1,0 +1,26 @@
+.oNode {
+	background-color: #fafaff;
+	padding: 1rem;
+	border: 1px solid #97a2fe;
+	box-shadow: 0px 1px 0px #cfd4ff;
+	border-radius: 15px;
+	width: 100%;
+	position: relative;
+	&.bor {
+		border: none;
+		box-shadow: none;
+		background-color: #ffffff;
+	}
+	.box {
+		position: absolute;
+		width: 15px;
+		height: 20px;
+		background: #97a2fe;
+
+		left: 0px;
+		top: 25px;
+		&.dis {
+			display: none;
+		}
+	}
+}

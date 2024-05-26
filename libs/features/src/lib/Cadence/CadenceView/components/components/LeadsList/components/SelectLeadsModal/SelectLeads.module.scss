@@ -1,0 +1,47 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.leadsModalOverlay {
+	position: absolute;
+	width: fit-content;
+	height: 98px;
+	left: 126px;
+	top: 215px;
+	display: flex;
+	flex-direction: column;
+	visibility: hidden;
+	background: $white;
+	box-shadow: 5px 10px 50px rgb(41 43 88 / 20%);
+	border-radius: 15px;
+	padding: 15px;
+	z-index: 999;
+
+	&.open {
+		visibility: visible;
+	}
+
+	&.checkedModal {
+		top: 295px;
+	}
+
+	.allLeads,
+	.visibleLeads {
+		cursor: pointer;
+		padding: 8px 12px;
+
+		&:hover {
+			background: #f0f8fe;
+			border-radius: 10px;
+		}
+		&.active {
+			background: $primaryGradient;
+			color: $white;
+			border-radius: 10px;
+			// box-shadow: 1.20264px 8.2px 24.0528px rgba(107, 140, 222, 0.5);
+		}
+		& > p {
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 20px;
+		}
+	}
+}

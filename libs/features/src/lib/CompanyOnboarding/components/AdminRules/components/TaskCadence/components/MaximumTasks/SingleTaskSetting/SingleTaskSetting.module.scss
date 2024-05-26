@@ -1,0 +1,130 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.singleTaskSetting {
+	&.exception {
+		border-radius: 10px;
+		padding: 15px 20px;
+	}
+
+	.title {
+		margin-bottom: 0.3rem;
+		color: $black;
+		font-weight: 600;
+		display: inline-block;
+		&::first-letter {
+			text-transform: capitalize;
+		}
+	}
+
+	.description {
+		font-size: 1rem;
+		margin-bottom: 0.75rem;
+		color: $lightBlue;
+		&::first-letter {
+			text-transform: capitalize;
+		}
+	}
+
+	.setting {
+		margin-bottom: 2.5rem;
+		.input {
+			border-radius: 5px;
+			border: none;
+			text-align: center;
+			font-size: 0.857rem;
+			padding: 10px;
+			font-weight: 600;
+		}
+
+		.title {
+			display: inline-block;
+			&::first-letter {
+				text-transform: capitalize;
+			}
+		}
+		.description {
+			&::first-letter {
+				text-transform: capitalize;
+			}
+		}
+
+		.priorityInput {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+
+			> div {
+				display: flex;
+				align-items: center;
+				background: $whiteShade1;
+				padding: 0 10px;
+				border-radius: 5px;
+
+				> span {
+					font-weight: 600;
+				}
+			}
+
+			> span {
+				width: 7px;
+				height: 2px;
+				background: $black;
+			}
+		}
+
+		.taskOption {
+			width: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 1rem;
+			margin-bottom: 1rem;
+			width: 400px;
+
+			> .tasks {
+				background-color: $whiteShade1;
+				border-radius: 20px;
+				display: flex;
+
+				> .left {
+					display: flex;
+					gap: 0.35rem;
+					width: 250px;
+					margin: 1rem;
+
+					> .icon {
+						color: $lightBlue;
+						width: 20px;
+					}
+					> .taskName {
+						text-transform: capitalize;
+					}
+				}
+
+				.taskTime {
+					display: flex;
+					align-items: center;
+
+					> p {
+						margin-right: 2rem;
+						font-size: 12px;
+						display: inline-block;
+						&::first-letter {
+							text-transform: capitalize;
+						}
+					}
+					.input {
+						text-align: center;
+						background-color: #fff;
+						border-radius: 10px;
+						margin-right: 1rem;
+					}
+				}
+			}
+		}
+	}
+
+	.taskInputException {
+		background: #fff !important;
+	}
+}

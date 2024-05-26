@@ -1,0 +1,38 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.addTemplateModal {
+	padding: 0.25rem;
+	margin-right: -13px;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	h3 {
+		font-size: 16px;
+		font-weight: 700;
+		margin-bottom: 20px;
+		text-transform: capitalize;
+	}
+
+	.main {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+	}
+
+	.inputBox {
+		margin-bottom: 1rem;
+		.bodyLabel {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		&.editor {
+			height: 100%;
+			margin-bottom: 50px;
+		}
+	}
+
+	.saveBtn {
+		min-height: 50px;
+	}
+}

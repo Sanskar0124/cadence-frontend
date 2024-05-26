@@ -1,0 +1,18 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.reassign {
+	position: relative;
+	.reassignBtn {
+		display: flex;
+		align-items: center;
+		svg {
+			color: $lightBlue;
+		}
+		& > span {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			margin-right: 30px;
+		}
+	}
+}

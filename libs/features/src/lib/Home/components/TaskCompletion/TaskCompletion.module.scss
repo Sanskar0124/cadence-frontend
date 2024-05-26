@@ -1,0 +1,374 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.container {
+	margin-top: 30px;
+	position: relative;
+	padding: 0 20px;
+	& > .header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		&::first-letter {
+			text-transform: capitalize;
+		}
+		.info {
+			span {
+				&:first-child {
+					font-size: 1.42rem;
+					color: $mainPurple;
+					font-weight: 700;
+				}
+				&:last-child {
+					color: $lightBlue;
+					font-size: 1.1rem;
+				}
+			}
+		}
+		.pagination {
+			transform: translateY(-5px);
+		}
+	}
+	& > .progressParent {
+		position: relative;
+		.progress {
+			margin-top: 17px;
+			width: 100%;
+			height: 37px;
+			border: 1px solid rgba(231, 235, 255, 0.32);
+			border-radius: 20px;
+			overflow: hidden;
+			.completed {
+				height: 100%;
+				border-radius: 20px 0 0 25px;
+				transition: height 0.3s;
+			}
+			&:hover {
+				&::before {
+					content: attr(data-percentage) " %";
+					position: absolute;
+					top: -40px;
+					left: 50%;
+					transform: translateX(-50%);
+					background: $black;
+					color: $white;
+					font-size: 1.1rem;
+					font-weight: 700;
+					padding: 7px 16px;
+					border-radius: 8px;
+				}
+				&::after {
+					content: "";
+					position: absolute;
+					top: -14px;
+					left: 50%;
+					transform: translateX(-50%) rotate(45deg);
+					background: $black;
+					width: 10px;
+					height: 10px;
+				}
+			}
+		}
+	}
+	&.all {
+		& > .header .info span:first-child {
+			color: $mainPurple;
+		}
+		.progressParent .progress {
+			background: linear-gradient(
+				106.52deg,
+				rgba(162, 130, 232, 0.1) -11.57%,
+				rgba(126, 142, 231, 0.1) 50.39%,
+				rgba(68, 153, 233, 0.1) 116.35%
+			);
+
+			.completed {
+				background: $primaryGradient;
+			}
+		}
+	}
+	&.late {
+		.header .info span:first-child {
+			color: $orange;
+		}
+		.progressParent .progress {
+			background: linear-gradient(
+				135deg,
+				rgba(255, 207, 79, 0.1) 0%,
+				rgba(255, 155, 74, 0.1) 100%
+			);
+
+			.completed {
+				background: $orangeGradient;
+			}
+		}
+	}
+	&.urgent {
+		.header .info span:first-child {
+			color: $red;
+		}
+		.progressParent .progress {
+			background: linear-gradient(
+				115.94deg,
+				rgba(247, 90, 146, 0.1) -12.55%,
+				rgba(255, 154, 154, 0.1) 112.61%
+			);
+			.completed {
+				background: $redGradient;
+			}
+		}
+	}
+	.pagination {
+		display: flex;
+		gap: 7px;
+		button {
+			padding: 0 10px;
+			border-radius: 7px;
+			svg {
+				width: 10px;
+				height: 10px;
+			}
+		}
+	}
+	.tasks {
+		&::-webkit-scrollbar {
+			display: none;
+		}
+		.task {
+			border-radius: 10px;
+			height: 132px;
+			min-width: 178px;
+			display: flex;
+			align-items: center;
+			gap: 20px;
+			padding: 10px;
+			cursor: pointer;
+			&:hover {
+				background: #f0f8fe;
+			}
+			.progress {
+				border: 1px solid transparent;
+				position: relative;
+				min-width: 64px;
+				height: 100%;
+				border-radius: 18px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				overflow: hidden;
+				.icon {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					border-radius: 15px;
+					width: 35px;
+					height: 35px;
+					svg {
+						color: $white;
+						height: 16px;
+					}
+				}
+				.progressFill {
+					position: absolute;
+					bottom: 0;
+					width: 100%;
+					opacity: 0.24;
+					border-radius: 0px 0px 18px 18px;
+				}
+			}
+			.info {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				.name {
+					font-weight: 600;
+					font-size: 0.9rem;
+					&::first-letter {
+						text-transform: uppercase;
+					}
+				}
+				.completed {
+					margin: 10px 0 5px;
+					color: $lightBlue;
+					display: flex;
+					align-items: center;
+					gap: 3px;
+					& > span {
+						color: #394759;
+						font-weight: 700;
+					}
+				}
+				.percent {
+					width: fit-content;
+					font-weight: 800;
+					font-size: 0.9rem;
+					padding: 4px 8px;
+
+					border-radius: 8px;
+				}
+			}
+			//colors according to types
+			&.email {
+				&:hover .progress {
+					border-color: #a282e8;
+				}
+				.progress {
+					background: linear-gradient(
+							0deg,
+							rgba(162, 130, 232, 0.05),
+							rgba(162, 130, 232, 0.05)
+						),
+						#ffffff;
+				}
+				.progress .icon,
+				.progress .progressFill,
+				.icon .completed {
+					background: #a282e8;
+				}
+				.info .percent {
+					color: #a281e8;
+					background: linear-gradient(
+						106.52deg,
+						rgba(162, 130, 232, 0.08) -11.57%,
+						rgba(126, 142, 231, 0.08) 50.39%,
+						rgba(68, 153, 233, 0.08) 116.35%
+					);
+				}
+			}
+			&.call {
+				&:hover .progress {
+					border-color: $green;
+				}
+				.progress {
+					background: linear-gradient(
+							0deg,
+							rgba(162, 130, 232, 0.05),
+							rgba(162, 130, 232, 0.05)
+						),
+						#ffffff;
+				}
+				.progress .icon,
+				.progress .progressFill,
+				.icon .completed {
+					background: $ringoverGradient;
+				}
+				.info .percent {
+					color: $green;
+					background: linear-gradient(
+						90deg,
+						rgba(54, 205, 207, 0.08) 0%,
+						rgba(64, 224, 207, 0.08) 100%
+					);
+				}
+			}
+			&.message {
+				&:hover .progress {
+					border-color: $darkblue;
+				}
+				.progress {
+					background: linear-gradient(
+							0deg,
+							rgba(162, 130, 232, 0.05),
+							rgba(162, 130, 232, 0.05)
+						),
+						#ffffff;
+				}
+				.progress .icon,
+				.progress .progressFill,
+				.icon .completed {
+					background: $darkblue;
+				}
+				.info .percent {
+					color: $darkblue;
+					background: rgba(3, 125, 252, 0.08);
+				}
+			}
+			&.cadence_custom {
+				&:hover .progress {
+					border-color: $pink;
+				}
+				.progress {
+					background: linear-gradient(
+							0deg,
+							rgba(162, 130, 232, 0.05),
+							rgba(162, 130, 232, 0.05)
+						),
+						#ffffff;
+				}
+				.progress .icon,
+				.progress .progressFill,
+				.icon .completed {
+					background: $pinkGradient;
+				}
+				.info .percent {
+					color: $pink;
+					background: linear-gradient(
+						115.94deg,
+						rgba(247, 90, 146, 0.08) -12.55%,
+						rgba(255, 154, 154, 0.08) 112.61%
+					);
+				}
+			}
+			&.data_check {
+				&:hover .progress {
+					border-color: #ffb12a;
+				}
+				.progress {
+					background: linear-gradient(
+							0deg,
+							rgba(255, 177, 42, 0.05),
+							rgba(255, 177, 42, 0.05)
+						),
+						#ffffff;
+				}
+				.progress .icon,
+				.progress .progressFill,
+				.icon .completed {
+					background: #ffb12a;
+				}
+				.info .percent {
+					color: #ffb12a;
+					background: rgba(255, 177, 42, 0.08);
+				}
+			}
+			&.linkedin {
+				&:hover .progress {
+					border-color: #0077b5;
+				}
+				.progress {
+					background: rgba(0, 119, 181, 0.05);
+				}
+				.progress .icon,
+				.progress .progressFill,
+				.icon .completed {
+					background: #0077b5;
+				}
+				.info .percent {
+					color: #0077b5;
+					background: rgba(0, 119, 181, 0.08);
+				}
+			}
+			&.whatsapp {
+				&:hover .progress {
+					border-color: #25d366;
+				}
+				.progress {
+					background: linear-gradient(
+							0deg,
+							rgba(162, 130, 232, 0.05),
+							rgba(162, 130, 232, 0.05)
+						),
+						#ffffff;
+				}
+				.progress .icon,
+				.progress .progressFill,
+				.icon .completed {
+					background: #25d366;
+				}
+				.info .percent {
+					color: #25d366;
+					background: rgba(37, 211, 102, 0.08);
+				}
+			}
+		}
+	}
+}

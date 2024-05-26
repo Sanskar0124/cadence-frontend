@@ -1,0 +1,156 @@
+{
+	"msg": "Lead fetched successfully",
+	"data": {
+		"lead": {
+			"data": {
+				"lead_id": 540017,
+				"first_name": "Local",
+				"last_name": "Kamakshipalya",
+				"full_name": "Local Kamakshipalya",
+				"job_position": "Maharani of Kathriguppe",
+				"user_id": "e160967c-c79f-44f0-9cdc-775b72b0a372",
+				"salesforce_lead_id": null,
+				"salesforce_contact_id": null,
+				"account_id": 510008,
+				"duplicate": null,
+				"linkedin_url": "linked.com",
+				"status": "new_lead",
+				"type": "header_form",
+				"created_at": "2022-12-01T11:46:34.000Z",
+				"integration_id": "GS1669894804809540017",
+				"integration_type": "google_sheets_lead",
+				"User": {
+					"user_id": "e160967c-c79f-44f0-9cdc-775b72b0a372",
+					"first_name": "Phalaksha",
+					"last_name": "GS",
+					"sd_id": "14d5ce76-baa9-47b2-8801-f6bb7b3dd011",
+					"User_Token": {
+						"salesforce_instance_url": null
+					},
+					"Company": {
+						"name": "GShets Dev test 3",
+						"company_id": "7317bd11-a854-4fe6-a797-d19f01e44ca2",
+						"Company_Setting": {
+							"company_settings_id": 330019,
+							"Google_Sheets_Field_Map": {
+								"gsfm_id": 60016,
+								"lead_map": {
+									"company": "Company",
+									"country": "Country",
+									"emails": ["Work Email", "Home Email", "Other Email"],
+									"first_name": "First Name",
+									"full_name": "Full Name",
+									"integration_id": "Integration ID",
+									"job_position": "Job Position",
+									"last_name": "Last Name",
+									"lead_id": "Lead ID",
+									"linkedin_url": "Linkedin URL",
+									"owner_integration_id": "User GSheets ID",
+									"phone_numbers": ["Work Phone", "Home Phone", "Other Phone"],
+									"primary_email": "Primary Email",
+									"primary_phone": "Primary Phone",
+									"size": "Size",
+									"source_site": "Source Site",
+									"status": "Status",
+									"type": "Type",
+									"url": "Company Website",
+									"zip_code": "Zip"
+								},
+								"company_settings_id": 330019,
+								"created_at": "2022-12-01T11:40:46.000Z",
+								"updated_at": "2022-12-01T11:40:46.000Z"
+							},
+							"Webhooks": []
+						}
+					}
+				},
+				"Account": {
+					"account_id": 510008,
+					"salesforce_account_id": null,
+					"user_id": "e160967c-c79f-44f0-9cdc-775b72b0a372",
+					"name": "ringover",
+					"size": null,
+					"zipcode": 400123,
+					"country": "India",
+					"url": "https://www.ringover.com ",
+					"linkedin_url": null,
+					"phone_number": null,
+					"integration_id": null,
+					"integration_type": "salesforce_lead_account"
+				},
+				"Lead_phone_numbers": [
+					{
+						"formatted_phone_number": "123444",
+						"time": "5:39:51 AM",
+						"lpn_id": 720049,
+						"phone_number": "123444",
+						"type": "Home Phone",
+						"timezone": "America/New_York",
+						"is_primary": false
+					},
+					{
+						"formatted_phone_number": "810517761",
+						"time": "7:39:51 PM",
+						"lpn_id": 720047,
+						"phone_number": "810517761",
+						"type": "Primary Phone",
+						"timezone": "Asia/Tokyo",
+						"is_primary": true
+					},
+					{
+						"formatted_phone_number": "9179289823",
+						"time": "4:09:51 PM",
+						"lpn_id": 720048,
+						"phone_number": "9179289823",
+						"type": "Work Phone",
+						"timezone": "Asia/Calcutta",
+						"is_primary": false
+					}
+				],
+				"Lead_emails": [
+					{
+						"lem_id": 660032,
+						"email_id": "yuvi@gmail.com",
+						"is_primary": false,
+						"type": "Primary Email"
+					},
+					{
+						"lem_id": 660033,
+						"email_id": "home2@gmail.com",
+						"is_primary": false,
+						"type": "Work Email"
+					},
+					{
+						"lem_id": 660034,
+						"email_id": "work2@gmail.com",
+						"is_primary": false,
+						"type": "Other Email"
+					}
+				],
+				"LeadToCadences": [
+					{
+						"status": "not_started",
+						"Cadences": [
+							{
+								"cadence_id": 540004,
+								"name": "GS Test 1",
+								"salesforce_cadence_id": "1T188sKlynJdaRlksx4CsHkP7jLUwbIW8WMoUXyj4oKA",
+								"status": "not_started",
+								"unix_resume_at": null
+							}
+						],
+						"Tasks": []
+					}
+				]
+			},
+			"msg": "Lead fetched successfully.",
+			"success": true
+		},
+		"activities": {
+			"data": [],
+			"msg": "Activities fetched successfully.",
+			"success": true
+		},
+		"nextNode": null
+	}
+}

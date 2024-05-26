@@ -1,0 +1,74 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.checkbox {
+	position: relative;
+	width: 20px;
+	height: 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	user-select: none;
+
+	.checkmark {
+		position: absolute;
+		height: 20px;
+		width: 20px;
+		box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+		border-radius: 5px;
+		transition: 0.3s ease-in-out;
+		background: #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	svg {
+		color: $white;
+		display: none;
+	}
+
+	input {
+		display: none;
+
+		&:checked ~ .checkmark {
+			background: $primaryGradient;
+			svg {
+				display: block;
+			}
+		}
+
+		&:disabled ~ .checkmark {
+			opacity: 0.5;
+			cursor: not-allowed;
+		}
+
+		&:checked ~ .primary {
+			background: $primaryGradient;
+			position: absolute;
+			height: 20px;
+			width: 20px;
+			box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+			border-radius: 5px;
+			transition: 0.1s ease-in-out;
+		}
+
+		&:checked ~ .red {
+			background: $red;
+			position: absolute;
+			height: 20px;
+			width: 20px;
+			box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+			border-radius: 5px;
+			transition: 0.1s ease-in-out;
+		}
+
+		&:checked ~ .orange {
+			background: $orange;
+			position: absolute;
+			height: 20px;
+			width: 20px;
+			box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+			border-radius: 5px;
+			transition: 0.1s ease-in-out;
+		}
+	}
+}

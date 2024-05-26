@@ -1,0 +1,46 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.dnsTableCell {
+	span {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 0.5em;
+	}
+}
+
+.actions {
+	display: flex;
+	gap: 1em;
+}
+
+.verification {
+	color: $mainPurple;
+	text-transform: capitalize;
+}
+
+.active {
+	animation: spin 1s linear infinite;
+}
+
+.icon {
+	width: 1.7rem;
+	height: 1.7rem;
+	border-radius: 50%;
+	background: $white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	cursor: pointer;
+	&:hover {
+		background: $whiteShade1;
+	}
+}
+
+@keyframes spin {
+	100% {
+		-webkit-transform: rotate(-360deg);
+		transform: rotate(-360deg);
+	}
+}

@@ -1,0 +1,56 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.user {
+	display: flex;
+	justify-content: space-between;
+
+	.left {
+		height: 100%;
+		display: flex;
+		gap: 10px;
+
+		.userImage {
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+		}
+
+		.info {
+			display: flex;
+			flex-direction: column;
+
+			.role {
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 19px;
+				color: #567191;
+			}
+		}
+	}
+
+	.right {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		> div {
+			width: 76px;
+			display: flex;
+			justify-content: flex-end;
+		}
+		.input {
+			text-align: center;
+			padding: 10px 5px;
+		}
+
+		.close {
+			width: 19px;
+			height: 19px;
+			margin-left: 2px;
+			padding: 1px;
+			color: $white;
+			background: #567191;
+			border-radius: 50%;
+			cursor: pointer;
+		}
+	}
+}

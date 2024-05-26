@@ -1,0 +1,94 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.wrapper {
+	min-width: fit-content;
+	min-height: fit-content;
+
+	.dragNdrop {
+		width: 100%;
+		height: 163px;
+		padding: 10px;
+		display: flex;
+		position: relative;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		color: $veryLightBlue;
+		background: $white;
+		border: 1px dashed #dadce0;
+		border-radius: 15px;
+		gap: 4px;
+
+		.select {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+
+			min-width: 120px;
+			height: 28px;
+		}
+		> p {
+			text-align: center;
+		}
+
+		.browseFilesBtn {
+			padding: 0;
+			font-weight: 600;
+			font-size: 14px;
+			color: $blue;
+			background: none;
+			border: none;
+		}
+	}
+
+	.fileCard {
+		width: max(75%, 25ch);
+		height: 50px;
+		min-width: max-content;
+		margin-top: 10px;
+		padding: 0 32px 0 10px;
+		display: flex;
+		align-items: center;
+		background: $whiteShade1;
+		border-radius: 15px;
+		position: relative;
+		gap: 10px;
+
+		.image {
+			height: 32px;
+			margin-top: 2px;
+			border-radius: 5px;
+		}
+
+		.info {
+			display: flex;
+			flex-direction: column;
+			color: $black;
+
+			.fileName {
+				font-weight: 600;
+				font-size: 12px;
+				line-height: 17px;
+			}
+
+			.fileSize {
+				font-weight: 400;
+				font-size: 10px;
+				line-height: 15px;
+			}
+		}
+
+		.close {
+			position: absolute;
+			top: 50%;
+			right: 4px;
+			width: 15px;
+			height: 15px;
+			transform: translate(-50%, -50%);
+			color: $white;
+			background: $lightBlue;
+			border-radius: 50%;
+			cursor: pointer;
+		}
+	}
+}

@@ -1,0 +1,190 @@
+@import "libs/themes/src/lib/styles/variables";
+
+@mixin display-flex {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+@mixin display-flex-column {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.graphcontainer {
+	width: 41.8rem; //595px
+	height: 24.5rem; //340px
+	background: $white;
+	border-radius: 10px;
+	flex-grow: 1;
+	position: relative;
+
+	&_header {
+		@include display-flex();
+		width: 100%;
+		justify-content: flex-end;
+		margin-top: 2%;
+
+		&_title {
+			font-style: normal;
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 22px;
+			position: absolute;
+			top: 6.5%;
+			left: 3%;
+			::first-letter {
+				text-transform: capitalize;
+			}
+		}
+		&_rightbtns {
+			@include display-flex();
+			gap: 10px;
+			width: 118px;
+			height: 38px;
+			margin-right: 4%;
+
+			button {
+				display: flex;
+				border-radius: 15px !important;
+				&.active {
+					background: $primaryGradient;
+					color: $white;
+					&:hover {
+						opacity: 10;
+					}
+				}
+			}
+		}
+		.settingsicon {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-right: 4%;
+			cursor: pointer;
+		}
+	}
+	&_chart {
+		@include display-flex();
+		width: 100%;
+		justify-content: center;
+		margin-top: 1.2rem;
+		height: 90%;
+		&_chartgraph {
+			display: flex;
+			align-self: center;
+			width: 100%;
+			height: 100%;
+			.recharts-text {
+				font-size: 10px;
+			}
+			tspan {
+				font-size: 12px !important;
+			}
+		}
+	}
+}
+.graph {
+	width: 100% !important;
+	height: 100% !important;
+}
+.graph tspan {
+	font-size: 0.7rem !important;
+}
+
+.customtooltip {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-evenly;
+	width: 185px;
+	background: $white;
+	box-shadow: 0px 4px 25px rgba(57, 71, 89, 0.15);
+	border-radius: 4px;
+	padding: 10px;
+	&_label {
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 19px;
+		color: $black;
+	}
+	&_content {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 5px;
+		width: 100%;
+
+		&_circle {
+			height: 9px;
+			width: 9px;
+			border: 3px solid;
+			border-radius: 50%;
+		}
+		&_value {
+			font-weight: 700;
+			font-size: 0.875rem;
+			line-height: 19px;
+			color: $lightBlue;
+		}
+		&_text {
+			font-size: 0.75rem;
+			line-height: 16px;
+			color: $lightBlue;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			width: 130px;
+		}
+		&_type {
+			font-size: 0.75rem;
+			line-height: 16px;
+			color: $lightBlue;
+		}
+		&_change {
+			width: 20%;
+			height: 15px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			margin-left: 4px;
+			font-size: 0.7rem;
+			font-weight: 700;
+			border-radius: 5px;
+		}
+	}
+}
+.blue {
+	border-color: $blue;
+}
+.mainpurple {
+	border-color: $mainPurple;
+}
+.green {
+	border-color: $darkGreen;
+}
+.darkblue {
+	border-color: $darkblue;
+}
+.pink {
+	border-color: $pink;
+}
+
+.linePlaceholders {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-top: 10px;
+	margin-left: 40px;
+	border-radius: 10px;
+	gap: 10px;
+	.linePlaceholder {
+		height: 40px;
+		width: 90%;
+		&:nth-child(2n + 1) {
+			width: 60%;
+		}
+	}
+}

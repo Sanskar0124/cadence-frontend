@@ -1,0 +1,319 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.addModal {
+	width: 650px;
+	border-radius: 20px;
+
+	.header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 5px;
+	}
+	.title {
+		margin-bottom: 5px;
+		font-weight: 600 !important;
+	}
+	.inputGroup {
+		max-height: 70vh;
+		overflow-y: scroll;
+		display: flex;
+		flex-direction: column;
+		// &::-webkit-scrollbar {
+		// 	display: none;
+		// }
+		.inputGroupOne,
+		.inputGroupTwo,
+		.inputGroupThree,
+		.inputGroupFour {
+			margin-bottom: 20px;
+		}
+		.inputGroupOne,
+		.inputGroupTwo,
+		.inputGroupThree {
+			margin-right: 5px;
+		}
+		.inptuGroupOneTwo {
+			// overflow-y: scroll;
+			// padding-bottom: 190px;
+		}
+
+		.inputGroupTwo {
+			.nodeBtnWrapper {
+				margin: 1rem 0;
+				button {
+					// box-shadow: none;
+					font-weight: 600;
+					font-size: 14px;
+					height: 44px !important;
+					// color: $black;
+				}
+			}
+
+			.conditionGroup {
+				margin: 1rem 0;
+				.tabsWrapper {
+					width: fit-content;
+					background: #f3f4fd;
+					padding: 0.3rem 0.5rem;
+					border-radius: 15px;
+					margin: 1rem 0rem 1rem 2rem;
+
+					.tabsOperator {
+						height: 40px;
+					}
+
+					.tabButton {
+						padding: 0.65rem 1.5rem;
+						border-radius: 20px;
+					}
+				}
+
+				.iconBtns {
+					display: flex;
+					gap: 1rem;
+
+					.iconBtn {
+						background-color: transparent;
+						box-shadow: none;
+						height: fit-content !important;
+						width: fit-content !important;
+						padding: 0 !important;
+					}
+				}
+			}
+
+			.criteriaWrapper {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				// gap: 10px;
+				// margin-bottom: 1rem;
+
+				.nestedTabs {
+					position: relative;
+
+					.verticalLineWrapper {
+						display: flex;
+						justify-content: flex-start;
+						position: relative;
+						.vLine {
+							margin-left: 30px;
+							border-left: 4px solid #c0c6fe;
+							height: 100px;
+						}
+
+						.innnerVline {
+							margin-left: 30px;
+							border-left: 4px solid #c0c6fe;
+							height: 100px;
+						}
+					}
+
+					.nestedTabsBtns {
+						position: absolute;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						top: 10px;
+
+						.tabsAllBtns {
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							gap: 1rem;
+						}
+
+						.tabSideLine {
+							width: 30px;
+							border-top: 4px solid #c0c6fe;
+							position: relative;
+							left: 30px;
+						}
+					}
+				}
+
+				.criteriaSubWrapper {
+					background-color: #fafaff;
+					padding: 1rem;
+					border: 1px solid #97a2fe;
+					box-shadow: 0px 1px 0px #cfd4ff;
+					border-radius: 15px;
+					width: 100%;
+
+					.outsideNode {
+						display: flex;
+						align-items: flex-start;
+						gap: 0.7rem;
+						// background-color: #fafaff;
+						// padding: 1rem;
+						// border: 1px solid #97a2fe;
+						// box-shadow: 0px 1px 0px #cfd4ff;
+						border-radius: 15px;
+						width: 100%;
+						position: relative;
+						.box {
+							position: absolute;
+							width: 15px;
+							height: 20px;
+							background: #97a2fe;
+
+							left: -14px;
+							top: 25px;
+						}
+
+						.firstNode {
+							display: flex;
+							// flex-direction: column;
+							align-items: center;
+
+							gap: 0.7rem;
+							// background-color: #fafaff;
+							// padding: 1rem;
+							// border: 1px solid #97a2fe;
+							// box-shadow: 0px 1px 0px #cfd4ff;
+							border-radius: 15px;
+							width: 100%;
+						}
+						.firstNodes {
+							display: flex;
+							// flex-direction: column;
+							align-items: center;
+
+							gap: 0.7rem;
+							// background-color: #fafaff;
+							// padding: 1rem;
+							// border: 1px solid #97a2fe;
+							// box-shadow: 0px 1px 0px #cfd4ff;
+							border-radius: 15px;
+							width: 100%;
+						}
+
+						.border {
+							background-color: #fafaff;
+							padding: 1rem;
+							border: 1px solid #97a2fe;
+							box-shadow: 0px 1px 0px #cfd4ff;
+							position: relative;
+
+							.box2 {
+								position: absolute;
+								width: 15px;
+								height: 20px;
+								top: 24px;
+								left: 0px;
+								background: #97a2fe;
+							}
+						}
+					}
+				}
+
+				.criteria {
+					width: 100%;
+					background: #f0f2ff;
+					padding: 0.5rem;
+					border-radius: 10px;
+
+					.typeOne {
+						margin-top: 0.5rem;
+						display: grid;
+						grid-template-columns: 49% 49%;
+						justify-content: center;
+						grid-column-gap: 0.5rem;
+					}
+					.typeTwo {
+						margin-top: 0.5rem;
+
+						display: grid;
+						grid-template-columns: 49% 49%;
+						justify-content: center;
+						grid-column-gap: 0.5rem;
+					}
+
+					.inputDate {
+						width: 100%;
+					}
+				}
+
+				.conditionWrapper {
+					position: relative;
+					margin-bottom: 0rem;
+
+					.condtionButton {
+						position: relative;
+					}
+
+					.conditions {
+						width: 200px;
+						position: absolute;
+						right: 0rem;
+						top: 4rem;
+						z-index: 999;
+						text-align: left;
+					}
+
+					.deleteButton {
+						margin-top: 0.5rem;
+					}
+				}
+			}
+		}
+
+		.inputGroupThree {
+			.title {
+				margin: 0px 0 10px 0;
+			}
+
+			.selectCadenceGroup {
+				margin-top: 20px;
+
+				position: relative;
+			}
+
+			.selectCadenceWrapper {
+				background: #fff;
+				border: 1px solid #dadce0;
+				border-radius: 15px;
+				width: 100%;
+				height: 100%;
+				padding: 10px 20px;
+				font-weight: 400;
+				font-size: 1rem;
+				line-height: 19px;
+				outline: none;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				position: relative;
+				cursor: pointer;
+
+				.arrowUp {
+					transition: 0.5s;
+					transform: rotate(180deg);
+				}
+
+				.arrowDown {
+					transition: 0.5s;
+				}
+			}
+		}
+
+		.inputGroupFour {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			.addActionButton {
+				width: 145px;
+				padding: 9px 18px;
+				font-size: 0.95rem;
+				color: $lightBlue;
+				font-weight: 600;
+			}
+		}
+	}
+}
+.footer {
+	&::first-letter {
+		text-transform: capitalize;
+	}
+}

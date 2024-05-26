@@ -1,0 +1,46 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.invitationModal {
+	width: 440px;
+
+	.heading {
+		margin: -2px 0 28px 0;
+
+		h3 {
+			font-size: 16px;
+			font-weight: 700;
+			color: $black;
+		}
+	}
+
+	.main {
+		max-height: 506px;
+		overflow-y: scroll;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+		.inputGroup {
+			padding-bottom: 20px;
+
+			&:nth-last-child(1) {
+				padding-bottom: 0;
+			}
+
+			.input {
+				border-radius: 15px;
+			}
+		}
+	}
+
+	.footer {
+		margin-top: 40px;
+
+		.sendBtn {
+			width: 100%;
+			border-radius: 15px;
+			box-shadow: 1px 8px 24px rgba(125, 142, 231, 0.4);
+		}
+	}
+}

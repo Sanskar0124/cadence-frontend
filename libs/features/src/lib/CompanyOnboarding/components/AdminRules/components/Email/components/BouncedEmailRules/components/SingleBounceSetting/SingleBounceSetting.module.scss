@@ -1,0 +1,26 @@
+.switchMailTypes {
+	margin-bottom: 1rem;
+}
+.dayBtn {
+	height: 35px;
+	font-size: 1.1rem;
+	border-radius: 5px;
+}
+
+.singleBounceSetting {
+	padding-bottom: 0.05rem;
+
+	&.exception {
+		border-radius: 10px;
+		padding: 15px 20px;
+	}
+
+	.setting {
+		margin-bottom: 1.5rem;
+
+		> .title {
+			margin-bottom: 0.5rem;
+			font-weight: 600;
+		}
+	}
+}

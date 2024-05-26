@@ -1,0 +1,153 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.card {
+	min-height: 163px;
+	min-width: 272px;
+	cursor: pointer;
+
+	.top {
+		height: 58%;
+		padding: 0 20px;
+		display: flex;
+		gap: 20px;
+		align-items: center;
+		background: linear-gradient(
+			106.52deg,
+			rgba(162, 130, 232, 0.04) -11.57%,
+			rgba(126, 142, 231, 0.04) 50.39%,
+			rgba(68, 153, 233, 0.04) 116.35%
+		);
+		border-radius: 15px 15px 0 0;
+		position: relative;
+
+		.logo {
+			width: 58px;
+			height: 54px;
+			border-radius: 50%;
+		}
+
+		.info {
+			display: flex;
+			flex-direction: column;
+
+			.title {
+				font-size: 16px;
+				font-weight: 700;
+				line-height: 22px;
+			}
+
+			.members {
+				font-size: 14px;
+				font-weight: 400;
+				color: $lightBlue;
+			}
+		}
+
+		.more {
+			position: absolute;
+			top: 16px;
+			right: 23px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			color: #567191;
+			cursor: pointer;
+			gap: 6px;
+
+			.moreBtn {
+				width: 26px;
+				height: 26px;
+				padding: 0 3px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 50%;
+
+				&:hover {
+					background: rgba(134, 132, 134, 0.08);
+
+					> svg {
+						background: none;
+					}
+				}
+			}
+
+			.dropdown {
+				z-index: 1000;
+				box-shadow: 5px 10px 50px rgba(41, 43, 88, 0.2);
+				border-radius: 15px;
+				background: $white;
+				padding: 10px 5px;
+				width: 200px;
+				display: flex;
+				flex-direction: column;
+
+				button {
+					border: none;
+					background: none;
+					border-radius: 15px;
+					padding: 10px 15px;
+					text-align: left;
+					display: inline-block;
+					&::first-letter {
+						text-transform: capitalize;
+					}
+
+					&:hover {
+						background: #f0f8fe;
+					}
+
+					&:disabled {
+						cursor: not-allowed;
+						background: $white;
+					}
+				}
+			}
+		}
+	}
+
+	.bottom {
+		height: 42%;
+		padding: 0 20px;
+		display: flex;
+		align-items: center;
+		background: linear-gradient(
+			106.52deg,
+			rgba(162, 130, 232, 0.08) -11.57%,
+			rgba(126, 142, 231, 0.08) 50.39%,
+			rgba(68, 153, 233, 0.08) 116.35%
+		);
+		border-radius: 0 0 15px 15px;
+
+		.imageBox {
+			padding: 10px;
+			display: flex;
+			align-items: center;
+
+			.image {
+				width: 36px;
+				height: 36px;
+				object-fit: cover;
+				margin: 0 -8.2px;
+				border-radius: 50%;
+				border: 2px solid #f2f6fd;
+			}
+
+			.numberCircle {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 32.5px;
+				height: 32.5px;
+				margin: 0 -8px;
+				font-size: 14px;
+				font-weight: 600;
+				color: $mainPurple;
+				background: #f2f6fd;
+				border-radius: 50%;
+				border: 1.5px solid $mainPurple;
+				z-index: 2;
+			}
+		}
+	}
+}

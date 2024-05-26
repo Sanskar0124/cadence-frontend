@@ -1,0 +1,51 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.errorBox {
+	position: relative;
+	width: 380px;
+	max-width: 380px;
+	min-height: 50px;
+	height: max-content;
+	max-height: 200px;
+	overflow: auto;
+	background: $ringoverGradient;
+	padding: 1rem;
+	color: $white;
+	border-radius: 15px;
+	display: flex;
+	align-items: center;
+
+	@keyframes animateAlertIn {
+		0% {
+			transform: translateX(300px);
+		}
+
+		100% {
+			transform: translateX(0px);
+		}
+	}
+
+	&.isActive {
+		animation: animateAlertIn 0.25s ease-in;
+	}
+
+	.closeIcon {
+		position: absolute;
+		top: 13px;
+		right: 8px;
+		cursor: pointer;
+	}
+	.errorText {
+		font-size: 1rem;
+		font-weight: 600;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-right: 20px;
+		svg {
+			margin-right: 10px;
+			min-width: 20px;
+			min-height: 20px;
+		}
+	}
+}

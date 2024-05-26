@@ -1,0 +1,68 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.integration {
+	margin-top: 35px;
+	.title {
+		margin-bottom: 10px;
+		h2 {
+			display: inline-block;
+			color: #567191;
+			font-weight: 600;
+			&:first-letter {
+				text-transform: capitalize;
+			}
+		}
+		p {
+			color: #567191 !important;
+		}
+	}
+
+	.eventLoading {
+		& > div {
+			width: 580px !important;
+			border-radius: 15px !important;
+		}
+	}
+
+	.settings {
+		& > div {
+			cursor: pointer;
+			margin: 10px 0;
+			.connect {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				width: 100%;
+				> div {
+					display: flex;
+					align-items: center;
+				}
+			}
+			&:first-child {
+				margin-top: 0;
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+			display: flex;
+			align-items: center;
+			background-color: #f5f6f7 !important;
+			height: 50px;
+			padding: 0 20px;
+			border-radius: 20px;
+			color: #394759;
+			svg {
+				margin-right: 10px;
+				width: 40px;
+				height: 40px;
+			}
+			&.active {
+				border: 1px solid #a282e8;
+			}
+			button {
+				font-size: 1rem;
+				margin-left: 20px;
+			}
+		}
+	}
+}

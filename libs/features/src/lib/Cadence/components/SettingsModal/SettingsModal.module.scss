@@ -1,0 +1,90 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.modal {
+	width: 32vw;
+
+	.header {
+		margin: -2px 0 28px 0;
+		h3 {
+			color: $black;
+			font-size: 1.25rem;
+			display: inline-block;
+			&::first-letter {
+				text-transform: capitalize;
+			}
+		}
+	}
+	.main {
+		.headText {
+			font-family: "Open Sans";
+			font-style: normal;
+			font-weight: 700;
+			font-size: 14px;
+			display: block;
+			color: #567191;
+		}
+		.titleSelector {
+			width: 100%;
+			padding-left: 20px;
+		}
+
+		.launchCadence {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.launchTitle {
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 19px;
+				color: $lightBlue;
+			}
+		}
+
+		.label {
+			margin-left: 20px;
+		}
+
+		.scheduleGroup {
+			padding: 5px 0;
+			> label {
+				font-size: 14px;
+				color: $black;
+			}
+
+			.inputTime {
+				&::-webkit-scrollbar {
+					display: none;
+				}
+			}
+		}
+		.inputGroup {
+			margin-bottom: 1.5rem;
+
+			> label {
+				&::first-letter {
+					text-transform: capitalize;
+				}
+			}
+
+			input {
+				border-radius: 15px;
+			}
+
+			.inputDescription {
+				height: 72px !important;
+			}
+			.wordCounter {
+				text-align: right;
+				color: $lightBlue;
+			}
+		}
+	}
+
+	.footer {
+		.btn {
+			width: 100%;
+			border-radius: 15px;
+			margin-top: 2rem;
+		}
+	}
+}

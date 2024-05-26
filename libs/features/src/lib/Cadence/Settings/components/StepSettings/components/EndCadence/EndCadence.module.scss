@@ -1,0 +1,33 @@
+@import "../../StepSettings.module.scss";
+
+.endCadence {
+	.container {
+		height: 55px;
+		&.open {
+			height: fit-content;
+			overflow: visible;
+		}
+		overflow: hidden;
+		background: rgba(91, 107, 225, 0.03);
+		padding: 15px;
+		border-radius: 20px;
+		margin: 10px 0;
+		.top {
+			display: flex;
+			align-items: center;
+			.checkbox {
+				margin-right: 10px;
+			}
+			& > span > span {
+				color: $red;
+				font-size: 0.9rem;
+			}
+		}
+		.box {
+			margin: 20px 0;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

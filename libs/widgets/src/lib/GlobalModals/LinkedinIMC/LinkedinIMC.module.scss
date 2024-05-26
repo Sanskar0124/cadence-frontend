@@ -1,0 +1,79 @@
+@import "libs/themes/src/lib/styles/variables";
+.linkedinIMC {
+	width: 80vw;
+	max-width: 800px;
+
+	.header {
+		margin-bottom: 2.4rem;
+		position: relative;
+		.copy {
+			display: flex;
+			align-items: center;
+			position: absolute;
+			right: 30px;
+			top: 4px;
+			cursor: pointer;
+			font-size: 0.9rem;
+			svg {
+				margin-right: 4px;
+				color: $lightBlue;
+			}
+
+			span {
+				color: $lightBlue;
+			}
+			&.copied {
+				color: $green;
+				font-weight: 600;
+			}
+		}
+	}
+	.body {
+		height: calc(100vh - 300px);
+		overflow-y: scroll;
+		position: relative;
+		margin-top: 10px;
+		margin-bottom: 1rem;
+		min-height: 70px;
+		padding-left: 0.4rem;
+		white-space: pre-wrap;
+		.loaderWrapper {
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			.loader {
+				height: 37px;
+				width: 37px;
+				div {
+					height: 35px;
+					width: 35px;
+					border-color: $lightBlue transparent transparent transparent;
+				}
+			}
+		}
+		.editor {
+			border: none !important;
+		}
+	}
+
+	.error {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		margin: 1rem auto;
+
+		svg {
+			transform: translateY(1px);
+		}
+
+		p {
+			color: $red;
+		}
+	}
+
+	.footer {
+		display: flex;
+		justify-content: center;
+	}
+}

@@ -1,0 +1,115 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.leadDetailsModal {
+	min-width: 470px;
+	height: 412px;
+
+	.additionalInfo {
+		display: flex;
+		gap: 10px;
+		position: absolute;
+		top: 23px;
+		right: 50px;
+		color: $veryLightBlue;
+		span {
+			font-size: 12px;
+			font-weight: 300;
+			text-transform: capitalize;
+		}
+	}
+
+	.heading {
+		margin-bottom: 2rem;
+
+		h3 {
+			font-size: 1.14rem;
+			display: inline-block;
+			&::first-letter {
+				text-transform: capitalize;
+			}
+		}
+	}
+
+	.main {
+		display: flex;
+		gap: 30px;
+		overflow: scroll;
+		height: 350px;
+		.col1 {
+			min-width: 20%;
+			// max-width: 40%;
+		}
+		.col2 {
+			max-width: 70%;
+		}
+
+		.group {
+			margin-bottom: 2rem;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			label {
+				display: block;
+				color: $lightBlue;
+				font-size: 12px;
+				font-weight: 700;
+				padding-bottom: 2px;
+				&::first-letter {
+					text-transform: capitalize;
+				}
+			}
+			.text {
+				display: flex;
+				align-items: center;
+				color: $black;
+				gap: 8px;
+
+				max-width: 200px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				display: block;
+
+				p {
+					max-width: 200px;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+				}
+				span {
+					color: $veryLightBlue;
+				}
+				i {
+					display: flex;
+					align-items: center;
+				}
+			}
+
+			.box {
+				border: 1px solid $mainPurple;
+				padding: 15px 20px;
+				margin-bottom: 0.5rem;
+				border-radius: 10px;
+				.primary {
+					font-weight: 400;
+					color: $veryLightBlue;
+					font-size: 0.9rem;
+				}
+
+				> span {
+					font-weight: 700;
+					margin-right: 7px;
+				}
+			}
+			&.noInfo {
+				height: 40px;
+				font-size: 1.6rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-weight: 600;
+				color: $lightBlue;
+			}
+		}
+	}
+}

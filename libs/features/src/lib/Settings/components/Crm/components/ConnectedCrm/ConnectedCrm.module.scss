@@ -1,0 +1,27 @@
+@import "libs/themes/src/lib/styles/variables";
+@import "../../../../Settings.module.scss";
+
+.container {
+	.settings {
+		.greyBox {
+			border-radius: 20px;
+			width: fit-content;
+			div {
+				gap: 10px;
+			}
+			&.notConnected {
+				border: 1px solid #f77272;
+				background: linear-gradient(
+					315deg,
+					rgba(255, 136, 136, 0.04) 0%,
+					rgba(240, 95, 95, 0.04) 100%
+				);
+				color: $red;
+			}
+			.adminLoader {
+				width: 250px;
+				height: 10px;
+			}
+		}
+	}
+}

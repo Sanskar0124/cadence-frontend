@@ -1,0 +1,143 @@
+@import "libs/themes/src/lib/styles/variables";
+
+.phoneSystem {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 2rem 2.4rem;
+	border: 1px solid #e7ebff;
+	background-color: $white;
+	border-radius: 20px;
+	overflow-y: scroll;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	.heading {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		margin-bottom: 5px;
+		font-size: 1.14rem;
+		font-weight: 700;
+		color: $black;
+		.icon {
+			width: 24px;
+			height: 24px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: $lightBlue;
+			border-radius: 6px;
+
+			> svg {
+				color: $white;
+			}
+		}
+	}
+	.subheading {
+		font-family: "Open Sans";
+		font-size: 1rem;
+		font-weight: 400;
+		line-height: 19px;
+		letter-spacing: 0px;
+		display: inline-block;
+		&::first-letter {
+			text-transform: capitalize;
+		}
+	}
+	.inputBlock {
+		margin-bottom: 1rem;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.phoneOptions {
+		margin-bottom: 1rem;
+	}
+
+	.radioBox {
+		margin-bottom: 1rem;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		& > div {
+			display: flex;
+			gap: 10px;
+		}
+	}
+
+	.inputBox {
+		width: 40%;
+		position: relative;
+		margin-bottom: 30px;
+		display: flex;
+		justify-content: space-between;
+		& > div {
+			&:first-child {
+				span {
+					font-weight: 600;
+				}
+				p {
+					color: $lightBlue;
+					margin-top: 3px;
+					a {
+						cursor: pointer;
+						color: $blue;
+						font-weight: 400;
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+
+	.smsHelp {
+		transform: translateY(-10px);
+		p {
+			margin-bottom: 10px;
+			line-height: 2;
+			span {
+				margin-top: 10px;
+				background: rgba(129, 147, 168, 0.05);
+				padding: 7px;
+				font-family: sans-serif;
+			}
+		}
+		& > div {
+			margin: 5px 0;
+			display: flex;
+			gap: 10px;
+			align-items: center;
+			.lower {
+				margin-right: 27px;
+			}
+			span {
+				div {
+					margin-left: 10px;
+					background-color: #f5f6f7;
+					color: $lightBlue;
+					padding: 10px 10px;
+					border-radius: 10px;
+					display: flex;
+					gap: 20px;
+					justify-content: space-between;
+					align-items: center;
+				}
+			}
+			p:first-letter {
+				text-transform: capitalize;
+			}
+			span:last-child {
+				color: $blue;
+				display: inline-flex;
+				align-items: center;
+				text-align: center;
+				gap: 5px;
+				svg {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,66 @@
+//colors
+$primaryGradient: linear-gradient(
+	106.52deg,
+	#a282e8 -11.57%,
+	#7e8ee7 50.39%,
+	#4499e9 116.35%
+);
+$primaryGradientLight: linear-gradient(
+	106.52deg,
+	rgba(162, 130, 232, 0.12) -11.57%,
+	rgba(126, 142, 231, 0.12) 50.39%,
+	rgba(68, 153, 233, 0.12) 116.35%
+);
+$primaryGradientHover: linear-gradient(
+	106.52deg,
+	rgb(162, 130, 232, 0.5) -11.57%,
+	rgb(126, 142, 231, 0.5) 50.39%,
+	rgb(68, 153, 233, 0.5) 116.35%
+);
+$ringoverGradient: linear-gradient(315deg, #40e0cf 0%, #36cdcf 100%);
+$lightBlueGradient: linear-gradient(
+	106.52deg,
+	rgba(162, 130, 232, 0.1) -11.57%,
+	rgba(126, 142, 231, 0.1) 50.39%,
+	rgba(68, 153, 233, 0.1) 116.35%
+);
+
+$mainPurple: #5b6be1;
+$secondary: #2d5380;
+$blue: #5ea5e9;
+$lightBlue: #567191;
+$veryLightBlue: #8193a8;
+$green: #00ddd0;
+$darkGreen: #00b3a8;
+
+$white: #ffffff;
+$whiteShade1: #f5f6f7;
+$whiteShade2: #f3f4fd;
+$black: #394759;
+$blackShade1: #404040;
+$blackShade4: #bfbfbf;
+$blackShade5: #ececec;
+$blackShade6: #394759;
+$blackShade7: #595959;
+$grey: #e4e6ea;
+
+$background: #eff7fd;
+$redGradient: linear-gradient(315deg, #ff8888 0%, #f05f5f 100%);
+$redGradient1: linear-gradient(
+	315deg,
+	rgba(255, 136, 136, 0.2) 0%,
+	rgba(240, 95, 95, 0.2) 100%
+);
+$redGradient2: linear-gradient(115.94deg, #f75a92 -12.55%, #ff9a9a 112.61%);
+$yellowGradient: linear-gradient(133.74deg, #ffcf4f -11.99%, #ff9b4a 100%);
+$pinkGradient: linear-gradient(115.94deg, #f75a92 -12.55%, #ff9a9a 112.61%);
+
+$orangeGradient: linear-gradient(135deg, #ffcf4f 0%, #ff9b4a 100%);
+$red: #f77272;
+$redShade2: #f77272;
+$redShade3: #f77272;
+$darkRed: #ef525e;
+
+$orange: #ffb12a;
+$yellow: #ffb12a;
+$greenShade1: #3bd6d0;
